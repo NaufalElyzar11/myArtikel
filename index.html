@@ -1,150 +1,366 @@
 <!DOCTYPE html>
-<html>
-<title>Naufal Elyzar Blog</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Naufal Elyzar — CV & Portfolio</title>
 
-<style>
-body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
-</style>
-<body class="w3-light-grey">
+  <!-- SEO -->
+  <meta name="description" content="CV & Portfolio Naufal Elyzar — Big Data, Robotics, dan Fotografi." />
+  <meta name="author" content="Naufal Elyzar" />
+  <meta property="og:title" content="Naufal Elyzar — CV & Portfolio" />
+  <meta property="og:description" content="Big Data, Robotics, dan Fotografi." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://i.postimg.cc/VL8wr6RW/Me.jpg" />
 
-<!-- w3-content defines a container for fixed size centered content, 
-and is wrapped around the whole page content, except for the footer in this example -->
-<div class="w3-content" style="max-width:1400px">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-<!-- Header -->
-<header class="w3-container w3-center w3-padding-32"> 
-<h1><b>MY BLOG</b></h1>
-<p>Welcome to the blog of <span class="w3-tag">Naufal Elyzar</span></p>
-</header>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="#home" class="logo">Naufal<span>.</span></a>
+      <nav class="nav__menu" id="navMenu">
+        <a href="#about">Tentang</a>
+        <a href="#skills">Keahlian</a>
+        <a href="#experience">Pengalaman</a>
+        <a href="#projects">Proyek</a>
+        <a href="#gallery">Galeri</a>
+        <a href="#contact">Kontak</a>
+        <a class="btn btn--ghost" href="My CV.jpg" target="_blank">Download CV</a>
+      </nav>
+      <button class="nav__toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-<!-- Grid -->
-<div class="w3-row">
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero">
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow">Portfolio & CV</p>
+        <h1 class="hero__title">
+          Naufal Elyzar
+          <span class="gradient-text">Big Data • Robotics</span>
+        </h1>
+        <p class="hero__desc">
+          Mahasiswa TI fokus Big Data/BI & robotic enthusiast. Pengalaman membangun Website, Aplikasi, Datawarehouse,
+          ROS, dan sistem IoT. Juga aktif di fotografi.
+        </p>
+        <div class="hero__cta">
+          <a class="btn" href="#projects">Lihat Proyek</a>
+          <a class="btn btn--ghost" href="#gallery">Galeri Foto</a>
+        </div>
+        <div class="hero__meta">
+          <span>📍 Kalimantan Selatan, ID</span>
+          <span>✉️ naufal111e@gmail.com</span>
+        </div>
+      </div>
+      <div class="hero__photo">
+        <img src="https://i.postimg.cc/VL8wr6RW/Me.jpg" alt="Foto Naufal Elyzar" />
+      </div>
+    </div>
+  </section>
 
-<!-- Blog entries -->
-<div class="w3-col l8 s12">
-<!-- Blog entry -->
-<div class="w3-card-4 w3-margin w3-white">
-<img src="https://i.postimg.cc/vHcm4nBx/Drone.jpg" alt="Nature" style="width:100%">
-<div class="w3-container">
-<h3><b>PRONE.ID</b></h3>
-<h5>Alat pemetaan, monitoring, dan penyiram lahan sawit yang dibuat oleh tim PRONTALA MAN ICT<span class="w3-opacity">  24 Mei, 2022</span></h5>
-</div>
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="container grid-2">
+      <div class="card card--soft">
+        <h2 class="section__title">Tentang Saya</h2>
+        <p>
+          Mahasiswa yang antusias terhadap dunia teknologi serta aktif 
+          dalam berbagai kegiatan pengembangan diri. Selain kuliah, 
+          saya dikenal ambisius dalam mengikuti lomba dan berpartisipasi 
+          dalam berbagai proyek. Memiliki pengalaman di bidang editing, 
+          desain grafis, administrasi, serta pengabdian masyarakat. 
+          Saya juga memiliki kemampuan yang baik dalam fotografi.
+        </p>
+        <div class="chips">
+          <span class="chip">Raspberry Pi</span>
+          <span class="chip">IoT</span>
+          <span class="chip">Airflow ETL</span>
+          <span class="chip">ROS2</span>
+          <span class="chip">Dynamixel</span>
+          <span class="chip">Python</span>
+          <span class="chip">SQL</span>
+          <span class="chip">Photography</span>
+          <span class="chip">Linux</span>
+          <span class="chip">Kotlin</span>
+          <span class="chip">PHP</span>
+        </div>
+      </div>
+      <div class="card card--list">
+        <h3 class="card__title">Info Singkat</h3>
+        <ul class="list">
+          <li><strong>Pendidikan:</strong> S1 TInformation Technology</li>
+          <li><strong>Fokus:</strong> Websites, Robotics, IoT</li>
+          <li><strong>Organisasi Aktif:</strong> Wasaka Robotic Team</li>
+          
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<div class="w3-container">
-<p>PRONE.ID mempunyai 3 device, yaitu Drone, Node, dan Raspberry Pi Station. Drone berfungsi untuk melakukan pemetaan dan penyiraman lahan, lalu node berfungsi untuk mengumpulkan data berupa kelembapan tanah, kelembapan udara, dan suhu udara yang kemudian dikirimkan ke raspi station. Setelah data-data tersebut diterima, raspi akan mengirimkan data tersebut ke aplikasi kami yang bernama PRONE.ID</p>
-<div class="w3-row">
-<div class="w3-col m8 s12">
-<p><a href="https://naufalelyzar11.github.io/AMD/"><button class="w3-button w3-padding-large w3-white w3-border"> <b>READ MORE »</b></button></p>
-</div>
-<div class="w3-col m4 w3-hide-small">
-<p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
-</div>
-</div>
-</div>
-</div>
-<hr>
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section section--alt">
+    <div class="container">
+      <h2 class="section__title">Keahlian</h2>
+      <div class="skills">
+        <div class="skill">
+          <h4>Robotics</h4>
+          <p>Arduino, Python, CPP, ROS</p>
+          <div class="meter"><span style="width:85%"></span></div>
+        </div>
+        <div class="skill">
+          <h4>Frontend</h4>
+          <p>HTML/CSS/JS, UI layouting</p>
+          <div class="meter"><span style="width:72%"></span></div>
+        </div>
+        <div class="skill">
+          <h4>Backend</h4>
+          <p>PHP/MySQL</p>
+          <div class="meter"><span style="width:60%"></span></div>
+        </div>
+        <div class="skill">
+          <h4>Mobile App</h4>
+          <p>Kotlin, Jetpack Compose</p>
+          <div class="meter"><span style="width:55%"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- Blog entry -->
-<div class="w3-card-4 w3-margin w3-white">
-<img src="MRC.jpg" alt="Norway" style="width:100%">
-<div class="w3-container">
-<h3><b>TRACO-BOT</b></h3>
-<h5>Sistem pemilah sampah otomatis berbasis Machine Learning, <span class="w3-opacity">23 November, 2022</span></h5>
-</div>
-    
-<div class="w3-container">
-<p>TRACO-BOT merupakan sistem pemilahan sampah otomatis berbasis teknologi Machine Learning dan Internet of Things (IoT). Robot ini menggunakan conveyor sebagai jalur pemilahan sampah dan mengklasifikasikan jenis sampah sebanyak 6 macam, yaitu logam, kaca, plastik, kertas, organik, dan sampah selainnya. </p>
-<div class="w3-row">
-<div class="w3-col m8 s12">
-<p><a href="https://i.postimg.cc/G3XyQH7d/MRC.jpg"><button class="w3-button w3-padding-large w3-white w3-border"> <b>READ MORE »</b></button></p>
-</div>
-<div class="w3-col m4 w3-hide-small">
-<p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span></p>
-</div>
-</div>
-</div>
-</div>
-<!-- END BLOG ENTRIES -->
-</div>
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section__title">Pengalaman</h2>
+      <div class="timeline">
+        <div class="tl__item">
+          <div class="tl__dot"></div>
+          <div class="tl__content">
+            <h4>PRONE.ID</h4>
+            <p class="muted">2021–2022</p>
+            <p>Merancang dan membangun Drone untuk mapping & spraying + node  sebagai deteksi kelembapan serta integrasi dashboard ringkas.</p>
+          </div>
+        </div>
+        <div class="tl__item">
+          <div class="tl__dot"></div>
+          <div class="tl__content">
+            <h4>Traco-BOT</h4>
+            <p class="muted">2024–2025</p>
+            <p>Sistem pemilah sampah otomatis berbasis Machine Learning dan IoT.</p>
+          </div>
+        </div>
+        <div class="tl__item">
+          <div class="tl__dot"></div>
+          <div class="tl__content">
+            <h4>Wasaka Robotic Team — Anggota Software</h4>
+            <p class="muted">2024–2025</p>
+            <p>Mempelajari Robot Hexapod(18 DoF).</p>
+          </div>
+        </div>
+        <div class="tl__item">
+          <div class="tl__dot"></div>
+          <div class="tl__content">
+            <h4>Wasaka Robotic Team — Koordinator Divisi Software</h4>
+            <p class="muted">2025–Sekarang</p>
+            <p>Membangun dan memprogram hexapod (18 DOF) serta membuat simulasi.</p>
+          </div>
+        </div>
+        <div class="tl__item">
+          <div class="tl__dot"></div>
+          <div class="tl__content">
+            <h4>MyAnimeRent</h4>
+            <p class="muted">2025</p>
+            <p>Aplikasi untuk booking rental kostum cosplay.</p>
+          </div>
+        </div>
+        <div class="tl__item">
+          <div class="tl__dot"></div>
+          <div class="tl__content">
+            <h4>BanuaTour</h4>
+            <p class="muted">2025</p>
+            <p>Website untuk digitalisasi dan pemesanan tiket online di wisata lokal(KalSel).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- Introduction menu -->
-<div class="w3-col l4">
-<!-- About Card -->
-<div class="w3-card w3-margin w3-margin-top">
-<img src="https://i.postimg.cc/VL8wr6RW/Me.jpg" style="width:100%">
-<div class="w3-container w3-white">
-<h4><b>Naufal Elyzar</b></h4>
-<p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of robotic. I want to share my world with you.</p>
-</div>
-</div><hr>
+  <!-- ===== PROJECTS / BLOG ===== -->
+  <section id="projects" class="section section--alt">
+    <div class="container">
+      <h2 class="section__title">Proyek & Tulisan</h2>
 
-<!-- Posts -->
-<div class="w3-card w3-margin">
-<div class="w3-container w3-padding">
-<h4>My Partners</h4>
-</div>
-<ul class="w3-ul w3-hoverable w3-white">
-<li class="w3-padding-16">
-<img src="https://i.postimg.cc/rpPcKNnD/Rafid.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-<span class="w3-large">Ahmad Najmuddin Rafid</span><br>
-<span>Marketing Specialist</span>
-</li>
-<li class="w3-padding-16">
-<img src="/w3images/gondol.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-<span class="w3-large">Chythan Wahyu Z. V.</span><br>
-<span>Web Developer</span>
-</li> 
-<li class="w3-padding-16">
-<img src="https://i.postimg.cc/d39xTqs5/Hatta.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-<span class="w3-large">Hatta Matahari Persada</span><br>
-<span>Public Speaker</span>
-</li> 
-<li class="w3-padding-16 w3-hide-medium w3-hide-small">
-<img src="https://i.postimg.cc/QxQX05tz/Afif.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-<span class="w3-large">M. Afifuddin</span><br>
-<span>Enginer</span>
-</li> 
-<li class="w3-padding-16 w3-hide-medium w3-hide-small">
-<img src="Afif.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-<span class="w3-large">Habibah Sai'dah</span><br>
-<span>Non-Technic</span>
-</li> 
-</ul>
-</div>
-<hr> 
+      <div class="cards">
+        <!-- PRONE.ID -->
+        <article class="card card--project">
+          <div class="card__thumb">
+            <img src="https://naufalelyzar11.github.io/AMD/" alt="PRONE.ID Drone" />
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">PRONE.ID</h3>
+            <p class="muted">Alat pemetaan, monitoring, & penyiram lahan sawit — <em>24 Mei 2022</em></p>
+            <p>Sistem yang berupa 3 device (Drone, Node, Raspi Station) untuk mapping, penyiraman, dan telemetry kelembapan.</p>
+            <div class="card__actions">
+              <a class="btn btn--ghost" href="https://naufalelyzar11.github.io/AMD/" target="_blank" rel="noreferrer">Read more</a>
+            </div>
+          </div>
+        </article>
 
-<!-- Labels / tags -->
-<div class="w3-card w3-margin">
-<div class="w3-container w3-padding">
-<h4>Tags</h4>
-</div>
-<div class="w3-container w3-white">
-<p><span class="w3-tag w3-black w3-margin-bottom">AMD</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">MRC</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Drone</span>
-<span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Machine Learning</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">AI</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Robot</span>
-<span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Prototype</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Final</span>
-<span class="w3-tag w3-light-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Digital</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Website</span>
-<span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Technology</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Innovative</span>
-</p>
-</div>
-</div>
+        <!-- TRACO-BOT -->
+        <article class="card card--project">
+          <div class="card__thumb">
+            <img src="https://naufalelyzar11.github.io/MRC/" alt="TRACO-BOT" />
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">TRACO-BOT</h3>
+            <p class="muted">Sistem pemilah sampah otomatis berbasis ML — <em>23 Nov 2022</em></p>
+            <p>Conveyor + klasifikasi 6 kelas (logam, kaca, plastik, kertas, organik, lainnya) terintegrasi IoT.</p>
+            <div class="card__actions">
+              <a class="btn btn--ghost" href="https://i.postimg.cc/G3XyQH7d/MRC.jpg" target="_blank" rel="noreferrer">Read more</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-<!-- END Introduction Menu -->
-</div>
+  <!-- ===== GALLERY ===== -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">Galeri Fotografi</h2>
+        <p class="muted">Seri landscape, low-light, dan street. Klik gambar untuk perbesar.</p>
+      </div>
 
-<!-- END GRID -->
-</div><br>
+      <div class="gallery">
+        <!-- Ganti dengan fotomu; contoh pakai postimg & placeholder -->
+        <a class="gallery__item" href="galeri1.jpg" data-caption="Bukit">
+          <img src="galeri1.jpg" alt="Bukit" />
+        </a>
+        <a class="gallery__item" href="galeri2.jpg" data-caption="Sunrise">
+          <img src="galeri2.jpg" alt="Sunrise" />
+        </a>
+        <a class="gallery__item" href="galeri3.jpg" data-caption="Sunset">
+          <img src="galeri3.jpg" alt="Sunset" />
+        </a>
+        <!-- Tambah item lain dengan pola yang sama -->
+      </div>
+    </div>
 
-<!-- END w3-content -->
-</div>
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <button class="lightbox__close" aria-label="Close" onclick="closeLightbox()">×</button>
+      <img id="lightboxImg" alt="preview" />
+      <div id="lightboxCap" class="lightbox__caption"></div>
+    </div>
+  </section>
 
-<!-- Footer -->
-<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
-<button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
-<button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
-</footer>
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section section--alt">
+    <div class="container grid-2">
+      <div>
+        <h2 class="section__title">Kontak</h2>
+        <p>Terbuka untuk kolaborasi. Jangan sungkan say hi!</p>
+        <ul class="list">
+          <li>✉️ <a href="mailto:naufalelyzar11@gmail.com">naufalelyzar11@gmail.com</a></li>
+          <li>🔗 <a href="https://www.linkedin.com/in/naufal-elyzar-8b8764296/" target="_blank" rel="noreferrer">LinkedIn</a> •
+              <a href="https://github.com/NaufalElyzar11" target="_blank" rel="noreferrer">GitHub</a> •
+              <a href="https://www.instagram.com/val_elzar?igsh=aGxxejllY21jeDVq" target="_blank" rel="noreferrer">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="card card--soft">
+        <h3 class="card__title">My Partners</h3>
+        <ul class="people">
+          <li>
+            <img src="https://i.postimg.cc/rpPcKNnD/Rafid.jpg" alt="Ahmad Najmuddin Rafid" />
+            <div><strong>Ahmad Najmuddin Rafid</strong><span>Marketing Specialist</span></div>
+          </li>
+          <li>
+            <img src="https://i.postimg.cc/d39xTqs5/Hatta.jpg" alt="Hatta Matahari Persada" />
+            <div><strong>Hatta Matahari Persada</strong><span>Public Speaker</span></div>
+          </li>
+          <li>
+            <img src="https://i.postimg.cc/QxQX05tz/Afif.jpg" alt="M. Afifuddin" />
+            <div><strong>M. Afifuddin</strong><span>Engineer</span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Naufal Elyzar. All rights reserved.</p>
+      <div class="socials">
+        <a href="#" aria-label="GitHub" title="GitHub" class="icon">
+          <!-- GitHub SVG -->
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.1-.75.08-.74.08-.74 1.22.09 1.86 1.25 1.86 1.25 1.08 1.86 2.84 1.32 3.53 1.01.11-.79.42-1.32.76-1.63-2.66-.3-5.46-1.33-5.46-5.9 0-1.3.47-2.36 1.24-3.19-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.22a11.5 11.5 0 0 1 6 0c2.29-1.54 3.3-1.22 3.3-1.22.66 1.65.24 2.87.12 3.17.77.83 1.24 1.89 1.24 3.19 0 4.59-2.81 5.59-5.49 5.88.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57A12 12 0 0 0 12 .5Z"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn" title="LinkedIn" class="icon">
+          <!-- LinkedIn SVG -->
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1-.02 5.02 2.5 2.5 0 0 1 .02-5.02ZM3 9h4v12H3zM14.5 9c-3.04 0-4.5 1.82-4.5 3.9V21h4v-6.38c0-1.63.78-2.62 2.27-2.62 1.37 0 2.23.95 2.23 2.62V21h4v-7.5C22.5 10.94 20.36 9 17.67 9c-1.52 0-2.86.53-3.67 1.59V9h- -. ."/></svg>
+        </a>
+        <a href="#" aria-label="Instagram" title="Instagram" class="icon">
+          <!-- Instagram SVG -->
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5Zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5ZM18 6.2a1 1 0 1 1-1 1 1 1 0 0 1 1-1Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    // mobile nav
+    function toggleMenu(){ document.getElementById('navMenu').classList.toggle('open'); }
+    // dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id = a.getAttribute('href');
+        if(id.length>1){
+          e.preventDefault();
+          document.querySelector(id).scrollIntoView({behavior:'smooth', block:'start'});
+          document.getElementById('navMenu').classList.remove('open');
+        }
+      });
+    });
+
+    // LIGHTBOX
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightboxImg');
+    const lbCap = document.getElementById('lightboxCap');
+
+    document.querySelectorAll('.gallery__item').forEach(el=>{
+      el.addEventListener('click', e=>{
+        e.preventDefault();
+        const href = el.getAttribute('href');
+        const cap = el.dataset.caption || '';
+        lbImg.src = href;
+        lbCap.textContent = cap;
+        lb.setAttribute('aria-hidden','false');
+        lb.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox(){
+      lb.classList.remove('open');
+      lb.setAttribute('aria-hidden','true');
+      lbImg.src = '';
+      document.body.style.overflow = '';
+    }
+    lb.addEventListener('click', (e)=>{ if(e.target===lb) closeLightbox(); });
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeLightbox(); });
+  </script>
 </body>
 </html>

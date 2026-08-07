@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Naufal Elyzar - CV & Portfolio</title>
+  <title>Naufal Elyzar — CV & Portfolio</title>
 
   <!-- SEO -->
-  <meta name="description" content="CV & Portfolio Naufal Elyzar - Big Data, Robotics, dan Fotografi." />
+  <meta name="description" content="CV & Portfolio Naufal Elyzar — Robotics, IoT, Computer Vision, dan Fotografi." />
   <meta name="author" content="Naufal Elyzar" />
-  <meta property="og:title" content="Naufal Elyzar - CV & Portfolio" />
-  <meta property="og:description" content="Big Data, Robotics, dan Fotografi." />
+  <meta property="og:title" content="Naufal Elyzar — CV & Portfolio" />
+  <meta property="og:description" content="Robotics, IoT, Computer Vision, dan Fotografi." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://i.postimg.cc/VL8wr6RW/Me.jpg" />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Fonts: condensed industrial display + IBM's own engineering-documentation sans/mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -31,9 +37,9 @@
         <a href="#projects">Proyek</a>
         <a href="#gallery">Galeri</a>
         <a href="#contact">Kontak</a>
-        <a class="btn btn--ghost" href="./My CV.jpg" target="_blank">Lihat CV</a>
+        <a class="btn btn--ghost" href="./My%20CV.jpg" target="_blank">Lihat CV</a>
       </nav>
-      <button class="nav__toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+      <button class="nav__toggle" id="navToggle" aria-label="Buka menu" aria-controls="navMenu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -43,65 +49,81 @@
   <section id="home" class="hero">
     <div class="container hero__grid">
       <div class="hero__copy">
-        <p class="eyebrow">Portfolio & CV</p>
         <h1 class="hero__title">
           Naufal Elyzar
-          <span class="gradient-text">Big Data • Robotics</span>
+          <small>Mahasiswa Teknologi Informasi — fokus pada robotics, computer vision, dan IoT. Membangun website,
+            aplikasi, data warehouse, dan sistem ROS.</small>
         </h1>
-        <p class="hero__desc">
-          Mahasiswa TI fokus Big Data/BI & robotic enthusiast. Pengalaman membangun Website, Aplikasi, Datawarehouse,
-          ROS, dan sistem IoT. Juga aktif di fotografi.
-        </p>
+
+        <div class="hero__tags">
+          <span class="tag">Robotics</span>
+          <span class="tag">AI + CV</span>
+          <span class="tag">IoT</span>
+          <span class="tag">Software</span>
+          <span class="tag">Photography</span>
+        </div>
+
+        <dl class="spec hero__spec">
+          <dt>Fokus</dt>
+          <dd>Big Data/BI &amp; Robotics</dd>
+          <dt>Basis</dt>
+          <dd>Banjarmasin, Kalimantan Selatan</dd>
+          <dt>Kontak</dt>
+          <dd>naufalelyzar11@gmail.com</dd>
+        </dl>
+
         <div class="hero__cta">
           <a class="btn" href="#projects">Lihat Proyek</a>
           <a class="btn btn--ghost" href="#gallery">Galeri Foto</a>
         </div>
-        <div class="hero__meta">
-          <span>📍 Kalimantan Selatan, ID</span>
-          <span>✉️ naufal111e@gmail.com</span>
-        </div>
       </div>
+
       <div class="hero__photo">
-        <img src="./Me.jpg" alt="Foto Naufal Elyzar" />
+        <div class="bbox-frame">
+          <img src="./Me.jpg" alt="Foto Naufal Elyzar" />
+          <span class="corner corner--tl"></span>
+          <span class="corner corner--tr"></span>
+          <span class="corner corner--bl"></span>
+          <span class="corner corner--br"></span>
+          <span class="bbox-tag">subject: naufal.jpg</span>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ===== ABOUT ===== -->
   <section id="about" class="section">
-    <div class="container grid-2">
-      <div class="card card--soft">
-        <h2 class="section__title">Tentang Saya</h2>
-        <p>
-          Mahasiswa yang antusias terhadap dunia teknologi serta aktif 
-          dalam berbagai kegiatan pengembangan diri. Selain kuliah, 
-          saya dikenal ambisius dalam mengikuti lomba dan berpartisipasi 
-          dalam berbagai proyek. Memiliki pengalaman di bidang editing, 
-          desain grafis, administrasi, serta pengabdian masyarakat. 
-          Saya juga memiliki kemampuan yang baik dalam fotografi.
-        </p>
-        <div class="chips">
-          <span class="chip">Raspberry Pi</span>
-          <span class="chip">IoT</span>
-          <span class="chip">Airflow ETL</span>
-          <span class="chip">ROS2</span>
-          <span class="chip">Dynamixel</span>
-          <span class="chip">Python</span>
-          <span class="chip">SQL</span>
-          <span class="chip">Photography</span>
-          <span class="chip">Linux</span>
-          <span class="chip">Kotlin</span>
-          <span class="chip">PHP</span>
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__body reveal">
+          <p>
+            Mahasiswa Teknologi Informasi yang menghabiskan sebagian besar waktu di luar kelas
+            untuk kompetisi dan proyek — dari robotika hingga pengembangan aplikasi. Pengalaman
+            lain mencakup editing, desain grafis, administrasi acara, dan pengabdian masyarakat.
+            Di luar itu saya memotret — sebagian hasilnya ada di galeri bawah.
+          </p>
+          <div class="about__tags">
+            <span class="tag">Raspberry Pi</span>
+            <span class="tag">ROS2</span>
+            <span class="tag">Dynamixel</span>
+            <span class="tag">Python</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Airflow ETL</span>
+            <span class="tag">Linux</span>
+            <span class="tag">Kotlin</span>
+            <span class="tag">PHP</span>
+          </div>
         </div>
-      </div>
-      <div class="card card--list">
-        <h3 class="card__title">Info Singkat</h3>
-        <ul class="list">
-          <li><strong>Pendidikan:</strong> S1 Teknologi Informasi</li>
-          <li><strong>Fokus:</strong> Websites, Robotics, IoT</li>
-          <li><strong>Organisasi Aktif:</strong> Wasaka Robotic Team</li>
-          
-        </ul>
+        <div class="about__info reveal">
+          <dl class="spec">
+            <dt>Pendidikan</dt>
+            <dd>S1 Teknologi Informasi</dd>
+            <dt>Fokus</dt>
+            <dd>Website, Robotics, IoT</dd>
+            <dt>Organisasi</dt>
+            <dd>Wasaka Robotic Team</dd>
+          </dl>
+        </div>
       </div>
     </div>
   </section>
@@ -109,27 +131,48 @@
   <!-- ===== SKILLS ===== -->
   <section id="skills" class="section section--alt">
     <div class="container">
-      <h2 class="section__title">Keahlian</h2>
+      <div class="section__head">
+        <h2 class="section__title">Keahlian</h2>
+      </div>
       <div class="skills">
         <div class="skill">
-          <h4>Robotics</h4>
-          <p>Arduino, Python, CPP, ROS</p>
-          <div class="meter"><span style="width:85%"></span></div>
+          <h3>Robotics</h3>
+          <ul>
+            <li>Arduino</li>
+            <li>Raspberry Pi</li>
+            <li>ROS2</li>
+            <li>Dynamixel</li>
+            <li>C / C++</li>
+            <li>Python</li>
+          </ul>
         </div>
         <div class="skill">
-          <h4>Frontend</h4>
-          <p>HTML/CSS/JS, UI layouting</p>
-          <div class="meter"><span style="width:72%"></span></div>
+          <h3>AI / Computer Vision</h3>
+          <ul>
+            <li>Machine Learning</li>
+            <li>YOLO</li>
+            <li>OpenCV</li>
+            <li>Object Detection</li>
+          </ul>
         </div>
         <div class="skill">
-          <h4>Backend</h4>
-          <p>PHP/MySQL</p>
-          <div class="meter"><span style="width:60%"></span></div>
+          <h3>Web</h3>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+            <li>MySQL</li>
+          </ul>
         </div>
         <div class="skill">
-          <h4>Mobile App</h4>
-          <p>Kotlin, Jetpack Compose</p>
-          <div class="meter"><span style="width:55%"></span></div>
+          <h3>IoT / Embedded</h3>
+          <ul>
+            <li>ESP32</li>
+            <li>Arduino</li>
+            <li>Sensors</li>
+            <li>IoT systems</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -138,96 +181,130 @@
   <!-- ===== EXPERIENCE ===== -->
   <section id="experience" class="section">
     <div class="container">
-      <h2 class="section__title">Pengalaman</h2>
-      <div class="timeline">
-        <div class="tl__item">
-          <div class="tl__dot"></div>
-          <div class="tl__content">
-            <h4>PRONE.ID</h4>
-            <p class="muted">2021–2022</p>
-            <p>Merancang dan membangun Drone untuk mapping & spraying + node  sebagai deteksi kelembapan serta integrasi dashboard ringkas.</p>
+      <div class="section__head">
+        <h2 class="section__title">Pengalaman</h2>
+      </div>
+
+      <div class="log">
+        <div class="log__item reveal">
+          <div class="log__date">2021 — 2022</div>
+          <div>
+            <h3 class="log__title">PRONE.ID</h3>
+            <p class="log__desc">Merancang dan membangun drone untuk pemetaan dan penyemprotan lahan sawit, dilengkapi
+              node sensor kelembapan dan dashboard monitoring ringkas.</p>
           </div>
         </div>
-        <div class="tl__item">
-          <div class="tl__dot"></div>
-          <div class="tl__content">
-            <h4>Traco-BOT</h4>
-            <p class="muted">2024–2025</p>
-            <p>Sistem pemilah sampah otomatis berbasis Machine Learning dan IoT.</p>
+
+        <div class="log__item reveal">
+          <div class="log__date">2024 — 2025</div>
+          <div>
+            <h3 class="log__title">TRACO-BOT</h3>
+            <p class="log__desc">Sistem pemilah sampah otomatis: conveyor dengan klasifikasi machine learning ke 6 kelas
+              (logam, kaca, plastik, kertas, organik, lainnya), terintegrasi sensor IoT.</p>
           </div>
         </div>
-        <div class="tl__item">
-          <div class="tl__dot"></div>
-          <div class="tl__content">
-            <h4>Wasaka Robotic Team — Anggota Software</h4>
-            <p class="muted">2024–2025</p>
-            <p>Mempelajari Robot Hexapod(18 DoF).</p>
+
+        <div class="log__item reveal">
+          <div class="log__date">2024 — 2025</div>
+          <div>
+            <span class="log__role">Anggota — Divisi Software</span>
+            <h3 class="log__title">Wasaka Robotic Team</h3>
+            <p class="log__desc">Mempelajari dan mengembangkan robot hexapod 18 DOF.</p>
           </div>
         </div>
-        <div class="tl__item">
-          <div class="tl__dot"></div>
-          <div class="tl__content">
-            <h4>Wasaka Robotic Team — Koordinator Divisi Software</h4>
-            <p class="muted">2025–Sekarang</p>
-            <p>Membangun dan memprogram hexapod (18 DOF) serta membuat simulasi.</p>
+
+        <div class="log__item reveal">
+          <div class="log__date">2025 — Sekarang</div>
+          <div>
+            <span class="log__role">Koordinator — Divisi Software</span>
+            <h3 class="log__title">Wasaka Robotic Team</h3>
+            <p class="log__desc">Membangun dan memprogram hexapod 18 DOF serta menyusun simulasinya.</p>
           </div>
         </div>
-        <div class="tl__item">
-          <div class="tl__dot"></div>
-          <div class="tl__content">
-            <h4>MyAnimeRent</h4>
-            <p class="muted">2025</p>
-            <p>Aplikasi untuk booking rental kostum cosplay.</p>
+
+        <div class="log__item reveal">
+          <div class="log__date">2025</div>
+          <div>
+            <h3 class="log__title">MyAnimeRent</h3>
+            <p class="log__desc">Aplikasi booking untuk rental kostum cosplay.</p>
           </div>
         </div>
-        <div class="tl__item">
-          <div class="tl__dot"></div>
-          <div class="tl__content">
-            <h4>BanuaTour</h4>
-            <p class="muted">2025</p>
-            <p>Website untuk digitalisasi dan pemesanan tiket online di wisata lokal(KalSel).</p>
+
+        <div class="log__item reveal">
+          <div class="log__date">2025</div>
+          <div>
+            <h3 class="log__title">BanuaTour</h3>
+            <p class="log__desc">Website digitalisasi dan pemesanan tiket wisata lokal Kalimantan Selatan.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== PROJECTS / BLOG ===== -->
+  <!-- ===== PROJECTS ===== -->
   <section id="projects" class="section section--alt">
     <div class="container">
-      <h2 class="section__title">Proyek & Tulisan</h2>
-
-      <div class="cards">
-        <!-- PRONE.ID -->
-        <article class="card card--project">
-          <div class="card__thumb">
-            <img src="./Drone.jpg" alt="PRONE.ID Drone" />
-          </div>
-          <div class="card__body">
-            <h3 class="card__title">PRONE.ID</h3>
-            <p class="muted">Alat pemetaan, monitoring, & penyiram lahan sawit — <em>24 Mei 2022</em></p>
-            <p>Sistem yang berupa 3 device (Drone, Node, Raspi Station) untuk mapping, penyiraman, dan sensor kelembapan.</p>
-            <div class="card__actions">
-              <a class="btn btn--ghost" href="https://naufalelyzar11.github.io/AMD/" target="_blank" rel="noreferrer">Read more</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- TRACO-BOT -->
-        <article class="card card--project">
-          <div class="card__thumb">
-            <img src="./MRC.jpg" alt="TRACO-BOT" />
-          </div>
-          <div class="card__body">
-            <h3 class="card__title">TRACO-BOT</h3>
-            <p class="muted">Sistem pemilah sampah otomatis berbasis ML — <em>23 Nov 2022</em></p>
-            <p>Conveyor + klasifikasi 6 kelas (logam, kaca, plastik, kertas, organik, lainnya) terintegrasi IoT.</p>
-            <div class="card__actions">
-              <a class="btn btn--ghost" href="https://naufalelyzar11.github.io/MRC/" target="_blank" rel="noreferrer">Read more</a>
-            </div>
-          </div>
-        </article>
+      <div class="section__head">
+        <h2 class="section__title">Proyek</h2>
       </div>
+
+      <!-- PRONE.ID -->
+      <article class="project reveal">
+        <div class="project__thumb">
+          <div class="bbox-frame">
+            <img src="./Drone.jpg" alt="PRONE.ID — sistem drone pemetaan dan penyiraman" />
+            <span class="corner corner--tl"></span>
+            <span class="corner corner--br"></span>
+          </div>
+        </div>
+        <div class="project__body">
+          <span class="project__index">// project 01</span>
+          <h3 class="project__name">PRONE.ID</h3>
+          <p class="project__desc">Sistem 3 perangkat (drone, sensor node, Raspberry Pi station) untuk pemetaan udara,
+            penyiraman terjadwal, dan pemantauan kelembapan lahan sawit.</p>
+          <dl class="spec project__spec">
+            <dt>Year</dt>
+            <dd>2022</dd>
+            <dt>Category</dt>
+            <dd>UAV · Agri-tech</dd>
+            <dt>Tech</dt>
+            <dd>Drone, Sensor Node, Raspberry Pi</dd>
+          </dl>
+          <div class="project__actions">
+            <a class="btn btn--ghost" href="https://naufalelyzar11.github.io/AMD/" target="_blank" rel="noreferrer">Baca
+              selengkapnya ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- TRACO-BOT -->
+      <article class="project reveal">
+        <div class="project__thumb">
+          <div class="bbox-frame">
+            <img src="./MRC.jpg" alt="TRACO-BOT — conveyor pemilah sampah otomatis" />
+            <span class="corner corner--tl"></span>
+            <span class="corner corner--br"></span>
+          </div>
+        </div>
+        <div class="project__body">
+          <span class="project__index">// project 02</span>
+          <h3 class="project__name">TRACO-BOT</h3>
+          <p class="project__desc">Conveyor otomatis dengan klasifikasi machine learning ke 6 kelas sampah (logam, kaca,
+            plastik, kertas, organik, lainnya), terintegrasi sensor IoT.</p>
+          <dl class="spec project__spec">
+            <dt>Year</dt>
+            <dd>2022</dd>
+            <dt>Category</dt>
+            <dd>Robotics · Machine Learning</dd>
+            <dt>Tech</dt>
+            <dd>Conveyor, ML classifier, IoT sensors</dd>
+          </dl>
+          <div class="project__actions">
+            <a class="btn btn--ghost" href="https://naufalelyzar11.github.io/MRC/" target="_blank" rel="noreferrer">Baca
+              selengkapnya ↗</a>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -236,27 +313,28 @@
     <div class="container">
       <div class="section__head">
         <h2 class="section__title">Galeri Fotografi</h2>
-        <p class="muted">Seri alam, sunrise, & sunset. Klik gambar untuk perbesar.</p>
+        <p class="muted">Seri alam, sunrise, &amp; sunset. Klik gambar untuk perbesar.</p>
       </div>
 
-      <div class="gallery">
-        <!-- Ganti dengan fotomu; contoh pakai postimg & placeholder -->
-        <a class="gallery__item" href="./galeri1.jpg" data-caption="Alam">
+      <div class="contact-sheet">
+        <a class="frame" href="./galeri1.jpg" data-caption="Alam" data-no="01">
           <img src="./galeri1.jpg" alt="Alam" />
+          <span class="frame__meta"><span class="no">01</span><span>Alam</span></span>
         </a>
-        <a class="gallery__item" href="./galeri2.jpg" data-caption="Sunrise">
+        <a class="frame" href="./galeri2.jpg" data-caption="Sunrise" data-no="02">
           <img src="./galeri2.jpg" alt="Sunrise" />
+          <span class="frame__meta"><span class="no">02</span><span>Sunrise</span></span>
         </a>
-        <a class="gallery__item" href="./galeri3.jpg" data-caption="Sunset">
+        <a class="frame" href="./galeri3.jpg" data-caption="Sunset" data-no="03">
           <img src="./galeri3.jpg" alt="Sunset" />
+          <span class="frame__meta"><span class="no">03</span><span>Sunset</span></span>
         </a>
-        <!-- Tambah item lain dengan pola yang sama -->
       </div>
     </div>
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox" aria-hidden="true">
-      <button class="lightbox__close" aria-label="Close" onclick="closeLightbox()">×</button>
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+      <button class="lightbox__close" aria-label="Tutup" id="lightboxCloseBtn">×</button>
       <img id="lightboxImg" alt="preview" />
       <div id="lightboxCap" class="lightbox__caption"></div>
     </div>
@@ -264,19 +342,23 @@
 
   <!-- ===== CONTACT ===== -->
   <section id="contact" class="section section--alt">
-    <div class="container grid-2">
+    <div class="container contact__grid">
       <div>
         <h2 class="section__title">Kontak</h2>
-        <p>Terbuka untuk kolaborasi. Jangan sungkan say hi!</p>
-        <ul class="list">
+        <p class="muted" style="margin-top:14px;">Terbuka untuk kolaborasi. Jangan sungkan say hi.</p>
+        <ul class="contact__links">
           <li>✉️ <a href="mailto:naufalelyzar11@gmail.com">naufalelyzar11@gmail.com</a></li>
-          <li>🔗 <a href="https://www.linkedin.com/in/naufal-elyzar-8b8764296/" target="_blank" rel="noreferrer">LinkedIn</a> •
-              <a href="https://github.com/NaufalElyzar11" target="_blank" rel="noreferrer">GitHub</a> •
-              <a href="https://www.instagram.com/val_elzar?igsh=aGxxejllY21jeDVq" target="_blank" rel="noreferrer">Instagram</a></li>
+          <li>🔗 <a href="https://www.linkedin.com/in/naufal-elyzar-8b8764296/" target="_blank"
+              rel="noreferrer">LinkedIn</a></li>
+          <li>💻 <a href="https://github.com/NaufalElyzar11" target="_blank" rel="noreferrer">GitHub</a></li>
+          <li>📷 <a href="https://www.instagram.com/val_elzar?igsh=aGxxejllY21jeDVq" target="_blank"
+              rel="noreferrer">Instagram</a></li>
         </ul>
       </div>
-      <div class="card card--soft">
-        <h3 class="card__title">My Partners</h3>
+      <div>
+        <h3 class="card__title"
+          style="font-family:var(--font-mono); text-transform:uppercase; font-size:.85rem; letter-spacing:.05em; color:var(--ink-muted); margin-bottom:16px;">
+          Partners</h3>
         <ul class="people">
           <li>
             <img src="./Rafid.jpg" alt="Ahmad Najmuddin Rafid" />
@@ -300,67 +382,33 @@
     <div class="container footer__inner">
       <p>© <span id="year"></span> Naufal Elyzar. All rights reserved.</p>
       <div class="socials">
-        <a href="#" aria-label="GitHub" title="GitHub" class="icon">
-          <!-- GitHub SVG -->
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.1-.75.08-.74.08-.74 1.22.09 1.86 1.25 1.86 1.25 1.08 1.86 2.84 1.32 3.53 1.01.11-.79.42-1.32.76-1.63-2.66-.3-5.46-1.33-5.46-5.9 0-1.3.47-2.36 1.24-3.19-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.22a11.5 11.5 0 0 1 6 0c2.29-1.54 3.3-1.22 3.3-1.22.66 1.65.24 2.87.12 3.17.77.83 1.24 1.89 1.24 3.19 0 4.59-2.81 5.59-5.49 5.88.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57A12 12 0 0 0 12 .5Z"/></svg>
+        <a href="https://github.com/NaufalElyzar11" aria-label="GitHub" title="GitHub" class="icon" target="_blank"
+          rel="noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M12 .5a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.1-.75.08-.74.08-.74 1.22.09 1.86 1.25 1.86 1.25 1.08 1.86 2.84 1.32 3.53 1.01.11-.79.42-1.32.76-1.63-2.66-.3-5.46-1.33-5.46-5.9 0-1.3.47-2.36 1.24-3.19-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.22a11.5 11.5 0 0 1 6 0c2.29-1.54 3.3-1.22 3.3-1.22.66 1.65.24 2.87.12 3.17.77.83 1.24 1.89 1.24 3.19 0 4.59-2.81 5.59-5.49 5.88.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57A12 12 0 0 0 12 .5Z" />
+          </svg>
         </a>
-        <a href="#" aria-label="LinkedIn" title="LinkedIn" class="icon">
-          <!-- LinkedIn SVG -->
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1-.02 5.02 2.5 2.5 0 0 1 .02-5.02ZM3 9h4v12H3zM14.5 9c-3.04 0-4.5 1.82-4.5 3.9V21h4v-6.38c0-1.63.78-2.62 2.27-2.62 1.37 0 2.23.95 2.23 2.62V21h4v-7.5C22.5 10.94 20.36 9 17.67 9c-1.52 0-2.86.53-3.67 1.59V9h- -. ."/></svg>
+        <a href="https://www.linkedin.com/in/naufal-elyzar-8b8764296/" aria-label="LinkedIn" title="LinkedIn"
+          class="icon" target="_blank" rel="noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 20.452H3.554V9h3.565v11.452z" />
+          </svg>
         </a>
-        <a href="#" aria-label="Instagram" title="Instagram" class="icon">
-          <!-- Instagram SVG -->
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5Zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5ZM18 6.2a1 1 0 1 1-1 1 1 1 0 0 1 1-1Z"/></svg>
+        <a href="https://www.instagram.com/val_elzar?igsh=aGxxejllY21jeDVq" aria-label="Instagram" title="Instagram"
+          class="icon" target="_blank" rel="noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5Zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5ZM18 6.2a1 1 0 1 1-1 1 1 1 0 0 1 1-1Z" />
+          </svg>
         </a>
       </div>
     </div>
   </footer>
 
   <!-- ===== SCRIPTS ===== -->
-  <script>
-    // mobile nav
-    function toggleMenu(){ document.getElementById('navMenu').classList.toggle('open'); }
-    // dynamic year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const id = a.getAttribute('href');
-        if(id.length>1){
-          e.preventDefault();
-          document.querySelector(id).scrollIntoView({behavior:'smooth', block:'start'});
-          document.getElementById('navMenu').classList.remove('open');
-        }
-      });
-    });
-
-    // LIGHTBOX
-    const lb = document.getElementById('lightbox');
-    const lbImg = document.getElementById('lightboxImg');
-    const lbCap = document.getElementById('lightboxCap');
-
-    document.querySelectorAll('.gallery__item').forEach(el=>{
-      el.addEventListener('click', e=>{
-        e.preventDefault();
-        const href = el.getAttribute('href');
-        const cap = el.dataset.caption || '';
-        lbImg.src = href;
-        lbCap.textContent = cap;
-        lb.setAttribute('aria-hidden','false');
-        lb.classList.add('open');
-        document.body.style.overflow = 'hidden';
-      });
-    });
-
-    function closeLightbox(){
-      lb.classList.remove('open');
-      lb.setAttribute('aria-hidden','true');
-      lbImg.src = '';
-      document.body.style.overflow = '';
-    }
-    lb.addEventListener('click', (e)=>{ if(e.target===lb) closeLightbox(); });
-    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeLightbox(); });
-  </script>
+  <script src="script.js" defer></script>
 </body>
+
 </html>

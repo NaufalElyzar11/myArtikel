@@ -1,4 +1,4 @@
-// ===== Mobile nav toggle =====
+// Mobile nav toggle
 const navMenu = document.getElementById('navMenu');
 const navToggle = document.getElementById('navToggle');
 
@@ -14,10 +14,10 @@ navMenu.querySelectorAll('a').forEach((a) => {
   });
 });
 
-// ===== Footer year =====
+// Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// ===== Lightbox (photography contact sheet) =====
+// Lightbox (photography contact sheet)
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');
 const lightboxCap = document.getElementById('lightboxCap');
@@ -56,7 +56,7 @@ document.getElementById('lightboxCloseBtn').addEventListener('click', closeLight
 lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox(); });
 
-// ===== Subtle scroll reveal (skipped entirely under reduced-motion) =====
+// Subtle scroll reveal (skipped entirely under reduced-motion)
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const revealEls = document.querySelectorAll('.reveal');
 

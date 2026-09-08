@@ -71,7 +71,7 @@
 
       <!-- Hero Media -->
       <figure class="bbox-frame hero__media">
-        <img src="../../assets/images/projects/traco-bot/MRC.jpg" alt="Prototype robot pemilah sampah TRACO-BOT" />
+        <img src="../../assets/images/projects/traco-bot/MRC.webp" alt="Prototype robot pemilah sampah TRACO-BOT" />
         <figcaption>Prototype konveyor pemilah sampah otomatis TRACO-BOT pada ajang kompetisi MRC.</figcaption>
         <span class="corner corner--tl"></span>
         <span class="corner corner--tr"></span>
@@ -139,17 +139,23 @@
           <div class="card">
             <h3>Tantangan Utama</h3>
             <ul>
-              <li><strong>Risiko Higienitas &amp; Keselamatan:</strong> Pekerja pemilah sampah terpapar zat beracun, benda tajam, dan bakteri berbahaya akibat kontak fisik langsung terus-menerus.</li>
-              <li><strong>Kecepatan Pemilahan Rendah:</strong> Kapasitas pemilahan manual manusia mudah menurun karena kelelahan fisik, menyebabkan penumpukan volume sampah di TPS.</li>
-              <li><strong>Tingginya Kontaminasi Daur Ulang:</strong> Sampah organik yang tercampur dengan kertas atau plastik merusak kualitas bahan mentah daur ulang.</li>
+              <li><strong>Risiko Higienitas &amp; Keselamatan:</strong> Pekerja pemilah sampah terpapar zat beracun,
+                benda tajam, dan bakteri berbahaya akibat kontak fisik langsung terus-menerus.</li>
+              <li><strong>Kecepatan Pemilahan Rendah:</strong> Kapasitas pemilahan manual manusia mudah menurun karena
+                kelelahan fisik, menyebabkan penumpukan volume sampah di TPS.</li>
+              <li><strong>Tingginya Kontaminasi Daur Ulang:</strong> Sampah organik yang tercampur dengan kertas atau
+                plastik merusak kualitas bahan mentah daur ulang.</li>
             </ul>
           </div>
           <div class="card">
             <h3>Solusi &amp; Target Sistem</h3>
             <ul>
-              <li><strong>Klasifikasi Otomatis Multi-Kelas:</strong> Pengenalan material visual seketika saat sampah melintas di lintasan konveyor.</li>
-              <li><strong>Aktuasi Pemisahan Presisi:</strong> Mekanisme pemilah elektrik yang sinkron dengan kecepatan laju konveyor belt.</li>
-              <li><strong>Monitoring Telemetri Berkelanjutan:</strong> Dashboard kuantitas sampah per kategori yang terbarui otomatis untuk keperluan audit sirkular ekonomi.</li>
+              <li><strong>Klasifikasi Otomatis Multi-Kelas:</strong> Pengenalan material visual seketika saat sampah
+                melintas di lintasan konveyor.</li>
+              <li><strong>Aktuasi Pemisahan Presisi:</strong> Mekanisme pemilah elektrik yang sinkron dengan kecepatan
+                laju konveyor belt.</li>
+              <li><strong>Monitoring Telemetri Berkelanjutan:</strong> Dashboard kuantitas sampah per kategori yang
+                terbarui otomatis untuk keperluan audit sirkular ekonomi.</li>
             </ul>
           </div>
         </div>
@@ -165,10 +171,14 @@
           <div class="card">
             <h4>Subsistem Perangkat Keras</h4>
             <ol>
-              <li><strong>Lintasan Konveyor &amp; Motor Penggerak:</strong> Konveyor sabuk dengan kecepatan stabil, dilengkapi sensor proximity optik/IR untuk mendeteksi kehadiran objek.</li>
-              <li><strong>Modul Kamera &amp; Pencahayaan:</strong> Kamera overhead terisolasi di dalam enclosure terkontrol untuk menjamin konsistensi pencahayaan saat pengambilan gambar.</li>
-              <li><strong>Aktuator Pemilah Mekanik:</strong> Rangkaian servo motor dan lengan diverter yang bergerak cepat mendorong objek ke wadah kategori yang sesuai.</li>
-              <li><strong>Pemrosesan Sentral:</strong> SBC (Single Board Computer) untuk inferensi model ML dan mikrokontroler real-time untuk kendali motorik aktuator.</li>
+              <li><strong>Lintasan Konveyor &amp; Motor Penggerak:</strong> Konveyor sabuk dengan kecepatan stabil,
+                dilengkapi sensor proximity optik/IR untuk mendeteksi kehadiran objek.</li>
+              <li><strong>Modul Kamera &amp; Pencahayaan:</strong> Kamera overhead terisolasi di dalam enclosure
+                terkontrol untuk menjamin konsistensi pencahayaan saat pengambilan gambar.</li>
+              <li><strong>Aktuator Pemilah Mekanik:</strong> Rangkaian servo motor dan lengan diverter yang bergerak
+                cepat mendorong objek ke wadah kategori yang sesuai.</li>
+              <li><strong>Pemrosesan Sentral:</strong> SBC (Single Board Computer) untuk inferensi model ML dan
+                mikrokontroler real-time untuk kendali motorik aktuator.</li>
             </ol>
           </div>
           <div class="card">
@@ -197,35 +207,40 @@
             <span class="step__no">1</span>
             <div class="step__content">
               <h5>Infeed &amp; Deteksi Kedatangan Objek</h5>
-              <p>Sampah diletakkan di ujung masukan konveyor. Saat melintasi sensor proximity inframerah, sistem mendeteksi posisi objek dan memicu siklus pengambilan citra kamera.</p>
+              <p>Sampah diletakkan di ujung masukan konveyor. Saat melintasi sensor proximity inframerah, sistem
+                mendeteksi posisi objek dan memicu siklus pengambilan citra kamera.</p>
             </div>
           </div>
           <div class="step">
             <span class="step__no">2</span>
             <div class="step__content">
               <h5>Image Acquisition &amp; Preprocessing</h5>
-              <p>Kamera mengambil citra beresolusi tinggi. Algoritma OpenCV melakukan pemotongan area fokus (ROI), penghilangan derau, dan normalisasi dimensi citra.</p>
+              <p>Kamera mengambil citra beresolusi tinggi. Algoritma OpenCV melakukan pemotongan area fokus (ROI),
+                penghilangan derau, dan normalisasi dimensi citra.</p>
             </div>
           </div>
           <div class="step">
             <span class="step__no">3</span>
             <div class="step__content">
               <h5>Inferensi Model Deep Learning</h5>
-              <p>Model neural network mengklasifikasikan citra ke salah satu dari 6 kelas (logam, kaca, plastik, kertas, organik, residu) dengan output tingkat kepercayaan (confidence score).</p>
+              <p>Model neural network mengklasifikasikan citra ke salah satu dari 6 kelas (logam, kaca, plastik, kertas,
+                organik, residu) dengan output tingkat kepercayaan (confidence score).</p>
             </div>
           </div>
           <div class="step">
             <span class="step__no">4</span>
             <div class="step__content">
               <h5>Timing Sinkronisasi &amp; Aktuasi Pemilahan</h5>
-              <p>Mikrokontroler menghitung delay perpindahan objek berdasarkan kecepatan linear konveyor, lalu mengaktifkan lengan pendorong mekanik tepat saat objek berada di depan wadah yang ditentukan.</p>
+              <p>Mikrokontroler menghitung delay perpindahan objek berdasarkan kecepatan linear konveyor, lalu
+                mengaktifkan lengan pendorong mekanik tepat saat objek berada di depan wadah yang ditentukan.</p>
             </div>
           </div>
           <div class="step">
             <span class="step__no">5</span>
             <div class="step__content">
               <h5>Logging Data &amp; Telemetri</h5>
-              <p>Kategori sampah yang berhasil dipilah dicatat ke dalam memori log lokal dan dikirimkan ke modul dashboard telemetri untuk pemantauan volume harian.</p>
+              <p>Kategori sampah yang berhasil dipilah dicatat ke dalam memori log lokal dan dikirimkan ke modul
+                dashboard telemetri untuk pemantauan volume harian.</p>
             </div>
           </div>
         </div>
@@ -235,10 +250,15 @@
       <section id="hasil" class="block">
         <h2>Hasil &amp; Pencapaian</h2>
         <ul class="feature-list">
-          <li><strong>Finalis Nasional MRC 2022:</strong> Berhasil menembus babak finalis pada kompetisi bergengsi <strong>Madrasah Robotic Competition (MRC)</strong> tingkat nasional tahun 2022.</li>
-          <li><strong>Keberhasilan Klasifikasi 6 Kelas:</strong> Mampu membedakan material dengan tekstur dan reflektansi berbeda secara otomatis di atas konveyor berjalan.</li>
-          <li><strong>Waktu Respon Cepat:</strong> Siklus deteksi, inferensi, dan aktuasi pemilahan diselesaikan dalam waktu kurang dari 1.2 detik per objek, memungkinkan laju konveyor yang stabil.</li>
-          <li><strong>Demonstrasi Handal:</strong> Sistem berhasil menjalankan simulasi berkelanjutan selama penilaian dewan juri tanpa kendala mekanis.</li>
+          <li><strong>Finalis Nasional MRC 2022:</strong> Berhasil menembus babak finalis pada kompetisi bergengsi
+            <strong>Madrasah Robotic Competition (MRC)</strong> tingkat nasional tahun 2022.
+          </li>
+          <li><strong>Keberhasilan Klasifikasi 6 Kelas:</strong> Mampu membedakan material dengan tekstur dan
+            reflektansi berbeda secara otomatis di atas konveyor berjalan.</li>
+          <li><strong>Waktu Respon Cepat:</strong> Siklus deteksi, inferensi, dan aktuasi pemilahan diselesaikan dalam
+            waktu kurang dari 1.2 detik per objek, memungkinkan laju konveyor yang stabil.</li>
+          <li><strong>Demonstrasi Handal:</strong> Sistem berhasil menjalankan simulasi berkelanjutan selama penilaian
+            dewan juri tanpa kendala mekanis.</li>
         </ul>
       </section>
 
@@ -249,8 +269,27 @@
 
         <div class="gallery">
           <!-- MRC Prototype -->
-          <a class="gallery__item" href="../../assets/images/projects/traco-bot/MRC.jpg" data-caption="Prototype robot conveyor pemilah sampah TRACO-BOT pada presentasi kompetisi Madrasah Robotic Competition 2022">
-            <img src="../../assets/images/projects/traco-bot/MRC.jpg" alt="TRACO-BOT prototype conveyor pemilah sampah" loading="lazy" />
+          <a class="gallery__item" href="../../assets/images/projects/traco-bot/MRC.webp"
+            data-caption="Prototype robot conveyor pemilah sampah TRACO-BOT pada presentasi kompetisi Madrasah Robotic Competition 2022">
+            <img src="../../assets/images/projects/traco-bot/MRC.webp" alt="TRACO-BOT prototype conveyor pemilah sampah"
+              loading="lazy" />
+            <!-- MRC Prototype -->
+            <a class="gallery__item" href="../../assets/images/projects/traco-bot/MRC3.webp"
+              data-caption="Prototype robot conveyor pemilah sampah TRACO-BOT pada presentasi kompetisi Madrasah Robotic Competition 2022">
+              <img src="../../assets/images/projects/traco-bot/MRC3.webp"
+                alt="TRACO-BOT prototype conveyor pemilah sampah" loading="lazy" />
+            </a>
+            <!-- MRC Prototype -->
+            <a class="gallery__item" href="../../assets/images/projects/traco-bot/MRC2.webp"
+              data-caption="Prototype robot conveyor pemilah sampah TRACO-BOT pada presentasi kompetisi Madrasah Robotic Competition 2022">
+              <img src="../../assets/images/projects/traco-bot/MRC2.webp"
+                alt="TRACO-BOT prototype conveyor pemilah sampah" loading="lazy" />
+            </a>
+            <!-- Us -->
+            <a class="gallery__item" href="../../assets/images/projects/traco-bot/us.webp"
+              data-caption="Kami di kompetisi Madrasah Robotic Competition 2022">
+              <img src="../../assets/images/projects/traco-bot/us.webp" alt="About us" loading="lazy" />
+            </a>
           </a>
         </div>
       </section>

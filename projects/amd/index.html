@@ -141,17 +141,23 @@
           <div class="card">
             <h3>Tantangan Lapangan</h3>
             <ul>
-              <li><strong>Monitoring Luas Terbatas:</strong> Pemantauan manual pada lahan sawit ribuan hektar membutuhkan waktu berhari-hari dan rawan ketidakakuratan data.</li>
-              <li><strong>Penyiraman &amp; Pemupukan Boros:</strong> Praktik konvensional menyiram secara seragam tanpa memperhatikan kadar air aktual tanah, membuang sumber daya air.</li>
-              <li><strong>Ketiadaan Data Historis:</strong> Fluktuasi kelembapan tanah dan suhu lingkungan tidak tercatat secara digital untuk analisis jangka panjang.</li>
+              <li><strong>Monitoring Luas Terbatas:</strong> Pemantauan manual pada lahan sawit ribuan hektar
+                membutuhkan waktu berhari-hari dan rawan ketidakakuratan data.</li>
+              <li><strong>Penyiraman &amp; Pemupukan Boros:</strong> Praktik konvensional menyiram secara seragam tanpa
+                memperhatikan kadar air aktual tanah, membuang sumber daya air.</li>
+              <li><strong>Ketiadaan Data Historis:</strong> Fluktuasi kelembapan tanah dan suhu lingkungan tidak
+                tercatat secara digital untuk analisis jangka panjang.</li>
             </ul>
           </div>
           <div class="card">
             <h3>Solusi &amp; Target</h3>
             <ul>
-              <li><strong>Pemetaan Pola Grid Otomatis:</strong> Menerbangkan drone dengan jalur waypoint terencana untuk memetakan luasan lahan dalam hitungan menit.</li>
-              <li><strong>Penyemprotan Terfokus:</strong> Mengaktifkan sprayer hanya pada zona dengan indikasi kekeringan berdasarkan data sensor node.</li>
-              <li><strong>Telemetri Real-time:</strong> Pengiriman data nirkabel periodik dari node sensor tanah menuju stasiun gateway dan dashboard visual.</li>
+              <li><strong>Pemetaan Pola Grid Otomatis:</strong> Menerbangkan drone dengan jalur waypoint terencana untuk
+                memetakan luasan lahan dalam hitungan menit.</li>
+              <li><strong>Penyemprotan Terfokus:</strong> Mengaktifkan sprayer hanya pada zona dengan indikasi
+                kekeringan berdasarkan data sensor node.</li>
+              <li><strong>Telemetri Real-time:</strong> Pengiriman data nirkabel periodik dari node sensor tanah menuju
+                stasiun gateway dan dashboard visual.</li>
             </ul>
           </div>
         </div>
@@ -161,15 +167,19 @@
       <section id="arsitektur" class="block">
         <h2>Arsitektur Sistem</h2>
         <p>
-          Sistem dibangun dengan arsitektur 3 pilar perangkat keras yang saling berkomunikasi melalui protokol radio nirkabel dan jaringan data:
+          Sistem dibangun dengan arsitektur 3 pilar perangkat keras yang saling berkomunikasi melalui protokol radio
+          nirkabel dan jaringan data:
         </p>
         <div class="grid2">
           <div class="card">
             <h4>Pilar Hardware</h4>
             <ol>
-              <li><strong>UAV Drone:</strong> Dilengkapi modul flight controller, sistem navigasi GPS otonom, dan modul pompa relay sprayer terkalibrasi.</li>
-              <li><strong>In-situ Sensor Nodes:</strong> Unit pemancar bertenaga baterai surya dengan sensor suhu, kelembapan udara (DHT22), dan kelembapan tanah resistif/kapasitif.</li>
-              <li><strong>Raspberry Pi Station:</strong> Gateway sentral penerima paket data telemetry via transreceiver radio nRF24L01 / Wi-Fi dan penyaji web dashboard.</li>
+              <li><strong>UAV Drone:</strong> Dilengkapi modul flight controller, sistem navigasi GPS otonom, dan modul
+                pompa relay sprayer terkalibrasi.</li>
+              <li><strong>In-situ Sensor Nodes:</strong> Unit pemancar bertenaga baterai surya dengan sensor suhu,
+                kelembapan udara (DHT22), dan kelembapan tanah resistif/kapasitif.</li>
+              <li><strong>Raspberry Pi Station:</strong> Gateway sentral penerima paket data telemetry via transreceiver
+                radio nRF24L01 / Wi-Fi dan penyaji web dashboard.</li>
             </ol>
           </div>
           <div class="card">
@@ -198,28 +208,32 @@
             <span class="step__no">1</span>
             <div class="step__content">
               <h5>Perencanaan Misi &amp; Pemetaan Udara</h5>
-              <p>Drone diterbangkan mengikuti jalur grid ortogonal dengan overlap kamera 75% untuk menghasilkan peta komposit vegetasi lahan dan mengidentifikasi anomali kerapatan kanopi.</p>
+              <p>Drone diterbangkan mengikuti jalur grid ortogonal dengan overlap kamera 75% untuk menghasilkan peta
+                komposit vegetasi lahan dan mengidentifikasi anomali kerapatan kanopi.</p>
             </div>
           </div>
           <div class="step">
             <span class="step__no">2</span>
             <div class="step__content">
               <h5>Akuisisi Data Sensor Tanah</h5>
-              <p>Node sensor yang tersebar di titik-titik perkebunan mengukur kelembapan volumetric tanah secara berkala dan memancarkan paket data ke stasiun penerima.</p>
+              <p>Node sensor yang tersebar di titik-titik perkebunan mengukur kelembapan volumetric tanah secara berkala
+                dan memancarkan paket data ke stasiun penerima.</p>
             </div>
           </div>
           <div class="step">
             <span class="step__no">3</span>
             <div class="step__content">
               <h5>Agregasi &amp; Analisis di Gateway</h5>
-              <p>Raspberry Pi memvalidasi checksum paket data, mengonversi sinyal analog ke satuan persentase kelembapan standar, dan menyimpan histori pembacaan ke database lokal.</p>
+              <p>Raspberry Pi memvalidasi checksum paket data, mengonversi sinyal analog ke satuan persentase kelembapan
+                standar, dan menyimpan histori pembacaan ke database lokal.</p>
             </div>
           </div>
           <div class="step">
             <span class="step__no">4</span>
             <div class="step__content">
               <h5>Visualisasi &amp; Aksi Penyiraman</h5>
-              <p>Data disajikan pada dashboard pemantauan berbasis peta. Jika terdeteksi zona dengan kelembapan di bawah ambang batas, operator dapat mengarahkan drone untuk menyiram titik target secara presisi.</p>
+              <p>Data disajikan pada dashboard pemantauan berbasis peta. Jika terdeteksi zona dengan kelembapan di bawah
+                ambang batas, operator dapat mengarahkan drone untuk menyiram titik target secara presisi.</p>
             </div>
           </div>
         </div>
@@ -229,10 +243,16 @@
       <section id="hasil" class="block">
         <h2>Hasil &amp; Dampak</h2>
         <ul class="feature-list">
-          <li><strong>Efisiensi Penggunaan Air:</strong> Uji coba lapangan membuktikan pengurangan volume air hingga <strong>22%</strong> dibandingkan metode penyiraman manual konvensional.</li>
-          <li><strong>Peningkatan Kecepatan Survei:</strong> Survei kondisi perkebunan mencapai percepatan <strong>31%</strong> dengan cakupan pemetaan udara otomatis beresolusi hingga ~3cm per pixel.</li>
-          <li><strong>Penghargaan Nasional:</strong> Dinobatkan sebagai peraih <strong>The Most Attractive Team</strong> pada ajang kompetisi riset nasional Akademi Madrasah Digital (AMD) 2021/2022.</li>
-          <li><strong>Validasi Prototype:</strong> Seluruh modul telemetry RF mampu mentransmisikan data stabil dalam radius operasional uji coba lapangan.</li>
+          <li><strong>Efisiensi Penggunaan Air:</strong> Uji coba lapangan membuktikan pengurangan volume air hingga
+            <strong>22%</strong> dibandingkan metode penyiraman manual konvensional.
+          </li>
+          <li><strong>Peningkatan Kecepatan Survei:</strong> Survei kondisi perkebunan mencapai percepatan
+            <strong>31%</strong> dengan cakupan pemetaan udara otomatis beresolusi hingga ~3cm per pixel.
+          </li>
+          <li><strong>Penghargaan Nasional:</strong> Dinobatkan sebagai peraih <strong>The Most Attractive Team</strong>
+            pada ajang kompetisi riset nasional Akademi Madrasah Digital (AMD) 2021/2022.</li>
+          <li><strong>Validasi Prototype:</strong> Seluruh modul telemetry RF mampu mentransmisikan data stabil dalam
+            radius operasional uji coba lapangan.</li>
         </ul>
       </section>
 
@@ -241,18 +261,39 @@
         <h2>Galeri Dokumentasi</h2>
         <p class="muted">Klik gambar untuk melihat dalam mode layar penuh (lightbox).</p>
 
-        <div class="gallery">
-          <!-- Drone -->
-          <a class="gallery__item" href="../../assets/images/projects/prone-id/Drone.jpg" data-caption="Penerbangan uji drone pemetaan dan sistem sprayer PRONE.ID">
-            <img src="../../assets/images/projects/prone-id/Drone.jpg" alt="Drone PRONE.ID" loading="lazy" />
+        <div class="gallery gallery--showcase">
+          <!-- Left Top: Drone -->
+          <a class="gallery__item gallery__item--left-top" href="../../assets/images/projects/prone-id/Drone.jpg"
+            data-caption="Our Drone">
+            <img src="../../assets/images/projects/prone-id/Drone.jpg" alt="Our Drone" loading="lazy" />
           </a>
-          <!-- Sensor Node Portrait -->
-          <a class="gallery__item portrait" href="../../assets/images/projects/prone-id/us.jpg" data-caption="Unit modul IoT Sensor Node in-situ untuk pemantauan kelembapan tanah">
-            <img src="../../assets/images/projects/prone-id/us.jpg" alt="Sensor Node IoT PRONE.ID" loading="lazy" />
+
+          <!-- Left Bottom: 1.jpg (tepat di bawah drone) -->
+          <a class="gallery__item gallery__item--left-bottom" href="../../assets/images/projects/prone-id/1.jpg"
+            data-caption="Preparation at Final Presentation in school">
+            <img src="../../assets/images/projects/prone-id/1.jpg" alt="Preparation at Final Presentation in school"
+              loading="lazy" />
           </a>
-          <!-- Station & Panel -->
-          <a class="gallery__item" href="../../assets/images/projects/prone-id/us2.jpg" data-caption="Raspberry Pi Base Station dan panel kontrol telemetri">
-            <img src="../../assets/images/projects/prone-id/us2.jpg" alt="Base Station Raspberry Pi" loading="lazy" />
+
+          <!-- Center Tall: us.webp (tetap di tengah, tingginya membentang 2 baris) -->
+          <a class="gallery__item gallery__item--center" href="../../assets/images/projects/prone-id/us.webp"
+            data-caption="Presentation at Final Competition">
+            <img src="../../assets/images/projects/prone-id/us.webp" alt="Presentation at Final Competition"
+              loading="lazy" />
+          </a>
+
+          <!-- Right Top: us3.webp -->
+          <a class="gallery__item gallery__item--right-top" href="../../assets/images/projects/prone-id/us3.webp"
+            data-caption="Penerbangan uji drone pemetaan dan sistem sprayer PRONE.ID">
+            <img src="../../assets/images/projects/prone-id/us3.webp"
+              alt="Penerbangan uji drone pemetaan dan sistem sprayer PRONE.ID" loading="lazy" />
+          </a>
+
+          <!-- Right Bottom: us2.jpg (tepat di bawah us3) -->
+          <a class="gallery__item gallery__item--right-bottom" href="../../assets/images/projects/prone-id/us2.jpg"
+            data-caption="Preparation at Final Presentation in school">
+            <img src="../../assets/images/projects/prone-id/us2.jpg" alt="Preparation at Final Presentation in school"
+              loading="lazy" />
           </a>
         </div>
       </section>

@@ -110,8 +110,10 @@
         </p>
         <p>
           Berbeda dari platform konvensional yang mengandalkan banyak sensor jarak (ultrasonik/LiDAR) yang mahal dan
-          rumit secara kabel, Hexaka V3 dirancang khusus untuk kompetisi <strong>BRIN Exhibition on Smart Technology (BEST) 2026</strong>
-          dengan kemampuan bernavigasi secara otonom di lintasan berundak hanya mengandalkan <strong>satu sensor kamera</strong>
+          rumit secara kabel, Hexaka V3 dirancang khusus untuk kompetisi <strong>BRIN Exhibition on Smart Technology
+            (BEST) 2026</strong>
+          dengan kemampuan bernavigasi secara otonom di lintasan berundak hanya mengandalkan <strong>satu sensor
+            kamera</strong>
           melalui fusi algoritma Computer Vision dan Deep Learning.
         </p>
 
@@ -146,21 +148,29 @@
             <span class="step__no">1</span>
             <div class="step__content">
               <h5>Autonomous Navigation (Kompetisi BEST 2026)</h5>
-              <p>Navigasi mandiri dengan <em>multi-layer vision perception</em> (analisis tepian, Optical Flow, segmentasi lantai, dan estimasi area bebas rintangan), penghindaran rintangan berbasis YOLO11 ONNX, stabilisasi kemiringan bodi tertutup (closed-loop PID leveling), dan mesin status Finite State Machine (CRUISE, AVOID, BACKUP, SCAN, FAULT).</p>
+              <p>Navigasi mandiri dengan <em>multi-layer vision perception</em> (analisis tepian, Optical Flow,
+                segmentasi lantai, dan estimasi area bebas rintangan), penghindaran rintangan berbasis YOLO11 ONNX,
+                stabilisasi kemiringan bodi tertutup (closed-loop PID leveling), dan mesin status Finite State Machine
+                (CRUISE, AVOID, BACKUP, SCAN, FAULT).</p>
             </div>
           </div>
           <div class="step">
             <span class="step__no">2</span>
             <div class="step__content">
               <h5>Person Following &amp; Teleoperation (Demo Pameran PKKMB)</h5>
-              <p>Pelacakan orang (human tracking) cerdas menggunakan model YOLOv8 ONNX berkecepatan tinggi dengan filter histeresis anti-flicker, pengendali jarak dan arah PID ganda, animasi interaktif (salam membungkuk, gerakan bernapas, lambaian kaki), serta opsi kendali manual jarak jauh stik Xbox via Pygame.</p>
+              <p>Pelacakan orang (human tracking) cerdas menggunakan model YOLOv8 ONNX berkecepatan tinggi dengan filter
+                histeresis anti-flicker, pengendali jarak dan arah PID ganda, animasi interaktif (salam membungkuk,
+                gerakan bernapas, lambaian kaki), serta opsi kendali manual jarak jauh stik Xbox via Pygame.</p>
             </div>
           </div>
           <div class="step">
             <span class="step__no">3</span>
             <div class="step__content">
               <h5>Interactive TikTok Live Streaming &amp; 3D Digital Twin</h5>
-              <p>Robot terhubung langsung secara nirkabel ke siaran langsung TikTok Live via WebSocket real-time. Robot merespons hadiah penonton (gifts), likes, komentar, dan follow dengan koreografi fisik 18-DOF yang dilengkapi queue manager anti-tabrakan. Dilengkapi telemetri non-blocking UDP 50 Hz ke antarmuka 3D Digital Twin di peramban web.</p>
+              <p>Robot terhubung langsung secara nirkabel ke siaran langsung TikTok Live via WebSocket real-time. Robot
+                merespons hadiah penonton (gifts), likes, komentar, dan follow dengan koreografi fisik 18-DOF yang
+                dilengkapi queue manager anti-tabrakan. Dilengkapi telemetri non-blocking UDP 50 Hz ke antarmuka 3D
+                Digital Twin di peramban web.</p>
             </div>
           </div>
         </div>
@@ -176,11 +186,16 @@
           <div class="card">
             <h4>Lapisan Hardware &amp; Kinematika</h4>
             <ul>
-              <li><strong>Driver Dynamixel AX-12A:</strong> Komunikasi serial paket berkecepatan tinggi dengan pengalamatan ID 1-18.</li>
-              <li><strong>Kinematika Inversi (IK):</strong> Pemetaan koordinat kartesian (X, Y, Z) ke sudut rotasi coxa, femur, dan tibia.</li>
-              <li><strong>Tripod Gait Engine:</strong> Siklus langkah di mana 3 kaki menyangga bodi (stance phase) sementara 3 kaki lainnya melangkah (swing phase).</li>
-              <li><strong>IMU 9-DOF BNO055 &amp; Leveler:</strong> Membaca orientasi roll, pitch, yaw untuk auto-leveling horizontal kontinu.</li>
-              <li><strong>Layar OLED SSD1306 128x64:</strong> Menampilkan status sistem, tegangan, IP, dan logo tim secara asinkron.</li>
+              <li><strong>Driver Dynamixel AX-12A:</strong> Komunikasi serial paket berkecepatan tinggi dengan
+                pengalamatan ID 1-18.</li>
+              <li><strong>Kinematika Inversi (IK):</strong> Pemetaan koordinat kartesian (X, Y, Z) ke sudut rotasi coxa,
+                femur, dan tibia.</li>
+              <li><strong>Tripod Gait Engine:</strong> Siklus langkah di mana 3 kaki menyangga bodi (stance phase)
+                sementara 3 kaki lainnya melangkah (swing phase).</li>
+              <li><strong>IMU 9-DOF BNO055 &amp; Leveler:</strong> Membaca orientasi roll, pitch, yaw untuk
+                auto-leveling horizontal kontinu.</li>
+              <li><strong>Layar OLED SSD1306 128x64:</strong> Menampilkan status sistem, tegangan, IP, dan logo tim
+                secara asinkron.</li>
             </ul>
           </div>
           <div class="card">
@@ -211,35 +226,40 @@
             <span class="step__no">A</span>
             <div class="step__content">
               <h5>Stream Kamera Multi-Index &amp; Preprocessing</h5>
-              <p>Worker thread membaca frame kamera dengan mekanisme fallback otomatis (indeks 0-5), melakukan normalisasi resolusi dan konversi warna optimal untuk inferensi AI.</p>
+              <p>Worker thread membaca frame kamera dengan mekanisme fallback otomatis (indeks 0-5), melakukan
+                normalisasi resolusi dan konversi warna optimal untuk inferensi AI.</p>
             </div>
           </div>
           <div class="step">
             <span class="step__no">B</span>
             <div class="step__content">
               <h5>Inferensi Neural Network Tervektorisasi</h5>
-              <p>Model ONNX mendeteksi kontur rintangan dan keberadaan subjek manusia dengan akselerasi CPU/GPU ringan tanpa membebani thread komunikasi servo.</p>
+              <p>Model ONNX mendeteksi kontur rintangan dan keberadaan subjek manusia dengan akselerasi CPU/GPU ringan
+                tanpa membebani thread komunikasi servo.</p>
             </div>
           </div>
           <div class="step">
             <span class="step__no">C</span>
             <div class="step__content">
               <h5>Decision Engine &amp; Finite State Machine</h5>
-              <p>FSM mengevaluasi status rute: jika aman robot tetap melangkah maju (CRUISE), jika terdeteksi halangan robot beralih menghindari (AVOID) atau berputar mencari celah (SCAN).</p>
+              <p>FSM mengevaluasi status rute: jika aman robot tetap melangkah maju (CRUISE), jika terdeteksi halangan
+                robot beralih menghindari (AVOID) atau berputar mencari celah (SCAN).</p>
             </div>
           </div>
           <div class="step">
             <span class="step__no">D</span>
             <div class="step__content">
               <h5>Kompensasi IMU &amp; Kalkulasi Gait Kinematika</h5>
-              <p>Sudut kemiringan medan dikoreksi oleh kontroler PID body leveling sehingga bodi utama tetap datar. Kaki yang melangkah diatur koordinatnya melalui Inverse Kinematics.</p>
+              <p>Sudut kemiringan medan dikoreksi oleh kontroler PID body leveling sehingga bodi utama tetap datar. Kaki
+                yang melangkah diatur koordinatnya melalui Inverse Kinematics.</p>
             </div>
           </div>
           <div class="step">
             <span class="step__no">E</span>
             <div class="step__content">
               <h5>Transmisi Paket Servo &amp; Streaming Telemetri</h5>
-              <p>Nilai target register posisi dikirimkan serentak ke 18 servo Dynamixel, bersamaan dengan pancaran data posisi dan orientasi UDP ke stasiun monitoring.</p>
+              <p>Nilai target register posisi dikirimkan serentak ke 18 servo Dynamixel, bersamaan dengan pancaran data
+                posisi dan orientasi UDP ke stasiun monitoring.</p>
             </div>
           </div>
         </div>
@@ -249,10 +269,14 @@
       <section id="hasil" class="block">
         <h2>Hasil Pengujian &amp; Pencapaian</h2>
         <ul class="feature-list">
-          <li><strong>Finalis BRIN BEST 2026:</strong> Sukses terpilih sebagai finalis kompetisi riset teknologi cerdas Badan Riset dan Inovasi Nasional (BRIN) dengan inovasi navigasi otonom kamera tunggal.</li>
-          <li><strong>Stabilitas Langkah Tinggi:</strong> Tripod gait menghasilkan traksi kokoh pada kemiringan hingga 20 derajat tanpa risiko terbalik berkat safety tilt interlock.</li>
-          <li><strong>Modularitas Bersih (Clean Code):</strong> Arsitektur terpisah antara core kinematika, visi, aplikasi misi, dan alat kalibrasi memudahkan pengujian individual tanpa mengaktifkan servo fisik.</li>
-          <li><strong>Interaktivitas Terbukti:</strong> Berhasil diuji coba pada pameran dan live stream dengan responsivitas gerak yang mulus dan bebas stuttering.</li>
+          <li><strong>Finalis BRIN BEST 2026:</strong> Sukses terpilih sebagai finalis kompetisi riset teknologi cerdas
+            Badan Riset dan Inovasi Nasional (BRIN) dengan inovasi navigasi otonom kamera tunggal.</li>
+          <li><strong>Stabilitas Langkah Tinggi:</strong> Tripod gait menghasilkan traksi kokoh pada kemiringan hingga
+            20 derajat tanpa risiko terbalik berkat safety tilt interlock.</li>
+          <li><strong>Modularitas Bersih (Clean Code):</strong> Arsitektur terpisah antara core kinematika, visi,
+            aplikasi misi, dan alat kalibrasi memudahkan pengujian individual tanpa mengaktifkan servo fisik.</li>
+          <li><strong>Juara 3 Kompetisi Robot STEM Indonesia:</strong> Berhasil meraih juara 3 kategori Robotik pada
+            Kompetisi Robot STEM 2025.</li>
         </ul>
       </section>
 
@@ -263,8 +287,13 @@
 
         <div class="gallery">
           <!-- Hexaka -->
-          <a class="gallery__item" href="../../assets/images/projects/hexaka/Hexa.jpg" data-caption="Robot Hexapod 18-DOF Wasaka Hexapod (Hexaka V3) - Wasaka Robotic Team">
+          <a class="gallery__item" href="../../assets/images/projects/hexaka/Hexa.jpg"
+            data-caption="Robot Hexapod 18-DOF Wasaka Hexapod (Hexaka V3) - Wasaka Robotic Team">
             <img src="../../assets/images/projects/hexaka/Hexa.jpg" alt="Wasaka Hexapod Hexaka V3" loading="lazy" />
+          </a>
+          <!-- Testing -->
+          <a class="gallery__item" href="../../assets/images/projects/hexaka/dokum.webp" data-caption="Uji Coba Hexaka">
+            <img src="../../assets/images/projects/hexaka/dokum.webp" alt="Uji Coba Hexaka" loading="lazy" />
           </a>
         </div>
       </section>

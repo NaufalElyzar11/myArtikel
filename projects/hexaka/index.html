@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wasaka Hexapod (Hexaka V3) — Robot Berkaki Otonom 18-DOF | Naufal Elyzar</title>
+
+  <meta name="description"
+    content="Studi kasus Wasaka Hexapod (Hexaka V3): Robot hexapod 18-DOF dengan Inverse Kinematics, Tripod Gait, navigasi otonom kamera tunggal BRIN BEST 2026, dan stabilisasi PID bodi." />
+  <meta name="author" content="Naufal Elyzar" />
+
+  <!-- Google Fonts (Serasi dengan web utama) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Stylesheet bersama -->
+  <link rel="stylesheet" href="../../assets/css/project-detail.css" />
+</head>
+
+<body>
+
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <div class="wrap">
+      <a class="back-link" href="../../index.html#projects" aria-label="Kembali ke portofolio">
+        <span>←</span> Kembali ke Portofolio
+      </a>
+      <nav class="mininav" aria-label="Navigasi cepat artikel">
+        <a href="#overview">Overview</a>
+        <a href="#misi">Misi Utama</a>
+        <a href="#arsitektur">Arsitektur</a>
+        <a href="#kinematika">Kinematika &amp; Visi</a>
+        <a href="#hasil">Pencapaian</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#tautan">Tautan</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="wrap hero__inner">
+      <div class="hero__text">
+        <p class="eyebrow">Case Study // Project 03</p>
+        <h1 class="hero__title">
+          Wasaka Hexapod
+          <span>Hexaka V3 • 18-DOF Autonomous Biomimetic Platform</span>
+        </h1>
+        <p class="lead">
+          Platform robot biomimetik hexapod 18-DOF berarsitektur modular yang menggabungkan
+          kalkulasi Inverse Kinematics 3-DOF per kaki, tripod gait generator dinamis,
+          stabilisasi bodi tertutup (closed-loop PID body leveling) berbasis sensor IMU 9-DOF,
+          serta navigasi otonom berbasis visi cerdas.
+        </p>
+
+        <ul class="badges">
+          <li><strong>Tahun:</strong> 2024 — 2026</li>
+          <li><strong>Peran:</strong> Koordinator Software &amp; General Manager</li>
+          <li><strong>Organisasi:</strong> Wasaka Robotic Team</li>
+          <li><strong>Kompetisi:</strong> Finalis BRIN BEST 2026</li>
+        </ul>
+
+        <div class="cta-group">
+          <a class="btn" href="https://github.com/Wasaka-Robotic-Team/HexakaV3" target="_blank" rel="noreferrer">
+            Lihat GitHub Repo ↗
+          </a>
+          <a class="btn btn--ghost" href="#misi">Jelajahi Fitur &amp; Misi</a>
+        </div>
+      </div>
+
+      <!-- Hero Media -->
+      <figure class="bbox-frame hero__media">
+        <img src="../../assets/images/projects/hexaka/Hexa.jpg" alt="Robot Wasaka Hexapod Hexaka V3" />
+        <figcaption>Wasaka Hexapod (Hexaka V3) dengan konfigurasi aktuator 18-DOF Dynamixel.</figcaption>
+        <span class="corner corner--tl"></span>
+        <span class="corner corner--tr"></span>
+        <span class="corner corner--bl"></span>
+        <span class="corner corner--br"></span>
+      </figure>
+    </div>
+  </section>
+
+  <!-- MAIN LAYOUT (Sticky TOC + Content) -->
+  <main class="wrap layout">
+    <!-- SIDEBAR TOC -->
+    <aside class="toc" aria-label="Daftar isi studi kasus">
+      <h3>Daftar Isi</h3>
+      <a class="toc__link active" href="#overview">Overview Proyek</a>
+      <a class="toc__link" href="#misi">Tiga Misi Utama</a>
+      <a class="toc__link" href="#arsitektur">Arsitektur Modular</a>
+      <a class="toc__link" href="#kinematika">Kinematika &amp; Alur AI</a>
+      <a class="toc__link" href="#hasil">Hasil &amp; Pengujian</a>
+      <a class="toc__link" href="#galeri">Galeri Dokumentasi</a>
+      <a class="toc__link" href="#tautan">Tautan &amp; Repositori</a>
+    </aside>
+
+    <!-- CONTENT SECTION -->
+    <article class="content">
+      <!-- Overview -->
+      <section id="overview" class="block">
+        <h2>Overview Proyek</h2>
+        <p>
+          <strong>Wasaka Hexapod (Hexaka V3)</strong> adalah generasi terbaru robot berkaki enam yang dikembangkan oleh
+          <strong>Wasaka Robotic Team</strong>. Robot dirancang untuk mengatasi kelemahan mobilitas robot beroda saat
+          berhadapan dengan medan berkontur tidak rata, tangga, dan permukaan berbatu.
+        </p>
+        <p>
+          Berbeda dari platform konvensional yang mengandalkan banyak sensor jarak (ultrasonik/LiDAR) yang mahal dan
+          rumit secara kabel, Hexaka V3 dirancang khusus untuk kompetisi <strong>BRIN Exhibition on Smart Technology (BEST) 2026</strong>
+          dengan kemampuan bernavigasi secara otonom di lintasan berundak hanya mengandalkan <strong>satu sensor kamera</strong>
+          melalui fusi algoritma Computer Vision dan Deep Learning.
+        </p>
+
+        <div class="kpi-grid">
+          <div class="kpi-item">
+            <div class="num">18 DOF</div>
+            <div class="label">Aktuasi Dynamixel AX-12A</div>
+          </div>
+          <div class="kpi-item">
+            <div class="num">50 Hz</div>
+            <div class="label">Telemetri UDP Digital Twin</div>
+          </div>
+          <div class="kpi-item">
+            <div class="num">1 Kamera</div>
+            <div class="label">Navigasi Otonom Visi Murni</div>
+          </div>
+          <div class="kpi-item">
+            <div class="num">Closed-Loop</div>
+            <div class="label">PID Dynamic Body Leveling</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3 Misi Utama -->
+      <section id="misi" class="block block--alt">
+        <h2>Tiga Misi Utama Hexaka V3</h2>
+        <p>
+          Basis kode Hexaka V3 menyatukan fungsionalitas robot ke dalam tiga aplikasi operasional siap pakai:
+        </p>
+        <div class="steps">
+          <div class="step">
+            <span class="step__no">1</span>
+            <div class="step__content">
+              <h5>Autonomous Navigation (Kompetisi BEST 2026)</h5>
+              <p>Navigasi mandiri dengan <em>multi-layer vision perception</em> (analisis tepian, Optical Flow, segmentasi lantai, dan estimasi area bebas rintangan), penghindaran rintangan berbasis YOLO11 ONNX, stabilisasi kemiringan bodi tertutup (closed-loop PID leveling), dan mesin status Finite State Machine (CRUISE, AVOID, BACKUP, SCAN, FAULT).</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step__no">2</span>
+            <div class="step__content">
+              <h5>Person Following &amp; Teleoperation (Demo Pameran PKKMB)</h5>
+              <p>Pelacakan orang (human tracking) cerdas menggunakan model YOLOv8 ONNX berkecepatan tinggi dengan filter histeresis anti-flicker, pengendali jarak dan arah PID ganda, animasi interaktif (salam membungkuk, gerakan bernapas, lambaian kaki), serta opsi kendali manual jarak jauh stik Xbox via Pygame.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step__no">3</span>
+            <div class="step__content">
+              <h5>Interactive TikTok Live Streaming &amp; 3D Digital Twin</h5>
+              <p>Robot terhubung langsung secara nirkabel ke siaran langsung TikTok Live via WebSocket real-time. Robot merespons hadiah penonton (gifts), likes, komentar, dan follow dengan koreografi fisik 18-DOF yang dilengkapi queue manager anti-tabrakan. Dilengkapi telemetri non-blocking UDP 50 Hz ke antarmuka 3D Digital Twin di peramban web.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Arsitektur Modular -->
+      <section id="arsitektur" class="block">
+        <h2>Arsitektur Sistem Modular</h2>
+        <p>
+          Repositori Hexaka V3 mengadopsi standar arsitektur perangkat lunak robotika yang bersih, teruji, dan modular:
+        </p>
+        <div class="grid2">
+          <div class="card">
+            <h4>Lapisan Hardware &amp; Kinematika</h4>
+            <ul>
+              <li><strong>Driver Dynamixel AX-12A:</strong> Komunikasi serial paket berkecepatan tinggi dengan pengalamatan ID 1-18.</li>
+              <li><strong>Kinematika Inversi (IK):</strong> Pemetaan koordinat kartesian (X, Y, Z) ke sudut rotasi coxa, femur, dan tibia.</li>
+              <li><strong>Tripod Gait Engine:</strong> Siklus langkah di mana 3 kaki menyangga bodi (stance phase) sementara 3 kaki lainnya melangkah (swing phase).</li>
+              <li><strong>IMU 9-DOF BNO055 &amp; Leveler:</strong> Membaca orientasi roll, pitch, yaw untuk auto-leveling horizontal kontinu.</li>
+              <li><strong>Layar OLED SSD1306 128x64:</strong> Menampilkan status sistem, tegangan, IP, dan logo tim secara asinkron.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>Stack Perangkat Lunak &amp; AI</h4>
+            <div class="stack-chips">
+              <span>Python 3</span>
+              <span>ROS2</span>
+              <span>ONNX Runtime</span>
+              <span>YOLOv8 &amp; YOLO11</span>
+              <span>OpenCV</span>
+              <span>NumPy</span>
+              <span>Dynamixel SDK</span>
+              <span>BNO055 IMU</span>
+              <span>SSD1306 I2C OLED</span>
+              <span>Pygame (Xbox Controller)</span>
+              <span>WebSockets &amp; UDP</span>
+              <span>Three.js (Digital Twin)</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kinematika & Alur AI -->
+      <section id="kinematika" class="block block--alt">
+        <h2>Alur Eksekusi &amp; Pipeline Visi</h2>
+        <div class="steps">
+          <div class="step">
+            <span class="step__no">A</span>
+            <div class="step__content">
+              <h5>Stream Kamera Multi-Index &amp; Preprocessing</h5>
+              <p>Worker thread membaca frame kamera dengan mekanisme fallback otomatis (indeks 0-5), melakukan normalisasi resolusi dan konversi warna optimal untuk inferensi AI.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step__no">B</span>
+            <div class="step__content">
+              <h5>Inferensi Neural Network Tervektorisasi</h5>
+              <p>Model ONNX mendeteksi kontur rintangan dan keberadaan subjek manusia dengan akselerasi CPU/GPU ringan tanpa membebani thread komunikasi servo.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step__no">C</span>
+            <div class="step__content">
+              <h5>Decision Engine &amp; Finite State Machine</h5>
+              <p>FSM mengevaluasi status rute: jika aman robot tetap melangkah maju (CRUISE), jika terdeteksi halangan robot beralih menghindari (AVOID) atau berputar mencari celah (SCAN).</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step__no">D</span>
+            <div class="step__content">
+              <h5>Kompensasi IMU &amp; Kalkulasi Gait Kinematika</h5>
+              <p>Sudut kemiringan medan dikoreksi oleh kontroler PID body leveling sehingga bodi utama tetap datar. Kaki yang melangkah diatur koordinatnya melalui Inverse Kinematics.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step__no">E</span>
+            <div class="step__content">
+              <h5>Transmisi Paket Servo &amp; Streaming Telemetri</h5>
+              <p>Nilai target register posisi dikirimkan serentak ke 18 servo Dynamixel, bersamaan dengan pancaran data posisi dan orientasi UDP ke stasiun monitoring.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hasil & Pencapaian -->
+      <section id="hasil" class="block">
+        <h2>Hasil Pengujian &amp; Pencapaian</h2>
+        <ul class="feature-list">
+          <li><strong>Finalis BRIN BEST 2026:</strong> Sukses terpilih sebagai finalis kompetisi riset teknologi cerdas Badan Riset dan Inovasi Nasional (BRIN) dengan inovasi navigasi otonom kamera tunggal.</li>
+          <li><strong>Stabilitas Langkah Tinggi:</strong> Tripod gait menghasilkan traksi kokoh pada kemiringan hingga 20 derajat tanpa risiko terbalik berkat safety tilt interlock.</li>
+          <li><strong>Modularitas Bersih (Clean Code):</strong> Arsitektur terpisah antara core kinematika, visi, aplikasi misi, dan alat kalibrasi memudahkan pengujian individual tanpa mengaktifkan servo fisik.</li>
+          <li><strong>Interaktivitas Terbukti:</strong> Berhasil diuji coba pada pameran dan live stream dengan responsivitas gerak yang mulus dan bebas stuttering.</li>
+        </ul>
+      </section>
+
+      <!-- Galeri -->
+      <section id="galeri" class="block block--alt">
+        <h2>Galeri Dokumentasi</h2>
+        <p class="muted">Klik gambar untuk melihat dalam mode layar penuh (lightbox).</p>
+
+        <div class="gallery">
+          <!-- Hexaka -->
+          <a class="gallery__item" href="../../assets/images/projects/hexaka/Hexa.jpg" data-caption="Robot Hexapod 18-DOF Wasaka Hexapod (Hexaka V3) - Wasaka Robotic Team">
+            <img src="../../assets/images/projects/hexaka/Hexa.jpg" alt="Wasaka Hexapod Hexaka V3" loading="lazy" />
+          </a>
+        </div>
+      </section>
+
+      <!-- Tautan -->
+      <section id="tautan" class="block">
+        <h2>Tautan &amp; Repositori</h2>
+        <div class="cta-group">
+          <a class="btn" href="https://github.com/Wasaka-Robotic-Team/HexakaV3" target="_blank" rel="noreferrer">
+            GitHub Wasaka-Robotic-Team/HexakaV3 ↗
+          </a>
+          <a class="btn btn--ghost" href="https://github.com/NaufalElyzar11" target="_blank" rel="noreferrer">
+            GitHub Profil Author ↗
+          </a>
+          <a class="btn btn--ghost" href="../../index.html#projects">
+            Kembali ke Semua Proyek
+          </a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="foot">
+    <div class="wrap foot__inner">
+      <p>© <span id="yr"></span> Naufal Elyzar. Wasaka Robotic Team — Hexaka V3.</p>
+      <div class="foot__links">
+        <a href="../../index.html#projects">Semua Proyek</a>
+        <a href="../../index.html#contact">Kontak</a>
+        <a href="https://github.com/Wasaka-Robotic-Team/HexakaV3" target="_blank" rel="noreferrer">Repo HexakaV3</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../../assets/js/project-detail.js" defer></script>
+</body>
+
+</html>

@@ -2,7 +2,8 @@
 const navMenu = document.getElementById('navMenu');
 const navToggle = document.getElementById('navToggle');
 
-navToggle.addEventListener('click', () => {
+navToggle.addEventListener('click', (e) => {
+  e.stopPropagation();
   const isOpen = navMenu.classList.toggle('open');
   navToggle.setAttribute('aria-expanded', String(isOpen));
 });
@@ -12,6 +13,23 @@ navMenu.querySelectorAll('a').forEach((a) => {
     navMenu.classList.remove('open');
     navToggle.setAttribute('aria-expanded', 'false');
   });
+});
+
+// Close mobile nav when clicking outside
+document.addEventListener('click', (e) => {
+  if (navMenu.classList.contains('open') && !navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+    navMenu.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }
+});
+
+// Close mobile nav on Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+    navMenu.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.focus();
+  }
 });
 
 // Footer year

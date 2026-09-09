@@ -115,4 +115,24 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // 4. Mobile Collapsible TOC Toggle
+  const tocHeading = document.querySelector('.toc h3');
+  const tocEl = document.querySelector('.toc');
+  if (tocHeading && tocEl) {
+    tocHeading.addEventListener('click', () => {
+      if (window.innerWidth <= 960) {
+        tocEl.classList.toggle('collapsed');
+      }
+    });
+
+    // When clicking a link on mobile, auto-collapse so the target section is fully visible
+    tocLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 960) {
+          tocEl.classList.add('collapsed');
+        }
+      });
+    });
+  }
 });

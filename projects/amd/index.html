@@ -1,335 +1,535 @@
 <!DOCTYPE html>
 <html lang="id">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PRONE.ID — Sistem Drone Mapping, IoT Telemetry, &amp; Dashboard | Naufal Elyzar</title>
-
-  <meta name="description"
-    content="Studi kasus PRONE.ID: Perancangan sistem pemetaan udara &amp; penyiraman drone, sensor node kelembapan tanah, dan gateway Raspberry Pi station untuk efisiensi perkebunan sawit." />
-  <meta name="author" content="Naufal Elyzar" />
-
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title data-i18n="t120">
+   PRONE.ID — Sistem Drone Mapping, IoT Telemetry, &amp; Dashboard | Naufal Elyzar
+  </title>
+  <meta content="Studi kasus PRONE.ID: Perancangan sistem pemetaan udara &amp; penyiraman drone, sensor node kelembapan tanah, dan gateway Raspberry Pi station untuk efisiensi perkebunan sawit." data-i18n-content="t188" name="description"/>
+  <meta content="Naufal Elyzar" name="author"/>
   <!-- Google Fonts (Serasi dengan web utama) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
-    rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
   <!-- Stylesheet bersama -->
-  <link rel="stylesheet" href="../../assets/css/project-detail.css" />
-</head>
-
-<body>
-
+  <link href="../../assets/css/project-detail.css" rel="stylesheet"/>
+  <link href="../../assets/css/site-controls.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <a class="skip-link" data-i18n="t002" href="#main-content">
+   Langsung ke konten
+  </a>
   <!-- TOPBAR -->
   <header class="topbar">
-    <div class="wrap">
-      <a class="back-link" href="../../index.html#projects" aria-label="Kembali ke portofolio">
-        <span>←</span> Kembali ke Portofolio
-      </a>
-      <nav class="mininav" aria-label="Navigasi cepat artikel">
-        <a href="#overview">Overview</a>
-        <a href="#tujuan">Tujuan</a>
-        <a href="#arsitektur">Arsitektur</a>
-        <a href="#pipeline">Alur Kerja</a>
-        <a href="#hasil">Hasil</a>
-        <a href="#galeri">Galeri</a>
-        <a href="#tautan">Tautan</a>
-      </nav>
+   <div class="wrap">
+    <a aria-label="Kembali ke portofolio" class="back-link" data-i18n="t121" data-i18n-aria-label="t189" href="../../index.html#projects">
+     <span>
+      ←
+     </span>
+     Kembali ke Portofolio
+    </a>
+    <nav aria-label="Navigasi cepat artikel" class="mininav" data-i18n-aria-label="t190">
+     <a data-i18n="t122" href="#overview">
+      Ringkasan
+     </a>
+     <a data-i18n="t123" href="#tujuan">
+      Tujuan
+     </a>
+     <a data-i18n="t124" href="#arsitektur">
+      Arsitektur
+     </a>
+     <a data-i18n="t125" href="#pipeline">
+      Alur Kerja
+     </a>
+     <a data-i18n="t126" href="#hasil">
+      Hasil
+     </a>
+     <a data-i18n="t008" href="#galeri">
+      Galeri
+     </a>
+     <a data-i18n="t127" href="#tautan">
+      Tautan
+     </a>
+    </nav>
+    <div aria-label="Bahasa" class="language-switch" data-i18n-aria-label="t107" role="group">
+     <button aria-label="Bahasa Indonesia" aria-pressed="true" data-i18n-aria-label="t108" data-language="id" lang="id" type="button">
+      ID
+     </button>
+     <button aria-label="English" aria-pressed="false" data-i18n-aria-label="t109" data-language="en" lang="en" type="button">
+      EN
+     </button>
     </div>
+   </div>
   </header>
-
   <!-- HERO SECTION -->
   <section class="hero">
-    <div class="wrap hero__inner">
-      <div class="hero__text">
-        <p class="eyebrow">Case Study // Project 01</p>
-        <h1 class="hero__title">
-          PRONE.ID
-          <span>Drone Mapping • IoT Telemetry • Centralized Dashboard</span>
-        </h1>
-        <p class="lead">
-          Sistem terintegrasi tiga pilar (drone sprayer, node sensor kelembapan tanah, dan
-          Raspberry&nbsp;Pi Gateway Station) yang mengalirkan data lapangan secara real-time
-          ke dashboard terpusat guna mendukung otomasi agrikultur di lahan kelapa sawit.
-        </p>
-
-        <ul class="badges">
-          <li><strong>Tahun:</strong> 2021 — 2022</li>
-          <li><strong>Peran:</strong> Data Engineer &amp; Robotics</li>
-          <li><strong>Penghargaan:</strong> The Most Attractive Team — AMD</li>
-          <li><strong>Tim:</strong> PRONTALA</li>
-        </ul>
-
-        <div class="cta-group">
-          <a class="btn" href="https://proneid.github.io/PRONE.ID/" target="_blank" rel="noreferrer">
-            Laman Proyek Resmi ↗
-          </a>
-          <a class="btn btn--ghost" href="#galeri">Lihat Galeri Foto</a>
-        </div>
-      </div>
-
-      <!-- Hero Media -->
-      <figure class="bbox-frame hero__media">
-        <img src="../../assets/images/projects/prone-id/Drone.jpg" alt="Drone PRONE.ID saat pengujian" />
-        <figcaption>Prototype sprayer pada frame uji terbang PRONE.ID.</figcaption>
-        <span class="corner corner--tl"></span>
-        <span class="corner corner--tr"></span>
-        <span class="corner corner--bl"></span>
-        <span class="corner corner--br"></span>
-      </figure>
+   <div class="wrap hero__inner">
+    <div class="hero__text">
+     <p class="eyebrow" data-i18n="t128">
+      Studi kasus / PRONE.ID
+     </p>
+     <h1 class="hero__title">
+      PRONE.ID
+      <span data-i18n="t129">
+       Pemetaan drone • Telemetri IoT • Dashboard
+      </span>
+     </h1>
+     <p class="lead" data-i18n="t130">
+      PRONE.ID menghubungkan drone pemetaan dan penyemprotan, node sensor tanah, serta stasiun Raspberry Pi. Data lapangan ditampilkan di dashboard untuk membantu pemantauan lahan sawit.
+     </p>
+     <ul class="badges">
+      <li data-i18n="t131">
+       <strong>
+        Tahun:
+       </strong>
+       2021 — 2022
+      </li>
+      <li data-i18n="t132">
+       <strong>
+        Peran:
+       </strong>
+       Data Engineer &amp; Robotics
+      </li>
+      <li data-i18n="t133">
+       <strong>
+        Penghargaan:
+       </strong>
+       The Most Attractive Team — AMD
+      </li>
+      <li data-i18n="t134">
+       <strong>
+        Tim:
+       </strong>
+       PRONTALA
+      </li>
+     </ul>
+     <div class="cta-group">
+      <a class="btn" data-i18n="t135" href="https://proneid.github.io/PRONE.ID/" rel="noreferrer" target="_blank">
+       Laman Proyek Resmi ↗
+      </a>
+      <a class="btn btn--ghost" data-i18n="t136" href="#galeri">
+       Lihat Galeri Foto
+      </a>
+     </div>
     </div>
+    <!-- Hero Media -->
+    <figure class="bbox-frame hero__media">
+     <img alt="Drone PRONE.ID saat pengujian" data-i18n-alt="t191" decoding="async" height="800" sizes="(max-width: 960px) 90vw, 600px" src="../../assets/images/optimized/projects-prone-id-Drone-960.webp" srcset="../../assets/images/optimized/projects-prone-id-Drone-480.webp 480w, ../../assets/images/optimized/projects-prone-id-Drone-960.webp 960w, ../../assets/images/optimized/projects-prone-id-Drone-1067.webp 1067w" width="1067"/>
+     <figcaption data-i18n="t137">
+      Prototype sprayer pada frame uji terbang PRONE.ID.
+     </figcaption>
+     <span class="corner corner--tl">
+     </span>
+     <span class="corner corner--tr">
+     </span>
+     <span class="corner corner--bl">
+     </span>
+     <span class="corner corner--br">
+     </span>
+    </figure>
+   </div>
   </section>
-
   <!-- MAIN LAYOUT (Sticky TOC + Content) -->
-  <main class="wrap layout">
-    <!-- SIDEBAR TOC -->
-    <aside class="toc" aria-label="Daftar isi studi kasus">
-      <h3>Daftar Isi</h3>
-      <a class="toc__link active" href="#overview">Overview Proyek</a>
-      <a class="toc__link" href="#tujuan">Masalah &amp; Target</a>
-      <a class="toc__link" href="#arsitektur">Arsitektur Sistem</a>
-      <a class="toc__link" href="#pipeline">Alur Kerja Data</a>
-      <a class="toc__link" href="#hasil">Hasil &amp; Dampak</a>
-      <a class="toc__link" href="#galeri">Galeri Foto</a>
-      <a class="toc__link" href="#tautan">Tautan &amp; Referensi</a>
-    </aside>
-
-    <!-- CONTENT SECTION -->
-    <article class="content">
-      <!-- Overview -->
-      <section id="overview" class="block">
-        <h2>Overview Proyek</h2>
-        <p>
-          <strong>PRONE.ID</strong> adalah inovasi agrikultur cerdas yang dikembangkan dalam program
-          <strong>Akademi Madrasah Digital (AMD)</strong> yang diselenggarakan oleh Kementerian Agama Republik Indonesia
-          bersama XL Axiata. Proyek ini memadukan wahana udara tanpa awak (UAV Drone) untuk pemetaan ortofoto dan
-          penyemprotan terarah, dengan <strong>jaringan sensor IoT nirkabel</strong> untuk pemantauan parameter tanah.
+  <main class="wrap layout" id="main-content" tabindex="-1">
+   <!-- SIDEBAR TOC -->
+   <aside aria-label="Daftar isi studi kasus" class="toc" data-i18n-aria-label="t192">
+    <h3>
+     <button aria-controls="toc-links" aria-expanded="true" class="toc-toggle" data-i18n="t138" type="button">
+      Daftar isi
+     </button>
+    </h3>
+    <div id="toc-links">
+     <a class="toc__link active" data-i18n="t139" href="#overview">
+      Ringkasan proyek
+     </a>
+     <a class="toc__link" data-i18n="t140" href="#tujuan">
+      Masalah &amp; Target
+     </a>
+     <a class="toc__link" data-i18n="t141" href="#arsitektur">
+      Arsitektur Sistem
+     </a>
+     <a class="toc__link" data-i18n="t142" href="#pipeline">
+      Alur Kerja Data
+     </a>
+     <a class="toc__link" data-i18n="t143" href="#hasil">
+      Hasil &amp; Dampak
+     </a>
+     <a class="toc__link" data-i18n="t144" href="#galeri">
+      Galeri Foto
+     </a>
+     <a class="toc__link" data-i18n="t145" href="#tautan">
+      Tautan &amp; Referensi
+     </a>
+    </div>
+   </aside>
+   <!-- CONTENT SECTION -->
+   <article class="content">
+    <!-- Overview -->
+    <section class="block" id="overview">
+     <h2 data-i18n="t139">
+      Ringkasan proyek
+     </h2>
+     <p data-i18n="t146">
+      PRONE.ID dikembangkan dalam program Akademi Madrasah Digital (AMD) oleh Kementerian Agama Republik Indonesia bersama XL Axiata. Proyek ini memadukan drone untuk pemetaan dan penyemprotan dengan sensor IoT nirkabel untuk memantau kondisi tanah.
+     </p>
+     <p data-i18n="t147">
+      Node sensor mengirimkan pembacaan ke Raspberry Pi Station sebagai gateway lokal. Data kemudian ditampilkan di dashboard web agar pengelola lahan dapat memantau kelembapan tanah dan merencanakan penyemprotan.
+     </p>
+     <div class="kpi-grid">
+      <div class="kpi-item">
+       <div class="num">
+        -22%
+       </div>
+       <div class="label" data-i18n="t148">
+        Konsumsi Air
+       </div>
+      </div>
+      <div class="kpi-item">
+       <div class="num">
+        +31%
+       </div>
+       <div class="label" data-i18n="t149">
+        Kecepatan Pemetaan
+       </div>
+      </div>
+      <div class="kpi-item">
+       <div class="num" data-i18n="t150">
+        ~3cm/px
+       </div>
+       <div class="label" data-i18n="t151">
+        Ground Sampling Distance
+       </div>
+      </div>
+      <div class="kpi-item">
+       <div class="num" data-i18n="t152">
+        Multi-Node
+       </div>
+       <div class="label" data-i18n="t153">
+        Jaringan Sensor IoT
+       </div>
+      </div>
+     </div>
+    </section>
+    <!-- Masalah & Target -->
+    <section class="block block--alt" id="tujuan">
+     <h2 data-i18n="t140">
+      Masalah &amp; Target
+     </h2>
+     <div class="grid2">
+      <div class="card">
+       <h3 data-i18n="t154">
+        Tantangan Lapangan
+       </h3>
+       <ul>
+        <li data-i18n="t155">
+         Cakupan pemantauan: Pemeriksaan manual pada lahan sawit ribuan hektar membutuhkan waktu berhari-hari dan berisiko menghasilkan data yang tidak akurat.
+        </li>
+        <li data-i18n="t156">
+         Penggunaan air: Penyiraman seragam tidak memperhitungkan kelembapan tanah di setiap titik.
+        </li>
+        <li data-i18n="t157">
+         Riwayat data: Perubahan kelembapan tanah dan suhu lingkungan belum tercatat secara digital untuk analisis jangka panjang.
+        </li>
+       </ul>
+      </div>
+      <div class="card">
+       <h3 data-i18n="t158">
+        Solusi &amp; Target
+       </h3>
+       <ul>
+        <li data-i18n="t159">
+         <strong>
+          Pemetaan Pola Grid Otomatis:
+         </strong>
+         Menerbangkan drone dengan jalur waypoint terencana untuk
+                memetakan luasan lahan dalam hitungan menit.
+        </li>
+        <li data-i18n="t160">
+         <strong>
+          Penyemprotan Terfokus:
+         </strong>
+         Mengaktifkan sprayer hanya pada zona dengan indikasi
+                kekeringan berdasarkan data sensor node.
+        </li>
+        <li data-i18n="t161">
+         <strong>
+          Telemetri Real-time:
+         </strong>
+         Pengiriman data nirkabel periodik dari node sensor tanah menuju
+                stasiun gateway dan dashboard visual.
+        </li>
+       </ul>
+      </div>
+     </div>
+    </section>
+    <!-- Arsitektur -->
+    <section class="block" id="arsitektur">
+     <h2 data-i18n="t141">
+      Arsitektur Sistem
+     </h2>
+     <p data-i18n="t162">
+      Drone, node sensor, dan stasiun Raspberry Pi terhubung melalui radio nirkabel dan jaringan data:
+     </p>
+     <div class="grid2">
+      <div class="card">
+       <h4 data-i18n="t163">
+        Komponen perangkat keras
+       </h4>
+       <ol>
+        <li data-i18n="t164">
+         <strong>
+          UAV Drone:
+         </strong>
+         Dilengkapi modul flight controller, sistem navigasi GPS otonom, dan modul
+                pompa relay sprayer terkalibrasi.
+        </li>
+        <li data-i18n="t165">
+         <strong>
+          In-situ Sensor Nodes:
+         </strong>
+         Unit pemancar bertenaga baterai surya dengan sensor suhu,
+                kelembapan udara (DHT22), dan kelembapan tanah resistif/kapasitif.
+        </li>
+        <li data-i18n="t166">
+         <strong>
+          Raspberry Pi Station:
+         </strong>
+         Gateway sentral penerima paket data telemetry via transreceiver
+                radio nRF24L01 / Wi-Fi dan penyaji web dashboard.
+        </li>
+       </ol>
+      </div>
+      <div class="card">
+       <h4 data-i18n="t167">
+        Teknologi &amp; perangkat
+       </h4>
+       <div class="stack-chips">
+        <span>
+         Python
+        </span>
+        <span>
+         Raspberry Pi OS
+        </span>
+        <span>
+         Arduino / C++
+        </span>
+        <span>
+         nRF24L01 Wireless
+        </span>
+        <span>
+         DHT22 &amp; Soil Moisture
+        </span>
+        <span>
+         GPS Telemetry
+        </span>
+        <span>
+         HTML5 &amp; CSS3
+        </span>
+        <span>
+         JavaScript
+        </span>
+        <span>
+         OpenStreetMap API
+        </span>
+        <span>
+         SQLite
+        </span>
+       </div>
+      </div>
+     </div>
+    </section>
+    <!-- Pipeline / Alur Kerja -->
+    <section class="block block--alt" id="pipeline">
+     <h2 data-i18n="t142">
+      Alur Kerja Data
+     </h2>
+     <div class="steps">
+      <div class="step">
+       <span class="step__no">
+        1
+       </span>
+       <div class="step__content">
+        <h5 data-i18n="t168">
+         Perencanaan Misi &amp; Pemetaan Udara
+        </h5>
+        <p data-i18n="t169">
+         Drone diterbangkan mengikuti jalur grid ortogonal dengan overlap kamera 75% untuk menghasilkan peta
+                komposit vegetasi lahan dan mengidentifikasi anomali kerapatan kanopi.
         </p>
-        <p>
-          Seluruh data yang dikumpulkan dari node sensor dikirimkan ke <strong>Raspberry Pi Station</strong> sebagai
-          gateway lokal, kemudian disinkronisasikan ke web dashboard terpusat sehingga pengelola lahan dapat memantau
-          kondisi hidrologi tanah dan mengarahkan rute penyemprotan secara presisi.
+       </div>
+      </div>
+      <div class="step">
+       <span class="step__no">
+        2
+       </span>
+       <div class="step__content">
+        <h5 data-i18n="t170">
+         Akuisisi Data Sensor Tanah
+        </h5>
+        <p data-i18n="t171">
+         Node sensor yang tersebar di titik-titik perkebunan mengukur kelembapan volumetric tanah secara berkala
+                dan memancarkan paket data ke stasiun penerima.
         </p>
-
-        <div class="kpi-grid">
-          <div class="kpi-item">
-            <div class="num">-22%</div>
-            <div class="label">Konsumsi Air</div>
-          </div>
-          <div class="kpi-item">
-            <div class="num">+31%</div>
-            <div class="label">Kecepatan Pemetaan</div>
-          </div>
-          <div class="kpi-item">
-            <div class="num">~3cm/px</div>
-            <div class="label">Ground Sampling Distance</div>
-          </div>
-          <div class="kpi-item">
-            <div class="num">Multi-Node</div>
-            <div class="label">Jaringan Sensor IoT</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Masalah & Target -->
-      <section id="tujuan" class="block block--alt">
-        <h2>Masalah &amp; Target</h2>
-        <div class="grid2">
-          <div class="card">
-            <h3>Tantangan Lapangan</h3>
-            <ul>
-              <li><strong>Monitoring Luas Terbatas:</strong> Pemantauan manual pada lahan sawit ribuan hektar
-                membutuhkan waktu berhari-hari dan rawan ketidakakuratan data.</li>
-              <li><strong>Penyiraman &amp; Pemupukan Boros:</strong> Praktik konvensional menyiram secara seragam tanpa
-                memperhatikan kadar air aktual tanah, membuang sumber daya air.</li>
-              <li><strong>Ketiadaan Data Historis:</strong> Fluktuasi kelembapan tanah dan suhu lingkungan tidak
-                tercatat secara digital untuk analisis jangka panjang.</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Solusi &amp; Target</h3>
-            <ul>
-              <li><strong>Pemetaan Pola Grid Otomatis:</strong> Menerbangkan drone dengan jalur waypoint terencana untuk
-                memetakan luasan lahan dalam hitungan menit.</li>
-              <li><strong>Penyemprotan Terfokus:</strong> Mengaktifkan sprayer hanya pada zona dengan indikasi
-                kekeringan berdasarkan data sensor node.</li>
-              <li><strong>Telemetri Real-time:</strong> Pengiriman data nirkabel periodik dari node sensor tanah menuju
-                stasiun gateway dan dashboard visual.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Arsitektur -->
-      <section id="arsitektur" class="block">
-        <h2>Arsitektur Sistem</h2>
-        <p>
-          Sistem dibangun dengan arsitektur 3 pilar perangkat keras yang saling berkomunikasi melalui protokol radio
-          nirkabel dan jaringan data:
+       </div>
+      </div>
+      <div class="step">
+       <span class="step__no">
+        3
+       </span>
+       <div class="step__content">
+        <h5 data-i18n="t172">
+         Agregasi &amp; Analisis di Gateway
+        </h5>
+        <p data-i18n="t173">
+         Raspberry Pi memvalidasi checksum paket data, mengonversi sinyal analog ke satuan persentase kelembapan
+                standar, dan menyimpan histori pembacaan ke database lokal.
         </p>
-        <div class="grid2">
-          <div class="card">
-            <h4>Pilar Hardware</h4>
-            <ol>
-              <li><strong>UAV Drone:</strong> Dilengkapi modul flight controller, sistem navigasi GPS otonom, dan modul
-                pompa relay sprayer terkalibrasi.</li>
-              <li><strong>In-situ Sensor Nodes:</strong> Unit pemancar bertenaga baterai surya dengan sensor suhu,
-                kelembapan udara (DHT22), dan kelembapan tanah resistif/kapasitif.</li>
-              <li><strong>Raspberry Pi Station:</strong> Gateway sentral penerima paket data telemetry via transreceiver
-                radio nRF24L01 / Wi-Fi dan penyaji web dashboard.</li>
-            </ol>
-          </div>
-          <div class="card">
-            <h4>Teknologi &amp; Tools</h4>
-            <div class="stack-chips">
-              <span>Python</span>
-              <span>Raspberry Pi OS</span>
-              <span>Arduino / C++</span>
-              <span>nRF24L01 Wireless</span>
-              <span>DHT22 &amp; Soil Moisture</span>
-              <span>GPS Telemetry</span>
-              <span>HTML5 &amp; CSS3</span>
-              <span>JavaScript</span>
-              <span>OpenStreetMap API</span>
-              <span>SQLite</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Pipeline / Alur Kerja -->
-      <section id="pipeline" class="block block--alt">
-        <h2>Alur Kerja Data</h2>
-        <div class="steps">
-          <div class="step">
-            <span class="step__no">1</span>
-            <div class="step__content">
-              <h5>Perencanaan Misi &amp; Pemetaan Udara</h5>
-              <p>Drone diterbangkan mengikuti jalur grid ortogonal dengan overlap kamera 75% untuk menghasilkan peta
-                komposit vegetasi lahan dan mengidentifikasi anomali kerapatan kanopi.</p>
-            </div>
-          </div>
-          <div class="step">
-            <span class="step__no">2</span>
-            <div class="step__content">
-              <h5>Akuisisi Data Sensor Tanah</h5>
-              <p>Node sensor yang tersebar di titik-titik perkebunan mengukur kelembapan volumetric tanah secara berkala
-                dan memancarkan paket data ke stasiun penerima.</p>
-            </div>
-          </div>
-          <div class="step">
-            <span class="step__no">3</span>
-            <div class="step__content">
-              <h5>Agregasi &amp; Analisis di Gateway</h5>
-              <p>Raspberry Pi memvalidasi checksum paket data, mengonversi sinyal analog ke satuan persentase kelembapan
-                standar, dan menyimpan histori pembacaan ke database lokal.</p>
-            </div>
-          </div>
-          <div class="step">
-            <span class="step__no">4</span>
-            <div class="step__content">
-              <h5>Visualisasi &amp; Aksi Penyiraman</h5>
-              <p>Data disajikan pada dashboard pemantauan berbasis peta. Jika terdeteksi zona dengan kelembapan di bawah
-                ambang batas, operator dapat mengarahkan drone untuk menyiram titik target secara presisi.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Hasil & KPI -->
-      <section id="hasil" class="block">
-        <h2>Hasil &amp; Dampak</h2>
-        <ul class="feature-list">
-          <li><strong>Efisiensi Penggunaan Air:</strong> Uji coba lapangan membuktikan pengurangan volume air hingga
-            <strong>22%</strong> dibandingkan metode penyiraman manual konvensional.
-          </li>
-          <li><strong>Peningkatan Kecepatan Survei:</strong> Survei kondisi perkebunan mencapai percepatan
-            <strong>31%</strong> dengan cakupan pemetaan udara otomatis beresolusi hingga ~3cm per pixel.
-          </li>
-          <li><strong>Penghargaan Nasional:</strong> Dinobatkan sebagai peraih <strong>The Most Attractive Team</strong>
-            pada ajang kompetisi riset nasional Akademi Madrasah Digital (AMD) 2021/2022.</li>
-          <li><strong>Validasi Prototype:</strong> Seluruh modul telemetry RF mampu mentransmisikan data stabil dalam
-            radius operasional uji coba lapangan.</li>
-        </ul>
-      </section>
-
-      <!-- Galeri -->
-      <section id="galeri" class="block block--alt">
-        <h2>Galeri Dokumentasi</h2>
-        <p class="muted">Klik gambar untuk melihat dalam mode layar penuh (lightbox).</p>
-
-        <div class="gallery gallery--showcase">
-          <!-- Left Top: Drone -->
-          <a class="gallery__item gallery__item--left-top" href="../../assets/images/projects/prone-id/Drone.jpg"
-            data-caption="Our Drone">
-            <img src="../../assets/images/projects/prone-id/Drone.jpg" alt="Our Drone" loading="lazy" />
-          </a>
-
-          <!-- Left Bottom: 1.jpg (tepat di bawah drone) -->
-          <a class="gallery__item gallery__item--left-bottom" href="../../assets/images/projects/prone-id/1.jpg"
-            data-caption="Preparation at Final Presentation in school">
-            <img src="../../assets/images/projects/prone-id/1.jpg" alt="Preparation at Final Presentation in school"
-              loading="lazy" />
-          </a>
-
-          <!-- Center Tall: us.webp (tetap di tengah, tingginya membentang 2 baris) -->
-          <a class="gallery__item gallery__item--center" href="../../assets/images/projects/prone-id/us.webp"
-            data-caption="Presentation at Final Competition">
-            <img src="../../assets/images/projects/prone-id/us.webp" alt="Presentation at Final Competition"
-              loading="lazy" />
-          </a>
-
-          <!-- Right Top: us3.webp -->
-          <a class="gallery__item gallery__item--right-top" href="../../assets/images/projects/prone-id/us3.webp"
-            data-caption="Penerbangan uji drone pemetaan dan sistem sprayer PRONE.ID">
-            <img src="../../assets/images/projects/prone-id/us3.webp"
-              alt="Penerbangan uji drone pemetaan dan sistem sprayer PRONE.ID" loading="lazy" />
-          </a>
-
-          <!-- Right Bottom: us2.jpg (tepat di bawah us3) -->
-          <a class="gallery__item gallery__item--right-bottom" href="../../assets/images/projects/prone-id/us2.jpg"
-            data-caption="Preparation at Final Presentation in school">
-            <img src="../../assets/images/projects/prone-id/us2.jpg" alt="Preparation at Final Presentation in school"
-              loading="lazy" />
-          </a>
-        </div>
-      </section>
-
-      <!-- Tautan -->
-      <section id="tautan" class="block">
-        <h2>Tautan &amp; Referensi</h2>
-        <div class="cta-group">
-          <a class="btn" href="https://proneid.github.io/PRONE.ID/" target="_blank" rel="noreferrer">
-            Laman Web Resmi PRONE.ID ↗
-          </a>
-          <a class="btn btn--ghost" href="https://github.com/NaufalElyzar11" target="_blank" rel="noreferrer">
-            GitHub Author ↗
-          </a>
-          <a class="btn btn--ghost" href="../../index.html#projects">
-            Kembali ke Semua Proyek
-          </a>
-        </div>
-      </section>
-    </article>
+       </div>
+      </div>
+      <div class="step">
+       <span class="step__no">
+        4
+       </span>
+       <div class="step__content">
+        <h5 data-i18n="t174">
+         Visualisasi &amp; Aksi Penyiraman
+        </h5>
+        <p data-i18n="t175">
+         Data disajikan pada dashboard pemantauan berbasis peta. Jika terdeteksi zona dengan kelembapan di bawah
+                ambang batas, operator dapat mengarahkan drone untuk menyiram titik target secara presisi.
+        </p>
+       </div>
+      </div>
+     </div>
+    </section>
+    <!-- Hasil & KPI -->
+    <section class="block" id="hasil">
+     <h2 data-i18n="t143">
+      Hasil &amp; Dampak
+     </h2>
+     <ul class="feature-list">
+      <li data-i18n="t176">
+       <strong>
+        Efisiensi Penggunaan Air:
+       </strong>
+       Uji coba lapangan membuktikan pengurangan volume air hingga
+       <strong>
+        22%
+       </strong>
+       dibandingkan metode penyiraman manual konvensional.
+      </li>
+      <li data-i18n="t177">
+       <strong>
+        Peningkatan Kecepatan Survei:
+       </strong>
+       Survei kondisi perkebunan mencapai percepatan
+       <strong>
+        31%
+       </strong>
+       dengan cakupan pemetaan udara otomatis beresolusi hingga ~3cm per pixel.
+      </li>
+      <li data-i18n="t178">
+       <strong>
+        Penghargaan Nasional:
+       </strong>
+       Dinobatkan sebagai peraih
+       <strong>
+        The Most Attractive Team
+       </strong>
+       pada ajang kompetisi riset nasional Akademi Madrasah Digital (AMD) 2021/2022.
+      </li>
+      <li data-i18n="t179">
+       <strong>
+        Validasi Prototype:
+       </strong>
+       Seluruh modul telemetry RF mampu mentransmisikan data stabil dalam
+            radius operasional uji coba lapangan.
+      </li>
+     </ul>
+    </section>
+    <!-- Galeri -->
+    <section class="block block--alt" id="galeri">
+     <h2 data-i18n="t180">
+      Galeri Dokumentasi
+     </h2>
+     <p class="muted" data-i18n="t181">
+      Klik foto untuk memperbesar. Gunakan panah untuk berpindah foto.
+     </p>
+     <div class="gallery gallery--showcase">
+      <!-- Left Top: Drone -->
+      <a class="gallery__item gallery__item--left-top" data-caption="Drone kami" data-i18n-data-caption="t193" href="../../assets/images/projects/prone-id/Drone.jpg">
+       <img alt="Drone kami" data-i18n-alt="t193" decoding="async" height="800" loading="lazy" sizes="(max-width: 580px) 86vw, (max-width: 900px) 42vw, 280px" src="../../assets/images/optimized/projects-prone-id-Drone-960.webp" srcset="../../assets/images/optimized/projects-prone-id-Drone-480.webp 480w, ../../assets/images/optimized/projects-prone-id-Drone-960.webp 960w, ../../assets/images/optimized/projects-prone-id-Drone-1067.webp 1067w" width="1067"/>
+      </a>
+      <!-- Left Bottom: 1.jpg (tepat di bawah drone) -->
+      <a class="gallery__item gallery__item--left-bottom" data-caption="Persiapan presentasi final di sekolah" data-i18n-data-caption="t194" href="../../assets/images/projects/prone-id/1.jpg">
+       <img alt="Persiapan presentasi final di sekolah" data-i18n-alt="t194" decoding="async" height="720" loading="lazy" sizes="(max-width: 580px) 86vw, (max-width: 900px) 42vw, 280px" src="../../assets/images/optimized/projects-prone-id-1-960.webp" srcset="../../assets/images/optimized/projects-prone-id-1-480.webp 480w, ../../assets/images/optimized/projects-prone-id-1-960.webp 960w, ../../assets/images/optimized/projects-prone-id-1-1080.webp 1080w" width="1080"/>
+      </a>
+      <!-- Center Tall: us.webp (tetap di tengah, tingginya membentang 2 baris) -->
+      <a class="gallery__item gallery__item--center" data-caption="Presentasi pada final kompetisi" data-i18n-data-caption="t195" href="../../assets/images/projects/prone-id/us.webp">
+       <img alt="Presentasi pada final kompetisi" data-i18n-alt="t195" decoding="async" height="4000" loading="lazy" sizes="(max-width: 580px) 86vw, (max-width: 900px) 42vw, 280px" src="../../assets/images/optimized/projects-prone-id-us-960.webp" srcset="../../assets/images/optimized/projects-prone-id-us-480.webp 480w, ../../assets/images/optimized/projects-prone-id-us-960.webp 960w, ../../assets/images/optimized/projects-prone-id-us-1440.webp 1440w" width="6000"/>
+      </a>
+      <!-- Right Top: us3.webp -->
+      <a class="gallery__item gallery__item--right-top" data-caption="Penerbangan uji drone pemetaan dan sistem sprayer PRONE.ID" data-i18n-data-caption="t196" href="../../assets/images/projects/prone-id/us3.webp">
+       <img alt="Penerbangan uji drone pemetaan dan sistem sprayer PRONE.ID" data-i18n-alt="t196" decoding="async" height="3000" loading="lazy" sizes="(max-width: 580px) 86vw, (max-width: 900px) 42vw, 280px" src="../../assets/images/optimized/projects-prone-id-us3-960.webp" srcset="../../assets/images/optimized/projects-prone-id-us3-480.webp 480w, ../../assets/images/optimized/projects-prone-id-us3-960.webp 960w, ../../assets/images/optimized/projects-prone-id-us3-1440.webp 1440w" width="4000"/>
+      </a>
+      <!-- Right Bottom: us2.jpg (tepat di bawah us3) -->
+      <a class="gallery__item gallery__item--right-bottom" data-caption="Persiapan presentasi final di sekolah" data-i18n-data-caption="t194" href="../../assets/images/projects/prone-id/us2.jpg">
+       <img alt="Persiapan presentasi final di sekolah" data-i18n-alt="t194" decoding="async" height="720" loading="lazy" sizes="(max-width: 580px) 86vw, (max-width: 900px) 42vw, 280px" src="../../assets/images/optimized/projects-prone-id-us2-960.webp" srcset="../../assets/images/optimized/projects-prone-id-us2-480.webp 480w, ../../assets/images/optimized/projects-prone-id-us2-960.webp 960w, ../../assets/images/optimized/projects-prone-id-us2-1080.webp 1080w" width="1080"/>
+      </a>
+     </div>
+    </section>
+    <!-- Tautan -->
+    <section class="block" id="tautan">
+     <h2 data-i18n="t145">
+      Tautan &amp; Referensi
+     </h2>
+     <div class="cta-group">
+      <a class="btn" data-i18n="t182" href="https://proneid.github.io/PRONE.ID/" rel="noreferrer" target="_blank">
+       Laman Web Resmi PRONE.ID ↗
+      </a>
+      <a class="btn btn--ghost" data-i18n="t183" href="https://github.com/NaufalElyzar11" rel="noreferrer" target="_blank">
+       GitHub pengembang ↗
+      </a>
+      <a class="btn btn--ghost" data-i18n="t184" href="../../index.html#projects">
+       Kembali ke Semua Proyek
+      </a>
+     </div>
+    </section>
+   </article>
   </main>
-
   <!-- FOOTER -->
   <footer class="foot">
-    <div class="wrap foot__inner">
-      <p>© <span id="yr"></span> Naufal Elyzar. Studi Kasus PRONE.ID.</p>
-      <div class="foot__links">
-        <a href="../../index.html#projects">Semua Proyek</a>
-        <a href="../../index.html#contact">Kontak</a>
-        <a href="https://github.com/NaufalElyzar11" target="_blank" rel="noreferrer">GitHub</a>
-      </div>
+   <div class="wrap foot__inner">
+    <p>
+     ©
+     <span id="yr">
+     </span>
+     <span data-i18n="t185">
+      Naufal Elyzar. Studi Kasus PRONE.ID.
+     </span>
+    </p>
+    <div class="foot__links">
+     <a data-i18n="t186" href="../../index.html#projects">
+      Semua Proyek
+     </a>
+     <a data-i18n="t009" href="../../index.html#contact">
+      Kontak
+     </a>
+     <a data-i18n="t187" href="https://github.com/NaufalElyzar11" rel="noreferrer" target="_blank">
+      GitHub
+     </a>
     </div>
+   </div>
   </footer>
-
   <!-- Scripts -->
-  <script src="../../assets/js/project-detail.js" defer></script>
-</body>
-
+  <script defer="" src="../../assets/js/translations.js">
+  </script>
+  <script defer="" src="../../assets/js/i18n.js">
+  </script>
+  <script defer="" src="../../assets/js/project-detail.js">
+  </script>
+  <script defer="" src="../../assets/js/gallery.js">
+  </script>
+ </body>
 </html>

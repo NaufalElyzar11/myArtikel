@@ -72,8 +72,36 @@ myArtikel/
 * **Markup:** Semantic HTML5 (struktur bersih, ramah SEO, dan aksesibel).
 * **Styling:** Vanilla CSS3 dengan CSS Custom Properties (Design Tokens), Flexbox, CSS Grid, dan dukungan `prefers-reduced-motion`.
 * **Tipografi:** Google Fonts (`Big Shoulders Display`, `IBM Plex Sans`, `IBM Plex Mono`).
-* **Interaktivitas:** Vanilla JavaScript murni (DOM manipulation, IntersectionObserver, ScrollSpy, event handling keyboard & modal).
-* **Zero Dependencies:** Tanpa node_modules, bundler rumit, atau framework berat.
+* **Interaktivitas:** JavaScript tanpa framework untuk pilihan bahasa, navigasi bagian aktif, daftar isi, serta galeri dengan keyboard dan gestur sentuh.
+* **Dependensi situs:** Tidak memerlukan bundler atau library JavaScript eksternal saat digunakan. `linkedom` hanya digunakan untuk pengujian pengembangan.
+
+## Bahasa, galeri, dan pemeliharaan
+
+- Tombol **ID / EN** tersedia di beranda dan ketiga halaman proyek. Pilihan disimpan dalam `localStorage` dengan kunci `naufal-language` dan dibawa melalui parameter `?lang=id` atau `?lang=en` saat mengikuti tautan halaman lokal. Parameter URL yang valid didahulukan; bahasa awal adalah Indonesia.
+- Kamus lokal ada di `assets/js/translations.js`. Atribut `data-i18n` pada HTML merujuk ke kunci kamus. Saat mengubah tulisan, perbarui versi Indonesia pada HTML (agar tetap terbaca tanpa JavaScript) serta pasangan `id` dan `en` dalam kamus. Atribut gambar, caption, dan label aksesibilitas menggunakan `data-i18n-alt`, `data-i18n-data-caption`, dan `data-i18n-aria-label`.
+- `assets/js/i18n.js` mengatur pergantian bahasa. Terjemahan dibundel bersama situs dan tidak memanggil layanan eksternal. Dokumen CV dan nama resmi organisasi/kompetisi tetap mengikuti sumber aslinya.
+- `assets/js/gallery.js` digunakan bersama oleh semua halaman. Foto dapat dibuka, diganti dengan tombol panah atau swipe, dan ditutup dengan Escape. Fokus keyboard dikembalikan ke foto asal.
+- `assets/images/optimized/` berisi versi WebP dengan beberapa lebar, dipilih melalui `srcset`. Gambar asli tetap dipakai untuk pratinjau penuh. Jika mengganti foto, perbarui juga varian WebP, `srcset`, dan dimensi intrinsiknya.
+- Tema gelap tetap dipakai. Navigasi beranda beralih ke menu mobile pada 1080 px; daftar isi proyek dapat dilipat pada 960 px. Animasi menghormati pengaturan reduced motion.
+
+### Pemeriksaan
+
+Dengan Node.js 20.19 atau lebih baru:
+
+```bash
+npm ci
+npm test
+```
+
+Tes memeriksa kedua bahasa di empat halaman, penyimpanan dan fallback bahasa, galeri, serta keadaan menu dan daftar isi. Tes DOM ini tidak merender tampilan.
+
+Pemeriksaan struktur tambahan dengan Python dan `beautifulsoup4`:
+
+```bash
+python tests/check_site.py
+```
+
+Untuk pemeriksaan visual, buka kedua bahasa pada lebar 320, 390, 768, 1024, dan 1440 px. Periksa menu, judul panjang, daftar isi, galeri, dan navigasi keyboard. Pemeriksaan otomatis bukan pengganti pemeriksaan visual ini.
 
 ---
 

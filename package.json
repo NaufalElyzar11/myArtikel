@@ -1,0 +1,10 @@
+{
+  "name": "naufal-portfolio",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/site.test.cjs"
+  },
+  "devDependencies": {
+    "linkedom": "0.18.13"
+  }
+}

@@ -1,331 +1,530 @@
 <!DOCTYPE html>
 <html lang="id">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TRACO-BOT — Conveyor Pemilah Sampah Cerdas Otomatis | Naufal Elyzar</title>
-
-  <meta name="description"
-    content="Studi kasus TRACO-BOT: Robot conveyor pemilah sampah otomatis berbasis Machine Learning 6 kelas, Computer Vision, dan sensor IoT. Finalis Madrasah Robotic Competition 2022." />
-  <meta name="author" content="Naufal Elyzar" />
-
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title data-i18n="t197">
+   TRACO-BOT — Conveyor Pemilah Sampah Cerdas Otomatis | Naufal Elyzar
+  </title>
+  <meta content="Studi kasus TRACO-BOT: Robot conveyor pemilah sampah otomatis berbasis Machine Learning 6 kelas, Computer Vision, dan sensor IoT. Finalis Madrasah Robotic Competition 2022." data-i18n-content="t250" name="description"/>
+  <meta content="Naufal Elyzar" name="author"/>
   <!-- Google Fonts (Serasi dengan web utama) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
-    rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
   <!-- Stylesheet bersama -->
-  <link rel="stylesheet" href="../../assets/css/project-detail.css" />
-</head>
-
-<body>
-
+  <link href="../../assets/css/project-detail.css" rel="stylesheet"/>
+  <link href="../../assets/css/site-controls.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <a class="skip-link" data-i18n="t002" href="#main-content">
+   Langsung ke konten
+  </a>
   <!-- TOPBAR -->
   <header class="topbar">
-    <div class="wrap">
-      <a class="back-link" href="../../index.html#projects" aria-label="Kembali ke portofolio">
-        <span>←</span> Kembali ke Portofolio
-      </a>
-      <nav class="mininav" aria-label="Navigasi cepat artikel">
-        <a href="#overview">Overview</a>
-        <a href="#tujuan">Tujuan</a>
-        <a href="#arsitektur">Arsitektur</a>
-        <a href="#pipeline">Alur Kerja</a>
-        <a href="#hasil">Hasil</a>
-        <a href="#galeri">Galeri</a>
-        <a href="#tautan">Tautan</a>
-      </nav>
+   <div class="wrap">
+    <a aria-label="Kembali ke portofolio" class="back-link" data-i18n="t121" data-i18n-aria-label="t189" href="../../index.html#projects">
+     <span>
+      ←
+     </span>
+     Kembali ke Portofolio
+    </a>
+    <nav aria-label="Navigasi cepat artikel" class="mininav" data-i18n-aria-label="t190">
+     <a data-i18n="t122" href="#overview">
+      Ringkasan
+     </a>
+     <a data-i18n="t123" href="#tujuan">
+      Tujuan
+     </a>
+     <a data-i18n="t124" href="#arsitektur">
+      Arsitektur
+     </a>
+     <a data-i18n="t125" href="#pipeline">
+      Alur Kerja
+     </a>
+     <a data-i18n="t126" href="#hasil">
+      Hasil
+     </a>
+     <a data-i18n="t008" href="#galeri">
+      Galeri
+     </a>
+     <a data-i18n="t127" href="#tautan">
+      Tautan
+     </a>
+    </nav>
+    <div aria-label="Bahasa" class="language-switch" data-i18n-aria-label="t107" role="group">
+     <button aria-label="Bahasa Indonesia" aria-pressed="true" data-i18n-aria-label="t108" data-language="id" lang="id" type="button">
+      ID
+     </button>
+     <button aria-label="English" aria-pressed="false" data-i18n-aria-label="t109" data-language="en" lang="en" type="button">
+      EN
+     </button>
     </div>
+   </div>
   </header>
-
   <!-- HERO SECTION -->
   <section class="hero">
-    <div class="wrap hero__inner">
-      <div class="hero__text">
-        <p class="eyebrow">Case Study // Project 02</p>
-        <h1 class="hero__title">
-          TRACO-BOT
-          <span>Automated Waste Sorter • Machine Learning Vision • IoT Integration</span>
-        </h1>
-        <p class="lead">
-          Sistem konveyor cerdas pemilah sampah otomatis yang mengintegrasikan kamera inspeksi,
-          model klasifikasi penglihatan komputer 6 kelas, aktuator mekanik pemilah cepat,
-          dan telemetri IoT untuk menciptakan rantai daur ulang yang higienis dan efisien.
-        </p>
-
-        <ul class="badges">
-          <li><strong>Tahun:</strong> 2022</li>
-          <li><strong>Peran:</strong> Robotics &amp; ML Developer</li>
-          <li><strong>Prestasi:</strong> Finalis Madrasah Robotic Competition (MRC)</li>
-          <li><strong>Kategori:</strong> Robotics · Machine Learning</li>
-        </ul>
-
-        <div class="cta-group">
-          <a class="btn" href="#arsitektur">Pelajari Arsitektur</a>
-          <a class="btn btn--ghost" href="#galeri">Lihat Dokumentasi</a>
-        </div>
-      </div>
-
-      <!-- Hero Media -->
-      <figure class="bbox-frame hero__media">
-        <img src="../../assets/images/projects/traco-bot/MRC.webp" alt="Prototype robot pemilah sampah TRACO-BOT" />
-        <figcaption>Prototype konveyor pemilah sampah otomatis TRACO-BOT pada ajang kompetisi MRC.</figcaption>
-        <span class="corner corner--tl"></span>
-        <span class="corner corner--tr"></span>
-        <span class="corner corner--bl"></span>
-        <span class="corner corner--br"></span>
-      </figure>
+   <div class="wrap hero__inner">
+    <div class="hero__text">
+     <p class="eyebrow" data-i18n="t198">
+      Studi kasus / TRACO-BOT
+     </p>
+     <h1 class="hero__title">
+      TRACO-BOT
+      <span data-i18n="t199">
+       Pemilah sampah otomatis • Computer vision • IoT
+      </span>
+     </h1>
+     <p class="lead" data-i18n="t200">
+      TRACO-BOT memilah sampah di atas konveyor menggunakan kamera dan model machine learning. Sistem mengenali enam kategori sampah, lalu menggerakkan pemilah ke wadah yang sesuai.
+     </p>
+     <ul class="badges">
+      <li data-i18n="t201">
+       <strong>
+        Tahun:
+       </strong>
+       2022
+      </li>
+      <li data-i18n="t202">
+       <strong>
+        Peran:
+       </strong>
+       Robotics &amp; ML Developer
+      </li>
+      <li data-i18n="t203">
+       <strong>
+        Prestasi:
+       </strong>
+       Finalis Madrasah Robotic Competition (MRC)
+      </li>
+      <li data-i18n="t204">
+       <strong>
+        Kategori:
+       </strong>
+       Robotics · Machine Learning
+      </li>
+     </ul>
+     <div class="cta-group">
+      <a class="btn" data-i18n="t205" href="#arsitektur">
+       Pelajari Arsitektur
+      </a>
+      <a class="btn btn--ghost" data-i18n="t206" href="#galeri">
+       Lihat Dokumentasi
+      </a>
+     </div>
     </div>
+    <!-- Hero Media -->
+    <figure class="bbox-frame hero__media">
+     <img alt="Prototype robot pemilah sampah TRACO-BOT" data-i18n-alt="t251" decoding="async" height="2160" sizes="(max-width: 960px) 90vw, 600px" src="../../assets/images/optimized/projects-traco-bot-MRC-960.webp" srcset="../../assets/images/optimized/projects-traco-bot-MRC-480.webp 480w, ../../assets/images/optimized/projects-traco-bot-MRC-960.webp 960w, ../../assets/images/optimized/projects-traco-bot-MRC-1440.webp 1440w" width="3840"/>
+     <figcaption data-i18n="t207">
+      Prototype konveyor pemilah sampah otomatis TRACO-BOT pada ajang kompetisi MRC.
+     </figcaption>
+     <span class="corner corner--tl">
+     </span>
+     <span class="corner corner--tr">
+     </span>
+     <span class="corner corner--bl">
+     </span>
+     <span class="corner corner--br">
+     </span>
+    </figure>
+   </div>
   </section>
-
   <!-- MAIN LAYOUT (Sticky TOC + Content) -->
-  <main class="wrap layout">
-    <!-- SIDEBAR TOC -->
-    <aside class="toc" aria-label="Daftar isi studi kasus">
-      <h3>Daftar Isi</h3>
-      <a class="toc__link active" href="#overview">Overview Proyek</a>
-      <a class="toc__link" href="#tujuan">Masalah &amp; Target</a>
-      <a class="toc__link" href="#arsitektur">Arsitektur Sistem</a>
-      <a class="toc__link" href="#pipeline">Alur Kerja Klasifikasi</a>
-      <a class="toc__link" href="#hasil">Hasil &amp; Dampak</a>
-      <a class="toc__link" href="#galeri">Galeri Dokumentasi</a>
-      <a class="toc__link" href="#tautan">Tautan &amp; Referensi</a>
-    </aside>
-
-    <!-- CONTENT SECTION -->
-    <article class="content">
-      <!-- Overview -->
-      <section id="overview" class="block">
-        <h2>Overview Proyek</h2>
-        <p>
-          <strong>TRACO-BOT (Trash Classifier &amp; Sorter Robot)</strong> dirancang untuk menyelesaikan tantangan
-          hilir pengolahan sampah perkotaan: pemilahan jenis sampah yang masih sangat bergantung pada tenaga manual
-          dan berisiko tinggi terhadap kesehatan pekerja kebersihan.
+  <main class="wrap layout" id="main-content" tabindex="-1">
+   <!-- SIDEBAR TOC -->
+   <aside aria-label="Daftar isi studi kasus" class="toc" data-i18n-aria-label="t192">
+    <h3>
+     <button aria-controls="toc-links" aria-expanded="true" class="toc-toggle" data-i18n="t138" type="button">
+      Daftar isi
+     </button>
+    </h3>
+    <div id="toc-links">
+     <a class="toc__link active" data-i18n="t139" href="#overview">
+      Ringkasan proyek
+     </a>
+     <a class="toc__link" data-i18n="t140" href="#tujuan">
+      Masalah &amp; Target
+     </a>
+     <a class="toc__link" data-i18n="t141" href="#arsitektur">
+      Arsitektur Sistem
+     </a>
+     <a class="toc__link" data-i18n="t208" href="#pipeline">
+      Alur Kerja Klasifikasi
+     </a>
+     <a class="toc__link" data-i18n="t143" href="#hasil">
+      Hasil &amp; Dampak
+     </a>
+     <a class="toc__link" data-i18n="t180" href="#galeri">
+      Galeri Dokumentasi
+     </a>
+     <a class="toc__link" data-i18n="t145" href="#tautan">
+      Tautan &amp; Referensi
+     </a>
+    </div>
+   </aside>
+   <!-- CONTENT SECTION -->
+   <article class="content">
+    <!-- Overview -->
+    <section class="block" id="overview">
+     <h2 data-i18n="t139">
+      Ringkasan proyek
+     </h2>
+     <p data-i18n="t209">
+      TRACO-BOT (Trash Classifier &amp; Sorter Robot) dibuat untuk membantu pemilahan sampah yang masih bergantung pada pekerjaan manual dan mengharuskan pekerja bersentuhan langsung dengan sampah.
+     </p>
+     <p data-i18n="t210">
+      Konveyor membawa sampah melewati kamera. Model deep learning mengenali enam kategori: logam, kaca, plastik, kertas, organik, dan residu. Lengan pendorong kemudian mengarahkan setiap objek ke wadahnya.
+     </p>
+     <div class="kpi-grid">
+      <div class="kpi-item">
+       <div class="num" data-i18n="t211">
+        6 Kelas
+       </div>
+       <div class="label" data-i18n="t212">
+        Kategori Sampah Terpilah
+       </div>
+      </div>
+      <div class="kpi-item">
+       <div class="num" data-i18n="t213">
+        &lt; 1.2 dtk
+       </div>
+       <div class="label" data-i18n="t214">
+        Waktu Inferensi per Objek
+       </div>
+      </div>
+      <div class="kpi-item">
+       <div class="num" data-i18n="t215">
+        Tanpa sentuh
+       </div>
+       <div class="label" data-i18n="t216">
+        Mengurangi kontak berbahaya
+       </div>
+      </div>
+      <div class="kpi-item">
+       <div class="num" data-i18n="t217">
+        Real-time
+       </div>
+       <div class="label" data-i18n="t218">
+        Pencatatan Telemetri IoT
+       </div>
+      </div>
+     </div>
+    </section>
+    <!-- Masalah & Target -->
+    <section class="block block--alt" id="tujuan">
+     <h2 data-i18n="t140">
+      Masalah &amp; Target
+     </h2>
+     <div class="grid2">
+      <div class="card">
+       <h3 data-i18n="t219">
+        Tantangan Utama
+       </h3>
+       <ul>
+        <li data-i18n="t220">
+         Kesehatan dan keselamatan: Pemilahan manual membuat pekerja bersentuhan dengan zat beracun, benda tajam, dan bakteri.
+        </li>
+        <li data-i18n="t221">
+         Kapasitas pemilahan: Kelelahan fisik dapat memperlambat pekerjaan manual dan menambah penumpukan sampah di TPS.
+        </li>
+        <li data-i18n="t222">
+         Kontaminasi: Sampah organik yang tercampur dengan kertas atau plastik menurunkan kualitas bahan daur ulang.
+        </li>
+       </ul>
+      </div>
+      <div class="card">
+       <h3 data-i18n="t223">
+        Solusi &amp; Target Sistem
+       </h3>
+       <ul>
+        <li data-i18n="t224">
+         <strong>
+          Klasifikasi Otomatis Multi-Kelas:
+         </strong>
+         Pengenalan material visual seketika saat sampah
+                melintas di lintasan konveyor.
+        </li>
+        <li data-i18n="t225">
+         <strong>
+          Aktuasi Pemisahan Presisi:
+         </strong>
+         Mekanisme pemilah elektrik yang sinkron dengan kecepatan
+                laju konveyor belt.
+        </li>
+        <li data-i18n="t226">
+         Pemantauan: Dashboard memperbarui jumlah sampah per kategori secara otomatis untuk pencatatan aliran material.
+        </li>
+       </ul>
+      </div>
+     </div>
+    </section>
+    <!-- Arsitektur -->
+    <section class="block" id="arsitektur">
+     <h2 data-i18n="t141">
+      Arsitektur Sistem
+     </h2>
+     <p data-i18n="t227">
+      Sistem menggabungkan konveyor, kamera, model klasifikasi, dan aktuator pemilah:
+     </p>
+     <div class="grid2">
+      <div class="card">
+       <h4 data-i18n="t228">
+        Subsistem Perangkat Keras
+       </h4>
+       <ol>
+        <li data-i18n="t229">
+         <strong>
+          Lintasan Konveyor &amp; Motor Penggerak:
+         </strong>
+         Konveyor sabuk dengan kecepatan stabil,
+                dilengkapi sensor proximity optik/IR untuk mendeteksi kehadiran objek.
+        </li>
+        <li data-i18n="t230">
+         <strong>
+          Modul Kamera &amp; Pencahayaan:
+         </strong>
+         Kamera overhead terisolasi di dalam enclosure
+                terkontrol untuk menjamin konsistensi pencahayaan saat pengambilan gambar.
+        </li>
+        <li data-i18n="t231">
+         <strong>
+          Aktuator Pemilah Mekanik:
+         </strong>
+         Rangkaian servo motor dan lengan diverter yang bergerak
+                cepat mendorong objek ke wadah kategori yang sesuai.
+        </li>
+        <li data-i18n="t232">
+         <strong>
+          Pemrosesan Sentral:
+         </strong>
+         SBC (Single Board Computer) untuk inferensi model ML dan
+                mikrokontroler real-time untuk kendali motorik aktuator.
+        </li>
+       </ol>
+      </div>
+      <div class="card">
+       <h4 data-i18n="t167">
+        Teknologi &amp; perangkat
+       </h4>
+       <div class="stack-chips">
+        <span>
+         Python
+        </span>
+        <span>
+         OpenCV
+        </span>
+        <span>
+         Machine Learning / CNN
+        </span>
+        <span>
+         Arduino C++
+        </span>
+        <span>
+         ESP32
+        </span>
+        <span>
+         DC Geared Motor
+        </span>
+        <span>
+         High-Torque Servos
+        </span>
+        <span>
+         Infrared Proximity Sensors
+        </span>
+        <span>
+         Serial UART Communication
+        </span>
+        <span>
+         IoT Dashboard
+        </span>
+       </div>
+      </div>
+     </div>
+    </section>
+    <!-- Pipeline / Alur Kerja -->
+    <section class="block block--alt" id="pipeline">
+     <h2 data-i18n="t208">
+      Alur Kerja Klasifikasi
+     </h2>
+     <div class="steps">
+      <div class="step">
+       <span class="step__no">
+        1
+       </span>
+       <div class="step__content">
+        <h5 data-i18n="t233">
+         Infeed &amp; Deteksi Kedatangan Objek
+        </h5>
+        <p data-i18n="t234">
+         Sampah diletakkan di ujung masukan konveyor. Saat melintasi sensor proximity inframerah, sistem
+                mendeteksi posisi objek dan memicu siklus pengambilan citra kamera.
         </p>
-        <p>
-          Melalui kombinasi <strong>konveyor mekanis</strong>, modul kamera terkalibrasi, model deep learning untuk
-          klasifikasi citra objek ke dalam <strong>6 kategori sampah</strong> (logam, kaca, plastik, kertas, organik,
-          dan residu), serta lengan aktuator pendorong cerdas, TRACO-BOT mampu mengarahkan sampah menuju wadah penampung
-          masing-masing secara mandiri dan cepat.
+       </div>
+      </div>
+      <div class="step">
+       <span class="step__no">
+        2
+       </span>
+       <div class="step__content">
+        <h5 data-i18n="t235">
+         Pengambilan &amp; persiapan gambar
+        </h5>
+        <p data-i18n="t236">
+         Kamera mengambil citra beresolusi tinggi. Algoritma OpenCV melakukan pemotongan area fokus (ROI),
+                penghilangan derau, dan normalisasi dimensi citra.
         </p>
-
-        <div class="kpi-grid">
-          <div class="kpi-item">
-            <div class="num">6 Kelas</div>
-            <div class="label">Kategori Sampah Terpilah</div>
-          </div>
-          <div class="kpi-item">
-            <div class="num">&lt; 1.2 dtk</div>
-            <div class="label">Waktu Inferensi per Objek</div>
-          </div>
-          <div class="kpi-item">
-            <div class="num">Zero Touch</div>
-            <div class="label">Pencegahan Kontak Bahaya</div>
-          </div>
-          <div class="kpi-item">
-            <div class="num">Real-Time</div>
-            <div class="label">Pencatatan Telemetri IoT</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Masalah & Target -->
-      <section id="tujuan" class="block block--alt">
-        <h2>Masalah &amp; Target</h2>
-        <div class="grid2">
-          <div class="card">
-            <h3>Tantangan Utama</h3>
-            <ul>
-              <li><strong>Risiko Higienitas &amp; Keselamatan:</strong> Pekerja pemilah sampah terpapar zat beracun,
-                benda tajam, dan bakteri berbahaya akibat kontak fisik langsung terus-menerus.</li>
-              <li><strong>Kecepatan Pemilahan Rendah:</strong> Kapasitas pemilahan manual manusia mudah menurun karena
-                kelelahan fisik, menyebabkan penumpukan volume sampah di TPS.</li>
-              <li><strong>Tingginya Kontaminasi Daur Ulang:</strong> Sampah organik yang tercampur dengan kertas atau
-                plastik merusak kualitas bahan mentah daur ulang.</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Solusi &amp; Target Sistem</h3>
-            <ul>
-              <li><strong>Klasifikasi Otomatis Multi-Kelas:</strong> Pengenalan material visual seketika saat sampah
-                melintas di lintasan konveyor.</li>
-              <li><strong>Aktuasi Pemisahan Presisi:</strong> Mekanisme pemilah elektrik yang sinkron dengan kecepatan
-                laju konveyor belt.</li>
-              <li><strong>Monitoring Telemetri Berkelanjutan:</strong> Dashboard kuantitas sampah per kategori yang
-                terbarui otomatis untuk keperluan audit sirkular ekonomi.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Arsitektur -->
-      <section id="arsitektur" class="block">
-        <h2>Arsitektur Sistem</h2>
-        <p>
-          Sistem memadukan komponen mekanika konveyor, penginderaan optik, dan komputasi inferensi cerdas:
+       </div>
+      </div>
+      <div class="step">
+       <span class="step__no">
+        3
+       </span>
+       <div class="step__content">
+        <h5 data-i18n="t237">
+         Inferensi Model Deep Learning
+        </h5>
+        <p data-i18n="t238">
+         Model neural network mengklasifikasikan citra ke salah satu dari 6 kelas (logam, kaca, plastik, kertas,
+                organik, residu) dengan output tingkat kepercayaan (confidence score).
         </p>
-        <div class="grid2">
-          <div class="card">
-            <h4>Subsistem Perangkat Keras</h4>
-            <ol>
-              <li><strong>Lintasan Konveyor &amp; Motor Penggerak:</strong> Konveyor sabuk dengan kecepatan stabil,
-                dilengkapi sensor proximity optik/IR untuk mendeteksi kehadiran objek.</li>
-              <li><strong>Modul Kamera &amp; Pencahayaan:</strong> Kamera overhead terisolasi di dalam enclosure
-                terkontrol untuk menjamin konsistensi pencahayaan saat pengambilan gambar.</li>
-              <li><strong>Aktuator Pemilah Mekanik:</strong> Rangkaian servo motor dan lengan diverter yang bergerak
-                cepat mendorong objek ke wadah kategori yang sesuai.</li>
-              <li><strong>Pemrosesan Sentral:</strong> SBC (Single Board Computer) untuk inferensi model ML dan
-                mikrokontroler real-time untuk kendali motorik aktuator.</li>
-            </ol>
-          </div>
-          <div class="card">
-            <h4>Teknologi &amp; Tools</h4>
-            <div class="stack-chips">
-              <span>Python</span>
-              <span>OpenCV</span>
-              <span>Machine Learning / CNN</span>
-              <span>Arduino C++</span>
-              <span>ESP32</span>
-              <span>DC Geared Motor</span>
-              <span>High-Torque Servos</span>
-              <span>Infrared Proximity Sensors</span>
-              <span>Serial UART Communication</span>
-              <span>IoT Dashboard</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Pipeline / Alur Kerja -->
-      <section id="pipeline" class="block block--alt">
-        <h2>Alur Kerja Klasifikasi</h2>
-        <div class="steps">
-          <div class="step">
-            <span class="step__no">1</span>
-            <div class="step__content">
-              <h5>Infeed &amp; Deteksi Kedatangan Objek</h5>
-              <p>Sampah diletakkan di ujung masukan konveyor. Saat melintasi sensor proximity inframerah, sistem
-                mendeteksi posisi objek dan memicu siklus pengambilan citra kamera.</p>
-            </div>
-          </div>
-          <div class="step">
-            <span class="step__no">2</span>
-            <div class="step__content">
-              <h5>Image Acquisition &amp; Preprocessing</h5>
-              <p>Kamera mengambil citra beresolusi tinggi. Algoritma OpenCV melakukan pemotongan area fokus (ROI),
-                penghilangan derau, dan normalisasi dimensi citra.</p>
-            </div>
-          </div>
-          <div class="step">
-            <span class="step__no">3</span>
-            <div class="step__content">
-              <h5>Inferensi Model Deep Learning</h5>
-              <p>Model neural network mengklasifikasikan citra ke salah satu dari 6 kelas (logam, kaca, plastik, kertas,
-                organik, residu) dengan output tingkat kepercayaan (confidence score).</p>
-            </div>
-          </div>
-          <div class="step">
-            <span class="step__no">4</span>
-            <div class="step__content">
-              <h5>Timing Sinkronisasi &amp; Aktuasi Pemilahan</h5>
-              <p>Mikrokontroler menghitung delay perpindahan objek berdasarkan kecepatan linear konveyor, lalu
-                mengaktifkan lengan pendorong mekanik tepat saat objek berada di depan wadah yang ditentukan.</p>
-            </div>
-          </div>
-          <div class="step">
-            <span class="step__no">5</span>
-            <div class="step__content">
-              <h5>Logging Data &amp; Telemetri</h5>
-              <p>Kategori sampah yang berhasil dipilah dicatat ke dalam memori log lokal dan dikirimkan ke modul
-                dashboard telemetri untuk pemantauan volume harian.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Hasil & KPI -->
-      <section id="hasil" class="block">
-        <h2>Hasil &amp; Pencapaian</h2>
-        <ul class="feature-list">
-          <li><strong>Finalis Nasional MRC 2022:</strong> Berhasil menembus babak finalis pada kompetisi bergengsi
-            <strong>Madrasah Robotic Competition (MRC)</strong> tingkat nasional tahun 2022.
-          </li>
-          <li><strong>Keberhasilan Klasifikasi 6 Kelas:</strong> Mampu membedakan material dengan tekstur dan
-            reflektansi berbeda secara otomatis di atas konveyor berjalan.</li>
-          <li><strong>Waktu Respon Cepat:</strong> Siklus deteksi, inferensi, dan aktuasi pemilahan diselesaikan dalam
-            waktu kurang dari 1.2 detik per objek, memungkinkan laju konveyor yang stabil.</li>
-          <li><strong>Demonstrasi Handal:</strong> Sistem berhasil menjalankan simulasi berkelanjutan selama penilaian
-            dewan juri tanpa kendala mekanis.</li>
-        </ul>
-      </section>
-
-      <!-- Galeri -->
-      <section id="galeri" class="block block--alt">
-        <h2>Galeri Dokumentasi</h2>
-        <p class="muted">Klik gambar untuk melihat dalam mode layar penuh (lightbox).</p>
-
-        <div class="gallery">
-          <!-- MRC Prototype -->
-          <a class="gallery__item" href="../../assets/images/projects/traco-bot/MRC.webp"
-            data-caption="Prototype robot conveyor pemilah sampah TRACO-BOT pada presentasi kompetisi Madrasah Robotic Competition 2022">
-            <img src="../../assets/images/projects/traco-bot/MRC.webp" alt="TRACO-BOT prototype conveyor pemilah sampah"
-              loading="lazy" />
-            <!-- MRC Prototype -->
-            <a class="gallery__item" href="../../assets/images/projects/traco-bot/MRC3.webp"
-              data-caption="Prototype robot conveyor pemilah sampah TRACO-BOT pada presentasi kompetisi Madrasah Robotic Competition 2022">
-              <img src="../../assets/images/projects/traco-bot/MRC3.webp"
-                alt="TRACO-BOT prototype conveyor pemilah sampah" loading="lazy" />
-            </a>
-            <!-- MRC Prototype -->
-            <a class="gallery__item" href="../../assets/images/projects/traco-bot/MRC2.webp"
-              data-caption="Prototype robot conveyor pemilah sampah TRACO-BOT pada presentasi kompetisi Madrasah Robotic Competition 2022">
-              <img src="../../assets/images/projects/traco-bot/MRC2.webp"
-                alt="TRACO-BOT prototype conveyor pemilah sampah" loading="lazy" />
-            </a>
-            <!-- Us -->
-            <a class="gallery__item" href="../../assets/images/projects/traco-bot/us.webp"
-              data-caption="Kami di kompetisi Madrasah Robotic Competition 2022">
-              <img src="../../assets/images/projects/traco-bot/us.webp" alt="About us" loading="lazy" />
-            </a>
-          </a>
-        </div>
-      </section>
-
-      <!-- Tautan -->
-      <section id="tautan" class="block">
-        <h2>Tautan &amp; Referensi</h2>
-        <div class="cta-group">
-          <a class="btn" href="https://github.com/NaufalElyzar11" target="_blank" rel="noreferrer">
-            GitHub Author ↗
-          </a>
-          <a class="btn btn--ghost" href="../../index.html#projects">
-            Kembali ke Semua Proyek
-          </a>
-          <a class="btn btn--ghost" href="../../index.html#contact">
-            Hubungi untuk Kolaborasi
-          </a>
-        </div>
-      </section>
-    </article>
+       </div>
+      </div>
+      <div class="step">
+       <span class="step__no">
+        4
+       </span>
+       <div class="step__content">
+        <h5 data-i18n="t239">
+         Timing Sinkronisasi &amp; Aktuasi Pemilahan
+        </h5>
+        <p data-i18n="t240">
+         Mikrokontroler menghitung delay perpindahan objek berdasarkan kecepatan linear konveyor, lalu
+                mengaktifkan lengan pendorong mekanik tepat saat objek berada di depan wadah yang ditentukan.
+        </p>
+       </div>
+      </div>
+      <div class="step">
+       <span class="step__no">
+        5
+       </span>
+       <div class="step__content">
+        <h5 data-i18n="t241">
+         Logging Data &amp; Telemetri
+        </h5>
+        <p data-i18n="t242">
+         Kategori sampah yang berhasil dipilah dicatat ke dalam memori log lokal dan dikirimkan ke modul
+                dashboard telemetri untuk pemantauan volume harian.
+        </p>
+       </div>
+      </div>
+     </div>
+    </section>
+    <!-- Hasil & KPI -->
+    <section class="block" id="hasil">
+     <h2 data-i18n="t243">
+      Hasil &amp; Pencapaian
+     </h2>
+     <ul class="feature-list">
+      <li data-i18n="t244">
+       Finalis nasional MRC 2022: Mencapai babak final Madrasah Robotic Competition tingkat nasional pada 2022.
+      </li>
+      <li data-i18n="t245">
+       <strong>
+        Keberhasilan Klasifikasi 6 Kelas:
+       </strong>
+       Mampu membedakan material dengan tekstur dan
+            reflektansi berbeda secara otomatis di atas konveyor berjalan.
+      </li>
+      <li data-i18n="t246">
+       <strong>
+        Waktu Respon Cepat:
+       </strong>
+       Siklus deteksi, inferensi, dan aktuasi pemilahan diselesaikan dalam
+            waktu kurang dari 1.2 detik per objek, memungkinkan laju konveyor yang stabil.
+      </li>
+      <li data-i18n="t247">
+       Demonstrasi kompetisi: Sistem berjalan selama penilaian juri tanpa kendala mekanis.
+      </li>
+     </ul>
+    </section>
+    <!-- Galeri -->
+    <section class="block block--alt" id="galeri">
+     <h2 data-i18n="t180">
+      Galeri Dokumentasi
+     </h2>
+     <p class="muted" data-i18n="t181">
+      Klik foto untuk memperbesar. Gunakan panah untuk berpindah foto.
+     </p>
+     <div class="gallery">
+      <a class="gallery__item" data-caption="Prototype robot conveyor pemilah sampah TRACO-BOT pada presentasi kompetisi Madrasah Robotic Competition 2022" data-i18n-data-caption="t252" href="../../assets/images/projects/traco-bot/MRC.webp">
+       <img alt="TRACO-BOT prototype conveyor pemilah sampah" data-i18n-alt="t253" decoding="async" height="2160" loading="lazy" sizes="(max-width: 580px) 86vw, (max-width: 900px) 42vw, 280px" src="../../assets/images/optimized/projects-traco-bot-MRC-960.webp" srcset="../../assets/images/optimized/projects-traco-bot-MRC-480.webp 480w, ../../assets/images/optimized/projects-traco-bot-MRC-960.webp 960w, ../../assets/images/optimized/projects-traco-bot-MRC-1440.webp 1440w" width="3840"/>
+       <!-- MRC Prototype -->
+       <!-- MRC Prototype -->
+       <!-- Us -->
+      </a>
+      <a class="gallery__item" data-caption="Prototype robot conveyor pemilah sampah TRACO-BOT pada presentasi kompetisi Madrasah Robotic Competition 2022" data-i18n-data-caption="t252" href="../../assets/images/projects/traco-bot/MRC3.webp">
+       <img alt="TRACO-BOT prototype conveyor pemilah sampah" data-i18n-alt="t253" decoding="async" height="3840" loading="lazy" sizes="(max-width: 580px) 86vw, (max-width: 900px) 42vw, 280px" src="../../assets/images/optimized/projects-traco-bot-MRC3-960.webp" srcset="../../assets/images/optimized/projects-traco-bot-MRC3-480.webp 480w, ../../assets/images/optimized/projects-traco-bot-MRC3-960.webp 960w, ../../assets/images/optimized/projects-traco-bot-MRC3-1440.webp 1440w" width="2160"/>
+      </a>
+      <a class="gallery__item" data-caption="Prototype robot conveyor pemilah sampah TRACO-BOT pada presentasi kompetisi Madrasah Robotic Competition 2022" data-i18n-data-caption="t252" href="../../assets/images/projects/traco-bot/MRC2.webp">
+       <img alt="TRACO-BOT prototype conveyor pemilah sampah" data-i18n-alt="t253" decoding="async" height="2160" loading="lazy" sizes="(max-width: 580px) 86vw, (max-width: 900px) 42vw, 280px" src="../../assets/images/optimized/projects-traco-bot-MRC2-960.webp" srcset="../../assets/images/optimized/projects-traco-bot-MRC2-480.webp 480w, ../../assets/images/optimized/projects-traco-bot-MRC2-960.webp 960w, ../../assets/images/optimized/projects-traco-bot-MRC2-1440.webp 1440w" width="3840"/>
+      </a>
+      <a class="gallery__item" data-caption="Kami di kompetisi Madrasah Robotic Competition 2022" data-i18n-data-caption="t254" href="../../assets/images/projects/traco-bot/us.webp">
+       <img alt="Tim kami" data-i18n-alt="t255" decoding="async" height="3840" loading="lazy" sizes="(max-width: 580px) 86vw, (max-width: 900px) 42vw, 280px" src="../../assets/images/optimized/projects-traco-bot-us-960.webp" srcset="../../assets/images/optimized/projects-traco-bot-us-480.webp 480w, ../../assets/images/optimized/projects-traco-bot-us-960.webp 960w, ../../assets/images/optimized/projects-traco-bot-us-1440.webp 1440w" width="2160"/>
+      </a>
+     </div>
+    </section>
+    <!-- Tautan -->
+    <section class="block" id="tautan">
+     <h2 data-i18n="t145">
+      Tautan &amp; Referensi
+     </h2>
+     <div class="cta-group">
+      <a class="btn" data-i18n="t183" href="https://github.com/NaufalElyzar11" rel="noreferrer" target="_blank">
+       GitHub pengembang ↗
+      </a>
+      <a class="btn btn--ghost" data-i18n="t184" href="../../index.html#projects">
+       Kembali ke Semua Proyek
+      </a>
+      <a class="btn btn--ghost" data-i18n="t248" href="../../index.html#contact">
+       Hubungi untuk Kolaborasi
+      </a>
+     </div>
+    </section>
+   </article>
   </main>
-
   <!-- FOOTER -->
   <footer class="foot">
-    <div class="wrap foot__inner">
-      <p>© <span id="yr"></span> Naufal Elyzar. Studi Kasus TRACO-BOT.</p>
-      <div class="foot__links">
-        <a href="../../index.html#projects">Semua Proyek</a>
-        <a href="../../index.html#contact">Kontak</a>
-        <a href="https://github.com/NaufalElyzar11" target="_blank" rel="noreferrer">GitHub</a>
-      </div>
+   <div class="wrap foot__inner">
+    <p>
+     ©
+     <span id="yr">
+     </span>
+     <span data-i18n="t249">
+      Naufal Elyzar. Studi Kasus TRACO-BOT.
+     </span>
+    </p>
+    <div class="foot__links">
+     <a data-i18n="t186" href="../../index.html#projects">
+      Semua Proyek
+     </a>
+     <a data-i18n="t009" href="../../index.html#contact">
+      Kontak
+     </a>
+     <a data-i18n="t187" href="https://github.com/NaufalElyzar11" rel="noreferrer" target="_blank">
+      GitHub
+     </a>
     </div>
+   </div>
   </footer>
-
   <!-- Scripts -->
-  <script src="../../assets/js/project-detail.js" defer></script>
-</body>
-
+  <script defer="" src="../../assets/js/translations.js">
+  </script>
+  <script defer="" src="../../assets/js/i18n.js">
+  </script>
+  <script defer="" src="../../assets/js/project-detail.js">
+  </script>
+  <script defer="" src="../../assets/js/gallery.js">
+  </script>
+ </body>
 </html>

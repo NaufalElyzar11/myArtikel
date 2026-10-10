@@ -7,11 +7,10 @@
   <title data-i18n="t001">
     Naufal Elyzar - CV &amp; Portofolio
   </title>
-  <meta content="CV &amp; Portfolio Naufal Elyzar - Robotics, IoT, Computer Vision, dan Fotografi."
-    data-i18n-content="t104" name="description" />
+  <meta content="CV &amp; Portfolio Naufal Elyzar — Robotika, teknologi asistif, IoT, aplikasi Flutter, dan fotografi." data-i18n-content="t104" name="description" />
   <meta content="Naufal Elyzar" name="author" />
   <meta content="Naufal Elyzar - CV &amp; Portfolio" data-i18n-content="t001" property="og:title" />
-  <meta content="Robotics, IoT, Computer Vision, dan Fotografi." data-i18n-content="t105" property="og:description" />
+  <meta content="Robotika, teknologi asistif, IoT, aplikasi Flutter, dan fotografi." data-i18n-content="t105" property="og:description" />
   <meta content="website" property="og:type" />
   <meta content="https://i.postimg.cc/VL8wr6RW/Me.jpg" property="og:image" />
   <!-- Fonts -->
@@ -82,14 +81,13 @@
       <div class="container hero__grid">
         <div class="hero__copy">
           <p class="hero__eyebrow" data-i18n="t011">
-            Robotika · Computer vision · IoT
+            Robotika · IoT · Teknologi asistif
           </p>
           <h1 class="hero__title">
             Naufal Elyzar
           </h1>
           <p class="hero__intro" data-i18n="t012">
-            Seorang mahasiswa Teknologi Informasi. Saya mengembangkan robot berkaki, sistem computer vision, dan
-            perangkat IoT.
+            Seorang mahasiswa Teknologi Informasi. Saya mengembangkan robot, perangkat asistif, dan sistem IoT yang terhubung ke aplikasi.
           </p>
           <div class="hero__cta">
             <a class="btn" data-i18n="t013" href="#projects">
@@ -102,11 +100,8 @@
               Lihat fotografi
             </a>
           </div>
-          <a class="hero__note" data-i18n="t015" href="./projects/hexaka/">
-            Proyek terbaru: Hexaka V3
-            <span aria-hidden="true">
-              ↗
-            </span>
+          <a class="hero__note" data-i18n="t015" href="./projects/mangrovepreneurs/">
+            Perangkat &amp; aplikasi: Mangrovepreneurs ↗
           </a>
         </div>
         <div class="hero__photo">
@@ -138,13 +133,19 @@
             Pilihan proyek
           </h2>
           <p class="muted" data-i18n="t018">
-            Robot berkaki, drone pertanian, dan pemilah sampah.
+            Dari robotika dan teknologi asistif hingga pemantauan sarang kelulut melalui aplikasi.
           </p>
         </div>
-        <!-- PRONE.ID -->
-        <!-- TRACO-BOT -->
-        <!-- Hexaka -->
-        <article class="project reveal project--featured">
+        <div class="project-browser" hidden>
+          <div class="project-filters" role="group" aria-label="Filter kategori proyek" data-i18n-aria-label="projects.filterLabel">
+            <button data-i18n="projects.all" type="button" class="project-filter" data-project-filter="all" aria-pressed="true">Semua</button>
+            <button data-i18n="projects.robotics" type="button" class="project-filter" data-project-filter="robotics" aria-pressed="false">Robotika</button>
+            <button data-i18n="projects.assistive" type="button" class="project-filter" data-project-filter="assistive" aria-pressed="false">Teknologi asistif</button>
+            <button data-i18n="projects.iot" type="button" class="project-filter" data-project-filter="iot" aria-pressed="false">IoT</button>
+          </div>
+          <p class="project-count" role="status" aria-live="polite" aria-atomic="true"></p>
+        </div>
+        <article class="project reveal project--featured" data-project-category="robotics">
           <div class="project__thumb">
             <div class="bbox-frame">
               <img alt="Wasaka Hexapod (Hexaka V3)" data-i18n-alt="t020" decoding="async" height="1280" loading="lazy"
@@ -195,7 +196,49 @@
             </div>
           </div>
         </article>
-        <article class="project reveal">
+        <article class="project reveal project--device" data-project-category="iot">
+          <div class="project__thumb"><div class="bbox-frame"><img src="./assets/images/optimized/mangrove-result-720.webp" srcset="./assets/images/optimized/mangrove-result-480.webp 480w, ./assets/images/optimized/mangrove-result-720.webp 720w" sizes="(max-width: 960px) 92vw, 600px" width="720" height="1280" alt="Perangkat Mangrovepreneurs terpasang pada sarang kelulut." data-i18n-alt="mangrovepreneurs.cover" decoding="async" loading="lazy" /><span class="corner corner--tl"></span><span class="corner corner--br"></span></div></div>
+          <div class="project__body">
+            <span data-i18n="mangrovepreneurs.index" class="project__index">Proyek 02</span>
+            <h3 class="project__name">Mangrovepreneurs</h3>
+            <p data-i18n="mangrovepreneurs.meta" class="project__desc">ESP32, BME280, dan load cell dengan HX711 terhubung ke Firebase dan aplikasi Flutter untuk memantau sarang kelulut, mengatur ambang kondisi, serta menerima notifikasi kesiapan panen.</p>
+            <dl class="spec project__spec">
+              <dt data-i18n="projects.client">Klien / konteks</dt><dd data-i18n="mangrovepreneurs.client">FEB ULM · Innovilleague 2026</dd>
+              <dt data-i18n="projects.role">Kontribusi saya</dt><dd data-i18n="mangrovepreneurs.role">Perangkat IoT &amp; aplikasi Flutter</dd>
+              <dt data-i18n="t025">Teknologi</dt><dd>ESP32 · BME280 · Load cell + HX711</dd>
+            </dl>
+            <div class="project__actions"><a data-i18n="t027" class="btn btn--ghost" href="./projects/mangrovepreneurs/">Baca selengkapnya ↗</a></div>
+          </div>
+        </article>
+        <article class="project reveal project--device" data-project-category="assistive">
+          <div class="project__thumb"><div class="bbox-frame"><img src="./assets/images/optimized/aac-result-720.webp" srcset="./assets/images/optimized/aac-result-480.webp 480w, ./assets/images/optimized/aac-result-720.webp 720w" sizes="(max-width: 960px) 92vw, 600px" width="720" height="1280" alt="Hasil alat AAC — Bicara Warna." data-i18n-alt="aac.cover" decoding="async" loading="lazy" /><span class="corner corner--tl"></span><span class="corner corner--br"></span></div></div>
+          <div class="project__body">
+            <span data-i18n="aac.index" class="project__index">Proyek 03</span>
+            <h3 class="project__name">AAC — Bicara Warna</h3>
+            <p data-i18n="aac.meta" class="project__desc">Alat bantu komunikasi dengan tiga tombol “mau”, “iya”, dan “tidak” serta keluaran suara. Pesanan Pendidikan Khusus ULM, dengan fokus wiring PCB dan pemrograman Arduino IDE (.ino).</p>
+            <dl class="spec project__spec">
+              <dt data-i18n="projects.client">Klien / konteks</dt><dd data-i18n="aac.client">Pendidikan Khusus ULM · Kelompok 2</dd>
+              <dt data-i18n="projects.role">Kontribusi saya</dt><dd data-i18n="aac.role">Wiring PCB &amp; pemrograman Arduino IDE (.ino)</dd>
+              <dt data-i18n="t025">Teknologi</dt><dd>Arduino Nano V3 · Arduino IDE (.ino) · PCB wiring</dd>
+            </dl>
+            <div class="project__actions"><a data-i18n="t027" class="btn btn--ghost" href="./projects/aac/">Baca selengkapnya ↗</a></div>
+          </div>
+        </article>
+        <article class="project reveal project--device" data-project-category="assistive">
+          <div class="project__thumb"><div class="bbox-frame"><img src="./assets/images/optimized/teksif-result-b4ddbcc5-720.webp" srcset="./assets/images/optimized/teksif-result-b4ddbcc5-480.webp 480w, ./assets/images/optimized/teksif-result-b4ddbcc5-720.webp 720w" sizes="(max-width: 960px) 92vw, 600px" width="720" height="1280" alt="Hasil alat TekSif — Chromoney." data-i18n-alt="teksif.cover" decoding="async" loading="lazy" /><span class="corner corner--tl"></span><span class="corner corner--br"></span></div></div>
+          <div class="project__body">
+            <span data-i18n="teksif.index" class="project__index">Proyek 04</span>
+            <h3 class="project__name">TekSif — Chromoney</h3>
+            <p data-i18n="teksif.meta" class="project__desc">Alat pengenal nominal uang melalui sensor warna dan keluaran suara untuk pengguna tunanetra. Pesanan Pendidikan Khusus ULM, dengan fokus wiring PCB dan Arduino IDE (.ino).</p>
+            <dl class="spec project__spec">
+              <dt data-i18n="projects.client">Klien / konteks</dt><dd data-i18n="teksif.client">Pendidikan Khusus ULM · Kelompok 4</dd>
+              <dt data-i18n="projects.role">Kontribusi saya</dt><dd data-i18n="teksif.role">Wiring PCB &amp; pemrograman Arduino IDE (.ino)</dd>
+              <dt data-i18n="t025">Teknologi</dt><dd data-i18n="teksif.homeStack">Arduino IDE (.ino) · PCB wiring · Sensor warna</dd>
+            </dl>
+            <div class="project__actions"><a data-i18n="t027" class="btn btn--ghost" href="./projects/teksif/">Baca selengkapnya ↗</a></div>
+          </div>
+        </article>
+        <article class="project reveal" data-project-category="iot">
           <div class="project__thumb">
             <div class="bbox-frame">
               <img alt="PRONE.ID - sistem drone pemetaan dan penyiraman" data-i18n-alt="t112" decoding="async"
@@ -211,8 +254,8 @@
           </div>
           <div class="project__body">
             <span class="project__index" data-i18n="t028">
-              Proyek 02
-            </span>
+            Proyek 05
+          </span>
             <h3 class="project__name" data-i18n="t029">
               PRONE.ID
             </h3>
@@ -247,7 +290,7 @@
             </div>
           </div>
         </article>
-        <article class="project reveal">
+        <article class="project reveal" data-project-category="robotics iot">
           <div class="project__thumb">
             <div class="bbox-frame">
               <img alt="TRACO-BOT — conveyor pemilah sampah otomatis" data-i18n-alt="t113" decoding="async"
@@ -263,8 +306,8 @@
           </div>
           <div class="project__body">
             <span class="project__index" data-i18n="t033">
-              Proyek 03
-            </span>
+            Proyek 06
+          </span>
             <h3 class="project__name" data-i18n="t034">
               TRACO-BOT
             </h3>
@@ -315,10 +358,12 @@
               Robotic Team, saya melanjutkan pengembangan robot hexapod, dari pemrograman gerak hingga simulasinya.
             </p>
             <p data-i18n="t040">
-              Di luar robotika, saya juga membangun website dan aplikasi. Fotografi menjadi bagian lain dari kegiatan
-              saya; beberapa hasilnya ada di galeri di bawah.
-            </p>
+            Saya juga mengerjakan perangkat asistif untuk Pendidikan Khusus ULM serta sistem Mangrovepreneurs untuk FEB ULM, mulai dari wiring PCB hingga aplikasi Flutter dan integrasi Firebase. Di luar pengembangan perangkat dan aplikasi, saya juga menekuni fotografi.
+          </p>
             <div class="about__tags">
+              <span class="tag">ESP32</span>
+              <span class="tag">Firebase</span>
+              <span data-i18n="skills.wiring" class="tag">Wiring PCB &amp; penyolderan</span>
               <span class="tag" data-i18n="t041">
                 Raspberry Pi
               </span>
@@ -360,8 +405,8 @@
                 Fokus
               </dt>
               <dd data-i18n="t053">
-                Website, Robotics, IoT
-              </dd>
+            Robotika, teknologi asistif, IoT &amp; aplikasi
+          </dd>
               <dt data-i18n="t054">
                 Organisasi
               </dt>
@@ -401,6 +446,8 @@
               <li data-i18n="t058">
                 C / C++
               </li>
+              <li data-i18n="skills.arduinoIde">Arduino IDE (.ino)</li>
+              <li data-i18n="skills.wiring">Wiring PCB &amp; penyolderan</li>
               <li data-i18n="t044">
                 Python
               </li>
@@ -464,8 +511,11 @@
               <li data-i18n="t072">
                 Sistem IoT
               </li>
+              <li data-i18n="skills.sensor">BME280 · Load cell / HX711</li>
+              <li data-i18n="skills.firebase">Firebase Realtime Database</li>
             </ul>
           </div>
+          <div class="skill"><h3 data-i18n="skills.mobile">Aplikasi mobile</h3><ul><li>Flutter / Dart</li><li data-i18n="skills.firebase">Firebase Realtime Database</li><li data-i18n="skills.notifications">Notifikasi &amp; pengaturan ambang</li></ul></div>
         </div>
       </div>
     </section>
@@ -717,7 +767,7 @@
             Kontak
           </h2>
           <p class="muted" data-i18n="t101" style="margin-top:14px;">
-            Ingin membahas robotika, proyek web, atau kolaborasi? Hubungi saya lewat email.
+            Ingin membahas robotika, perangkat asistif, IoT, aplikasi, atau kolaborasi? Hubungi saya lewat email.
           </p>
           <ul class="contact__links">
             <li>
@@ -842,6 +892,9 @@
                 </span>
               </div>
             </li>
+
+            <li><img src="./assets/images/optimized/partner-nanda-192.webp" srcset="./assets/images/optimized/partner-nanda-96.webp 96w, ./assets/images/optimized/partner-nanda-192.webp 192w" sizes="44px" width="381" height="381" alt="Nanda Ikbar" data-i18n-alt="partner-nanda.name" decoding="async" loading="lazy" /><div><strong>Nanda Ikbar</strong><span data-i18n="partner-nanda.role">Electrical</span></div></li>
+            <li><img src="./assets/images/optimized/partner-rara-192.webp" srcset="./assets/images/optimized/partner-rara-96.webp 96w, ./assets/images/optimized/partner-rara-192.webp 192w" sizes="44px" width="639" height="639" alt="Siti Fathimah Az-Zahra" data-i18n-alt="partner-rara.name" decoding="async" loading="lazy" /><div><strong>Siti Fathimah Az-Zahra</strong><span data-i18n="partner-rara.role">Robotic Consultant</span></div></li>
           </ul>
         </div>
       </div>

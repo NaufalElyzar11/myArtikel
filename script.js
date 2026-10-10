@@ -44,3 +44,29 @@ window.addEventListener('scroll', () => {
 window.addEventListener('resize', updateSection);
 document.addEventListener('languagechange', updateSection);
 updateSection();
+
+// All projects remain visible when JavaScript is unavailable.
+const projectBrowser = document.querySelector('.project-browser');
+const projectFilters = [...document.querySelectorAll('[data-project-filter]')];
+const projectCards = [...document.querySelectorAll('[data-project-category]')];
+if (projectBrowser && projectFilters.length) {
+  const count = projectBrowser.querySelector('.project-count');
+  let selectedCategory = 'all';
+  function filterProjects() {
+    let visible = 0;
+    projectCards.forEach(card => {
+      const matches = selectedCategory === 'all' || card.dataset.projectCategory.split(' ').includes(selectedCategory);
+      card.hidden = !matches;
+      if (matches) visible++;
+    });
+    projectFilters.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.projectFilter === selectedCategory)));
+    count.textContent = `${visible} / ${projectCards.length} ${window.siteI18n.t('projects.count')}`;
+  }
+  projectFilters.forEach(button => button.addEventListener('click', () => {
+    selectedCategory = button.dataset.projectFilter;
+    filterProjects();
+  }));
+  document.addEventListener('languagechange', filterProjects);
+  projectBrowser.hidden = false;
+  filterProjects();
+}

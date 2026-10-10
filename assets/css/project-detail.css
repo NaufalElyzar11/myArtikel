@@ -967,6 +967,18 @@ html[lang="en"] .gallery__item::after { content: 'Enlarge ↗'; }
   .foot__links { flex-wrap: wrap; }
 }
 
+/* Hardware case studies and captioned progress documentation. */
+.device-media img { aspect-ratio: 4 / 3; object-position: 50% 45%; }
+.toc h2 { font: 600 1rem var(--font-body); margin: 0 0 16px; }
+.toc.collapsed h2 { margin-bottom: 0; }
+.documentation-photo { margin: 0; min-width: 0; }
+.documentation-photo .gallery__item { aspect-ratio: 3 / 4; }
+.documentation-photo img { object-fit: contain; }
+.documentation-photo figcaption { font-size: .82rem; line-height: 1.6; color: var(--ink-muted); padding-top: 10px; }
+.project-return { padding-block: 12px; }
+.step__content h3 { margin: 0 0 6px; font-size: 1.2rem; }
+.stack-chips span { overflow-wrap: anywhere; }
+
 /* Print */
 @media print {
   .topbar, .toc, .gallery, .lightbox, .foot, .cta-group {

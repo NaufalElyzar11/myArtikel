@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-i18n="mangrovepreneurs.pageTitle">Mangrovepreneurs | Naufal Elyzar</title>
+  <meta name="description" content="ESP32, BME280, dan load cell dengan HX711 terhubung ke Firebase dan aplikasi Flutter untuk memantau sarang kelulut, mengatur ambang kondisi, serta menerima notifikasi kesiapan panen." data-i18n-content="mangrovepreneurs.meta" />
+  <meta name="author" content="Naufal Elyzar" />
+  <meta property="og:title" content="Mangrovepreneurs | Naufal Elyzar" data-i18n-content="mangrovepreneurs.pageTitle" />
+  <meta property="og:description" content="ESP32, BME280, dan load cell dengan HX711 terhubung ke Firebase dan aplikasi Flutter untuk memantau sarang kelulut, mengatur ambang kondisi, serta menerima notifikasi kesiapan panen." data-i18n-content="mangrovepreneurs.meta" />
+  <meta property="og:type" content="article" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" />
+  <link rel="stylesheet" href="../../assets/css/project-detail.css" />
+  <link rel="stylesheet" href="../../assets/css/site-controls.css" />
+</head>
+<body>
+  <a data-i18n="t002" class="skip-link" href="#main-content">Langsung ke konten</a>
+  <header class="topbar"><div class="wrap">
+    <a data-i18n="t121" class="back-link" href="../../index.html#projects">← Kembali ke Portofolio</a>
+    <nav class="mininav" aria-label="Navigasi cepat artikel" data-i18n-aria-label="t190"><a data-i18n="t122" href="#overview">Ringkasan</a><a data-i18n="projects.features" href="#fitur">Fitur utama</a><a data-i18n="projects.implementation" href="#implementasi">Implementasi</a><a data-i18n="t008" href="#galeri">Galeri</a></nav>
+    <div class="language-switch" role="group" aria-label="Bahasa" data-i18n-aria-label="t107">
+    <button type="button" data-language="id" lang="id" aria-pressed="true" aria-label="Bahasa Indonesia" data-i18n-aria-label="t108">ID</button>
+    <button type="button" data-language="en" lang="en" aria-pressed="false" aria-label="English" data-i18n-aria-label="t109">EN</button>
+  </div>
+  </div></header>
+  <main id="main-content" tabindex="-1">
+    <section class="hero">
+      <div class="wrap hero__inner">
+        <div class="hero__text">
+          <p data-i18n="mangrovepreneurs.eyebrow" class="eyebrow">Studi kasus / Mangrovepreneurs</p>
+          <h1 class="hero__title">Mangrovepreneurs<span data-i18n="mangrovepreneurs.subtitle">Pemantauan sarang kelulut · IoT · Aplikasi mobile</span></h1>
+          <p data-i18n="mangrovepreneurs.description" class="lead">Sistem pemantauan sarang kelulut untuk tim FEB ULM dalam ajang nasional Innovilleague 2026. ESP32 mengirim suhu, kelembapan, dan berat ke Firebase Realtime Database; aplikasi Flutter menampilkan data serta notifikasi sesuai ambang yang ditentukan pengguna.</p>
+          <ul class="badges"><li data-i18n="mangrovepreneurs.client">FEB ULM · Innovilleague 2026</li><li data-i18n="mangrovepreneurs.role">Perangkat IoT &amp; aplikasi Flutter</li></ul>
+          <div class="cta-group"><a data-i18n="projects.features" class="btn" href="#fitur">Fitur utama</a><a data-i18n="t206" class="btn btn--ghost" href="#galeri">Lihat Dokumentasi</a></div>
+        </div>
+        <figure class="bbox-frame hero__media device-media">
+          <img src="../../assets/images/optimized/mangrove-result-720.webp" srcset="../../assets/images/optimized/mangrove-result-480.webp 480w, ../../assets/images/optimized/mangrove-result-720.webp 720w" sizes="(max-width: 960px) 92vw, 600px" width="720" height="1280" alt="Perangkat Mangrovepreneurs terpasang pada sarang kelulut." data-i18n-alt="mangrovepreneurs.cover" decoding="async" fetchpriority="high" />
+          <figcaption data-i18n="mangrovepreneurs.cover">Perangkat Mangrovepreneurs terpasang pada sarang kelulut.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <div class="wrap layout">
+      <aside class="toc" aria-label="Daftar isi" data-i18n-aria-label="projects.contents">
+        <h2><button type="button" class="toc-toggle" aria-controls="toc-links" aria-expanded="true"><span data-i18n="projects.contents">Daftar isi</span></button></h2>
+        <div id="toc-links"><a data-i18n="t122" class="toc__link" href="#overview">Ringkasan</a><a data-i18n="projects.features" class="toc__link" href="#fitur">Fitur utama</a><a data-i18n="projects.implementation" class="toc__link" href="#implementasi">Implementasi</a><a data-i18n="t008" class="toc__link" href="#galeri">Galeri</a></div>
+      </aside>
+      <article class="content">
+        <section class="block" id="overview">
+          <h2 data-i18n="t122">Ringkasan</h2>
+          <p data-i18n="mangrovepreneurs.overview.0">Mangrovepreneurs menghubungkan perangkat di sarang kelulut dengan aplikasi mobile agar kondisi sarang dapat dipantau dari data sensor. Proyek ini dikembangkan untuk kebutuhan tim Fakultas Ekonomi dan Bisnis Universitas Lambung Mangkurat.</p>
+<p data-i18n="mangrovepreneurs.overview.1">Konteks proyek adalah ajang nasional Innovilleague 2026 yang diselenggarakan Kementerian Koordinator Bidang Pemberdayaan Masyarakat RI. Pengembangan mencakup perakitan perangkat ESP32, integrasi sensor, koneksi database realtime, dan aplikasi Flutter.</p>
+          <div class="stack-chips"><span>ESP32</span><span>BME280</span><span>Load cell + HX711</span><span>Firebase Realtime Database</span><span>Flutter / Dart</span></div>
+        </section>
+        <section class="block" id="fitur">
+          <h2 data-i18n="projects.features">Fitur utama</h2>
+          <div class="grid2"><div class="card"><h3 data-i18n="mangrovepreneurs.feature.0.title">Pemantauan suhu &amp; kelembapan</h3><p data-i18n="mangrovepreneurs.feature.0.body">Sensor BME280 membaca suhu dan kelembapan di sarang. Data dikirim melalui ESP32 agar dapat dilihat di aplikasi.</p></div>
+<div class="card"><h3 data-i18n="mangrovepreneurs.feature.1.title">Indikator kesiapan panen</h3><p data-i18n="mangrovepreneurs.feature.1.body">Load cell dengan modul HX711 membaca berat. Notifikasi kesiapan panen mengikuti target berat dalam kilogram yang diatur pengguna.</p></div>
+<div class="card"><h3 data-i18n="mangrovepreneurs.feature.2.title">Notifikasi kondisi sarang</h3><p data-i18n="mangrovepreneurs.feature.2.body">Aplikasi memberi notifikasi saat suhu atau kelembapan berada di bawah ambang yang ditentukan, serta saat target berat panen tercapai.</p></div>
+<div class="card"><h3 data-i18n="mangrovepreneurs.feature.3.title">Ambang dapat diatur</h3><p data-i18n="mangrovepreneurs.feature.3.body">Pengguna dapat mengatur batas suhu, kelembapan, dan target berat panen dari aplikasi Flutter sesuai kebutuhan sarang.</p></div></div>
+        </section>
+        <section class="block" id="implementasi">
+          <h2 data-i18n="projects.implementation">Implementasi</h2>
+          <div class="steps"><div class="step"><span class="step__no" aria-hidden="true">01</span><div class="step__content"><h3 data-i18n="mangrovepreneurs.step.0.title">Sensor &amp; ESP32</h3><p data-i18n="mangrovepreneurs.step.0.body">BME280 menangani pembacaan suhu dan kelembapan. Load cell terhubung melalui HX711 untuk pembacaan berat; ESP32 mengumpulkan data kedua jalur sensor.</p></div></div><div class="step"><span class="step__no" aria-hidden="true">02</span><div class="step__content"><h3 data-i18n="mangrovepreneurs.step.1.title">Firebase Realtime Database</h3><p data-i18n="mangrovepreneurs.step.1.body">ESP32 mengirim data sensor ke Firebase Realtime Database, yang menjadi penghubung antara perangkat dan aplikasi mobile.</p></div></div><div class="step"><span class="step__no" aria-hidden="true">03</span><div class="step__content"><h3 data-i18n="mangrovepreneurs.step.2.title">Flutter &amp; notifikasi</h3><p data-i18n="mangrovepreneurs.step.2.body">Aplikasi Flutter menampilkan data sarang dan menyediakan pengaturan ambang. Kondisi suhu, kelembapan, serta berat digunakan untuk menentukan notifikasi.</p></div></div></div>
+        </section>
+        <section class="block" id="galeri">
+          <h2 data-i18n="t008">Galeri</h2>
+          <p data-i18n="projects.galleryHint" class="muted">Hasil alat, proses pengerjaan, dan konteks lapangan. Pilih foto untuk memperbesar; gunakan tombol panah atau swipe untuk menjelajah.</p>
+          <div class="gallery documentation-gallery"><figure class="documentation-photo"><a class="gallery__item" href="../../assets/images/optimized/mangrove-result-720.webp" data-caption="Hasil alat: perangkat pemantauan pada sarang kelulut." data-i18n-data-caption="mangrovepreneurs.photo.mangrove-result"><img src="../../assets/images/optimized/mangrove-result-720.webp" srcset="../../assets/images/optimized/mangrove-result-480.webp 480w, ../../assets/images/optimized/mangrove-result-720.webp 720w" sizes="(max-width: 960px) 92vw, 600px" width="720" height="1280" alt="Hasil alat: perangkat pemantauan pada sarang kelulut." data-i18n-alt="mangrovepreneurs.photo.mangrove-result" decoding="async" loading="lazy" /></a><figcaption data-i18n="mangrovepreneurs.photo.mangrove-result">Hasil alat: perangkat pemantauan pada sarang kelulut.</figcaption></figure>
+<figure class="documentation-photo"><a class="gallery__item" href="../../assets/images/optimized/mangrove-app-709.webp" data-caption="Aplikasi Flutter Mangrovepreneurs: daftar sarang, suhu, kelembapan, dan berat." data-i18n-data-caption="mangrovepreneurs.photo.mangrove-app"><img src="../../assets/images/optimized/mangrove-app-709.webp" srcset="../../assets/images/optimized/mangrove-app-480.webp 480w, ../../assets/images/optimized/mangrove-app-709.webp 709w" sizes="(max-width: 960px) 92vw, 600px" width="709" height="1600" alt="Aplikasi Flutter Mangrovepreneurs: daftar sarang, suhu, kelembapan, dan berat." data-i18n-alt="mangrovepreneurs.photo.mangrove-app" decoding="async" loading="lazy" /></a><figcaption data-i18n="mangrovepreneurs.photo.mangrove-app">Aplikasi Flutter Mangrovepreneurs: daftar sarang, suhu, kelembapan, dan berat.</figcaption></figure>
+<figure class="documentation-photo"><a class="gallery__item" href="../../assets/images/optimized/mangrove-wiring-899.webp" data-caption="Progres perakitan rangkaian dan wiring perangkat Mangrovepreneurs." data-i18n-data-caption="mangrovepreneurs.photo.mangrove-wiring"><img src="../../assets/images/optimized/mangrove-wiring-899.webp" srcset="../../assets/images/optimized/mangrove-wiring-480.webp 480w, ../../assets/images/optimized/mangrove-wiring-899.webp 899w" sizes="(max-width: 960px) 92vw, 600px" width="899" height="1599" alt="Progres perakitan rangkaian dan wiring perangkat Mangrovepreneurs." data-i18n-alt="mangrovepreneurs.photo.mangrove-wiring" decoding="async" loading="lazy" /></a><figcaption data-i18n="mangrovepreneurs.photo.mangrove-wiring">Progres perakitan rangkaian dan wiring perangkat Mangrovepreneurs.</figcaption></figure>
+<figure class="documentation-photo"><a class="gallery__item" href="../../assets/images/optimized/mangrove-case-960.webp" data-caption="Progres pemasangan rangkaian dan catu daya di dalam casing." data-i18n-data-caption="mangrovepreneurs.photo.mangrove-case"><img src="../../assets/images/optimized/mangrove-case-960.webp" srcset="../../assets/images/optimized/mangrove-case-480.webp 480w, ../../assets/images/optimized/mangrove-case-960.webp 960w" sizes="(max-width: 960px) 92vw, 600px" width="960" height="1280" alt="Progres pemasangan rangkaian dan catu daya di dalam casing." data-i18n-alt="mangrovepreneurs.photo.mangrove-case" decoding="async" loading="lazy" /></a><figcaption data-i18n="mangrovepreneurs.photo.mangrove-case">Progres pemasangan rangkaian dan catu daya di dalam casing.</figcaption></figure>
+<figure class="documentation-photo"><a class="gallery__item" href="../../assets/images/optimized/mangrove-survey-960.webp" data-caption="Survei sarang kelulut untuk kebutuhan perangkat Mangrovepreneurs." data-i18n-data-caption="mangrovepreneurs.photo.mangrove-survey"><img src="../../assets/images/optimized/mangrove-survey-960.webp" srcset="../../assets/images/optimized/mangrove-survey-480.webp 480w, ../../assets/images/optimized/mangrove-survey-960.webp 960w" sizes="(max-width: 960px) 92vw, 600px" width="960" height="1280" alt="Survei sarang kelulut untuk kebutuhan perangkat Mangrovepreneurs." data-i18n-alt="mangrovepreneurs.photo.mangrove-survey" decoding="async" loading="lazy" /></a><figcaption data-i18n="mangrovepreneurs.photo.mangrove-survey">Survei sarang kelulut untuk kebutuhan perangkat Mangrovepreneurs.</figcaption></figure></div>
+        </section>
+        <div class="project-return cta-group">
+          <a data-i18n="t184" class="btn btn--ghost" href="../../index.html#projects">Kembali ke Semua Proyek</a>
+          <a data-i18n="projects.collaboration" class="btn" href="../../index.html#contact">Bahas proyek serupa</a>
+        </div>
+      </article>
+    </div>
+  </main>
+  <footer class="foot"><div class="wrap foot__inner">
+    <p>© <span id="yr"></span> <span data-i18n="t103">Naufal Elyzar. Hak cipta dilindungi.</span></p>
+    <div class="foot__links"><a data-i18n="t186" href="../../index.html#projects">Semua Proyek</a><a data-i18n="t009" href="../../index.html#contact">Kontak</a></div>
+  </div></footer>
+  <script defer src="../../assets/js/translations.js"></script>
+  <script defer src="../../assets/js/i18n.js"></script>
+  <script defer src="../../assets/js/project-detail.js"></script>
+  <script defer src="../../assets/js/gallery.js"></script>
+</body>
+</html>

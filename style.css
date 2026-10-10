@@ -645,7 +645,7 @@ ul {
 /* ---------- Skills ---------- */
 .skills {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 0;
   border-top: 1px solid var(--rule);
   border-left: 1px solid var(--rule);
@@ -825,6 +825,33 @@ ul {
   padding: .6rem .9rem;
   font-size: .78rem;
 }
+
+/* Keep an expanded portfolio easy to browse with keyboard-accessible filters. */
+.project-browser {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-bottom: 20px;
+}
+.project-browser[hidden], .project[hidden] { display: none; }
+.project-filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.project-filter {
+  min-height: 44px;
+  padding: 9px 16px;
+  background: transparent;
+  color: var(--ink-muted);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  font: 500 .88rem var(--font-body);
+  cursor: pointer;
+  transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+}
+.project-filter:hover { color: var(--ink); border-color: var(--accent); }
+.project-filter[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.project-count { margin: 0; font: .8rem var(--font-mono); color: var(--ink-muted); }
+.project--device .project__thumb img { object-position: 50% 45%; }
 
 @media (max-width: 880px) {
 

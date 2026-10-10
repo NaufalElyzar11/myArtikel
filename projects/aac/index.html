@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-i18n="aac.pageTitle">AAC — Bicara Warna | Naufal Elyzar</title>
+  <meta name="description" content="Alat bantu komunikasi dengan tiga tombol “mau”, “iya”, dan “tidak” serta keluaran suara. Pesanan Pendidikan Khusus ULM, dengan fokus wiring PCB dan pemrograman Arduino IDE (.ino)." data-i18n-content="aac.meta" />
+  <meta name="author" content="Naufal Elyzar" />
+  <meta property="og:title" content="AAC — Bicara Warna | Naufal Elyzar" data-i18n-content="aac.pageTitle" />
+  <meta property="og:description" content="Alat bantu komunikasi dengan tiga tombol “mau”, “iya”, dan “tidak” serta keluaran suara. Pesanan Pendidikan Khusus ULM, dengan fokus wiring PCB dan pemrograman Arduino IDE (.ino)." data-i18n-content="aac.meta" />
+  <meta property="og:type" content="article" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" />
+  <link rel="stylesheet" href="../../assets/css/project-detail.css" />
+  <link rel="stylesheet" href="../../assets/css/site-controls.css" />
+</head>
+<body>
+  <a data-i18n="t002" class="skip-link" href="#main-content">Langsung ke konten</a>
+  <header class="topbar"><div class="wrap">
+    <a data-i18n="t121" class="back-link" href="../../index.html#projects">← Kembali ke Portofolio</a>
+    <nav class="mininav" aria-label="Navigasi cepat artikel" data-i18n-aria-label="t190"><a data-i18n="t122" href="#overview">Ringkasan</a><a data-i18n="projects.features" href="#fitur">Fitur utama</a><a data-i18n="projects.implementation" href="#implementasi">Implementasi</a><a data-i18n="t008" href="#galeri">Galeri</a></nav>
+    <div class="language-switch" role="group" aria-label="Bahasa" data-i18n-aria-label="t107">
+    <button type="button" data-language="id" lang="id" aria-pressed="true" aria-label="Bahasa Indonesia" data-i18n-aria-label="t108">ID</button>
+    <button type="button" data-language="en" lang="en" aria-pressed="false" aria-label="English" data-i18n-aria-label="t109">EN</button>
+  </div>
+  </div></header>
+  <main id="main-content" tabindex="-1">
+    <section class="hero">
+      <div class="wrap hero__inner">
+        <div class="hero__text">
+          <p data-i18n="aac.eyebrow" class="eyebrow">Studi kasus / AAC — Bicara Warna</p>
+          <h1 class="hero__title">AAC — Bicara Warna<span data-i18n="aac.subtitle">Alat bantu komunikasi · Tiga tombol · Keluaran suara</span></h1>
+          <p data-i18n="aac.description" class="lead">Alat bantu komunikasi pesanan Pendidikan Khusus ULM. Tiga tombol mewakili “mau”, “iya”, dan “tidak”, dengan keluaran suara untuk membantu menyampaikan keinginan dan respons sederhana. Fokus pengerjaan saya adalah wiring PCB dan pemrograman Arduino IDE (.ino).</p>
+          <ul class="badges"><li data-i18n="aac.client">Pendidikan Khusus ULM · Kelompok 2</li><li data-i18n="aac.role">Wiring PCB &amp; pemrograman Arduino IDE (.ino)</li></ul>
+          <div class="cta-group"><a data-i18n="projects.features" class="btn" href="#fitur">Fitur utama</a><a data-i18n="t206" class="btn btn--ghost" href="#galeri">Lihat Dokumentasi</a></div>
+        </div>
+        <figure class="bbox-frame hero__media device-media">
+          <img src="../../assets/images/optimized/aac-result-720.webp" srcset="../../assets/images/optimized/aac-result-480.webp 480w, ../../assets/images/optimized/aac-result-720.webp 720w" sizes="(max-width: 960px) 92vw, 600px" width="720" height="1280" alt="Hasil alat AAC — Bicara Warna." data-i18n-alt="aac.cover" decoding="async" fetchpriority="high" />
+          <figcaption data-i18n="aac.cover">Hasil alat AAC — Bicara Warna.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <div class="wrap layout">
+      <aside class="toc" aria-label="Daftar isi" data-i18n-aria-label="projects.contents">
+        <h2><button type="button" class="toc-toggle" aria-controls="toc-links" aria-expanded="true"><span data-i18n="projects.contents">Daftar isi</span></button></h2>
+        <div id="toc-links"><a data-i18n="t122" class="toc__link" href="#overview">Ringkasan</a><a data-i18n="projects.features" class="toc__link" href="#fitur">Fitur utama</a><a data-i18n="projects.implementation" class="toc__link" href="#implementasi">Implementasi</a><a data-i18n="t008" class="toc__link" href="#galeri">Galeri</a></div>
+      </aside>
+      <article class="content">
+        <section class="block" id="overview">
+          <h2 data-i18n="t122">Ringkasan</h2>
+          <p data-i18n="aac.overview.0">AAC (Augmentative and Alternative Communication) — Bicara Warna dikembangkan berdasarkan rancangan Kelompok 2 Pendidikan Khusus Universitas Lambung Mangkurat. Alat ditujukan untuk membantu pengguna yang mengalami hambatan komunikasi verbal menyampaikan keinginan dan respons sederhana.</p>
+<p data-i18n="aac.overview.1">Interaksi utama menggunakan tiga tombol: “mau”, “iya”, dan “tidak”. Rancangan menggabungkan tombol fisik, Arduino Nano V3, pemutar MP3, kartu memori, speaker, serta catu daya baterai dalam satu casing.</p>
+          <div class="stack-chips"><span>Arduino Nano V3</span><span>Arduino IDE (.ino)</span><span>PCB wiring</span><span>Push button</span><span>MP3 player</span><span>Speaker</span></div>
+        </section>
+        <section class="block" id="fitur">
+          <h2 data-i18n="projects.features">Fitur utama</h2>
+          <div class="grid2"><div class="card"><h3 data-i18n="aac.feature.0.title">Tiga pilihan komunikasi</h3><p data-i18n="aac.feature.0.body">Tombol “mau”, “iya”, dan “tidak” memberikan pilihan langsung untuk menyampaikan keinginan atau menjawab pertanyaan sederhana.</p></div>
+<div class="card"><h3 data-i18n="aac.feature.1.title">Respons melalui suara</h3><p data-i18n="aac.feature.1.body">Input tombol diproses oleh Arduino dan dihubungkan ke pemutar MP3 serta speaker untuk keluaran suara yang sesuai.</p></div></div>
+        </section>
+        <section class="block" id="implementasi">
+          <h2 data-i18n="projects.implementation">Implementasi</h2>
+          <div class="steps"><div class="step"><span class="step__no" aria-hidden="true">01</span><div class="step__content"><h3 data-i18n="aac.step.0.title">Wiring PCB</h3><p data-i18n="aac.step.0.body">Merangkai jalur tombol, mikrokontroler, modul audio, speaker, dan catu daya pada PCB. Penataan kabel menjadi fokus utama perakitan alat.</p></div></div><div class="step"><span class="step__no" aria-hidden="true">02</span><div class="step__content"><h3 data-i18n="aac.step.1.title">Arduino IDE (.ino)</h3><p data-i18n="aac.step.1.body">Firmware ditulis sebagai sketch .ino menggunakan Arduino IDE untuk membaca tombol dan menghubungkannya dengan respons audio.</p></div></div><div class="step"><span class="step__no" aria-hidden="true">03</span><div class="step__content"><h3 data-i18n="aac.step.2.title">Perakitan dalam casing</h3><p data-i18n="aac.step.2.body">Rangkaian ditempatkan dalam casing bersama tombol dan keluaran audio. Foto dokumentasi menunjukkan progres wiring, rancangan casing, dan hasil alat.</p></div></div></div>
+        </section>
+        <section class="block" id="galeri">
+          <h2 data-i18n="t008">Galeri</h2>
+          <p data-i18n="projects.galleryHint" class="muted">Hasil alat, proses pengerjaan, dan konteks lapangan. Pilih foto untuk memperbesar; gunakan tombol panah atau swipe untuk menjelajah.</p>
+          <div class="gallery documentation-gallery"><figure class="documentation-photo"><a class="gallery__item" href="../../assets/images/optimized/aac-result-720.webp" data-caption="Hasil alat AAC — Bicara Warna dengan tombol komunikasi." data-i18n-data-caption="aac.photo.aac-result"><img src="../../assets/images/optimized/aac-result-720.webp" srcset="../../assets/images/optimized/aac-result-480.webp 480w, ../../assets/images/optimized/aac-result-720.webp 720w" sizes="(max-width: 960px) 92vw, 600px" width="720" height="1280" alt="Hasil alat AAC — Bicara Warna dengan tombol komunikasi." data-i18n-alt="aac.photo.aac-result" decoding="async" loading="lazy" /></a><figcaption data-i18n="aac.photo.aac-result">Hasil alat AAC — Bicara Warna dengan tombol komunikasi.</figcaption></figure>
+<figure class="documentation-photo"><a class="gallery__item" href="../../assets/images/optimized/aac-wiring-900.webp" data-caption="Progres AAC: penataan kabel dan wiring pada PCB." data-i18n-data-caption="aac.photo.aac-wiring"><img src="../../assets/images/optimized/aac-wiring-900.webp" srcset="../../assets/images/optimized/aac-wiring-480.webp 480w, ../../assets/images/optimized/aac-wiring-900.webp 900w" sizes="(max-width: 960px) 92vw, 600px" width="900" height="1600" alt="Progres AAC: penataan kabel dan wiring pada PCB." data-i18n-alt="aac.photo.aac-wiring" decoding="async" loading="lazy" /></a><figcaption data-i18n="aac.photo.aac-wiring">Progres AAC: penataan kabel dan wiring pada PCB.</figcaption></figure>
+<figure class="documentation-photo"><a class="gallery__item" href="../../assets/images/optimized/aac-case-806.webp" data-caption="Rancangan casing AAC untuk penempatan tombol dan rangkaian." data-i18n-data-caption="aac.photo.aac-case"><img src="../../assets/images/optimized/aac-case-806.webp" srcset="../../assets/images/optimized/aac-case-480.webp 480w, ../../assets/images/optimized/aac-case-806.webp 806w" sizes="(max-width: 960px) 92vw, 600px" width="806" height="543" alt="Rancangan casing AAC untuk penempatan tombol dan rangkaian." data-i18n-alt="aac.photo.aac-case" decoding="async" loading="lazy" /></a><figcaption data-i18n="aac.photo.aac-case">Rancangan casing AAC untuk penempatan tombol dan rangkaian.</figcaption></figure></div>
+        </section>
+        <div class="project-return cta-group">
+          <a data-i18n="t184" class="btn btn--ghost" href="../../index.html#projects">Kembali ke Semua Proyek</a>
+          <a data-i18n="projects.collaboration" class="btn" href="../../index.html#contact">Bahas proyek serupa</a>
+        </div>
+      </article>
+    </div>
+  </main>
+  <footer class="foot"><div class="wrap foot__inner">
+    <p>© <span id="yr"></span> <span data-i18n="t103">Naufal Elyzar. Hak cipta dilindungi.</span></p>
+    <div class="foot__links"><a data-i18n="t186" href="../../index.html#projects">Semua Proyek</a><a data-i18n="t009" href="../../index.html#contact">Kontak</a></div>
+  </div></footer>
+  <script defer src="../../assets/js/translations.js"></script>
+  <script defer src="../../assets/js/i18n.js"></script>
+  <script defer src="../../assets/js/project-detail.js"></script>
+  <script defer src="../../assets/js/gallery.js"></script>
+</body>
+</html>

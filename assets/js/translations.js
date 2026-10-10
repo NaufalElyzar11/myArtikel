@@ -1,4 +1,3 @@
-// Shared, locally bundled copy. No translation service or network request is needed.
 window.siteTranslations = {
   "t001": {
     "id": "Naufal Elyzar - CV & Portofolio",
@@ -41,12 +40,12 @@ window.siteTranslations = {
     "en": "View CV"
   },
   "t011": {
-    "id": "Robotika · Computer vision · IoT",
-    "en": "Robotics · Computer vision · IoT"
+    "id": "Robotika · IoT · Teknologi asistif",
+    "en": "Robotics · IoT · Assistive technology"
   },
   "t012": {
-    "id": "Seorang mahasiswa Teknologi Informasi. Saya mengembangkan robot berkaki, sistem computer vision, dan perangkat IoT.",
-    "en": "An Information Technology student. I develop walking robots, computer vision systems, and IoT devices."
+    "id": "Seorang mahasiswa Teknologi Informasi. Saya mengembangkan robot, perangkat asistif, dan sistem IoT yang terhubung ke aplikasi.",
+    "en": "An Information Technology student. I develop robots, assistive devices, and IoT systems connected to apps."
   },
   "t013": {
     "id": "Lihat Proyek",
@@ -57,8 +56,8 @@ window.siteTranslations = {
     "en": "View photography"
   },
   "t015": {
-    "id": "Proyek terbaru: Hexaka V3 ↗",
-    "en": "Latest project: Hexaka V3 ↗"
+    "id": "Perangkat & aplikasi: Mangrovepreneurs ↗",
+    "en": "Hardware & app: Mangrovepreneurs ↗"
   },
   "t016": {
     "id": "Naufal Elyzar / Wasaka Robotic Team",
@@ -69,8 +68,8 @@ window.siteTranslations = {
     "en": "Selected projects"
   },
   "t018": {
-    "id": "Robot berkaki, drone pertanian, dan pemilah sampah.",
-    "en": "Walking robots, agricultural drones, and waste sorting."
+    "id": "Dari robotika dan teknologi asistif hingga pemantauan sarang kelulut melalui aplikasi.",
+    "en": "From robotics and assistive technology to bee hive monitoring through a mobile app."
   },
   "t019": {
     "id": "Proyek unggulan",
@@ -109,8 +108,8 @@ window.siteTranslations = {
     "en": "Read the case study ↗"
   },
   "t028": {
-    "id": "Proyek 02",
-    "en": "Project 02"
+    "id": "Proyek 05",
+    "en": "Project 05"
   },
   "t029": {
     "id": "PRONE.ID",
@@ -129,8 +128,8 @@ window.siteTranslations = {
     "en": "Drone, Sensor Node, Raspberry Pi"
   },
   "t033": {
-    "id": "Proyek 03",
-    "en": "Project 03"
+    "id": "Proyek 06",
+    "en": "Project 06"
   },
   "t034": {
     "id": "TRACO-BOT",
@@ -157,8 +156,8 @@ window.siteTranslations = {
     "en": "I started building agricultural drones and waste-sorting robots through madrasah competitions. At Wasaka Robotic Team, I continued with hexapod development, from programming its movement to building simulations."
   },
   "t040": {
-    "id": "Di luar robotika, saya juga membangun website dan aplikasi. Fotografi menjadi bagian lain dari kegiatan saya; beberapa hasilnya ada di galeri di bawah.",
-    "en": "Outside robotics, I also build websites and apps. Photography is another part of what I do; you can find a few of my photos in the gallery below."
+    "id": "Saya juga mengerjakan perangkat asistif untuk Pendidikan Khusus ULM serta sistem Mangrovepreneurs untuk FEB ULM, mulai dari wiring PCB hingga aplikasi Flutter dan integrasi Firebase. Di luar pengembangan perangkat dan aplikasi, saya juga menekuni fotografi.",
+    "en": "I also build assistive devices for Special Education at ULM and the Mangrovepreneurs system for FEB ULM, from PCB wiring to Flutter apps and Firebase integration. Outside hardware and app development, I also pursue photography."
   },
   "t041": {
     "id": "Raspberry Pi",
@@ -209,8 +208,8 @@ window.siteTranslations = {
     "en": "Focus"
   },
   "t053": {
-    "id": "Website, Robotics, IoT",
-    "en": "Web development, Robotics, IoT"
+    "id": "Robotika, teknologi asistif, IoT & aplikasi",
+    "en": "Robotics, assistive technology, IoT & apps"
   },
   "t054": {
     "id": "Organisasi",
@@ -401,8 +400,8 @@ window.siteTranslations = {
     "en": "Sunset"
   },
   "t101": {
-    "id": "Ingin membahas robotika, proyek web, atau kolaborasi? Hubungi saya lewat email.",
-    "en": "Want to talk about robotics, a web project, or working together? Get in touch by email."
+    "id": "Ingin membahas robotika, perangkat asistif, IoT, aplikasi, atau kolaborasi? Hubungi saya lewat email.",
+    "en": "Want to discuss robotics, assistive devices, IoT, apps, or a collaboration? Get in touch by email."
   },
   "t102": {
     "id": "Rekan kolaborasi",
@@ -413,12 +412,12 @@ window.siteTranslations = {
     "en": "Naufal Elyzar. All rights reserved."
   },
   "t104": {
-    "id": "CV & Portfolio Naufal Elyzar - Robotics, IoT, Computer Vision, dan Fotografi.",
-    "en": "Naufal Elyzar's CV and portfolio: robotics, IoT, computer vision, and photography."
+    "id": "CV & Portfolio Naufal Elyzar — Robotika, teknologi asistif, IoT, aplikasi Flutter, dan fotografi.",
+    "en": "Naufal Elyzar CV & portfolio — Robotics, assistive technology, IoT, Flutter apps, and photography."
   },
   "t105": {
-    "id": "Robotics, IoT, Computer Vision, dan Fotografi.",
-    "en": "Robotics, IoT, computer vision, and photography."
+    "id": "Robotika, teknologi asistif, IoT, aplikasi Flutter, dan fotografi.",
+    "en": "Robotics, assistive technology, IoT, Flutter apps, and photography."
   },
   "t106": {
     "id": "Navigasi utama",
@@ -1331,5 +1330,425 @@ window.siteTranslations = {
   "ui.status": {
     "id": "Bahasa diubah ke Indonesia",
     "en": "Language changed to English"
+  },
+  "projects.client": {
+    "id": "Klien / konteks",
+    "en": "Client / context"
+  },
+  "projects.role": {
+    "id": "Kontribusi saya",
+    "en": "My contribution"
+  },
+  "projects.features": {
+    "id": "Fitur utama",
+    "en": "Main features"
+  },
+  "projects.implementation": {
+    "id": "Implementasi",
+    "en": "Implementation"
+  },
+  "projects.galleryHint": {
+    "id": "Hasil alat, proses pengerjaan, dan konteks lapangan. Pilih foto untuk memperbesar; gunakan tombol panah atau swipe untuk menjelajah.",
+    "en": "Finished hardware, work in progress, and field context. Select a photo to enlarge it; use the arrow buttons or swipe to browse."
+  },
+  "projects.collaboration": {
+    "id": "Bahas proyek serupa",
+    "en": "Discuss a similar project"
+  },
+  "projects.filterLabel": {
+    "id": "Filter kategori proyek",
+    "en": "Filter projects by category"
+  },
+  "projects.all": {
+    "id": "Semua",
+    "en": "All"
+  },
+  "projects.robotics": {
+    "id": "Robotika",
+    "en": "Robotics"
+  },
+  "projects.assistive": {
+    "id": "Teknologi asistif",
+    "en": "Assistive technology"
+  },
+  "projects.iot": {
+    "id": "IoT",
+    "en": "IoT"
+  },
+  "projects.count": {
+    "id": "proyek ditampilkan",
+    "en": "projects shown"
+  },
+  "skills.wiring": {
+    "id": "Wiring PCB & penyolderan",
+    "en": "PCB wiring & soldering"
+  },
+  "skills.arduinoIde": {
+    "id": "Arduino IDE (.ino)",
+    "en": "Arduino IDE (.ino)"
+  },
+  "skills.sensor": {
+    "id": "BME280 · Load cell / HX711",
+    "en": "BME280 · Load cell / HX711"
+  },
+  "skills.mobile": {
+    "id": "Aplikasi mobile",
+    "en": "Mobile apps"
+  },
+  "skills.notifications": {
+    "id": "Notifikasi & pengaturan ambang",
+    "en": "Notifications & threshold settings"
+  },
+  "skills.firebase": {
+    "id": "Firebase Realtime Database",
+    "en": "Firebase Realtime Database"
+  },
+  "mangrovepreneurs.pageTitle": {
+    "id": "Mangrovepreneurs | Naufal Elyzar",
+    "en": "Mangrovepreneurs | Naufal Elyzar"
+  },
+  "mangrovepreneurs.meta": {
+    "id": "ESP32, BME280, dan load cell dengan HX711 terhubung ke Firebase dan aplikasi Flutter untuk memantau sarang kelulut, mengatur ambang kondisi, serta menerima notifikasi kesiapan panen.",
+    "en": "An ESP32, BME280, and load cell with HX711 connect to Firebase and a Flutter app to monitor bee hives, configure thresholds, and receive harvest readiness notifications."
+  },
+  "mangrovepreneurs.cover": {
+    "id": "Perangkat Mangrovepreneurs terpasang pada sarang kelulut.",
+    "en": "Mangrovepreneurs hardware installed on a stingless bee hive."
+  },
+  "mangrovepreneurs.step.0.title": {
+    "id": "Sensor & ESP32",
+    "en": "Sensors & ESP32"
+  },
+  "mangrovepreneurs.step.0.body": {
+    "id": "BME280 menangani pembacaan suhu dan kelembapan. Load cell terhubung melalui HX711 untuk pembacaan berat; ESP32 mengumpulkan data kedua jalur sensor.",
+    "en": "The BME280 reads temperature and humidity. A load cell connects through an HX711 to read weight; the ESP32 gathers data from both sensor paths."
+  },
+  "mangrovepreneurs.step.1.title": {
+    "id": "Firebase Realtime Database",
+    "en": "Firebase Realtime Database"
+  },
+  "mangrovepreneurs.step.1.body": {
+    "id": "ESP32 mengirim data sensor ke Firebase Realtime Database, yang menjadi penghubung antara perangkat dan aplikasi mobile.",
+    "en": "The ESP32 sends sensor readings to Firebase Realtime Database, connecting the hardware to the mobile app."
+  },
+  "mangrovepreneurs.step.2.title": {
+    "id": "Flutter & notifikasi",
+    "en": "Flutter & notifications"
+  },
+  "mangrovepreneurs.step.2.body": {
+    "id": "Aplikasi Flutter menampilkan data sarang dan menyediakan pengaturan ambang. Kondisi suhu, kelembapan, serta berat digunakan untuk menentukan notifikasi.",
+    "en": "The Flutter app displays hive readings and provides threshold settings. Temperature, humidity, and weight conditions determine notifications."
+  },
+  "mangrovepreneurs.eyebrow": {
+    "id": "Studi kasus / Mangrovepreneurs",
+    "en": "Case study / Mangrovepreneurs"
+  },
+  "mangrovepreneurs.subtitle": {
+    "id": "Pemantauan sarang kelulut · IoT · Aplikasi mobile",
+    "en": "Stingless bee hive monitoring · IoT · Mobile app"
+  },
+  "mangrovepreneurs.description": {
+    "id": "Sistem pemantauan sarang kelulut untuk tim FEB ULM dalam ajang nasional Innovilleague 2026. ESP32 mengirim suhu, kelembapan, dan berat ke Firebase Realtime Database; aplikasi Flutter menampilkan data serta notifikasi sesuai ambang yang ditentukan pengguna.",
+    "en": "A stingless bee hive monitoring system for the FEB ULM team at the national Innovilleague 2026 event. An ESP32 sends temperature, humidity, and weight to Firebase Realtime Database; a Flutter app displays readings and notifications based on user-defined thresholds."
+  },
+  "mangrovepreneurs.client": {
+    "id": "FEB ULM · Innovilleague 2026",
+    "en": "FEB ULM · Innovilleague 2026"
+  },
+  "mangrovepreneurs.role": {
+    "id": "Perangkat IoT & aplikasi Flutter",
+    "en": "IoT hardware & Flutter app"
+  },
+  "mangrovepreneurs.overview.0": {
+    "id": "Mangrovepreneurs menghubungkan perangkat di sarang kelulut dengan aplikasi mobile agar kondisi sarang dapat dipantau dari data sensor. Proyek ini dikembangkan untuk kebutuhan tim Fakultas Ekonomi dan Bisnis Universitas Lambung Mangkurat.",
+    "en": "Mangrovepreneurs connects hardware at a stingless bee hive to a mobile app so hive conditions can be monitored through sensor readings. The project was developed for the Faculty of Economics and Business team at Universitas Lambung Mangkurat."
+  },
+  "mangrovepreneurs.overview.1": {
+    "id": "Konteks proyek adalah ajang nasional Innovilleague 2026 yang diselenggarakan Kementerian Koordinator Bidang Pemberdayaan Masyarakat RI. Pengembangan mencakup perakitan perangkat ESP32, integrasi sensor, koneksi database realtime, dan aplikasi Flutter.",
+    "en": "The project supports the national Innovilleague 2026 event organized by Indonesia’s Coordinating Ministry for Community Empowerment. Development covers ESP32 hardware assembly, sensor integration, a realtime database connection, and a Flutter app."
+  },
+  "mangrovepreneurs.feature.0.title": {
+    "id": "Pemantauan suhu & kelembapan",
+    "en": "Temperature & humidity monitoring"
+  },
+  "mangrovepreneurs.feature.0.body": {
+    "id": "Sensor BME280 membaca suhu dan kelembapan di sarang. Data dikirim melalui ESP32 agar dapat dilihat di aplikasi.",
+    "en": "A BME280 reads temperature and humidity at the hive. The ESP32 sends the readings for viewing in the app."
+  },
+  "mangrovepreneurs.feature.1.title": {
+    "id": "Indikator kesiapan panen",
+    "en": "Harvest readiness indicator"
+  },
+  "mangrovepreneurs.feature.1.body": {
+    "id": "Load cell dengan modul HX711 membaca berat. Notifikasi kesiapan panen mengikuti target berat dalam kilogram yang diatur pengguna.",
+    "en": "A load cell with an HX711 module reads weight. Harvest readiness notifications follow the target weight in kilograms configured by the user."
+  },
+  "mangrovepreneurs.feature.2.title": {
+    "id": "Notifikasi kondisi sarang",
+    "en": "Hive condition notifications"
+  },
+  "mangrovepreneurs.feature.2.body": {
+    "id": "Aplikasi memberi notifikasi saat suhu atau kelembapan berada di bawah ambang yang ditentukan, serta saat target berat panen tercapai.",
+    "en": "The app notifies users when temperature or humidity falls below the configured threshold, or when the harvest weight target is reached."
+  },
+  "mangrovepreneurs.feature.3.title": {
+    "id": "Ambang dapat diatur",
+    "en": "Configurable thresholds"
+  },
+  "mangrovepreneurs.feature.3.body": {
+    "id": "Pengguna dapat mengatur batas suhu, kelembapan, dan target berat panen dari aplikasi Flutter sesuai kebutuhan sarang.",
+    "en": "Users can configure temperature and humidity limits and the harvest weight target from the Flutter app to suit the hive."
+  },
+  "mangrovepreneurs.photo.mangrove-result": {
+    "id": "Hasil alat: perangkat pemantauan pada sarang kelulut.",
+    "en": "Finished hardware: monitoring device at the bee hive."
+  },
+  "mangrovepreneurs.photo.mangrove-app": {
+    "id": "Aplikasi Flutter Mangrovepreneurs: daftar sarang, suhu, kelembapan, dan berat.",
+    "en": "Mangrovepreneurs Flutter app: hive list, temperature, humidity, and weight."
+  },
+  "mangrovepreneurs.photo.mangrove-wiring": {
+    "id": "Progres perakitan rangkaian dan wiring perangkat Mangrovepreneurs.",
+    "en": "Mangrovepreneurs circuit assembly and wiring in progress."
+  },
+  "mangrovepreneurs.photo.mangrove-case": {
+    "id": "Progres pemasangan rangkaian dan catu daya di dalam casing.",
+    "en": "Circuit and power supply installation inside the enclosure."
+  },
+  "mangrovepreneurs.photo.mangrove-survey": {
+    "id": "Survei sarang kelulut untuk kebutuhan perangkat Mangrovepreneurs.",
+    "en": "Bee hive survey for the Mangrovepreneurs hardware."
+  },
+  "aac.pageTitle": {
+    "id": "AAC — Bicara Warna | Naufal Elyzar",
+    "en": "AAC — Bicara Warna | Naufal Elyzar"
+  },
+  "aac.meta": {
+    "id": "Alat bantu komunikasi dengan tiga tombol “mau”, “iya”, dan “tidak” serta keluaran suara. Pesanan Pendidikan Khusus ULM, dengan fokus wiring PCB dan pemrograman Arduino IDE (.ino).",
+    "en": "A communication aid with “want”, “yes”, and “no” buttons and audio output. Commissioned by Special Education at ULM, with a focus on PCB wiring and Arduino IDE programming (.ino)."
+  },
+  "aac.cover": {
+    "id": "Hasil alat AAC — Bicara Warna.",
+    "en": "Finished AAC — Bicara Warna communication aid."
+  },
+  "aac.step.0.title": {
+    "id": "Wiring PCB",
+    "en": "PCB wiring"
+  },
+  "aac.step.0.body": {
+    "id": "Merangkai jalur tombol, mikrokontroler, modul audio, speaker, dan catu daya pada PCB. Penataan kabel menjadi fokus utama perakitan alat.",
+    "en": "Wiring the buttons, microcontroller, audio module, speaker, and power supply on the PCB. Cable routing is a main focus of hardware assembly."
+  },
+  "aac.step.1.title": {
+    "id": "Arduino IDE (.ino)",
+    "en": "Arduino IDE (.ino)"
+  },
+  "aac.step.1.body": {
+    "id": "Firmware ditulis sebagai sketch .ino menggunakan Arduino IDE untuk membaca tombol dan menghubungkannya dengan respons audio.",
+    "en": "Firmware is written as an .ino sketch in Arduino IDE to read button input and map it to audio responses."
+  },
+  "aac.step.2.title": {
+    "id": "Perakitan dalam casing",
+    "en": "Enclosure assembly"
+  },
+  "aac.step.2.body": {
+    "id": "Rangkaian ditempatkan dalam casing bersama tombol dan keluaran audio. Foto dokumentasi menunjukkan progres wiring, rancangan casing, dan hasil alat.",
+    "en": "The circuit is placed in an enclosure with the buttons and audio output. Documentation shows the wiring progress, enclosure design, and finished device."
+  },
+  "aac.eyebrow": {
+    "id": "Studi kasus / AAC — Bicara Warna",
+    "en": "Case study / AAC — Bicara Warna"
+  },
+  "aac.subtitle": {
+    "id": "Alat bantu komunikasi · Tiga tombol · Keluaran suara",
+    "en": "Communication aid · Three buttons · Audio output"
+  },
+  "aac.description": {
+    "id": "Alat bantu komunikasi pesanan Pendidikan Khusus ULM. Tiga tombol mewakili “mau”, “iya”, dan “tidak”, dengan keluaran suara untuk membantu menyampaikan keinginan dan respons sederhana. Fokus pengerjaan saya adalah wiring PCB dan pemrograman Arduino IDE (.ino).",
+    "en": "A communication aid commissioned by Special Education at ULM. Three buttons represent “want”, “yes”, and “no”, with audio output to help express needs and simple responses. My work focuses on PCB wiring and Arduino IDE programming (.ino)."
+  },
+  "aac.client": {
+    "id": "Pendidikan Khusus ULM · Kelompok 2",
+    "en": "Special Education, ULM · Group 2"
+  },
+  "aac.role": {
+    "id": "Wiring PCB & pemrograman Arduino IDE (.ino)",
+    "en": "PCB wiring & Arduino IDE programming (.ino)"
+  },
+  "aac.overview.0": {
+    "id": "AAC (Augmentative and Alternative Communication) — Bicara Warna dikembangkan berdasarkan rancangan Kelompok 2 Pendidikan Khusus Universitas Lambung Mangkurat. Alat ditujukan untuk membantu pengguna yang mengalami hambatan komunikasi verbal menyampaikan keinginan dan respons sederhana.",
+    "en": "AAC (Augmentative and Alternative Communication) — Bicara Warna was developed from the design by Group 2 of Special Education at Universitas Lambung Mangkurat. The device aims to help users with verbal communication difficulties express needs and simple responses."
+  },
+  "aac.overview.1": {
+    "id": "Interaksi utama menggunakan tiga tombol: “mau”, “iya”, dan “tidak”. Rancangan menggabungkan tombol fisik, Arduino Nano V3, pemutar MP3, kartu memori, speaker, serta catu daya baterai dalam satu casing.",
+    "en": "The main interaction uses three buttons: “want”, “yes”, and “no”. The design combines physical buttons, an Arduino Nano V3, an MP3 player, a memory card, a speaker, and battery power in one enclosure."
+  },
+  "aac.feature.0.title": {
+    "id": "Tiga pilihan komunikasi",
+    "en": "Three communication choices"
+  },
+  "aac.feature.0.body": {
+    "id": "Tombol “mau”, “iya”, dan “tidak” memberikan pilihan langsung untuk menyampaikan keinginan atau menjawab pertanyaan sederhana.",
+    "en": "The “want”, “yes”, and “no” buttons provide direct choices for expressing needs or answering simple questions."
+  },
+  "aac.feature.1.title": {
+    "id": "Respons melalui suara",
+    "en": "Audio response"
+  },
+  "aac.feature.1.body": {
+    "id": "Input tombol diproses oleh Arduino dan dihubungkan ke pemutar MP3 serta speaker untuk keluaran suara yang sesuai.",
+    "en": "Button input is processed by the Arduino and connected to the MP3 player and speaker for the corresponding audio output."
+  },
+  "aac.photo.aac-result": {
+    "id": "Hasil alat AAC — Bicara Warna dengan tombol komunikasi.",
+    "en": "Finished AAC — Bicara Warna with communication buttons."
+  },
+  "aac.photo.aac-wiring": {
+    "id": "Progres AAC: penataan kabel dan wiring pada PCB.",
+    "en": "AAC in progress: cable routing and PCB wiring."
+  },
+  "aac.photo.aac-case": {
+    "id": "Rancangan casing AAC untuk penempatan tombol dan rangkaian.",
+    "en": "AAC enclosure design for the buttons and circuit."
+  },
+  "teksif.pageTitle": {
+    "id": "TekSif — Chromoney | Naufal Elyzar",
+    "en": "TekSif — Chromoney | Naufal Elyzar"
+  },
+  "teksif.meta": {
+    "id": "Alat pengenal nominal uang melalui sensor warna dan keluaran suara untuk pengguna tunanetra. Pesanan Pendidikan Khusus ULM, dengan fokus wiring PCB dan Arduino IDE (.ino).",
+    "en": "A banknote denomination reader using a color sensor and audio output for blind users. Commissioned by Special Education at ULM, with a focus on PCB wiring and Arduino IDE (.ino)."
+  },
+  "teksif.cover": {
+    "id": "Hasil alat TekSif — Chromoney.",
+    "en": "Finished TekSif — Chromoney denomination reader."
+  },
+  "teksif.step.0.title": {
+    "id": "Wiring PCB & integrasi sensor",
+    "en": "PCB wiring & sensor integration"
+  },
+  "teksif.step.0.body": {
+    "id": "Menghubungkan sensor warna, tombol, modul audio, dan catu daya pada PCB. Rangkaian dirakit agar dapat ditempatkan dalam casing alat.",
+    "en": "Connecting the color sensor, buttons, audio module, and power supply on the PCB. The circuit is assembled to fit inside the device enclosure."
+  },
+  "teksif.step.1.title": {
+    "id": "Pemrograman Arduino IDE (.ino)",
+    "en": "Arduino IDE programming (.ino)"
+  },
+  "teksif.step.1.body": {
+    "id": "Sketch .ino menangani pembacaan sensor dan respons alat, termasuk keluaran suara untuk hasil pengenalan nominal.",
+    "en": "The .ino sketch handles sensor readings and device responses, including audio output for the identified denomination."
+  },
+  "teksif.step.2.title": {
+    "id": "Perakitan & percobaan pembacaan",
+    "en": "Assembly & reading trials"
+  },
+  "teksif.step.2.body": {
+    "id": "Dokumentasi mencakup penyolderan dan wiring pada PCB serta percobaan pembacaan uang saat alat terhubung ke laptop.",
+    "en": "Documentation covers soldering and PCB wiring, as well as banknote reading trials with the device connected to a laptop."
+  },
+  "teksif.stack.2": {
+    "id": "Sensor warna",
+    "en": "Color sensor"
+  },
+  "teksif.stack.3": {
+    "id": "Modul audio",
+    "en": "Audio module"
+  },
+  "teksif.stack.5": {
+    "id": "Baterai",
+    "en": "Battery"
+  },
+  "teksif.eyebrow": {
+    "id": "Studi kasus / TekSif — Chromoney",
+    "en": "Case study / TekSif — Chromoney"
+  },
+  "teksif.subtitle": {
+    "id": "Pengenal nominal uang · Sensor warna · Keluaran suara",
+    "en": "Banknote denomination reader · Color sensor · Audio output"
+  },
+  "teksif.description": {
+    "id": "Perangkat asistif pesanan Pendidikan Khusus ULM untuk membantu pengguna tunanetra mengenali nominal uang. Sensor warna membaca ciri uang, lalu hasil pengenalan disampaikan melalui suara. Fokus pengerjaan saya adalah wiring PCB dan pemrograman Arduino IDE (.ino).",
+    "en": "An assistive device commissioned by Special Education at ULM to help blind users recognize banknote denominations. A color sensor reads banknote characteristics and the identified denomination is communicated through audio. My work focuses on PCB wiring and Arduino IDE programming (.ino)."
+  },
+  "teksif.client": {
+    "id": "Pendidikan Khusus ULM · Kelompok 4",
+    "en": "Special Education, ULM · Group 4"
+  },
+  "teksif.role": {
+    "id": "Wiring PCB & pemrograman Arduino IDE (.ino)",
+    "en": "PCB wiring & Arduino IDE programming (.ino)"
+  },
+  "teksif.overview.0": {
+    "id": "TekSif — Chromoney dikembangkan berdasarkan rancangan Kelompok 4 Pendidikan Khusus Universitas Lambung Mangkurat. Tujuannya adalah membantu pengguna tunanetra mengenali nominal uang saat melakukan transaksi sederhana.",
+    "en": "TekSif — Chromoney was developed from the design by Group 4 of Special Education at Universitas Lambung Mangkurat. It aims to help blind users identify banknote denominations during simple transactions."
+  },
+  "teksif.overview.1": {
+    "id": "Rancangan menggunakan sensor warna untuk membaca ciri uang serta speaker sebagai keluaran informasi suara. Komponen pendukung meliputi tombol fisik, PCB dot matrix, baterai, modul pengisian daya, dan casing.",
+    "en": "The design uses a color sensor to read banknote characteristics and a speaker to provide audio information. Supporting components include physical buttons, a dot-matrix PCB, a battery, a charging module, and an enclosure."
+  },
+  "teksif.feature.0.title": {
+    "id": "Pengenalan nominal uang",
+    "en": "Banknote denomination recognition"
+  },
+  "teksif.feature.0.body": {
+    "id": "Sensor warna menjadi input pengenalan ciri uang. Pembacaan diproses untuk menentukan nominal yang akan disampaikan kepada pengguna.",
+    "en": "The color sensor provides input for recognizing banknote characteristics. Readings are processed to determine the denomination to communicate to the user."
+  },
+  "teksif.feature.1.title": {
+    "id": "Informasi melalui suara",
+    "en": "Information through audio"
+  },
+  "teksif.feature.1.body": {
+    "id": "Keluaran speaker membantu pengguna memperoleh informasi nominal tanpa mengandalkan penglihatan.",
+    "en": "Speaker output helps users obtain denomination information without relying on sight."
+  },
+  "teksif.photo.teksif-result": {
+    "id": "Hasil alat TekSif — Chromoney dalam casing.",
+    "en": "Finished TekSif — Chromoney in its enclosure."
+  },
+  "teksif.photo.teksif-wiring": {
+    "id": "Progres TekSif: penyolderan dan wiring pada PCB.",
+    "en": "TekSif in progress: soldering and PCB wiring."
+  },
+  "teksif.photo.teksif-test": {
+    "id": "Progres TekSif: percobaan pembacaan uang dan pemrograman.",
+    "en": "TekSif in progress: banknote reading trials and programming."
+  },
+  "mangrovepreneurs.index": {
+    "id": "Proyek 02",
+    "en": "Project 02"
+  },
+  "aac.index": {
+    "id": "Proyek 03",
+    "en": "Project 03"
+  },
+  "teksif.index": {
+    "id": "Proyek 04",
+    "en": "Project 04"
+  },
+  "partner-nanda.name": {
+    "id": "Nanda Ikbar",
+    "en": "Nanda Ikbar"
+  },
+  "partner-rara.name": {
+    "id": "Siti Fathimah Az-Zahra",
+    "en": "Siti Fathimah Az-Zahra"
+  },
+  "projects.contents": {
+    "id": "Daftar isi",
+    "en": "Contents"
+  },
+  "teksif.homeStack": {
+    "id": "Arduino IDE (.ino) · PCB wiring · Sensor warna",
+    "en": "Arduino IDE (.ino) · PCB wiring · Color sensor"
+  },
+  "partner-nanda.role": {
+    "id": "Electrical",
+    "en": "Electrical"
+  },
+  "partner-rara.role": {
+    "id": "Robotic Consultant",
+    "en": "Robotic Consultant"
   }
 };

@@ -6,7 +6,8 @@ const path = require('node:path');
 const vm = require('node:vm');
 const { parseHTML } = require('linkedom');
 const root = path.resolve(__dirname, '..');
-const files = ['index.html', 'projects/amd/index.html', 'projects/mrc/index.html', 'projects/hexaka/index.html'];
+const files = ['index.html', 'projects/amd/index.html', 'projects/mrc/index.html', 'projects/hexaka/index.html',
+  'projects/aac/index.html', 'projects/teksif/index.html', 'projects/mangrovepreneurs/index.html'];
 
 function load(file, { query = '', saved, blocked = false, mobile = true } = {}) {
   const { window, document } = parseHTML(fs.readFileSync(path.join(root, file), 'utf8'));
@@ -143,4 +144,48 @@ test('Project contents collapse on mobile and expand on desktop', () => {
   assert.equal(toggle.getAttribute('aria-expanded'), 'false');
   media.get('(max-width: 960px)').change(false);
   assert.equal(toggle.getAttribute('aria-expanded'), 'true');
+});
+
+test('Project filters show the right projects, retain selection across languages, and reset', () => {
+  const { document, click, window } = load('index.html');
+  const visibleNames = () => [...document.querySelectorAll('[data-project-category]')]
+    .filter(card => !card.hidden).map(card => card.querySelector('.project__name').textContent.trim());
+  const button = category => document.querySelector(`[data-project-filter="${category}"]`);
+  assert.equal(document.querySelector('.project-browser').hidden, false);
+  assert.equal(visibleNames().length, 6);
+  click(button('assistive'));
+  assert.deepEqual(visibleNames(), ['AAC — Bicara Warna', 'TekSif — Chromoney']);
+  assert.match(document.querySelector('.project-count').textContent, /^2 \/ 6/);
+  window.siteI18n.setLanguage('en');
+  assert.equal(button('assistive').getAttribute('aria-pressed'), 'true');
+  assert.deepEqual(visibleNames(), ['AAC — Bicara Warna', 'TekSif — Chromoney']);
+  assert.equal(document.querySelector('.project-count').textContent, '2 / 6 projects shown');
+  click(button('iot'));
+  assert.deepEqual(visibleNames(), ['Mangrovepreneurs', 'PRONE.ID', 'TRACO-BOT']);
+  click(button('robotics'));
+  assert.deepEqual(visibleNames(), ['Wasaka Hexapod (Hexaka V3)', 'TRACO-BOT']);
+  click(button('all'));
+  assert.equal(visibleNames().length, 6);
+  assert.equal(document.querySelectorAll('[data-project-filter][aria-pressed="true"]').length, 1);
+  window.siteI18n.setLanguage('id');
+  assert.equal(document.querySelector('.project-count').textContent, '6 / 6 proyek ditampilkan');
+});
+
+test('New project galleries use the supplied result covers and retain contextual captions', () => {
+  for (const [slug, cover, photos] of [
+    ['aac', 'aac-result', 3], ['teksif', 'teksif-result', 3], ['mangrovepreneurs', 'mangrove-result', 5]
+  ]) {
+    const { document } = load(`projects/${slug}/index.html`);
+    assert.ok(document.querySelector('.hero__media img').getAttribute('src').includes(cover));
+    assert.equal(document.querySelectorAll('.documentation-photo').length, photos);
+    assert.equal(document.querySelector('.toc-toggle').textContent, 'Daftar isi');
+    assert.equal(document.querySelector('.toc').getAttribute('aria-label'), 'Daftar isi');
+    for (const photo of document.querySelectorAll('.documentation-photo')) {
+      assert.equal(photo.querySelector('figcaption').textContent, photo.querySelector('a').dataset.caption);
+    }
+  }
+  const { document } = load('index.html');
+  const names = [...document.querySelectorAll('.people strong')].map(el => el.textContent.trim());
+  assert.ok(names.includes('Nanda Ikbar'));
+  assert.ok(names.includes('Siti Fathimah Az-Zahra'));
 });

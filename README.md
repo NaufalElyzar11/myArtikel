@@ -30,6 +30,23 @@ Detail teknis setiap proyek terintegrasi langsung di repositori ini:
 * **Ringkasan:** Robot berkaki enam (hexapod) 18-DOF Dynamixel dengan kinematika inversi (IK 3-DOF per kaki), generator *tripod gait* dinamis, stabilisasi kemiringan bodi tertutup (*closed-loop PID body leveling* berbasis IMU 9-DOF), navigasi otonom visi murni tanpa LiDAR, pelacak manusia YOLOv8, dan integrasi siaran interaktif TikTok Live + 3D Digital Twin 50 Hz.
 * **Repositori Resmi:** [Wasaka-Robotic-Team/HexakaV3](https://github.com/Wasaka-Robotic-Team/HexakaV3)
 
+### 4. [Mangrovepreneurs](./projects/mangrovepreneurs/)
+* **Klien / konteks:** FEB ULM — kebutuhan ajang nasional Innovilleague 2026, diselenggarakan Kementerian Koordinator Bidang Pemberdayaan Masyarakat RI.
+* **Teknologi:** ESP32, BME280, load cell dengan HX711, Firebase Realtime Database, Flutter / Dart.
+* **Ringkasan:** Pemantauan suhu, kelembapan, dan berat sarang kelulut melalui aplikasi mobile. Ambang suhu/kelembapan dan target berat panen dapat diatur pengguna; aplikasi menyediakan notifikasi kondisi dan kesiapan panen.
+
+### 5. [AAC — Bicara Warna](./projects/aac/)
+* **Klien:** Pendidikan Khusus ULM — Kelompok 2.
+* **Kontribusi:** Wiring PCB dan pemrograman Arduino IDE dengan sketch `.ino`.
+* **Ringkasan:** Alat bantu komunikasi dengan tiga tombol “mau”, “iya”, dan “tidak”, Arduino Nano V3, pemutar MP3, dan keluaran speaker.
+
+### 6. [TekSif — Chromoney](./projects/teksif/)
+* **Klien:** Pendidikan Khusus ULM — Kelompok 4.
+* **Kontribusi:** Wiring PCB dan pemrograman Arduino IDE dengan sketch `.ino`.
+* **Ringkasan:** Perangkat asistif pengenal nominal uang melalui sensor warna dan keluaran suara untuk pengguna tunanetra.
+
+Beranda mempertahankan Hexaka sebagai proyek unggulan, diikuti Mangrovepreneurs, AAC, TekSif, PRONE.ID, dan TRACO-BOT. Filter **Semua / Robotika / Teknologi asistif / IoT** mendukung proyek dengan beberapa kategori. Pilihan kategori tetap aktif saat mengganti bahasa; semua proyek tetap tampil tanpa JavaScript.
+
 ---
 
 ## 📁 Struktur Direktori
@@ -55,7 +72,13 @@ myArtikel/
 │   │   └── index.html
 │   ├── mrc/                     # Detail studi kasus TRACO-BOT
 │   │   └── index.html
-│   └── hexaka/                  # Detail studi kasus Wasaka Hexapod (Hexaka V3)
+│   ├── hexaka/                  # Detail studi kasus Wasaka Hexapod (Hexaka V3)
+│   │   └── index.html
+│   ├── mangrovepreneurs/        # Perangkat pemantauan kelulut & aplikasi Flutter
+│   │   └── index.html
+│   ├── aac/                     # Alat bantu komunikasi Bicara Warna
+│   │   └── index.html
+│   └── teksif/                  # Pengenal nominal uang Chromoney
 │       └── index.html
 ├── AMD/
 │   └── index.html               # Pengalihan (redirect) untuk kompatibilitas tautan lama
@@ -77,11 +100,13 @@ myArtikel/
 
 ## Bahasa, galeri, dan pemeliharaan
 
-- Tombol **ID / EN** tersedia di beranda dan ketiga halaman proyek. Pilihan disimpan dalam `localStorage` dengan kunci `naufal-language` dan dibawa melalui parameter `?lang=id` atau `?lang=en` saat mengikuti tautan halaman lokal. Parameter URL yang valid didahulukan; bahasa awal adalah Indonesia.
+- Tombol **ID / EN** tersedia di beranda dan keenam halaman proyek. Pilihan disimpan dalam `localStorage` dengan kunci `naufal-language` dan dibawa melalui parameter `?lang=id` atau `?lang=en` saat mengikuti tautan halaman lokal. Parameter URL yang valid didahulukan; bahasa awal adalah Indonesia.
 - Kamus lokal ada di `assets/js/translations.js`. Atribut `data-i18n` pada HTML merujuk ke kunci kamus. Saat mengubah tulisan, perbarui versi Indonesia pada HTML (agar tetap terbaca tanpa JavaScript) serta pasangan `id` dan `en` dalam kamus. Atribut gambar, caption, dan label aksesibilitas menggunakan `data-i18n-alt`, `data-i18n-data-caption`, dan `data-i18n-aria-label`.
 - `assets/js/i18n.js` mengatur pergantian bahasa. Terjemahan dibundel bersama situs dan tidak memanggil layanan eksternal. Dokumen CV dan nama resmi organisasi/kompetisi tetap mengikuti sumber aslinya.
 - `assets/js/gallery.js` digunakan bersama oleh semua halaman. Foto dapat dibuka, diganti dengan tombol panah atau swipe, dan ditutup dengan Escape. Fokus keyboard dikembalikan ke foto asal.
-- `assets/images/optimized/` berisi versi WebP dengan beberapa lebar, dipilih melalui `srcset`. Gambar asli tetap dipakai untuk pratinjau penuh. Jika mengganti foto, perbarui juga varian WebP, `srcset`, dan dimensi intrinsiknya.
+- `assets/images/optimized/` berisi versi WebP dengan beberapa lebar, dipilih melalui `srcset`. Pratinjau memakai gambar asli yang tersedia; jika gambar asli tidak tersedia, galeri memakai varian WebP terbesar. Jika mengganti foto, perbarui juga varian WebP, `srcset`, dan dimensi intrinsiknya.
+- Cover proyek baru memakai foto hasil alat. Galeri detail menampilkan keterangan untuk hasil, progres wiring, rancangan casing, aplikasi, dan survei sesuai nama serta isi foto. Kapitalisasi nama berkas harus dipertahankan untuk hosting yang membedakan huruf besar dan kecil. Gambar hasil TekSif memakai nama WebP berdasarkan revisi foto agar penggantian gambar tidak tertahan cache browser.
+- Nanda Ikbar berperan sebagai **Electrical** dan Siti Fathimah Az-Zahra sebagai **Robotic Consultant**. Foto kecil memakai varian WebP 96 / 192 px.
 - Tema gelap tetap dipakai. Navigasi beranda beralih ke menu mobile pada 1080 px; daftar isi proyek dapat dilipat pada 960 px. Animasi menghormati pengaturan reduced motion.
 
 ### Pemeriksaan
@@ -93,7 +118,7 @@ npm ci
 npm test
 ```
 
-Tes memeriksa kedua bahasa di empat halaman, penyimpanan dan fallback bahasa, galeri, serta keadaan menu dan daftar isi. Tes DOM ini tidak merender tampilan.
+Tes memeriksa kedua bahasa di tujuh halaman, penyimpanan dan fallback bahasa, galeri, menu, daftar isi, filter kategori, cover proyek baru, dan partner. Tes DOM ini tidak merender tampilan. Jika sandbox membatasi pembuatan proses tes Node, gunakan `node --test --test-isolation=none tests/site.test.cjs` pada Node.js yang mendukung opsi tersebut.
 
 Pemeriksaan struktur tambahan dengan Python dan `beautifulsoup4`:
 

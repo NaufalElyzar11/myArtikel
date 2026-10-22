@@ -44,8 +44,8 @@ window.siteTranslations = {
     "en": "Robotics · Embedded & IoT Systems · Assistive Technology"
   },
   "t012": {
-    "id": "Mahasiswa Teknologi Informasi Universitas Lambung Mangkurat yang senang merakit sistem dari nol—mulai dari menyolder jalur PCB alat bantu disabilitas, memprogram kinematika robot berkaki 18-DOF, hingga menghubungkan sensor lapangan ke aplikasi Flutter.",
-    "en": "An Information Technology student at Universitas Lambung Mangkurat who loves building systems from the ground up—from soldering PCBs for assistive devices and programming 18-DOF hexapod kinematics to connecting field sensors to Flutter apps."
+    "id": "Mahasiswa Teknologi Informasi Universitas Lambung Mangkurat yang memiliki hobi merakit dan membuat embedded system, mulai dari menyolder jalur PCB, membuat project dengan robot berkaki 18-DOF, hingga menghubungkan sensor ke aplikasi mobile.",
+    "en": "An Information Technology student at Universitas Lambung Mangkurat who loves building embedded systems, from soldering PCBs, making projects with 18-DOF hexapod robots, to connecting sensors to mobile applications."
   },
   "t013": {
     "id": "Jelajahi Studi Kasus",
@@ -68,8 +68,8 @@ window.siteTranslations = {
     "en": "Selected Projects"
   },
   "t018": {
-    "id": "Setiap proyek di bawah ini berangkat dari masalah nyata di lapangan—bukan sekadar tugas di atas kertas. Klik tab pada kartu untuk mengintip alur sistemnya, atau buka halaman studi kasus untuk mencoba simulasi interaktifnya.",
-    "en": "Every project below started from a real field problem—not just a classroom exercise. Use the tabs on each card to inspect the system flow, or open the case study to try its interactive simulator."
+    "id": "Setiap proyek di bawah ini berangkat dari masalah nyata di lapangan, bukan sekadar tugas di atas kertas. Klik tab pada kartu untuk mengintip alur sistemnya, atau buka halaman studi kasus untuk mencoba simulasi interaktifnya.",
+    "en": "Every project below started from a real field problem, not just a classroom exercise. Use the tabs on each card to inspect the system flow, or open the case study to try its interactive simulator."
   },
   "t019": {
     "id": "Proyek Unggulan · 01",
@@ -200,8 +200,8 @@ window.siteTranslations = {
     "en": "Education"
   },
   "t051": {
-    "id": "S1 Teknologi Informasi — Universitas Lambung Mangkurat (2023–Sekarang)",
-    "en": "B.Sc. in Information Technology — Universitas Lambung Mangkurat (2023–Present)"
+    "id": "S1 Teknologi Informasi - Universitas Lambung Mangkurat (2023-Sekarang)",
+    "en": "B.Sc. in Information Technology - Universitas Lambung Mangkurat (2023-Present)"
   },
   "t052": {
     "id": "Fokus",

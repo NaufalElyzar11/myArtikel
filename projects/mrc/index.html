@@ -211,6 +211,53 @@
       </div>
      </div>
     </section>
+    <!-- Interactive Simulator -->
+    <section class="block block--sim" id="simulasi" data-project-sim="mrc">
+     <h2 data-i18n="mrc.sim.title">
+      Simulasi Interaktif: Klasifikasi 6 Kelas Sampah di Atas Konveyor
+     </h2>
+     <p class="muted" data-i18n="mrc.sim.desc">
+      Pilih jenis objek sampah yang melintasi sensor proximity inframerah untuk melihat kecepatan inferensi CNN dan sudut bukaan lengan servo pemilah.
+     </p>
+     <div class="sim-widget">
+      <div class="sim-controls">
+       <div class="sim-group">
+        <div class="sim-label"><span data-i18n="mrc.sim.choose">Letakkan Sampah di Sabuk Konveyor:</span></div>
+        <div class="sim-btns">
+         <button type="button" class="sim-btn" data-waste-item="metal" data-i18n="mrc.sim.w1">🥫 Kaleng Logam</button>
+         <button type="button" class="sim-btn" data-waste-item="glass" data-i18n="mrc.sim.w2">🍾 Botol Kaca</button>
+         <button type="button" class="sim-btn active" data-waste-item="plastic" data-i18n="mrc.sim.w3">🥤 Gelas Plastik</button>
+         <button type="button" class="sim-btn" data-waste-item="paper" data-i18n="mrc.sim.w4">📄 Kertas / Karton</button>
+         <button type="button" class="sim-btn" data-waste-item="organic" data-i18n="mrc.sim.w5">🍂 Sampah Organik</button>
+         <button type="button" class="sim-btn" data-waste-item="residue" data-i18n="mrc.sim.w6">🧤 Residu Lainnya</button>
+        </div>
+       </div>
+      </div>
+      <div class="sim-terminal">
+       <div class="sim-terminal__head">
+        <span>TRACO_BOT // OPENCV_CNN + SERVO</span>
+        <span class="sim-terminal__badge">● CONVEYOR RUNNING</span>
+       </div>
+       <div class="sim-metrics">
+        <div class="sim-metric">
+         <span data-i18n="mrc.sim.k1">PREDIKSI MODEL</span>
+         <strong id="simMrcM1">Plastik (97.8%)</strong>
+        </div>
+        <div class="sim-metric">
+         <span data-i18n="mrc.sim.k2">WAKTU INFERENSI</span>
+         <strong id="simMrcM2">0.79 s</strong>
+        </div>
+        <div class="sim-metric">
+         <span data-i18n="mrc.sim.k3">AKTUATOR TUJUAN</span>
+         <strong id="simMrcM3">Bin #3 (Servo 75°)</strong>
+        </div>
+       </div>
+       <div class="sim-output" id="simMrcOut">
+        [TRACO-BOT] Sensor IR aktif → pemotongan ROI OpenCV → CNN mengenali Plastik (97.8%) dalam 0.79 s → Lengan servo mengarahkan ke Bin #3 (Servo 75°).
+       </div>
+      </div>
+     </div>
+    </section>
     <!-- Masalah & Target -->
     <section class="block block--alt" id="tujuan">
      <h2 data-i18n="t140">
@@ -482,6 +529,9 @@
      <div class="cta-group">
       <a class="btn" data-i18n="t183" href="https://github.com/NaufalElyzar11" rel="noreferrer" target="_blank">
        GitHub pengembang ↗
+      </a>
+      <a class="btn btn--ghost" data-i18n="mrc.next" href="../hexaka/">
+       Proyek Berikutnya: Wasaka Hexapod (Hexaka V3) →
       </a>
       <a class="btn btn--ghost" data-i18n="t184" href="../../index.html#projects">
        Kembali ke Semua Proyek

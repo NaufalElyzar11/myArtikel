@@ -9,3 +9,6 @@ Thumbs.db
 .vscode/
 .idea/
 node_modules/
+
+# Local project documentation
+/PROJECT_CONTEXT.local.md

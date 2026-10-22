@@ -211,6 +211,57 @@
       </div>
      </div>
     </section>
+    <!-- Interactive Simulator -->
+    <section class="block block--sim" id="simulasi" data-project-sim="hexaka">
+     <h2 data-i18n="hexaka.sim.title">
+      Simulasi Interaktif: Stabilisasi IMU &amp; Mode Misi
+     </h2>
+     <p class="muted" data-i18n="hexaka.sim.desc">
+      Ubah sudut kemiringan lantai (0°–22°) atau pilih salah satu dari 3 aplikasi misi Hexaka V3 untuk mengamati respons PID body leveling dan status sistemnya.
+     </p>
+     <div class="sim-widget">
+      <div class="sim-controls">
+       <div class="sim-group">
+        <div class="sim-label">
+         <span data-i18n="hexaka.sim.slope">Kemiringan Permukaan Medan (BNO055 IMU)</span>
+         <strong id="simHexSlopeVal">8°</strong>
+        </div>
+        <input type="range" class="sim-slider" id="simHexSlope" min="0" max="22" step="1" value="8" aria-label="Sudut kemiringan" />
+       </div>
+       <div class="sim-group">
+        <div class="sim-label"><span data-i18n="hexaka.sim.mode">Pilih Aplikasi Misi Aktif:</span></div>
+        <div class="sim-btns">
+         <button type="button" class="sim-btn active" data-hex-mode="BEST_AUTONOMOUS" data-i18n="hexaka.sim.m_best">1 · BRIN BEST 2026</button>
+         <button type="button" class="sim-btn" data-hex-mode="PKKMB_TRACK" data-i18n="hexaka.sim.m_pkkmb">2 · Human Tracking</button>
+         <button type="button" class="sim-btn" data-hex-mode="TIKTOK_LIVE" data-i18n="hexaka.sim.m_tiktok">3 · TikTok Live + 3D</button>
+        </div>
+       </div>
+      </div>
+      <div class="sim-terminal">
+       <div class="sim-terminal__head">
+        <span>HEXAKA_V3 // 18-DOF DYNAMIXEL</span>
+        <span class="sim-terminal__badge">● 50Hz TELEMETRY</span>
+       </div>
+       <div class="sim-metrics">
+        <div class="sim-metric">
+         <span data-i18n="hexaka.sim.k1">KOREKSI BODI</span>
+         <strong id="simHexM1">-7.5° PID</strong>
+        </div>
+        <div class="sim-metric">
+         <span data-i18n="hexaka.sim.k2">POLA LANGKAH</span>
+         <strong id="simHexM2">TRIPOD 3+3</strong>
+        </div>
+        <div class="sim-metric">
+         <span data-i18n="hexaka.sim.k3">PIPELINE AKTIF</span>
+         <strong id="simHexM3">ONNX + 50Hz</strong>
+        </div>
+       </div>
+       <div class="sim-output" id="simHexOut">
+        [BRIN BEST 2026] Segmentasi lantai kamera tunggal + penghindaran rintangan YOLO11 aktif. IMU BNO055 mengompensasi miring 8°.
+       </div>
+      </div>
+     </div>
+    </section>
     <!-- 3 Misi Utama -->
     <section class="block block--alt" id="misi">
      <h2 data-i18n="t285">
@@ -501,6 +552,9 @@
       </a>
       <a class="btn btn--ghost" data-i18n="t319" href="https://github.com/NaufalElyzar11" rel="noreferrer" target="_blank">
        Profil GitHub pengembang ↗
+      </a>
+      <a class="btn btn--ghost" data-i18n="hexaka.next" href="../mangrovepreneurs/">
+       Proyek Berikutnya: Mangrovepreneurs →
       </a>
       <a class="btn btn--ghost" data-i18n="t184" href="../../index.html#projects">
        Kembali ke Semua Proyek

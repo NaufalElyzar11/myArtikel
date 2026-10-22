@@ -4,10 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title data-i18n="teksif.pageTitle">TekSif — Chromoney | Naufal Elyzar</title>
-  <meta name="description" content="Alat pengenal nominal uang melalui sensor warna dan keluaran suara untuk pengguna tunanetra. Pesanan Pendidikan Khusus ULM, dengan fokus wiring PCB dan Arduino IDE (.ino)." data-i18n-content="teksif.meta" />
+  <meta name="description" content="Perangkat saku pembaca nominal uang kertas Rupiah berbasis sensor warna dan keluaran suara (voice assist), dirancang agar siswa tunanetra dapat berbelanja mandiri di kantin asrama tanpa harus selalu bergantung pada pendamping." data-i18n-content="teksif.meta" />
   <meta name="author" content="Naufal Elyzar" />
   <meta property="og:title" content="TekSif — Chromoney | Naufal Elyzar" data-i18n-content="teksif.pageTitle" />
-  <meta property="og:description" content="Alat pengenal nominal uang melalui sensor warna dan keluaran suara untuk pengguna tunanetra. Pesanan Pendidikan Khusus ULM, dengan fokus wiring PCB dan Arduino IDE (.ino)." data-i18n-content="teksif.meta" />
+  <meta property="og:description" content="Perangkat saku pembaca nominal uang kertas Rupiah berbasis sensor warna dan keluaran suara (voice assist), dirancang agar siswa tunanetra dapat berbelanja mandiri di kantin asrama tanpa harus selalu bergantung pada pendamping." data-i18n-content="teksif.meta" />
   <meta property="og:type" content="article" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,69 +17,249 @@
 </head>
 <body>
   <a data-i18n="t002" class="skip-link" href="#main-content">Langsung ke konten</a>
-  <header class="topbar"><div class="wrap">
-    <a data-i18n="t121" class="back-link" href="../../index.html#projects">← Kembali ke Portofolio</a>
-    <nav class="mininav" aria-label="Navigasi cepat artikel" data-i18n-aria-label="t190"><a data-i18n="t122" href="#overview">Ringkasan</a><a data-i18n="projects.features" href="#fitur">Fitur utama</a><a data-i18n="projects.implementation" href="#implementasi">Implementasi</a><a data-i18n="t008" href="#galeri">Galeri</a></nav>
-    <div class="language-switch" role="group" aria-label="Bahasa" data-i18n-aria-label="t107">
-    <button type="button" data-language="id" lang="id" aria-pressed="true" aria-label="Bahasa Indonesia" data-i18n-aria-label="t108">ID</button>
-    <button type="button" data-language="en" lang="en" aria-pressed="false" aria-label="English" data-i18n-aria-label="t109">EN</button>
-  </div>
-  </div></header>
+  <header class="topbar">
+    <div class="wrap">
+      <a data-i18n="t121" class="back-link" href="../../index.html#projects">← Kembali ke Portofolio</a>
+      <nav class="mininav" aria-label="Navigasi cepat artikel" data-i18n-aria-label="t190">
+        <a data-i18n="t122" href="#overview">Ringkasan</a>
+        <a data-i18n="teksif.nav.sim" href="#simulasi">Simulasi Sensor</a>
+        <a data-i18n="projects.features" href="#fitur">Fitur utama</a>
+        <a data-i18n="projects.implementation" href="#implementasi">Implementasi</a>
+        <a data-i18n="t008" href="#galeri">Galeri</a>
+      </nav>
+      <div class="language-switch" role="group" aria-label="Bahasa" data-i18n-aria-label="t107">
+        <button type="button" data-language="id" lang="id" aria-pressed="true" aria-label="Bahasa Indonesia" data-i18n-aria-label="t108">ID</button>
+        <button type="button" data-language="en" lang="en" aria-pressed="false" aria-label="English" data-i18n-aria-label="t109">EN</button>
+      </div>
+    </div>
+  </header>
+
   <main id="main-content" tabindex="-1">
     <section class="hero">
       <div class="wrap hero__inner">
         <div class="hero__text">
           <p data-i18n="teksif.eyebrow" class="eyebrow">Studi kasus / TekSif — Chromoney</p>
           <h1 class="hero__title">TekSif — Chromoney<span data-i18n="teksif.subtitle">Pengenal nominal uang · Sensor warna · Keluaran suara</span></h1>
-          <p data-i18n="teksif.description" class="lead">Perangkat asistif pesanan Pendidikan Khusus ULM untuk membantu pengguna tunanetra mengenali nominal uang. Sensor warna membaca ciri uang, lalu hasil pengenalan disampaikan melalui suara. Fokus pengerjaan saya adalah wiring PCB dan pemrograman Arduino IDE (.ino).</p>
-          <ul class="badges"><li data-i18n="teksif.client">Pendidikan Khusus ULM · Kelompok 4</li><li data-i18n="teksif.role">Wiring PCB &amp; pemrograman Arduino IDE (.ino)</li></ul>
-          <div class="cta-group"><a data-i18n="projects.features" class="btn" href="#fitur">Fitur utama</a><a data-i18n="t206" class="btn btn--ghost" href="#galeri">Lihat Dokumentasi</a></div>
+          <p data-i18n="teksif.description" class="lead">
+            Perangkat teknologi asistif portabel pesanan Kelompok 4 Pendidikan Khusus ULM untuk mendukung kemandirian siswa tunanetra (Subjek Anak A) saat berbelanja di kantin asrama. Menggunakan sensor warna untuk mengidentifikasi nilai mata uang Rupiah dan menyebutkan nominalnya secara lantang melalui speaker.
+          </p>
+          <ul class="badges">
+            <li data-i18n="teksif.client">Pendidikan Khusus ULM · Kelompok 4</li>
+            <li data-i18n="teksif.role">Wiring PCB &amp; pemrograman Arduino IDE (.ino)</li>
+          </ul>
+          <div class="cta-group">
+            <a data-i18n="teksif.cta.sim" class="btn" href="#simulasi">Coba Pemindai Uang</a>
+            <a data-i18n="t206" class="btn btn--ghost" href="#galeri">Lihat Dokumentasi</a>
+          </div>
         </div>
         <figure class="bbox-frame hero__media device-media">
           <img src="../../assets/images/optimized/teksif-result-b4ddbcc5-720.webp" srcset="../../assets/images/optimized/teksif-result-b4ddbcc5-480.webp 480w, ../../assets/images/optimized/teksif-result-b4ddbcc5-720.webp 720w" sizes="(max-width: 960px) 92vw, 600px" width="720" height="1280" alt="Hasil alat TekSif — Chromoney." data-i18n-alt="teksif.cover" decoding="async" fetchpriority="high" />
           <figcaption data-i18n="teksif.cover">Hasil alat TekSif — Chromoney.</figcaption>
+          <span class="corner corner--tl"></span>
+          <span class="corner corner--tr"></span>
+          <span class="corner corner--bl"></span>
+          <span class="corner corner--br"></span>
         </figure>
       </div>
     </section>
+
     <div class="wrap layout">
       <aside class="toc" aria-label="Daftar isi" data-i18n-aria-label="projects.contents">
         <h2><button type="button" class="toc-toggle" aria-controls="toc-links" aria-expanded="true"><span data-i18n="projects.contents">Daftar isi</span></button></h2>
-        <div id="toc-links"><a data-i18n="t122" class="toc__link" href="#overview">Ringkasan</a><a data-i18n="projects.features" class="toc__link" href="#fitur">Fitur utama</a><a data-i18n="projects.implementation" class="toc__link" href="#implementasi">Implementasi</a><a data-i18n="t008" class="toc__link" href="#galeri">Galeri</a></div>
+        <div id="toc-links">
+          <a data-i18n="t122" class="toc__link" href="#overview">Ringkasan</a>
+          <a data-i18n="teksif.nav.sim" class="toc__link" href="#simulasi">Simulasi Sensor</a>
+          <a data-i18n="projects.features" class="toc__link" href="#fitur">Fitur utama</a>
+          <a data-i18n="projects.implementation" class="toc__link" href="#implementasi">Implementasi</a>
+          <a data-i18n="t008" class="toc__link" href="#galeri">Galeri</a>
+        </div>
       </aside>
+
       <article class="content">
         <section class="block" id="overview">
           <h2 data-i18n="t122">Ringkasan</h2>
-          <p data-i18n="teksif.overview.0">TekSif — Chromoney dikembangkan berdasarkan rancangan Kelompok 4 Pendidikan Khusus Universitas Lambung Mangkurat. Tujuannya adalah membantu pengguna tunanetra mengenali nominal uang saat melakukan transaksi sederhana.</p>
-<p data-i18n="teksif.overview.1">Rancangan menggunakan sensor warna untuk membaca ciri uang serta speaker sebagai keluaran informasi suara. Komponen pendukung meliputi tombol fisik, PCB dot matrix, baterai, modul pengisian daya, dan casing.</p>
-          <div class="stack-chips"><span>Arduino IDE (.ino)</span><span>PCB wiring</span><span data-i18n="teksif.stack.2">Sensor warna</span><span data-i18n="teksif.stack.3">Modul audio</span><span>Speaker</span><span data-i18n="teksif.stack.5">Baterai</span></div>
+          <p data-i18n="teksif.overview.0">
+            Berdasarkan asesmen Kelompok 4 Pendidikan Khusus Universitas Lambung Mangkurat, Subjek “Anak A” yang mengalami tunanetra belum mampu membedakan pecahan uang kertas dari tekstur atau ukuran taktilnya. Akibatnya, setiap kali berbelanja di kantin asrama, Anak A harus selalu didampingi guru piket atau mengandalkan penjaga kantin untuk menyebutkan nominal uang yang ia pegang.
+          </p>
+          <p data-i18n="teksif.overview.1">
+            Alat “Chromoney” dirancang agar Anak A bisa memeriksa uangnya sendiri dengan percaya diri. Saya merakit dan memprogram sistem 21 komponen ini ke dalam bodi cetak 3D berukuran saku (11 × 7,5 × 3,5 cm): menyatukan modul sensor warna 4 × 4 cm, papan PCB dot-matrix single-layer (10,5 × 7 cm), tombol taktil samping (+ dan =), speaker horn 40 mm 3W 4Ω dengan mini amplifier, serta sistem baterai tanam 18650 dengan modul pengisian daya TP4056 Type-C.
+          </p>
+          <div class="kpi-grid">
+            <div class="kpi-item">
+              <div class="num">11×7,5 cm</div>
+              <div class="label" data-i18n="teksif.kpi.1">Dimensi Casing 3D-Print</div>
+            </div>
+            <div class="kpi-item">
+              <div class="num">3W 4Ω</div>
+              <div class="label" data-i18n="teksif.kpi.2">Speaker 40mm + Amplifier</div>
+            </div>
+            <div class="kpi-item">
+              <div class="num">Type-C</div>
+              <div class="label" data-i18n="teksif.kpi.3">Baterai Tanam + TP4056</div>
+            </div>
+            <div class="kpi-item">
+              <div class="num">21 Bagian</div>
+              <div class="label" data-i18n="teksif.kpi.4">Rangkaian Terintegrasi Rapi</div>
+            </div>
+          </div>
+          <div class="stack-chips">
+            <span>Arduino IDE (.ino)</span>
+            <span>PCB wiring (10.5×7 cm)</span>
+            <span data-i18n="teksif.stack.2">Sensor warna</span>
+            <span data-i18n="teksif.stack.3">Modul audio</span>
+            <span>Speaker 40mm 3W</span>
+            <span data-i18n="teksif.stack.5">Baterai</span>
+            <span>TP4056 Type-C</span>
+          </div>
         </section>
+
+        <!-- Interactive Simulator -->
+        <section class="block block--sim" id="simulasi" data-project-sim="teksif">
+          <h2 data-i18n="teksif.sim.title">Simulasi Interaktif: Pemindai Uang &amp; Transaksi Kantin</h2>
+          <p class="muted" data-i18n="teksif.sim.desc">
+            Pilih nominal uang kertas Rupiah untuk melihat pembacaan RGB sensor warna dan keluaran suaranya, lalu uji tombol samping (+ / =) untuk menjumlahkan uang belanja.
+          </p>
+          <div class="sim-widget">
+            <div class="sim-controls">
+              <div class="sim-group">
+                <div class="sim-label"><span data-i18n="teksif.sim.select">Tempelkan Uang Kertas ke Sensor Warna:</span></div>
+                <div class="sim-btns">
+                  <button type="button" class="sim-btn" data-note-val="2000">Rp 2.000</button>
+                  <button type="button" class="sim-btn" data-note-val="5000">Rp 5.000</button>
+                  <button type="button" class="sim-btn active" data-note-val="10000">Rp 10.000</button>
+                  <button type="button" class="sim-btn" data-note-val="20000">Rp 20.000</button>
+                  <button type="button" class="sim-btn" data-note-val="50000">Rp 50.000</button>
+                  <button type="button" class="sim-btn" data-note-val="100000">Rp 100.000</button>
+                </div>
+              </div>
+              <div class="sim-group">
+                <div class="sim-label"><span data-i18n="teksif.sim.sideBtns">Tombol Samping Kanan (+ dan =):</span></div>
+                <div class="sim-btns">
+                  <button type="button" class="sim-btn" id="simTeksifAdd" data-i18n="teksif.sim.addBtn">➕ Tambah Nominal ke Total (+)</button>
+                  <button type="button" class="sim-btn" id="simTeksifReset" data-i18n="teksif.sim.resetBtn">↺ Reset Hitungan</button>
+                </div>
+              </div>
+            </div>
+            <div class="sim-terminal">
+              <div class="sim-terminal__head">
+                <span>CHROMONEY // COLOR_SENSOR_RGB</span>
+                <span class="sim-terminal__badge">● VOICE ASSIST ON</span>
+              </div>
+              <div class="sim-metrics">
+                <div class="sim-metric">
+                  <span data-i18n="teksif.sim.m1">NOMINAL TERBACA</span>
+                  <strong id="simTeksifM1">Rp 10.000</strong>
+                </div>
+                <div class="sim-metric">
+                  <span data-i18n="teksif.sim.m2">NILAI SENSOR RGB</span>
+                  <strong id="simTeksifM2">R:146 G:102 B:168</strong>
+                </div>
+                <div class="sim-metric">
+                  <span data-i18n="teksif.sim.m3">AKUMULASI (+)</span>
+                  <strong id="simTeksifM3">Rp 10.000</strong>
+                </div>
+              </div>
+              <div class="sim-output" id="simTeksifOut">
+                🔊 [SPEAKER 3W]: "Rp 10.000." — Sensor warna mengenali pantulan RGB (R:146 G:102 B:168).
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section class="block" id="fitur">
           <h2 data-i18n="projects.features">Fitur utama</h2>
-          <div class="grid2"><div class="card"><h3 data-i18n="teksif.feature.0.title">Pengenalan nominal uang</h3><p data-i18n="teksif.feature.0.body">Sensor warna menjadi input pengenalan ciri uang. Pembacaan diproses untuk menentukan nominal yang akan disampaikan kepada pengguna.</p></div>
-<div class="card"><h3 data-i18n="teksif.feature.1.title">Informasi melalui suara</h3><p data-i18n="teksif.feature.1.body">Keluaran speaker membantu pengguna memperoleh informasi nominal tanpa mengandalkan penglihatan.</p></div></div>
+          <div class="grid2">
+            <div class="card">
+              <h3 data-i18n="teksif.feature.0.title">Identifikasi nominal berbasis spektrum warna</h3>
+              <p data-i18n="teksif.feature.0.body">
+                Sensor warna membaca karakteristik pantulan warna khas tiap pecahan uang kertas Rupiah di jendela pemindai bagian depan, lalu mencocokkannya dengan rentang kalibrasi pada mikrokontroler.
+              </p>
+            </div>
+            <div class="card">
+              <h3 data-i18n="teksif.feature.1.title">Pemandu suara &amp; desain taktil ramah tunanetra</h3>
+              <p data-i18n="teksif.feature.1.body">
+                Dilengkapi speaker 3W yang nyaring untuk lingkungan kantin sekolah, tombol fisik bertekstur (+ dan =) di sisi kanan, sakelar daya momentary 12mm di bagian atas, serta pengisian daya USB Type-C.
+              </p>
+            </div>
+          </div>
         </section>
-        <section class="block" id="implementasi">
+
+        <section class="block block--alt" id="implementasi">
           <h2 data-i18n="projects.implementation">Implementasi</h2>
-          <div class="steps"><div class="step"><span class="step__no" aria-hidden="true">01</span><div class="step__content"><h3 data-i18n="teksif.step.0.title">Wiring PCB &amp; integrasi sensor</h3><p data-i18n="teksif.step.0.body">Menghubungkan sensor warna, tombol, modul audio, dan catu daya pada PCB. Rangkaian dirakit agar dapat ditempatkan dalam casing alat.</p></div></div><div class="step"><span class="step__no" aria-hidden="true">02</span><div class="step__content"><h3 data-i18n="teksif.step.1.title">Pemrograman Arduino IDE (.ino)</h3><p data-i18n="teksif.step.1.body">Sketch .ino menangani pembacaan sensor dan respons alat, termasuk keluaran suara untuk hasil pengenalan nominal.</p></div></div><div class="step"><span class="step__no" aria-hidden="true">03</span><div class="step__content"><h3 data-i18n="teksif.step.2.title">Perakitan &amp; percobaan pembacaan</h3><p data-i18n="teksif.step.2.body">Dokumentasi mencakup penyolderan dan wiring pada PCB serta percobaan pembacaan uang saat alat terhubung ke laptop.</p></div></div></div>
+          <div class="steps">
+            <div class="step">
+              <span class="step__no" aria-hidden="true">01</span>
+              <div class="step__content">
+                <h3 data-i18n="teksif.step.0.title">Wiring PCB Dot-Matrix &amp; Manajemen Daya</h3>
+                <p data-i18n="teksif.step.0.body">
+                  Menyolder jalur penghubung sensor warna, tombol taktil, modul audio amplifier, speaker 40mm, serta sistem baterai tanam 18650 dengan modul proteksi pengisian TP4056 di atas PCB 10,5 × 7 cm.
+                </p>
+              </div>
+            </div>
+            <div class="step">
+              <span class="step__no" aria-hidden="true">02</span>
+              <div class="step__content">
+                <h3 data-i18n="teksif.step.1.title">Pemrograman &amp; Kalibrasi di Arduino IDE (.ino)</h3>
+                <p data-i18n="teksif.step.1.body">
+                  Menulis firmware .ino untuk mengambil sampel frekuensi RGB sensor warna, menyaring fluktuasi cahaya luar, memetakan nilai ke nominal Rupiah, dan memicu pengumuman suara.
+                </p>
+              </div>
+            </div>
+            <div class="step">
+              <span class="step__no" aria-hidden="true">03</span>
+              <div class="step__content">
+                <h3 data-i18n="teksif.step.2.title">Perakitan Casing &amp; Uji Baca Pecahan Uang</h3>
+                <p data-i18n="teksif.step.2.body">
+                  Merakit seluruh komponen ke dalam bodi 3D-print bersekrup 4 titik dan melakukan pengujian pembacaan berbagai pecahan uang kertas secara berulang saat terhubung ke serial monitor laptop.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
+
         <section class="block" id="galeri">
           <h2 data-i18n="t008">Galeri</h2>
           <p data-i18n="projects.galleryHint" class="muted">Hasil alat, proses pengerjaan, dan konteks lapangan. Pilih foto untuk memperbesar; gunakan tombol panah atau swipe untuk menjelajah.</p>
-          <div class="gallery documentation-gallery"><figure class="documentation-photo"><a class="gallery__item" href="../../assets/images/Hasil%20Teksif.jpeg" data-caption="Hasil alat TekSif — Chromoney dalam casing." data-i18n-data-caption="teksif.photo.teksif-result"><img src="../../assets/images/optimized/teksif-result-b4ddbcc5-720.webp" srcset="../../assets/images/optimized/teksif-result-b4ddbcc5-480.webp 480w, ../../assets/images/optimized/teksif-result-b4ddbcc5-720.webp 720w" sizes="(max-width: 960px) 92vw, 600px" width="720" height="1280" alt="Hasil alat TekSif — Chromoney dalam casing." data-i18n-alt="teksif.photo.teksif-result" decoding="async" loading="lazy" /></a><figcaption data-i18n="teksif.photo.teksif-result">Hasil alat TekSif — Chromoney dalam casing.</figcaption></figure>
-<figure class="documentation-photo"><a class="gallery__item" href="../../assets/images/optimized/teksif-wiring-960.webp" data-caption="Progres TekSif: penyolderan dan wiring pada PCB." data-i18n-data-caption="teksif.photo.teksif-wiring"><img src="../../assets/images/optimized/teksif-wiring-960.webp" srcset="../../assets/images/optimized/teksif-wiring-480.webp 480w, ../../assets/images/optimized/teksif-wiring-960.webp 960w" sizes="(max-width: 960px) 92vw, 600px" width="1080" height="1393" alt="Progres TekSif: penyolderan dan wiring pada PCB." data-i18n-alt="teksif.photo.teksif-wiring" decoding="async" loading="lazy" /></a><figcaption data-i18n="teksif.photo.teksif-wiring">Progres TekSif: penyolderan dan wiring pada PCB.</figcaption></figure>
-<figure class="documentation-photo"><a class="gallery__item" href="../../assets/images/optimized/teksif-test-960.webp" data-caption="Progres TekSif: percobaan pembacaan uang dan pemrograman." data-i18n-data-caption="teksif.photo.teksif-test"><img src="../../assets/images/optimized/teksif-test-960.webp" srcset="../../assets/images/optimized/teksif-test-480.webp 480w, ../../assets/images/optimized/teksif-test-960.webp 960w" sizes="(max-width: 960px) 92vw, 600px" width="1080" height="1512" alt="Progres TekSif: percobaan pembacaan uang dan pemrograman." data-i18n-alt="teksif.photo.teksif-test" decoding="async" loading="lazy" /></a><figcaption data-i18n="teksif.photo.teksif-test">Progres TekSif: percobaan pembacaan uang dan pemrograman.</figcaption></figure></div>
+          <div class="gallery documentation-gallery">
+            <figure class="documentation-photo">
+              <a class="gallery__item" href="../../assets/images/Hasil%20Teksif.jpeg" data-caption="Hasil alat TekSif — Chromoney dalam casing." data-i18n-data-caption="teksif.photo.teksif-result">
+                <img src="../../assets/images/optimized/teksif-result-b4ddbcc5-720.webp" srcset="../../assets/images/optimized/teksif-result-b4ddbcc5-480.webp 480w, ../../assets/images/optimized/teksif-result-b4ddbcc5-720.webp 720w" sizes="(max-width: 960px) 92vw, 600px" width="720" height="1280" alt="Hasil alat TekSif — Chromoney dalam casing." data-i18n-alt="teksif.photo.teksif-result" decoding="async" loading="lazy" />
+              </a>
+              <figcaption data-i18n="teksif.photo.teksif-result">Hasil alat TekSif — Chromoney dalam casing.</figcaption>
+            </figure>
+            <figure class="documentation-photo">
+              <a class="gallery__item" href="../../assets/images/optimized/teksif-wiring-960.webp" data-caption="Progres TekSif: penyolderan dan wiring pada PCB." data-i18n-data-caption="teksif.photo.teksif-wiring">
+                <img src="../../assets/images/optimized/teksif-wiring-960.webp" srcset="../../assets/images/optimized/teksif-wiring-480.webp 480w, ../../assets/images/optimized/teksif-wiring-960.webp 960w" sizes="(max-width: 960px) 92vw, 600px" width="1080" height="1393" alt="Progres TekSif: penyolderan dan wiring pada PCB." data-i18n-alt="teksif.photo.teksif-wiring" decoding="async" loading="lazy" />
+              </a>
+              <figcaption data-i18n="teksif.photo.teksif-wiring">Progres TekSif: penyolderan dan wiring pada PCB.</figcaption>
+            </figure>
+            <figure class="documentation-photo">
+              <a class="gallery__item" href="../../assets/images/optimized/teksif-test-960.webp" data-caption="Progres TekSif: percobaan pembacaan uang dan pemrograman." data-i18n-data-caption="teksif.photo.teksif-test">
+                <img src="../../assets/images/optimized/teksif-test-960.webp" srcset="../../assets/images/optimized/teksif-test-480.webp 480w, ../../assets/images/optimized/teksif-test-960.webp 960w" sizes="(max-width: 960px) 92vw, 600px" width="1080" height="1512" alt="Progres TekSif: percobaan pembacaan uang dan pemrograman." data-i18n-alt="teksif.photo.teksif-test" decoding="async" loading="lazy" />
+              </a>
+              <figcaption data-i18n="teksif.photo.teksif-test">Progres TekSif: percobaan pembacaan uang dan pemrograman.</figcaption>
+            </figure>
+          </div>
         </section>
+
         <div class="project-return cta-group">
           <a data-i18n="t184" class="btn btn--ghost" href="../../index.html#projects">Kembali ke Semua Proyek</a>
+          <a data-i18n="teksif.next" class="btn btn--ghost" href="../amd/">Proyek Berikutnya: PRONE.ID →</a>
           <a data-i18n="projects.collaboration" class="btn" href="../../index.html#contact">Bahas proyek serupa</a>
         </div>
       </article>
     </div>
   </main>
-  <footer class="foot"><div class="wrap foot__inner">
-    <p>© <span id="yr"></span> <span data-i18n="t103">Naufal Elyzar. Hak cipta dilindungi.</span></p>
-    <div class="foot__links"><a data-i18n="t186" href="../../index.html#projects">Semua Proyek</a><a data-i18n="t009" href="../../index.html#contact">Kontak</a></div>
-  </div></footer>
+
+  <footer class="foot">
+    <div class="wrap foot__inner">
+      <p>© <span id="yr"></span> <span data-i18n="t103">Naufal Elyzar. Hak cipta dilindungi.</span></p>
+      <div class="foot__links">
+        <a data-i18n="t186" href="../../index.html#projects">Semua Proyek</a>
+        <a data-i18n="t009" href="../../index.html#contact">Kontak</a>
+      </div>
+    </div>
+  </footer>
   <script defer src="../../assets/js/translations.js"></script>
   <script defer src="../../assets/js/i18n.js"></script>
   <script defer src="../../assets/js/project-detail.js"></script>

@@ -211,6 +211,51 @@
       </div>
      </div>
     </section>
+    <!-- Interactive Simulator -->
+    <section class="block block--sim" id="simulasi" data-project-sim="amd">
+     <h2 data-i18n="amd.sim.title">
+      Simulasi Interaktif: Telemetri Kelembapan Tanah &amp; Penyiraman Presisi
+     </h2>
+     <p class="muted" data-i18n="amd.sim.desc">
+      Pilih salah satu blok sensor tanah (Blok A–D) untuk melihat bagaimana stasiun Raspberry Pi mengevaluasi kelembapan tanah dan memutuskan apakah drone sprayer perlu diterbangkan.
+     </p>
+     <div class="sim-widget">
+      <div class="sim-controls">
+       <div class="sim-group">
+        <div class="sim-label"><span data-i18n="amd.sim.choose">Pilih Node Sensor Perkebunan Sawit:</span></div>
+        <div class="sim-btns">
+         <button type="button" class="sim-btn active" data-zone-btn="A" data-i18n="amd.sim.zA">Blok A (Lembap · 64%)</button>
+         <button type="button" class="sim-btn" data-zone-btn="B" data-i18n="amd.sim.zB">Blok B (Kering · 28%)</button>
+         <button type="button" class="sim-btn" data-zone-btn="C" data-i18n="amd.sim.zC">Blok C (Kering · 31%)</button>
+         <button type="button" class="sim-btn" data-zone-btn="D" data-i18n="amd.sim.zD">Blok D (Optimal · 71%)</button>
+        </div>
+       </div>
+      </div>
+      <div class="sim-terminal">
+       <div class="sim-terminal__head">
+        <span>PRONE_ID // RPi_GATEWAY + nRF24L01</span>
+        <span class="sim-terminal__badge">● RF LINK OK</span>
+       </div>
+       <div class="sim-metrics">
+        <div class="sim-metric">
+         <span data-i18n="amd.sim.k1">KELEMBAPAN TANAH</span>
+         <strong id="simAmdM1">64%</strong>
+        </div>
+        <div class="sim-metric">
+         <span data-i18n="amd.sim.k2">SUHU UDARA (DHT22)</span>
+         <strong id="simAmdM2">29.2°C</strong>
+        </div>
+        <div class="sim-metric">
+         <span data-i18n="amd.sim.k3">KEPUTUSAN MISI</span>
+         <strong id="simAmdM3">Tunda Siram (Hemat Air)</strong>
+        </div>
+       </div>
+       <div class="sim-output" id="simAmdOut">
+        [GATEWAY RPi] Kelembapan Blok A (64%) sudah cukup. Pompa sprayer dinonaktifkan—menghemat penggunaan air hingga 22%.
+       </div>
+      </div>
+     </div>
+    </section>
     <!-- Masalah & Target -->
     <section class="block block--alt" id="tujuan">
      <h2 data-i18n="t140">
@@ -490,6 +535,9 @@
       </a>
       <a class="btn btn--ghost" data-i18n="t183" href="https://github.com/NaufalElyzar11" rel="noreferrer" target="_blank">
        GitHub pengembang ↗
+      </a>
+      <a class="btn btn--ghost" data-i18n="amd.next" href="../mrc/">
+       Proyek Berikutnya: TRACO-BOT →
       </a>
       <a class="btn btn--ghost" data-i18n="t184" href="../../index.html#projects">
        Kembali ke Semua Proyek

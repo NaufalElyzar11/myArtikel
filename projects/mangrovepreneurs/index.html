@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" />
   <link rel="stylesheet" href="../../assets/css/project-detail.css" />
   <link rel="stylesheet" href="../../assets/css/site-controls.css" />
+  <link rel="stylesheet" href="../../assets/css/app-preview.css" />
 </head>
 <body>
   <a data-i18n="t002" class="skip-link" href="#main-content">Langsung ke konten</a>
@@ -22,6 +23,7 @@
       <a data-i18n="t121" class="back-link" href="../../index.html#projects">← Kembali ke Portofolio</a>
       <nav class="mininav" aria-label="Navigasi cepat artikel" data-i18n-aria-label="t190">
         <a data-i18n="t122" href="#overview">Ringkasan</a>
+        <a data-i18n="mg.preview.nav" href="#preview">Preview aplikasi</a>
         <a data-i18n="mangrovepreneurs.nav.sim" href="#simulasi">Simulasi Sarang</a>
         <a data-i18n="projects.features" href="#fitur">Fitur utama</a>
         <a data-i18n="projects.implementation" href="#implementasi">Implementasi</a>
@@ -48,7 +50,7 @@
             <li data-i18n="mangrovepreneurs.role">Perangkat IoT &amp; aplikasi Flutter</li>
           </ul>
           <div class="cta-group">
-            <a data-i18n="mangrovepreneurs.cta.sim" class="btn" href="#simulasi">Coba Simulasi Sarang</a>
+            <a data-i18n="mg.preview.cta" class="btn" href="#preview">Lihat preview aplikasi</a>
             <a data-i18n="t206" class="btn btn--ghost" href="#galeri">Lihat Dokumentasi</a>
           </div>
         </div>
@@ -68,6 +70,7 @@
         <h2><button type="button" class="toc-toggle" aria-controls="toc-links" aria-expanded="true"><span data-i18n="projects.contents">Daftar isi</span></button></h2>
         <div id="toc-links">
           <a data-i18n="t122" class="toc__link" href="#overview">Ringkasan</a>
+          <a data-i18n="mg.preview.nav" class="toc__link" href="#preview">Preview aplikasi</a>
           <a data-i18n="mangrovepreneurs.nav.sim" class="toc__link" href="#simulasi">Simulasi Sarang</a>
           <a data-i18n="projects.features" class="toc__link" href="#fitur">Fitur utama</a>
           <a data-i18n="projects.implementation" class="toc__link" href="#implementasi">Implementasi</a>
@@ -112,11 +115,34 @@
           </div>
         </section>
 
+        <section class="block" id="preview">
+          <h2 data-i18n="mg.preview.title">Kondisi sarang, langsung dari ponsel</h2>
+          <p data-i18n="mg.preview.intro">Peternak dapat memeriksa kondisi beberapa sarang tanpa membuka kotaknya satu per satu. Berikut dokumentasi tampilan aplikasi Flutter yang dibuat untuk proyek ini.</p>
+          <div class="app-preview">
+            <figure>
+              <a class="gallery__item" href="../../assets/images/optimized/mangrove-app-709.webp" data-caption="Dokumentasi tampilan aplikasi Mangrovepreneurs. Angka pada gambar adalah kondisi saat dokumentasi diambil." data-i18n-data-caption="mg.preview.caption">
+                <img src="../../assets/images/optimized/mangrove-app-709.webp" srcset="../../assets/images/optimized/mangrove-app-480.webp 480w, ../../assets/images/optimized/mangrove-app-709.webp 709w" sizes="(max-width: 600px) 65vw, 240px" width="709" height="1600" alt="Dashboard aplikasi Mangrovepreneurs berisi daftar sarang dan pembacaan sensor." data-i18n-alt="mg.preview.alt" loading="lazy" decoding="async" />
+              </a>
+              <figcaption data-i18n="mg.preview.caption">Dokumentasi tampilan aplikasi Mangrovepreneurs. Angka pada gambar adalah kondisi saat dokumentasi diambil.</figcaption>
+            </figure>
+            <div>
+              <h3 data-i18n="mg.preview.how">Bagaimana aplikasi membantu peternak?</h3>
+              <ol>
+                <li data-i18n="mg.preview.step1">Pilih sarang untuk memeriksa suhu, kelembapan, bobot, dan kondisi baterainya.</li>
+                <li data-i18n="mg.preview.step2">Lihat riwayat pembacaan untuk memahami perubahan kondisi sarang dari waktu ke waktu.</li>
+                <li data-i18n="mg.preview.step3">Atur batas peringatan dan target bobot. Aplikasi memberi notifikasi ketika pembacaan melewati batas yang ditetapkan.</li>
+              </ol>
+              <p class="preview-note" data-i18n="mg.preview.note">Gambar ini adalah dokumentasi aplikasi, bukan sambungan langsung ke sensor. Simulasi di bawah memakai data contoh untuk menjelaskan alurnya.</p>
+              <a class="btn btn--ghost" href="#simulasi" data-i18n="mg.preview.try">Jelajahi contoh kondisi sarang ↓</a>
+            </div>
+          </div>
+        </section>
+
         <!-- Interactive Simulator -->
         <section class="block block--sim" id="simulasi" data-project-sim="mangrove">
           <h2 data-i18n="mangrovepreneurs.sim.title">Simulasi Interaktif: Telemetri Sarang &amp; Ambang Panen</h2>
           <p class="muted" data-i18n="mangrovepreneurs.sim.desc">
-            Pilih salah satu profil data asli dari 3 sarang kelulut pada aplikasi, atau geser slider berat dan suhu untuk melihat bagaimana sistem mengirim peringatan ke aplikasi Flutter.
+            Pilih profil contoh atau geser berat dan suhu untuk memahami kapan aplikasi menampilkan peringatan. Seluruh angka di sini adalah data demonstrasi, bukan pembacaan sensor langsung.
           </p>
           <div class="sim-widget">
             <div class="sim-controls">
@@ -146,7 +172,7 @@
             <div class="sim-terminal">
               <div class="sim-terminal__head">
                 <span>FLUTTER_DASHBOARD // FIREBASE_RTDB</span>
-                <span class="sim-terminal__badge">● LIVE TELEMETRY</span>
+                <span class="sim-terminal__badge" data-i18n="mg.preview.demo">DATA CONTOH</span>
               </div>
               <div class="sim-metrics">
                 <div class="sim-metric">
@@ -270,8 +296,8 @@
         </section>
 
         <div class="project-return cta-group">
-          <a data-i18n="t184" class="btn btn--ghost" href="../../index.html#projects">Kembali ke Semua Proyek</a>
-          <a data-i18n="mangrovepreneurs.next" class="btn btn--ghost" href="../aac/">Proyek Berikutnya: AAC — Bicara Warna →</a>
+          <a data-i18n="t184" class="btn btn--ghost" href="../">Kembali ke Semua Proyek</a>
+          <a data-i18n="mangrovepreneurs.next" class="btn btn--ghost" href="../aac/">Proyek Berikutnya: AAC: Bicara Warna →</a>
           <a data-i18n="projects.collaboration" class="btn" href="../../index.html#contact">Bahas proyek serupa</a>
         </div>
       </article>
@@ -282,7 +308,7 @@
     <div class="wrap foot__inner">
       <p>© <span id="yr"></span> <span data-i18n="t103">Naufal Elyzar. Hak cipta dilindungi.</span></p>
       <div class="foot__links">
-        <a data-i18n="t186" href="../../index.html#projects">Semua Proyek</a>
+        <a data-i18n="t186" href="../">Semua Proyek</a>
         <a data-i18n="t009" href="../../index.html#contact">Kontak</a>
       </div>
     </div>

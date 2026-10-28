@@ -1,0 +1,326 @@
+{
+  "cetakin": {
+    "kind": "web",
+    "source": {
+      "id": "Tangkapan layar dari website CetakIn asli yang dijalankan secara lokal. Halaman, stylesheet, dan skrip antarmuka memakai kode proyek; layanan produksi dan pemesanan tidak dihubungkan.",
+      "en": "Screenshots of the original CetakIn website running locally. Pages, stylesheets, and interface scripts use the project source; production services and ordering are disconnected."
+    },
+    "scenes": [
+      {
+        "image": "cetakin-home.jpg",
+        "width": 1425,
+        "height": 990,
+        "title": {
+          "id": "Halaman utama & layanan",
+          "en": "Homepage & services"
+        },
+        "description": {
+          "id": "Tampilan asli halaman utama memperkenalkan layanan cetak 3D dan produk kustom CetakIn.",
+          "en": "The original homepage introduces CetakIn’s 3D printing and custom product services."
+        },
+        "route": "/",
+        "sha256": "07d3dad2ec507c2a56810c60deb6a122ace7c16a1f516f45831b1518564c5961"
+      },
+      {
+        "image": "cetakin-clicker.jpg",
+        "width": 1425,
+        "height": 990,
+        "title": {
+          "id": "Clicker Lab yang sebenarnya",
+          "en": "The actual Clicker Lab"
+        },
+        "description": {
+          "id": "Konfigurator asli dengan desain contoh enam tombol. Pengunjung situs CetakIn dapat mengubah huruf, bentuk, warna, dan susunan melalui antarmuka ini.",
+          "en": "The original configurator with an example six-key design. CetakIn visitors can change letters, shape, colors, and arrangement through this interface."
+        },
+        "route": "/clicker.html",
+        "sha256": "63d2713f72cc9a530a381c1efdfa1a52d676034e59df5307a0fa12633c7bbba7"
+      },
+      {
+        "image": "cetakin-guides.jpg",
+        "width": 1425,
+        "height": 990,
+        "title": {
+          "id": "Panduan komponen robotika",
+          "en": "Robotics component guides"
+        },
+        "description": {
+          "id": "Halaman panduan asli membantu pengguna mempelajari komponen, wiring, kode uji, dan langkah pemeriksaan rangkaian.",
+          "en": "The original guide page helps users learn about components, wiring, test code, and circuit checks."
+        },
+        "route": "/panduan.html",
+        "sha256": "aba5c87308734c535835ea62241ebb1b7bd8b516cbc85664d64681bcf074344b"
+      }
+    ]
+  },
+  "pkl-kominfo": {
+    "kind": "web",
+    "source": {
+      "id": "Tangkapan layar dari aplikasi Si-Cuti Laravel asli pada salinan lokal. Template dan stylesheet proyek dipertahankan; akun, NIP, kuota, serta riwayat memakai database SQLite demonstrasi.",
+      "en": "Screenshots from the original Si-Cuti Laravel app running in a local copy. Project templates and stylesheets are preserved; accounts, employee identifiers, allowances, and records use a demonstration SQLite database."
+    },
+    "scenes": [
+      {
+        "image": "pkl-dashboard.jpg",
+        "width": 1425,
+        "height": 990,
+        "title": {
+          "id": "Dashboard pegawai",
+          "en": "Employee dashboard"
+        },
+        "description": {
+          "id": "Tampilan asli ringkasan sisa cuti, pemberitahuan, dan status permohonan. Seluruh identitas serta angka pada screenshot adalah data demonstrasi.",
+          "en": "The original overview of remaining leave, notifications, and request statuses. All identities and figures in the screenshot are demonstration data."
+        },
+        "route": "/pegawai/dashboard",
+        "sha256": "a57fd567a028004cac8d95dcb96ebe5a5c3a0b5767199f640c0a8d35cb0c35e4"
+      },
+      {
+        "image": "pkl-request.jpg",
+        "width": 1440,
+        "height": 1000,
+        "title": {
+          "id": "Formulir pengajuan cuti",
+          "en": "Leave request form"
+        },
+        "description": {
+          "id": "Formulir asli memperlihatkan data pegawai, jenis cuti, periode, alasan, dan pengganti tugas sebelum permohonan dikirim.",
+          "en": "The original form shows employee information, leave type, dates, reason, and task coverage before submission."
+        },
+        "route": "/pegawai/cuti",
+        "sha256": "eae9ac105b8ee155eba6a348a78235c6a4c1576efc32d34600f18890501f33f8"
+      },
+      {
+        "image": "pkl-history.jpg",
+        "width": 1440,
+        "height": 1000,
+        "title": {
+          "id": "Riwayat & laporan cuti",
+          "en": "Leave history & reports"
+        },
+        "description": {
+          "id": "Tampilan riwayat asli membantu pegawai meninjau hasil persetujuan serta mengakses rekap laporan. Data yang terlihat dibuat khusus untuk preview.",
+          "en": "The original history view helps employees review approval outcomes and access reports. The visible records were created specifically for the preview."
+        },
+        "route": "/pegawai/cuti?tab=riwayat",
+        "sha256": "79fa1bb78eca88fb6f665ac98b3b8d3ceca7b673be8970abcc3f586ea90ffc2d"
+      }
+    ]
+  },
+  "banua-tour": {
+    "kind": "web",
+    "source": {
+      "id": "Tangkapan layar dari aplikasi CodeIgniter Banua-Tour asli pada salinan lokal. Template, stylesheet, dan foto aset proyek dipertahankan. Destinasi, harga, akun, dan informasi operasional pada database demo hanya untuk dokumentasi.",
+      "en": "Screenshots from the original CodeIgniter Banua-Tour app running in a local copy. Templates, stylesheets, and project photo assets are preserved. Destinations, prices, accounts, and operational information in the demo database are for documentation only."
+    },
+    "scenes": [
+      {
+        "image": "banua-catalog.jpg",
+        "width": 1425,
+        "height": 990,
+        "title": {
+          "id": "Katalog destinasi asli",
+          "en": "Original destination catalog"
+        },
+        "description": {
+          "id": "Pengunjung dapat mencari tempat wisata, menyaring kategori dan daerah, serta mengurutkan hasil pada antarmuka katalog yang sebenarnya.",
+          "en": "Visitors can search places, filter categories and regions, and sort results using the actual catalog interface."
+        },
+        "route": "/destinasi",
+        "sha256": "e7e6566ad21e8362b0e4939167d1dfc8768af028038f03eafd75ddea33591889"
+      },
+      {
+        "image": "banua-detail.jpg",
+        "width": 1425,
+        "height": 990,
+        "title": {
+          "id": "Detail destinasi & galeri",
+          "en": "Destination details & gallery"
+        },
+        "description": {
+          "id": "Halaman asli menyatukan foto, informasi destinasi, persiapan kunjungan, serta akses pemesanan. Harga dan informasi operasional di screenshot adalah data contoh.",
+          "en": "The original page combines photos, destination information, visit preparation, and booking access. Prices and operational details in the screenshot are sample data."
+        },
+        "route": "/destinasi/detail/1",
+        "sha256": "7d52f73ef2baa071a5b94c02088bc17a8fdd5ec5e996ed485ed9c297b7f0b1b1"
+      },
+      {
+        "image": "banua-booking.jpg",
+        "width": 1425,
+        "height": 990,
+        "title": {
+          "id": "Perencanaan kunjungan",
+          "en": "Visit planning"
+        },
+        "description": {
+          "id": "Formulir pemesanan asli menampilkan tanggal, jumlah pengunjung, dan total biaya contoh sebelum pesanan disimpan. Tidak ada transaksi yang dikirim saat pengambilan gambar.",
+          "en": "The original booking form shows dates, visitor count, and a sample total before saving an order. No transaction was submitted during capture."
+        },
+        "route": "/booking/pembelian/1",
+        "sha256": "b597988fc40c6e5cc008c6748a4a284f11fe59de66d83c97f645927494998421"
+      }
+    ]
+  },
+  "myanimerent": {
+    "kind": "mobile",
+    "source": {
+      "id": "Dirender dari layar dan widget Flutter MyAnimeRent asli tanpa mengubah desainnya. Koneksi Firebase diganti layanan memori lokal khusus dokumentasi; akun, toko, harga, dan tanggal memakai data demo. Gambar kostum berasal dari aset proyek.",
+      "en": "Rendered from the original MyAnimeRent Flutter screens and widgets without changing their design. Firebase is replaced with a local in-memory service for documentation; accounts, shops, prices, and dates use demo data. Costume images come from project assets."
+    },
+    "scenes": [
+      {
+        "image": "myanimerent-home.jpg",
+        "width": 390,
+        "height": 843,
+        "title": {
+          "id": "Beranda & katalog kostum",
+          "en": "Home & costume catalog"
+        },
+        "description": {
+          "id": "Ini adalah tampilan beranda Flutter asli, dengan banner kostum, direktori toko, kategori, dan navigasi aplikasi.",
+          "en": "This is the original Flutter home screen with costume banners, a shop directory, categories, and app navigation."
+        },
+        "route": "/#/home",
+        "sha256": "5423cbc009b5d461a685e9033f11fca2916ec3182e37dda0a445e0a64d41b5d0"
+      },
+      {
+        "image": "myanimerent-detail.jpg",
+        "width": 390,
+        "height": 843,
+        "title": {
+          "id": "Detail kostum yang sebenarnya",
+          "en": "The actual costume details"
+        },
+        "description": {
+          "id": "Layar asli menampilkan foto kostum, toko penyedia, harga, dan deskripsi sebelum pengguna memilih ukuran serta tanggal sewa.",
+          "en": "The original screen shows costume photos, the rental shop, price, and description before the user selects size and rental dates."
+        },
+        "route": "/#/detail/demo-frieren",
+        "sha256": "1214dc6a770646fa9028e3e231b846ea549b505954c945adab1826bee27519cb"
+      },
+      {
+        "image": "myanimerent-calendar.jpg",
+        "width": 390,
+        "height": 843,
+        "title": {
+          "id": "Ukuran & kalender sewa",
+          "en": "Sizes & rental calendar"
+        },
+        "description": {
+          "id": "Kalender dan pemilihan ukuran berasal dari widget aplikasi asli. Rentang tanggal yang dipilih di sini hanya contoh dan tidak membuat pemesanan.",
+          "en": "The calendar and size selection use the original app widgets. The selected dates are examples and do not create a booking."
+        },
+        "route": "/#/detail/demo-frieren",
+        "sha256": "a027cee43a216fdd76546706157768d6a8158089bffc14a185dbedf573b164da"
+      }
+    ]
+  },
+  "e-ponic": {
+    "kind": "mobile",
+    "source": {
+      "id": "Dirender dari layar, widget, model, dan tema E-Ponic asli yang identik dengan kode proyek. Firebase serta layanan alarm diganti adaptor memori lokal khusus dokumentasi. Seluruh identitas pelanggan, tanaman, jadwal, dan jumlah panen merupakan data demonstrasi.",
+      "en": "Rendered from the original E-Ponic screens, widgets, models, and theme, identical to the project source. Firebase and alarm services are replaced by local in-memory adapters for documentation. Customer identities, crops, schedules, and harvest quantities are demonstration data."
+    },
+    "scenes": [
+      {
+        "image": "eponic-farmer.jpg",
+        "width": 390,
+        "height": 843,
+        "title": {
+          "id": "Beranda petani",
+          "en": "Farmer home screen"
+        },
+        "description": {
+          "id": "Tampilan asli menampilkan ringkasan tanaman dan daftar jadwal perawatan harian untuk petani.",
+          "en": "The original screen presents a crop summary and daily care schedule for farmers."
+        },
+        "route": "/?screen=farmer",
+        "sha256": "5cd3cd8cea7c4037bac5996ac5fcdcc15b6244979e4a80b2244900224ae0aab1"
+      },
+      {
+        "image": "eponic-maintenance.jpg",
+        "width": 390,
+        "height": 843,
+        "title": {
+          "id": "Detail perawatan tanaman",
+          "en": "Plant care details"
+        },
+        "description": {
+          "id": "Layar asli memuat tugas, penjelasan, tanggal, waktu, dan interval perawatan yang perlu diikuti.",
+          "en": "The original screen presents the task, description, date, time, and care interval to follow."
+        },
+        "route": "/?screen=maintenance",
+        "sha256": "1284af71c43edde0d777de656fb3ef58501597a24b667df3efadfc1e0c6e9ff4"
+      },
+      {
+        "image": "eponic-harvest.jpg",
+        "width": 390,
+        "height": 843,
+        "title": {
+          "id": "Tugas panen",
+          "en": "Harvest tasks"
+        },
+        "description": {
+          "id": "Daftar tugas panen berasal dari antarmuka aplikasi yang sebenarnya. Nama pelanggan, alamat, dan jumlah di layar ini khusus untuk demonstrasi.",
+          "en": "Harvest tasks are shown in the actual app interface. Customer names, addresses, and quantities on this screen are demonstration data."
+        },
+        "route": "/?screen=harvest",
+        "sha256": "5c731a70ae89d82b29b608e77146085a6eff51877be47a0a15a7e69699032baa"
+      }
+    ]
+  },
+  "cloud-manager": {
+    "kind": "web",
+    "source": {
+      "id": "Tangkapan layar dari template Blade dan CSS/JS asli Vortex Cloud, diperoleh dari repositori raihan2030/proyek-cloud-computing. Akun, paket, sumber daya, biaya, dan respons penyimpanan memakai data lokal demonstrasi tanpa koneksi AWS.",
+      "en": "Screenshots from the original Vortex Cloud Blade templates and CSS/JS, obtained from raihan2030/proyek-cloud-computing. Accounts, plans, resources, costs, and storage responses use local demonstration data without an AWS connection."
+    },
+    "scenes": [
+      {
+        "image": "cloud-overview.jpg",
+        "width": 1272,
+        "height": 716,
+        "title": {
+          "id": "Dashboard Vortex Cloud",
+          "en": "Vortex Cloud dashboard"
+        },
+        "description": {
+          "id": "Dashboard asli merangkum jumlah sumber daya, layanan aktif, estimasi biaya, alokasi, serta aktivitas sistem. Semua angka pada screenshot ini berasal dari data demonstrasi.",
+          "en": "The original dashboard summarizes resource counts, active services, cost estimates, allocation, and system activity. All figures in this screenshot come from demonstration data."
+        },
+        "route": "/dashboard",
+        "sha256": "a926a1b470a71caf745e94404ae59255b101d5cbbb6d967cce634bc4bbacdf26"
+      },
+      {
+        "image": "cloud-resources.jpg",
+        "width": 1272,
+        "height": 716,
+        "title": {
+          "id": "Sumber daya komputasi & penyimpanan",
+          "en": "Compute & storage resources"
+        },
+        "description": {
+          "id": "Antarmuka asli memperlihatkan kuota penyimpanan S3, kapasitas EC2, serta formulir penyediaan sumber daya. Preview tidak membuat server atau penyimpanan sungguhan.",
+          "en": "The original interface shows S3 storage quotas, EC2 capacity, and resource provisioning forms. The preview does not create real servers or storage."
+        },
+        "route": "/dashboard?tab=resources",
+        "sha256": "d702ba57d46b841e558d0b4aa07f4053a5592f641f6634c69773ad784db77305"
+      },
+      {
+        "image": "cloud-plans.jpg",
+        "width": 1272,
+        "height": 716,
+        "title": {
+          "id": "Pilihan paket langganan",
+          "en": "Subscription plans"
+        },
+        "description": {
+          "id": "Halaman asli menampilkan tingkatan paket komputasi dan penyimpanan. Harga serta spesifikasi yang terlihat adalah contoh dari lingkungan dokumentasi.",
+          "en": "The original page displays compute and storage plan tiers. The visible prices and specifications are examples from the documentation environment."
+        },
+        "route": "/dashboard?tab=plans",
+        "sha256": "d30818891efedcecf268848861f177832ae1cfa77f7c3d355f0d858f5dcc0bdc"
+      }
+    ]
+  }
+}

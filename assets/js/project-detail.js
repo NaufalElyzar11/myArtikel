@@ -128,24 +128,24 @@ if (simRoot) {
         colorEn: 'Red ("WANT")',
         pin: 'Nano D2 → LOW',
         track: '001_mau.mp3',
-        id: '🔊 Speaker 4cm berbunyi: "Saya MAU." — Membantu anak N.M. menyatakan keinginan tanpa harus menangis karena salah paham.',
-        en: '🔊 4cm Speaker plays: "I WANT this." — Helps child N.M. express desires clearly without frustration.'
+        id: '[SPEAKER 4CM]: "Saya MAU." Membantu anak N.M. menyatakan keinginan tanpa harus menangis karena salah paham.',
+        en: '[4CM SPEAKER]: "I WANT this." Helps child N.M. express desires clearly without frustration.'
       },
       iya: {
         colorId: 'Biru ("IYA")',
         colorEn: 'Blue ("YES")',
         pin: 'Nano D3 → LOW',
         track: '002_iya.mp3',
-        id: '🔊 Speaker 4cm berbunyi: "IYA." — Merespons pertanyaan guru atau orang tua secara mandiri.',
-        en: '🔊 4cm Speaker plays: "YES." — Allows independent affirmative response to teachers or parents.'
+        id: '[SPEAKER 4CM]: "IYA." Merespons pertanyaan guru atau orang tua secara mandiri.',
+        en: '[4CM SPEAKER]: "YES." Allows independent affirmative response to teachers or parents.'
       },
       tidak: {
         colorId: 'Hijau ("TIDAK")',
         colorEn: 'Green ("NO")',
         pin: 'Nano D4 → LOW',
         track: '003_tidak.mp3',
-        id: '🔊 Speaker 4cm berbunyi: "TIDAK." — Memberi tahu penolakan atau ketidaknyamanan secara jelas.',
-        en: '🔊 4cm Speaker plays: "NO." — Clearly communicates refusal or discomfort.'
+        id: '[SPEAKER 4CM]: "TIDAK." Memberi tahu penolakan atau ketidaknyamanan secara jelas.',
+        en: '[4CM SPEAKER]: "NO." Clearly communicates refusal or discomfort.'
       }
     };
 
@@ -200,12 +200,12 @@ if (simRoot) {
       m3.textContent = fmtRp(totalSum);
       if (action === 'add') {
         out.textContent = isEn()
-          ? `🔊 [BUTTON + / =]: Added ${fmtRp(currentNote)}. Total canteen transaction: ${fmtRp(totalSum)}.`
-          : `🔊 [TOMBOL + / =]: Menambahkan ${fmtRp(currentNote)}. Total uang di tangan untuk transaksi kantin: ${fmtRp(totalSum)}.`;
+          ? `[BUTTON + / =]: Added ${fmtRp(currentNote)}. Total canteen transaction: ${fmtRp(totalSum)}.`
+          : `[TOMBOL + / =]: Menambahkan ${fmtRp(currentNote)}. Total uang di tangan untuk transaksi kantin: ${fmtRp(totalSum)}.`;
       } else {
         out.textContent = isEn()
-          ? `🔊 [SPEAKER 3W]: "${fmtRp(currentNote)}." — Color sensor matched RGB reflectance (${rgbMap[currentNote]}).`
-          : `🔊 [SPEAKER 3W]: "${fmtRp(currentNote)}." — Sensor warna mengenali pantulan RGB (${rgbMap[currentNote]}).`;
+          ? `[SPEAKER 3W]: "${fmtRp(currentNote)}." Color sensor matched RGB reflectance (${rgbMap[currentNote]}).`
+          : `[SPEAKER 3W]: "${fmtRp(currentNote)}." Sensor warna mengenali pantulan RGB (${rgbMap[currentNote]}).`;
       }
     }
 
@@ -303,8 +303,8 @@ if (simRoot) {
           ? `[GATEWAY RPi] Zone ${zone} soil moisture (${z.moist}) is below 35% threshold. Uploading GPS waypoint to UAV sprayer pump.`
           : `[GATEWAY RPi] Kelembapan tanah Blok ${zone} (${z.moist}) di bawah ambang 35%. Mengirim koordinat waypoint ke pompa sprayer drone.`)
         : (isEn()
-          ? `[GATEWAY RPi] Zone ${zone} moisture (${z.moist}) is sufficient. Sprayer relay kept OFF—contributing to 22% water savings.`
-          : `[GATEWAY RPi] Kelembapan Blok ${zone} (${z.moist}) sudah cukup. Pompa sprayer dinonaktifkan—menghemat penggunaan air hingga 22%.`);
+          ? `[GATEWAY RPi] Zone ${zone} moisture (${z.moist}) is sufficient. Sprayer relay kept OFF, contributing to 22% water savings.`
+          : `[GATEWAY RPi] Kelembapan Blok ${zone} (${z.moist}) sudah cukup. Pompa sprayer dinonaktifkan sehingga menghemat penggunaan air hingga 22%.`);
     }
 
     zoneBtns.forEach(btn => {

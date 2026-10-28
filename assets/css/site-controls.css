@@ -10,9 +10,9 @@
 }
 .i18n-ready .language-switch { display: inline-flex; }
 .language-switch button {
-  min-width: 40px;
-  min-height: 38px;
-  padding: 6px 8px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 6px 10px;
   border: 0;
   border-radius: 2px;
   font: 500 .8rem var(--font-mono);

@@ -6,10 +6,13 @@ const path = require('node:path');
 const vm = require('node:vm');
 const { parseHTML } = require('linkedom');
 const root = path.resolve(__dirname, '..');
-const files = ['index.html', 'projects/amd/index.html', 'projects/mrc/index.html', 'projects/hexaka/index.html',
-  'projects/aac/index.html', 'projects/teksif/index.html', 'projects/mangrovepreneurs/index.html'];
+const softwareFiles = ['cetakin', 'pkl-kominfo', 'banua-tour', 'cloud-manager', 'myanimerent', 'e-ponic']
+  .map(slug => `projects/${slug}/index.html`);
+const files = ['index.html', 'projects/index.html', 'profil/index.html', 'projects/amd/index.html',
+  'projects/mrc/index.html', 'projects/hexaka/index.html', 'projects/aac/index.html',
+  'projects/teksif/index.html', 'projects/mangrovepreneurs/index.html', ...softwareFiles];
 
-function load(file, { query = '', saved, blocked = false, mobile = true } = {}) {
+function load(file, { query = '', saved, blocked = false, mobile = true, reducedMotion = false } = {}) {
   const { window, document } = parseHTML(fs.readFileSync(path.join(root, file), 'utf8'));
   let active = document.body;
   Object.defineProperty(document, 'activeElement', { get: () => active });
@@ -17,7 +20,7 @@ function load(file, { query = '', saved, blocked = false, mobile = true } = {}) 
   const media = new Map();
   window.matchMedia = query => {
     if (!media.has(query)) media.set(query, {
-      matches: mobile,
+      matches: query.includes('prefers-reduced-motion') ? reducedMotion : mobile,
       addEventListener(type, handler) { this.handler = handler; },
       change(value) { this.matches = value; this.handler?.(); }
     });
@@ -25,6 +28,10 @@ function load(file, { query = '', saved, blocked = false, mobile = true } = {}) 
   };
   window.innerHeight = 800;
   window.scrollY = 0;
+  let timerId = 0;
+  const timers = new Map();
+  window.setTimeout = callback => { timers.set(++timerId, callback); return timerId; };
+  window.clearTimeout = id => timers.delete(id);
   const location = new URL(`https://portfolio.test/${file}${query}`);
   const store = new Map(saved ? [['naufal-language', saved]] : []);
   const context = vm.createContext({
@@ -38,7 +45,7 @@ function load(file, { query = '', saved, blocked = false, mobile = true } = {}) 
     requestAnimationFrame: callback => callback()
   });
   for (const script of document.querySelectorAll('script[src]')) {
-    const scriptPath = path.resolve(root, path.dirname(file), script.getAttribute('src'));
+    const scriptPath = path.resolve(root, path.dirname(file), script.getAttribute('src').split('?')[0]);
     vm.runInContext(fs.readFileSync(scriptPath, 'utf8'), context, { filename: scriptPath });
   }
   const click = el => el.dispatchEvent(new window.Event('click', { bubbles: true, cancelable: true }));
@@ -47,7 +54,13 @@ function load(file, { query = '', saved, blocked = false, mobile = true } = {}) 
     Object.assign(event, { key, shiftKey });
     document.dispatchEvent(event);
   };
-  return { window, document, store, location, media, click, key };
+  const advanceTimer = () => {
+    const entry = timers.entries().next().value;
+    if (!entry) return;
+    timers.delete(entry[0]);
+    entry[1]();
+  };
+  return { window, document, store, location, media, click, key, timers, advanceTimer };
 }
 
 for (const file of files) {
@@ -79,6 +92,7 @@ for (const file of files) {
     assert.equal(document.querySelector('[data-language="en"]').getAttribute('aria-pressed'), 'true');
   });
 
+  if (/class="(?:frame|gallery__item)(?:\s|")/.test(fs.readFileSync(path.join(root, file), 'utf8'))) {
   test(`${file}: gallery navigation, keyboard focus, Escape, and translated captions`, () => {
     const { document, window, click, key } = load(file, { query: '?lang=en' });
     const items = [...document.querySelectorAll('.frame, .gallery__item')];
@@ -104,6 +118,7 @@ for (const file of files) {
     assert.equal(document.activeElement, items[0]);
     assert.notEqual(document.body.style.overflow, 'hidden');
   });
+  }
 }
 
 test('Saved language, URL precedence, invalid values, and disabled storage', () => {
@@ -147,18 +162,18 @@ test('Project contents collapse on mobile and expand on desktop', () => {
 });
 
 test('Project filters show the right projects, retain selection across languages, and reset', () => {
-  const { document, click, window } = load('index.html');
+  const { document, click, window } = load('projects/index.html');
   const visibleNames = () => [...document.querySelectorAll('[data-project-category]')]
     .filter(card => !card.hidden).map(card => card.querySelector('.project__name').textContent.trim());
   const button = category => document.querySelector(`[data-project-filter="${category}"]`);
   assert.equal(document.querySelector('.project-browser').hidden, false);
   assert.equal(visibleNames().length, 6);
   click(button('assistive'));
-  assert.deepEqual(visibleNames(), ['AAC — Bicara Warna', 'TekSif — Chromoney']);
+  assert.deepEqual(visibleNames(), ['AAC: Bicara Warna', 'TekSif: Chromoney']);
   assert.match(document.querySelector('.project-count').textContent, /^2 \/ 6/);
   window.siteI18n.setLanguage('en');
   assert.equal(button('assistive').getAttribute('aria-pressed'), 'true');
-  assert.deepEqual(visibleNames(), ['AAC — Bicara Warna', 'TekSif — Chromoney']);
+  assert.deepEqual(visibleNames(), ['AAC: Bicara Warna', 'TekSif: Chromoney']);
   assert.equal(document.querySelector('.project-count').textContent, '2 / 6 projects shown');
   click(button('iot'));
   assert.deepEqual(visibleNames(), ['Mangrovepreneurs', 'PRONE.ID', 'TRACO-BOT']);
@@ -184,8 +199,95 @@ test('New project galleries use the supplied result covers and retain contextual
       assert.equal(photo.querySelector('figcaption').textContent, photo.querySelector('a').dataset.caption);
     }
   }
-  const { document } = load('index.html');
+  const { document } = load('profil/index.html');
   const names = [...document.querySelectorAll('.people strong')].map(el => el.textContent.trim());
   assert.ok(names.includes('Nanda Ikbar'));
   assert.ok(names.includes('Siti Fathimah Az-Zahra'));
+});
+
+test('Homepage gives four selected works and links to complete archives', () => {
+  const { document } = load('index.html');
+  assert.equal(document.querySelectorAll('.selected-grid .work-card').length, 4);
+  assert.equal(document.querySelector('#interactive-lab'), null);
+  assert.equal(document.querySelector('[data-project-sim]'), null);
+  for (const selector of ['#certificates', '#skills', '#gallery', '.project__tabs']) {
+    assert.equal(document.querySelector(selector), null);
+  }
+  assert.ok(document.querySelector('a[href*="/projects/?lang=id"]'));
+  assert.ok(document.querySelector('a[href*="/profil/?lang=id"]'));
+  const { document: archive } = load('projects/index.html');
+  assert.equal(archive.querySelectorAll('.work-card').length, 13);
+  for (const link of archive.querySelectorAll('.work-card__link')) {
+    assert.ok(link.href.startsWith('https://portfolio.test/projects/'));
+    assert.ok(!link.href.includes('github.com'));
+  }
+});
+
+const captureManifest = JSON.parse(fs.readFileSync(path.join(root, 'assets/images/previews/manifest.json'), 'utf8'));
+for (const file of softwareFiles.filter(file => captureManifest[file.split('/')[1]])) {
+  test(`${file}: walkthrough navigation, finite playback, pause, and language changes`, () => {
+    const { document, window, click, timers, advanceTimer } = load(file);
+    const scenes = [...document.querySelectorAll('[data-scene]')];
+    const current = () => scenes.findIndex(scene => !scene.hidden);
+    const next = document.querySelector('[data-preview-next]');
+    const previous = document.querySelector('[data-preview-prev]');
+    const play = document.querySelector('[data-preview-play]');
+    assert.equal(scenes.length, 3);
+    assert.equal(current(), 0);
+    assert.equal(previous.disabled, true);
+    click(next);
+    assert.equal(current(), 1);
+    window.siteI18n.setLanguage('en');
+    assert.match(document.querySelector('[data-preview-status]').textContent, /^Screen 2 \/ 3:/);
+    assert.equal(current(), 1);
+    click(play);
+    assert.equal(timers.size, 1);
+    click(play);
+    assert.equal(timers.size, 0);
+    assert.equal(current(), 1);
+    click(play);
+    advanceTimer();
+    assert.equal(current(), 2);
+    assert.equal(next.disabled, true);
+    advanceTimer();
+    assert.equal(timers.size, 0);
+    assert.equal(play.getAttribute('aria-pressed'), 'false');
+    click(play);
+    assert.equal(current(), 0);
+    document.dispatchEvent(new window.Event('visibilitychange'));
+    window.dispatchEvent(new window.Event('pagehide'));
+    assert.equal(timers.size, 0);
+    assert.equal(play.getAttribute('aria-pressed'), 'false');
+    click(document.querySelector('[data-preview-step="2"]'));
+    assert.equal(current(), 2);
+  });
+
+  test(`${file}: reduced motion disables scene transitions and honors preference changes`, () => {
+    const { document, click, media, timers } = load(file, { reducedMotion: true });
+    assert.equal(document.querySelector('.is-entering'), null);
+    assert.equal(document.querySelector('[data-preview-play]').textContent, 'Putar tanpa animasi');
+    click(document.querySelector('[data-preview-play]'));
+    media.get('(prefers-reduced-motion: reduce)').change(false);
+    assert.equal(timers.size, 0);
+  });
+}
+
+test('Software previews use captured assets and never substitute reconstructed interfaces', () => {
+  const crypto = require('node:crypto');
+  for (const file of softwareFiles) {
+    const { document } = load(file);
+    const captures = captureManifest[file.split('/')[1]];
+    assert.equal(document.querySelector('.preview-browser, .preview-phone'), null);
+    if (!captures) {
+      assert.ok(document.querySelector('.preview-unavailable'));
+      assert.equal(document.querySelector('[data-walkthrough]'), null);
+      continue;
+    }
+    assert.equal(document.querySelectorAll('.actual-capture img').length, captures.scenes.length);
+    for (const scene of captures.scenes) {
+      const asset = fs.readFileSync(path.join(root, 'assets/images/previews', scene.image));
+      assert.equal(crypto.createHash('sha256').update(asset).digest('hex'), scene.sha256);
+      assert.ok(asset.length > 10000, 'Capture must contain a rendered image');
+    }
+  }
 });

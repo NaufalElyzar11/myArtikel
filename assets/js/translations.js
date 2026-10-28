@@ -20,8 +20,8 @@ window.siteTranslations = {
     "en": "About"
   },
   "t006": {
-    "id": "Keahlian",
-    "en": "Skills"
+    "id": "Tools & Tech",
+    "en": "Tools & Tech"
   },
   "t007": {
     "id": "Pengalaman",
@@ -40,24 +40,24 @@ window.siteTranslations = {
     "en": "View CV"
   },
   "t011": {
-    "id": "Robotika · Sistem Embedded & IoT · Teknologi Asistif",
-    "en": "Robotics · Embedded & IoT Systems · Assistive Technology"
+    "id": "Robotika & IoT · Web & Mobile Dev · Manufaktur 3D · Technical Educator",
+    "en": "Robotics & IoT · Web & Mobile Dev · 3D Manufacturing · Technical Educator"
   },
   "t012": {
-    "id": "Mahasiswa Teknologi Informasi Universitas Lambung Mangkurat yang memiliki hobi merakit dan membuat embedded system, mulai dari menyolder jalur PCB, membuat project dengan robot berkaki 18-DOF, hingga menghubungkan sensor ke aplikasi mobile.",
-    "en": "An Information Technology student at Universitas Lambung Mangkurat who loves building embedded systems, from soldering PCBs, making projects with 18-DOF hexapod robots, to connecting sensors to mobile applications."
+    "id": "Mahasiswa Teknologi Informasi Universitas Lambung Mangkurat yang merakit sistem dari perangkat keras hingga perangkat lunak: memprogram robot hexapod 18-DOF dan alat bantu disabilitas, membangun aplikasi web Laravel serta mobile Flutter, mengelola usaha manufaktur digital CetakIn, hingga mengajar robotika dan IoT.",
+    "en": "Information Technology student at Lambung Mangkurat University building end-to-end hardware and software systems: programming 18-DOF hexapod robots and assistive devices, developing Laravel web and Flutter mobile apps, co-founding CetakIn digital manufacturing, and teaching robotics and IoT."
   },
   "t013": {
-    "id": "Jelajahi Studi Kasus",
-    "en": "Explore Case Studies"
+    "id": "Jelajahi Proyek",
+    "en": "Explore Projects"
   },
   "t014": {
     "id": "Lihat fotografi",
     "en": "View photography"
   },
   "t015": {
-    "id": "Proyek terbaru: Sistem IoT & Aplikasi Kelulut Mangrovepreneurs (Innovilleague 2026) ↗",
-    "en": "Latest build: Mangrovepreneurs Bee Hive IoT & Flutter App (Innovilleague 2026) ↗"
+    "id": "Studi kasus lapangan terbaru: Sistem IoT & Aplikasi Kelulut Mangrovepreneurs (Innovilleague 2026) ↗",
+    "en": "Latest field case study: Mangrovepreneurs Stingless Bee IoT & Flutter App (Innovilleague 2026) ↗"
   },
   "t016": {
     "id": "Naufal Elyzar / Wasaka Robotic Team",
@@ -148,16 +148,16 @@ window.siteTranslations = {
     "en": "OpenCV, CNN Classifier, ESP32/Arduino, Servo Diverter, IR Proximity"
   },
   "t038": {
-    "id": "Tentang saya",
-    "en": "About me"
+    "id": "Tentang Saya",
+    "en": "About Me"
   },
   "t039": {
-    "id": "Ketertarikan saya membangun perangkat keras dimulai sejak bangku madrasah di MAN Insan Cendekia Tanah Laut (2020–2023), ketika saya dan tim merakit drone pemetaan kebun sawit (PRONE.ID) serta konveyor pemilah sampah berbasis visi komputer (TRACO-BOT). Saat melanjutkan studi S1 Teknologi Informasi di Universitas Lambung Mangkurat, ruang eksplorasi itu berkembang jauh lebih dalam bersama Wasaka Robotic Team—mulai dari memprogram Inverse Kinematics robot hexapod 18-DOF hingga dipercaya menjadi General Manager tim pada 2026.",
-    "en": "My passion for building hardware began at MAN Insan Cendekia Tanah Laut (2020–2023), where my team and I built an oil-palm mapping drone (PRONE.ID) and a computer-vision waste sorting conveyor (TRACO-BOT). Pursuing my B.Sc. in Information Technology at Universitas Lambung Mangkurat expanded that journey with Wasaka Robotic Team—from programming 18-DOF hexapod Inverse Kinematics to serving as the team's General Manager in 2026."
+    "id": "Saya Naufal Elyzar, mahasiswa S1 Teknologi Informasi di Fakultas Teknik Universitas Lambung Mangkurat yang senang menjembatani dunia fisik (robotika, mikrokontroler, sensor, cetak 3D) dengan dunia perangkat lunak (aplikasi web Laravel/CodeIgniter, aplikasi mobile Flutter, computer vision, dan cloud). Kebiasaan mengutak-atik alat ini tumbuh sejak masa sekolah di MAN Insan Cendekia Tanah Laut (2020-2023) hingga kini dipercaya memimpin Wasaka Robotic Team sebagai General Manager.",
+    "en": "I am Naufal Elyzar, an Information Technology undergraduate at the Faculty of Engineering, Lambung Mangkurat University, passionate about bridging physical hardware (robotics, microcontrollers, sensors, 3D printing) with software systems (Laravel/CodeIgniter web apps, Flutter mobile apps, computer vision, and cloud). This hands-on habit started at MAN Insan Cendekia Tanah Laut (2020-2023) and grew into leading the Wasaka Robotic Team as General Manager."
   },
   "t040": {
-    "id": "Di luar arena kompetisi robotika, saya senang mengerjakan perangkat yang langsung dipakai manusia: menyolder PCB dan memprogram Arduino untuk alat bantu komunikasi anak berkebutuhan khusus (AAC Bicara Warna) serta pembaca nominal uang tunanetra (Chromoney) bersama rekan-rekan Pendidikan Khusus ULM, hingga membangun perangkat IoT dan aplikasi Flutter pemantau sarang lebah kelulut (Mangrovepreneurs) untuk tim FEB ULM. Saat sedang tidak memegang solder atau menulis kode, saya memotret lanskap alam dan matahari terbit.",
-    "en": "Beyond robotics competitions, I love building hardware people directly rely on: soldering PCBs and writing Arduino firmware for a special-needs communication aid (AAC Bicara Warna) and a banknote reader for blind students (Chromoney) with Special Education at ULM, as well as building the IoT hardware and Flutter app for stingless bee hive monitoring (Mangrovepreneurs) with FEB ULM. Away from the workbench, I photograph nature landscapes and sunrises."
+    "id": "Di luar laboratorium kampus, saya menjalankan peran sebagai Co-Founder CetakIn (usaha cetak 3D kustom, komponen robotika, dan prototipe perangkat IoT/asistif di Banjarbaru) serta aktif berbagi ilmu sebagai pengajar ekstrakurikuler robotik, instruktur les robot Line Follower, dan narasumber workshop Internet of Things di berbagai sekolah.",
+    "en": "Outside the campus lab, I serve as Co-Founder of CetakIn (a custom 3D printing, robotics component, and IoT/assistive prototyping venture in Banjarbaru) and actively teach robotics extracurriculars, intensive Line Follower classes, and Internet of Things workshops across local schools."
   },
   "t041": {
     "id": "Raspberry Pi",
@@ -192,24 +192,24 @@ window.siteTranslations = {
     "en": "Kotlin"
   },
   "t049": {
-    "id": "PHP",
-    "en": "PHP"
+    "id": "PHP & Laravel 12",
+    "en": "PHP & Laravel 12"
   },
   "t050": {
     "id": "Pendidikan",
     "en": "Education"
   },
   "t051": {
-    "id": "S1 Teknologi Informasi - Universitas Lambung Mangkurat (2023-Sekarang)",
-    "en": "B.Sc. in Information Technology - Universitas Lambung Mangkurat (2023-Present)"
+    "id": "S1 Teknologi Informasi, Universitas Lambung Mangkurat (2023-Sekarang)",
+    "en": "B.Sc. in Information Technology, Lambung Mangkurat University (2023-Present)"
   },
   "t052": {
     "id": "Fokus",
     "en": "Focus"
   },
   "t053": {
-    "id": "Robotika, teknologi asistif, IoT & aplikasi",
-    "en": "Robotics, assistive technology, IoT & apps"
+    "id": "Robotika, IoT, Web & Mobile Dev, Manufaktur 3D",
+    "en": "Robotics, IoT, Web & Mobile Dev, 3D Manufacturing"
   },
   "t054": {
     "id": "Organisasi",
@@ -220,8 +220,8 @@ window.siteTranslations = {
     "en": "Wasaka Robotic Team"
   },
   "t056": {
-    "id": "Robotika",
-    "en": "Robotics"
+    "id": "Robotika & Kendali",
+    "en": "Robotics & Control"
   },
   "t057": {
     "id": "Arduino",
@@ -232,16 +232,16 @@ window.siteTranslations = {
     "en": "C / C++"
   },
   "t059": {
-    "id": "Computer Vision",
-    "en": "Computer Vision"
+    "id": "AI, Visi & Keamanan Siber",
+    "en": "AI, Vision & Cybersecurity"
   },
   "t060": {
     "id": "Machine Learning",
     "en": "Machine Learning"
   },
   "t061": {
-    "id": "YOLO",
-    "en": "YOLO"
+    "id": "YOLOv8 & YOLO11",
+    "en": "YOLOv8 & YOLO11"
   },
   "t062": {
     "id": "OpenCV",
@@ -252,28 +252,28 @@ window.siteTranslations = {
     "en": "Object Detection"
   },
   "t064": {
-    "id": "Web",
-    "en": "Web"
+    "id": "Web, Backend & Cloud",
+    "en": "Web, Backend & Cloud"
   },
   "t065": {
-    "id": "HTML",
-    "en": "HTML"
+    "id": "HTML5",
+    "en": "HTML5"
   },
   "t066": {
-    "id": "CSS",
-    "en": "CSS"
+    "id": "CSS3 & Tailwind",
+    "en": "CSS3 & Tailwind"
   },
   "t067": {
-    "id": "JavaScript",
-    "en": "JavaScript"
+    "id": "JavaScript (ES6+)",
+    "en": "JavaScript (ES6+)"
   },
   "t068": {
-    "id": "MySQL",
-    "en": "MySQL"
+    "id": "MySQL & PostgreSQL",
+    "en": "MySQL & PostgreSQL"
   },
   "t069": {
-    "id": "IoT / Embedded",
-    "en": "IoT / Embedded"
+    "id": "IoT & Perangkat Keras",
+    "en": "IoT & Hardware"
   },
   "t070": {
     "id": "ESP32",
@@ -400,8 +400,8 @@ window.siteTranslations = {
     "en": "Sunset"
   },
   "t101": {
-    "id": "Sedang merancang prototipe perangkat asistif, sistem sensor IoT, robotika, atau aplikasi Flutter? Jangan ragu menghubungi saya untuk berdiskusi atau berkolaborasi.",
-    "en": "Planning an assistive hardware prototype, IoT sensor system, robotics project, or Flutter app? Feel free to reach out to discuss or collaborate."
+    "id": "Sedang merancang prototipe perangkat asistif, sistem sensor IoT, aplikasi web/Flutter, atau ingin mengundang untuk kelas dan workshop robotika? Hubungi saya melalui kanal di bawah ini.",
+    "en": "Building an assistive device prototype, IoT sensor network, web/Flutter app, or looking to invite a speaker for a robotics/IoT workshop? Reach out through any channel below."
   },
   "t102": {
     "id": "Rekan kolaborasi",
@@ -412,12 +412,12 @@ window.siteTranslations = {
     "en": "Naufal Elyzar. All rights reserved."
   },
   "t104": {
-    "id": "Portofolio rekayasa Naufal Elyzar — Robotika hexapod, perangkat asistif, sistem IoT, aplikasi Flutter, dan fotografi.",
-    "en": "Engineering portfolio of Naufal Elyzar — Hexapod robotics, assistive devices, IoT systems, Flutter apps, and photography."
+    "id": "Portofolio Naufal Elyzar: Robotika hexapod, perangkat asistif, sistem IoT, pengembangan web & aplikasi Flutter, Co-Founder CetakIn, dan pengajar robotika.",
+    "en": "Naufal Elyzar Portfolio: Hexapod robotics, assistive devices, IoT systems, web & Flutter development, Co-Founder of CetakIn, and robotics educator."
   },
   "t105": {
-    "id": "Robotika hexapod, perangkat asistif, sistem IoT, aplikasi Flutter, dan fotografi.",
-    "en": "Hexapod robotics, assistive devices, IoT systems, Flutter apps, and photography."
+    "id": "Robotika hexapod, perangkat asistif, sistem IoT, pengembangan web & Flutter, Co-Founder CetakIn, dan pengajar robotika.",
+    "en": "Hexapod robotics, assistive devices, IoT systems, web & Flutter development, Co-Founder of CetakIn, and robotics educator."
   },
   "t106": {
     "id": "Navigasi utama",
@@ -440,7 +440,7 @@ window.siteTranslations = {
     "en": "Open menu"
   },
   "t111": {
-    "id": "Foto Naufal Elyzar",
+    "id": "Potret Naufal Elyzar",
     "en": "Portrait of Naufal Elyzar"
   },
   "t112": {
@@ -448,8 +448,8 @@ window.siteTranslations = {
     "en": "PRONE.ID drone mapping and irrigation system"
   },
   "t113": {
-    "id": "TRACO-BOT — conveyor pemilah sampah otomatis",
-    "en": "TRACO-BOT automated waste-sorting conveyor"
+    "id": "TRACO-BOT - conveyor pemilah sampah otomatis",
+    "en": "TRACO-BOT - automated waste sorting conveyor"
   },
   "t114": {
     "id": "Tutup",
@@ -476,8 +476,8 @@ window.siteTranslations = {
     "en": "Chythan Wahyu Zurlya Vallent"
   },
   "t120": {
-    "id": "PRONE.ID — Sistem Drone Mapping, IoT Telemetry, & Dashboard | Naufal Elyzar",
-    "en": "PRONE.ID — Drone Mapping, IoT Telemetry & Dashboard | Naufal Elyzar"
+    "id": "PRONE.ID: Sistem Drone Mapping, IoT Telemetry, & Dashboard | Naufal Elyzar",
+    "en": "PRONE.ID: Drone Mapping, IoT Telemetry & Dashboard | Naufal Elyzar"
   },
   "t121": {
     "id": "← Kembali ke Portofolio",
@@ -520,16 +520,16 @@ window.siteTranslations = {
     "en": "PRONE.ID connects a mapping and spraying drone, soil sensor nodes, and a Raspberry Pi station. Field data appears on a dashboard to help monitor oil palm plantations."
   },
   "t131": {
-    "id": "Tahun: 2021 — 2022",
-    "en": "Year: 2021 — 2022"
+    "id": "Tahun: 2021 - 2022",
+    "en": "Year: 2021 - 2022"
   },
   "t132": {
     "id": "Peran: Data Engineer & Robotics",
     "en": "Role: Data Engineer & Robotics"
   },
   "t133": {
-    "id": "Penghargaan: The Most Attractive Team — AMD",
-    "en": "Award: The Most Attractive Team — AMD"
+    "id": "Penghargaan: The Most Attractive Team (AMD)",
+    "en": "Award: The Most Attractive Team (AMD)"
   },
   "t134": {
     "id": "Tim: PRONTALA",
@@ -784,8 +784,8 @@ window.siteTranslations = {
     "en": "PRONE.ID mapping drone and sprayer flight test"
   },
   "t197": {
-    "id": "TRACO-BOT — Conveyor Pemilah Sampah Cerdas Otomatis | Naufal Elyzar",
-    "en": "TRACO-BOT — Automated Waste-Sorting Conveyor | Naufal Elyzar"
+    "id": "TRACO-BOT: Conveyor Pemilah Sampah Cerdas Otomatis | Naufal Elyzar",
+    "en": "TRACO-BOT: Automated Waste-Sorting Conveyor | Naufal Elyzar"
   },
   "t198": {
     "id": "Studi kasus / TRACO-BOT",
@@ -1020,8 +1020,8 @@ window.siteTranslations = {
     "en": "Our team"
   },
   "t256": {
-    "id": "Wasaka Hexapod (Hexaka V3) — Robot Berkaki Otonom 18-DOF | Naufal Elyzar",
-    "en": "Wasaka Hexapod (Hexaka V3) — 18-DOF Autonomous Walking Robot | Naufal Elyzar"
+    "id": "Wasaka Hexapod (Hexaka V3): Robot Berkaki Otonom 18-DOF | Naufal Elyzar",
+    "en": "Wasaka Hexapod (Hexaka V3): 18-DOF Autonomous Walking Robot | Naufal Elyzar"
   },
   "t257": {
     "id": "Misi Utama",
@@ -1048,8 +1048,8 @@ window.siteTranslations = {
     "en": "Hexaka V3 is a six-legged robot I develop with Wasaka Robotic Team. A camera helps it read the course, while an IMU sensor stabilizes the body as it moves."
   },
   "t263": {
-    "id": "Tahun: 2024 — 2026",
-    "en": "Year: 2024 — 2026"
+    "id": "Tahun: 2024 - 2026",
+    "en": "Year: 2024 - 2026"
   },
   "t264": {
     "id": "Peran: Koordinator Software & General Manager",
@@ -1276,8 +1276,8 @@ window.siteTranslations = {
     "en": "Author's GitHub profile ↗"
   },
   "t320": {
-    "id": "Naufal Elyzar. Wasaka Robotic Team — Hexaka V3.",
-    "en": "Naufal Elyzar. Wasaka Robotic Team — Hexaka V3."
+    "id": "Naufal Elyzar. Wasaka Robotic Team: Hexaka V3.",
+    "en": "Naufal Elyzar. Wasaka Robotic Team: Hexaka V3."
   },
   "t321": {
     "id": "Repo HexakaV3",
@@ -1392,12 +1392,12 @@ window.siteTranslations = {
     "en": "BME280 · Load cell / HX711"
   },
   "skills.mobile": {
-    "id": "Aplikasi mobile",
-    "en": "Mobile apps"
+    "id": "Aplikasi Mobile",
+    "en": "Mobile Apps"
   },
   "skills.notifications": {
-    "id": "Notifikasi & pengaturan ambang",
-    "en": "Notifications & threshold settings"
+    "id": "Notifikasi & Background Service",
+    "en": "Notifications & Background Service"
   },
   "skills.firebase": {
     "id": "Firebase Realtime Database",
@@ -1520,16 +1520,16 @@ window.siteTranslations = {
     "en": "Bee hive survey for the Mangrovepreneurs hardware."
   },
   "aac.pageTitle": {
-    "id": "AAC — Bicara Warna | Naufal Elyzar",
-    "en": "AAC — Bicara Warna | Naufal Elyzar"
+    "id": "AAC: Bicara Warna | Naufal Elyzar",
+    "en": "AAC: Bicara Warna | Naufal Elyzar"
   },
   "aac.meta": {
     "id": "Alat bantu komunikasi suara (Augmentative & Alternative Communication) dengan tiga tombol besar berwarna (“Mau”, “Iya”, “Tidak”) untuk membantu anak berusia 8 tahun dengan hambatan bicara verbal mengekspresikan keinginannya tanpa kesalahpahaman.",
     "en": "A voice-output communication aid (Augmentative & Alternative Communication) with three large color-coded buttons (“Want”, “Yes”, “No”) built to help an 8-year-old child with verbal speech barriers express her needs clearly."
   },
   "aac.cover": {
-    "id": "Hasil alat AAC — Bicara Warna.",
-    "en": "Finished AAC — Bicara Warna communication aid."
+    "id": "Hasil alat AAC: Bicara Warna.",
+    "en": "Finished AAC: Bicara Warna communication aid."
   },
   "aac.step.0.title": {
     "id": "Penataan Jalur Kabel & Wiring PCB",
@@ -1556,8 +1556,8 @@ window.siteTranslations = {
     "en": "Mounting the circuit inside a custom PLA+ enclosure with three top buttons, a rear speaker grille, a right-side On/Off switch, and a top lanyard loop."
   },
   "aac.eyebrow": {
-    "id": "Studi kasus / AAC — Bicara Warna",
-    "en": "Case study / AAC — Bicara Warna"
+    "id": "Studi kasus / AAC: Bicara Warna",
+    "en": "Case study / AAC: Bicara Warna"
   },
   "aac.subtitle": {
     "id": "Alat bantu komunikasi · Tiga tombol · Keluaran suara",
@@ -1576,8 +1576,8 @@ window.siteTranslations = {
     "en": "PCB wiring & Arduino IDE programming (.ino)"
   },
   "aac.overview.0": {
-    "id": "Proyek AAC (Augmentative and Alternative Communication) — Bicara Warna ini berangkat dari hasil asesmen lapangan Kelompok 2 Pendidikan Khusus Universitas Lambung Mangkurat terhadap seorang anak perempuan berusia 8 tahun (Subjek N.M.). Secara bahasa reseptif, N.M. memahami instruksi sederhana, tetapi secara ekspresif ia belum mampu mengucapkan kalimat dan hanya menunjuk benda atau mengucap “ah”. Meski ibunya cukup memahami sebagian isyarat tersebut, kesalahpahaman dengan guru maupun teman-teman di sekolah kerap membuat N.M. menangis karena keinginannya tidak tersampaikan.",
-    "en": "AAC (Augmentative and Alternative Communication) — Bicara Warna originated from a field assessment by Group 2 of Special Education at Universitas Lambung Mangkurat with an 8-year-old girl (Subject N.M.). While she understands simple instructions receptively, she could only express desires by pointing or saying 'ah'. Misunderstandings with teachers and peers at school frequently left her crying in frustration."
+    "id": "Proyek AAC (Augmentative and Alternative Communication): Bicara Warna ini berangkat dari hasil asesmen lapangan Kelompok 2 Pendidikan Khusus Universitas Lambung Mangkurat terhadap seorang anak perempuan berusia 8 tahun (Subjek N.M.). Secara bahasa reseptif, N.M. memahami instruksi sederhana, tetapi secara ekspresif ia belum mampu mengucapkan kalimat dan hanya menunjuk benda atau mengucap “ah”. Meski ibunya cukup memahami sebagian isyarat tersebut, kesalahpahaman dengan guru maupun teman-teman di sekolah kerap membuat N.M. menangis karena keinginannya tidak tersampaikan.",
+    "en": "AAC (Augmentative and Alternative Communication): Bicara Warna originated from a field assessment by Group 2 of Special Education at Universitas Lambung Mangkurat with an 8-year-old girl (Subject N.M.). While she understands simple instructions receptively, she could only express desires by pointing or saying 'ah'. Misunderstandings with teachers and peers at school frequently left her crying in frustration."
   },
   "aac.overview.1": {
     "id": "Untuk menjembatani potensi komunikasi N.M., saya mewujudkan rancangan alat “Bicara Warna” menjadi perangkat keras fungsional: memadukan tiga tombol tekan warna mencolok (Merah untuk “Mau”, Biru untuk “Iya”, dan Hijau untuk “Tidak”), mikrokontroler Arduino Nano V3, modul pemutar MP3 dengan kartu memori, speaker 4 cm menghadap belakang, sakelar On/Off di sisi kanan, serta baterai isi ulang 18650 di dalam casing cetak 3D PLA+ yang dilengkapi pengait lanyard.",
@@ -1600,8 +1600,8 @@ window.siteTranslations = {
     "en": "Pressing a button triggers the Arduino Nano V3 and MP3 module to play clear, consistent voice recordings through the 4 cm speaker so parents, teachers, and peers understand immediately."
   },
   "aac.photo.aac-result": {
-    "id": "Hasil alat AAC — Bicara Warna dengan tombol komunikasi.",
-    "en": "Finished AAC — Bicara Warna with communication buttons."
+    "id": "Hasil alat AAC: Bicara Warna dengan tombol komunikasi.",
+    "en": "Finished AAC: Bicara Warna with communication buttons."
   },
   "aac.photo.aac-wiring": {
     "id": "Progres AAC: penataan kabel dan wiring pada PCB.",
@@ -1612,16 +1612,16 @@ window.siteTranslations = {
     "en": "AAC enclosure design for the buttons and circuit."
   },
   "teksif.pageTitle": {
-    "id": "TekSif — Chromoney | Naufal Elyzar",
-    "en": "TekSif — Chromoney | Naufal Elyzar"
+    "id": "TekSif: Chromoney | Naufal Elyzar",
+    "en": "TekSif: Chromoney | Naufal Elyzar"
   },
   "teksif.meta": {
     "id": "Perangkat saku pembaca nominal uang kertas Rupiah berbasis sensor warna dan keluaran suara (voice assist), dirancang agar siswa tunanetra dapat berbelanja mandiri di kantin asrama tanpa harus selalu bergantung pada pendamping.",
     "en": "A pocket-sized Rupiah banknote reader using a color sensor and voice output, built so blind students can shop independently at their dorm canteen without relying on a companion."
   },
   "teksif.cover": {
-    "id": "Hasil alat TekSif — Chromoney.",
-    "en": "Finished TekSif — Chromoney denomination reader."
+    "id": "Hasil alat TekSif: Chromoney.",
+    "en": "Finished TekSif: Chromoney denomination reader."
   },
   "teksif.step.0.title": {
     "id": "Wiring PCB Dot-Matrix & Manajemen Daya",
@@ -1660,8 +1660,8 @@ window.siteTranslations = {
     "en": "Battery"
   },
   "teksif.eyebrow": {
-    "id": "Studi kasus / TekSif — Chromoney",
-    "en": "Case study / TekSif — Chromoney"
+    "id": "Studi kasus / TekSif: Chromoney",
+    "en": "Case study / TekSif: Chromoney"
   },
   "teksif.subtitle": {
     "id": "Pengenal nominal uang · Sensor warna · Keluaran suara",
@@ -1704,8 +1704,8 @@ window.siteTranslations = {
     "en": "Equipped with a loud 3W speaker suited for busy school canteens, raised tactile buttons (+ and =) on the right side, a 12mm top power switch, and USB Type-C charging."
   },
   "teksif.photo.teksif-result": {
-    "id": "Hasil alat TekSif — Chromoney dalam casing.",
-    "en": "Finished TekSif — Chromoney in its enclosure."
+    "id": "Hasil alat TekSif: Chromoney dalam casing.",
+    "en": "Finished TekSif: Chromoney in its enclosure."
   },
   "teksif.photo.teksif-wiring": {
     "id": "Progres TekSif: penyolderan dan wiring pada PCB.",
@@ -1756,24 +1756,24 @@ window.siteTranslations = {
     "en": "Simulator"
   },
   "home.hero.status": {
-    "id": "General Manager @ Wasaka Robotic Team · S1 TI FT ULM",
-    "en": "General Manager @ Wasaka Robotic Team · IT Undergrad at ULM"
+    "id": "GM @ Wasaka Robotic Team · Co-Founder @ CetakIn · S1 TI FT ULM",
+    "en": "GM @ Wasaka Robotic Team · Co-Founder @ CetakIn · IT Student at ULM"
   },
   "home.metric.1": {
-    "id": "Dirakit & diuji di lapangan",
-    "en": "Built & field-tested"
+    "id": "Robotika, IoT, Web & Aplikasi Flutter",
+    "en": "Robotics, IoT, Web & Flutter Apps"
   },
   "home.metric.2": {
-    "id": "Hexapod & visi komputer",
-    "en": "Hexapod & computer vision"
+    "id": "Co-Founder · 3D Print, IoT & Cloud ERP",
+    "en": "Co-Founder · 3D Print, IoT & Cloud ERP"
   },
   "home.metric.3": {
-    "id": "BRIN BEST, STEM, KRAI, MRC",
-    "en": "BRIN BEST, STEM, KRAI, MRC"
+    "id": "EC-Council D|FE, BRIN BEST, STEM, Cisco",
+    "en": "EC-Council D|FE, BRIN BEST, STEM, Cisco"
   },
   "home.hero.tryLab": {
-    "id": "Coba Simulasi Alat",
-    "en": "Try Hardware Simulator"
+    "id": "Lihat Sertifikat",
+    "en": "View Certificates"
   },
   "home.projects.eyebrow": {
     "id": "01 / Arsip Rekayasa & Studi Kasus",
@@ -1897,11 +1897,11 @@ window.siteTranslations = {
   },
   "home.teksif.story": {
     "id": "Menyatukan 21 komponen (termasuk baterai tanam 18650, charger Type-C TP4056, sensor warna 4×4 cm, dan speaker 40mm) ke dalam casing 3D-print berukuran 11×7,5×3,5 cm menuntut penataan jalur solder yang sangat presisi di atas PCB dot-matrix.",
-    "en": "Fitting 21 components—including an internal 18650 battery, TP4056 Type-C charger, 4×4 cm color sensor, and 40mm speaker—into an 11×7.5×3.5 cm 3D-printed case required tight, carefully planned solder routing on a dot-matrix PCB."
+    "en": "Fitting 21 components (including an internal 18650 battery, TP4056 Type-C charger, 4×4 cm color sensor, and 40mm speaker) into an 11×7.5×3.5 cm 3D-printed case required tight, carefully planned solder routing on a dot-matrix PCB."
   },
   "home.prone.badge": {
-    "id": "Most Attractive Team — AMD Kemenag & XL",
-    "en": "Most Attractive Team — AMD National"
+    "id": "Most Attractive Team · AMD Kemenag & XL",
+    "en": "Most Attractive Team · AMD Kemenag & XL"
   },
   "home.prone.f1": {
     "id": "Node Sensor Tanah (DHT22 + Soil)",
@@ -2020,24 +2020,24 @@ window.siteTranslations = {
     "en": "Press an AAC communication button (Bicara Warna) or scan a Rupiah banknote on TekSif (Chromoney) to see the Arduino microcontroller and audio module response."
   },
   "home.lab.assistive.aac": {
-    "id": "AAC — Bicara Warna (Tekan Tombol Fisik)",
-    "en": "AAC — Bicara Warna (Press Physical Button)"
+    "id": "AAC: Bicara Warna (Tekan Tombol Fisik)",
+    "en": "AAC: Bicara Warna (Press Physical Button)"
   },
   "home.lab.aac.mau": {
-    "id": "🔴 Tombol \"MAU\"",
-    "en": "🔴 \"WANT\" Button"
+    "id": "Tombol \"MAU\"",
+    "en": "\"WANT\" Button"
   },
   "home.lab.aac.iya": {
-    "id": "🔵 Tombol \"IYA\"",
-    "en": "🔵 \"YES\" Button"
+    "id": "Tombol \"IYA\"",
+    "en": "\"YES\" Button"
   },
   "home.lab.aac.tidak": {
-    "id": "🟢 Tombol \"TIDAK\"",
-    "en": "🟢 \"NO\" Button"
+    "id": "Tombol \"TIDAK\"",
+    "en": "\"NO\" Button"
   },
   "home.lab.assistive.money": {
-    "id": "Chromoney — Pindai Uang Kertas di Sensor Warna",
-    "en": "Chromoney — Scan Banknote on Color Sensor"
+    "id": "Chromoney: Pindai Uang Kertas di Sensor Warna",
+    "en": "Chromoney: Scan Banknote on Color Sensor"
   },
   "home.lab.ast.r1": {
     "id": "MODE ALAT",
@@ -2052,8 +2052,8 @@ window.siteTranslations = {
     "en": "AUDIO TRACK"
   },
   "home.about.eyebrow": {
-    "id": "02 / Latar Belakang & Cara Kerja",
-    "en": "02 / Background & Engineering Approach"
+    "id": "02 / Profil, Peran & Cara Kerja",
+    "en": "02 / Profile, Roles & Work Ethic"
   },
   "home.about.p1.t": {
     "id": "01 · Berangkat dari Masalah Nyata",
@@ -2068,44 +2068,44 @@ window.siteTranslations = {
     "en": "02 · End-to-End from Solder to App"
   },
   "home.about.p2.d": {
-    "id": "Terbiasa menangani alur ujung-ke-ujung: merancang jalur PCB dot-matrix, menulis firmware C++/Python, hingga membangun dashboard dan aplikasi Flutter.",
-    "en": "Comfortable owning the full stack: routing dot-matrix PCBs, writing C++/Python firmware, and building web dashboards or Flutter mobile apps."
+    "id": "Terbiasa menangani alur ujung-ke-ujung: merancang jalur PCB dot-matrix dan casing 3D print, menulis firmware, hingga membangun aplikasi web dan mobile.",
+    "en": "Experienced across the full stack: routing dot-matrix PCBs and 3D-printed enclosures, writing firmware, and building web and mobile applications."
   },
   "home.about.school": {
     "id": "Almamater",
     "en": "High School"
   },
   "home.about.schoolVal": {
-    "id": "MAN Insan Cendekia Tanah Laut — MIPA (2020–2023)",
-    "en": "MAN Insan Cendekia Tanah Laut — STEM (2020–2023)"
+    "id": "MAN Insan Cendekia Tanah Laut, MIPA (2020-2023)",
+    "en": "MAN Insan Cendekia Tanah Laut, Science Track (2020-2023)"
   },
   "home.about.loc": {
     "id": "Domisili",
     "en": "Location"
   },
   "home.about.locVal": {
-    "id": "Kalimantan Selatan, Indonesia",
-    "en": "South Kalimantan, Indonesia"
+    "id": "Banjarbaru, Kalimantan Selatan, Indonesia",
+    "en": "Banjarbaru, South Kalimantan, Indonesia"
   },
   "home.skills.eyebrow": {
-    "id": "03 / Perangkat Keras & Perangkat Lunak",
-    "en": "03 / Hardware & Software Stack"
+    "id": "03 / Perangkat Keras, Perangkat Lunak & Manufaktur",
+    "en": "03 / Hardware, Software & Digital Manufacturing"
   },
   "home.skills.sub": {
-    "id": "Klik salah satu keahlian di bawah untuk melihat bagaimana teknologi tersebut saya terapkan pada proyek nyata.",
-    "en": "Click any skill below to see how I apply it across real hardware and software builds."
+    "id": "Cakupan teknologi yang saya gunakan sehari-hari, mulai dari robotika dan mikrokontroler hingga pengembangan web, aplikasi mobile Flutter, keamanan siber, dan desain cetak 3D. Klik atau tekan Enter pada item untuk melihat penerapannya.",
+    "en": "Technologies I work with across robotics, microcontrollers, full-stack web, Flutter mobile apps, cybersecurity, and 3D printing. Click or press Enter on any item to inspect its real-world application."
   },
   "home.exp.eyebrow": {
-    "id": "04 / Rekam Jejak Kompetisi & Organisasi",
-    "en": "04 / Competitions & Leadership Log"
+    "id": "06 / Rekam Jejak Kompetisi & Organisasi",
+    "en": "06 / Competition & Organization Track Record"
   },
   "home.gallery.eyebrow": {
-    "id": "05 / Jeda Visual di Luar Lab",
-    "en": "05 / Visual Pause Outside the Lab"
+    "id": "07 / Jeda Visual di Luar Lab",
+    "en": "07 / Visual Pause Outside the Lab"
   },
   "home.contact.eyebrow": {
-    "id": "06 / Mari Berdiskusi",
-    "en": "06 / Let's Talk"
+    "id": "08 / Mari Berdiskusi",
+    "en": "08 / Let's Connect"
   },
   "home.contact.sendEmail": {
     "id": "Kirim Email ↗",
@@ -2148,8 +2148,8 @@ window.siteTranslations = {
     "en": "Interactive Simulator: Hive Telemetry & Harvest Thresholds"
   },
   "mangrovepreneurs.sim.desc": {
-    "id": "Pilih salah satu profil data asli dari 3 sarang kelulut pada aplikasi, atau geser slider berat dan suhu untuk melihat bagaimana sistem mengirim peringatan ke aplikasi Flutter.",
-    "en": "Select one of the three real hive profiles from the app, or adjust the weight and temperature sliders to see how alerts are triggered in the Flutter app."
+    "id": "Pilih profil contoh atau geser berat dan suhu untuk memahami kapan aplikasi menampilkan peringatan. Seluruh angka di sini adalah data demonstrasi, bukan pembacaan sensor langsung.",
+    "en": "Choose a sample profile or adjust weight and temperature to understand when the app shows an alert. All figures here are demonstration data rather than live sensor readings."
   },
   "mangrovepreneurs.sim.preset": {
     "id": "Pilih Profil Sarang Aktif:",
@@ -2176,8 +2176,8 @@ window.siteTranslations = {
     "en": "UNIT BATTERY"
   },
   "mangrovepreneurs.next": {
-    "id": "Proyek Berikutnya: AAC — Bicara Warna →",
-    "en": "Next Project: AAC — Bicara Warna →"
+    "id": "Proyek Berikutnya: AAC: Bicara Warna →",
+    "en": "Next Project: AAC: Bicara Warna →"
   },
   "aac.nav.sim": {
     "id": "Simulasi Tombol",
@@ -2216,16 +2216,16 @@ window.siteTranslations = {
     "en": "Press a Physical Button on the Top Case:"
   },
   "aac.sim.b1": {
-    "id": "🔴 Merah — “MAU”",
-    "en": "🔴 Red — “WANT”"
+    "id": "Merah: “MAU”",
+    "en": "Red: “WANT”"
   },
   "aac.sim.b2": {
-    "id": "🔵 Biru — “IYA”",
-    "en": "🔵 Blue — “YES”"
+    "id": "Biru: “IYA”",
+    "en": "Blue: “YES”"
   },
   "aac.sim.b3": {
-    "id": "🟢 Hijau — “TIDAK”",
-    "en": "🟢 Green — “NO”"
+    "id": "Hijau: “TIDAK”",
+    "en": "Green: “NO”"
   },
   "aac.sim.note": {
     "id": "Setiap tombol menggunakan resistor pull-up internal pada Arduino Nano V3 dengan perangkat lunak debouncing agar tekanan berulang oleh anak tidak memicu suara ganda yang terputus-putus.",
@@ -2244,8 +2244,8 @@ window.siteTranslations = {
     "en": "MICROSD TRACK"
   },
   "aac.next": {
-    "id": "Proyek Berikutnya: TekSif — Chromoney →",
-    "en": "Next Project: TekSif — Chromoney →"
+    "id": "Proyek Berikutnya: TekSif: Chromoney →",
+    "en": "Next Project: TekSif: Chromoney →"
   },
   "teksif.nav.sim": {
     "id": "Simulasi Sensor",
@@ -2288,12 +2288,12 @@ window.siteTranslations = {
     "en": "Right-Side Tactile Buttons (+ and =):"
   },
   "teksif.sim.addBtn": {
-    "id": "➕ Tambah Nominal ke Total (+)",
-    "en": "➕ Add Note to Total (+)"
+    "id": "[+] Tambah Nominal ke Total",
+    "en": "[+] Add Banknote to Total"
   },
   "teksif.sim.resetBtn": {
-    "id": "↺ Reset Hitungan",
-    "en": "↺ Reset Total"
+    "id": "Reset Hitungan",
+    "en": "Reset Total"
   },
   "teksif.sim.m1": {
     "id": "NOMINAL TERBACA",
@@ -2424,28 +2424,28 @@ window.siteTranslations = {
     "en": "Place Waste Item on the Conveyor Belt:"
   },
   "mrc.sim.w1": {
-    "id": "🥫 Kaleng Logam",
-    "en": "🥫 Metal Can"
+    "id": "[01] Kaleng Logam",
+    "en": "[01] Metal Can"
   },
   "mrc.sim.w2": {
-    "id": "🍾 Botol Kaca",
-    "en": "🍾 Glass Bottle"
+    "id": "[02] Botol Kaca",
+    "en": "[02] Glass Bottle"
   },
   "mrc.sim.w3": {
-    "id": "🥤 Gelas Plastik",
-    "en": "🥤 Plastic Cup"
+    "id": "[03] Gelas Plastik",
+    "en": "[03] Plastic Cup"
   },
   "mrc.sim.w4": {
-    "id": "📄 Kertas / Karton",
-    "en": "📄 Paper / Carton"
+    "id": "[04] Kertas / Karton",
+    "en": "[04] Paper / Cardboard"
   },
   "mrc.sim.w5": {
-    "id": "🍂 Sampah Organik",
-    "en": "🍂 Organic Waste"
+    "id": "[05] Sampah Organik",
+    "en": "[05] Organic Waste"
   },
   "mrc.sim.w6": {
-    "id": "🧤 Residu Lainnya",
-    "en": "🧤 Residual Waste"
+    "id": "[06] Residu Lainnya",
+    "en": "[06] Other Residue"
   },
   "mrc.sim.k1": {
     "id": "PREDIKSI MODEL",
@@ -2462,5 +2462,961 @@ window.siteTranslations = {
   "mrc.next": {
     "id": "Proyek Berikutnya: Wasaka Hexapod (Hexaka V3) →",
     "en": "Next Project: Wasaka Hexapod (Hexaka V3) →"
+  },
+  "home.nav.educator": {
+    "id": "Pengajar",
+    "en": "Educator"
+  },
+  "home.nav.certs": {
+    "id": "Sertifikat",
+    "en": "Certificates"
+  },
+  "home.chip.1": {
+    "id": "01 // Robotika & IoT",
+    "en": "01 // Robotics & IoT"
+  },
+  "home.chip.2": {
+    "id": "02 // Web & Flutter",
+    "en": "02 // Web & Flutter"
+  },
+  "home.chip.3": {
+    "id": "03 // Co-Founder CetakIn",
+    "en": "03 // Co-Founder CetakIn"
+  },
+  "home.chip.4": {
+    "id": "04 // Pengajar Robotik",
+    "en": "04 // Robotics Educator"
+  },
+  "home.pose.guideTitle": {
+    "id": "Panduan Ganti Foto Cutout Anda:",
+    "en": "How to Replace Your Cutout Portrait:"
+  },
+  "home.pose.guideBody": {
+    "id": "Gunakan foto setengah badan (medium shot) menghadap 20° ke kiri dengan pencahayaan kontras dari samping, sambil memegang prototipe PCB/robot atau melipat tangan. Hapus latar belakang (PNG/WebP transparan 800×1000 px) lalu simpan ke assets/images/profile/Me-Cutout.webp.",
+    "en": "Use a waist-up medium shot angled 20° left with side key lighting, holding a PCB/robot prototype or arms crossed. Remove the background (transparent PNG/WebP 800×1000 px) and save as assets/images/profile/Me-Cutout.webp."
+  },
+  "home.pose.aria": {
+    "id": "Mode tampilan foto profil",
+    "en": "Profile portrait display mode"
+  },
+  "home.pose.b1": {
+    "id": "Pose 01: Cutout",
+    "en": "Pose 01: Cutout"
+  },
+  "home.pose.b2": {
+    "id": "Pose 02: Almamater ULM",
+    "en": "Pose 02: ULM Jacket"
+  },
+  "home.pose.b3": {
+    "id": "Tips Pose Baru",
+    "en": "New Pose Guide"
+  },
+  "home.dev.eyebrow": {
+    "id": "01B / Ekosistem Usaha, Web & Aplikasi Mobile",
+    "en": "01B / Venture, Web & Mobile App Ecosystem"
+  },
+  "home.dev.title": {
+    "id": "Produk Bisnis, Sistem Web & Aplikasi Flutter",
+    "en": "Business Venture, Web Systems & Flutter Apps"
+  },
+  "home.dev.sub": {
+    "id": "Selain merakit robot dan perangkat keras, saya membangun bisnis manufaktur digital CetakIn serta mengembangkan berbagai sistem informasi web dan aplikasi mobile lintas platform.",
+    "en": "Beyond robotics and hardware prototyping, I co-founded the CetakIn digital manufacturing venture and build full-stack web information systems and cross-platform Flutter mobile apps."
+  },
+  "home.dev.filterAria": {
+    "id": "Filter proyek software dan bisnis",
+    "en": "Filter software and business projects"
+  },
+  "home.dev.fAll": {
+    "id": "Semua (7)",
+    "en": "All (7)"
+  },
+  "home.dev.fVenture": {
+    "id": "Founder & Bisnis",
+    "en": "Founder & Venture"
+  },
+  "home.dev.fWeb": {
+    "id": "Web & Cloud",
+    "en": "Web & Cloud"
+  },
+  "home.dev.fMobile": {
+    "id": "Mobile App (Flutter)",
+    "en": "Mobile App (Flutter)"
+  },
+  "home.dev.cetakin.role": {
+    "id": "Co-Founder & Lead Technologist · Venture",
+    "en": "Co-Founder & Lead Technologist · Venture"
+  },
+  "home.dev.cetakin.tag": {
+    "id": "Manufaktur Cetak 3D Kustom, Konfigurator CAD 2D, Toko Robotika & Prototipe IoT",
+    "en": "Custom 3D Printing, 2D CAD Configurator, Robotics Store & IoT Prototyping"
+  },
+  "home.dev.cetakin.desc": {
+    "id": "Usaha teknologi dan manufaktur digital di Banjarbaru: cetak 3D kustom, konfigurator Clicker Lab, katalog komponen robotika, serta sistem pengelolaan usaha berbasis Node.js, Express, HTML, CSS, dan JavaScript.",
+    "en": "A digital manufacturing and technology venture in Banjarbaru: custom 3D printing, the Clicker Lab configurator, a robotics component catalogue, and business management tools built with Node.js, Express, HTML, CSS, and JavaScript."
+  },
+  "home.dev.cetakin.cta": {
+    "id": "Kunjungi cetak-in.my.id ↗",
+    "en": "Visit cetak-in.my.id ↗"
+  },
+  "home.dev.kominfo.role": {
+    "id": "Full-Stack Web · Laravel 12",
+    "en": "Full-Stack Web · Laravel 12"
+  },
+  "home.dev.kominfo.title": {
+    "id": "PKL-Kominfo: Sistem Informasi Cuti Berjenjang",
+    "en": "PKL-Kominfo: Multi-Stage Leave Management System"
+  },
+  "home.dev.kominfo.desc": {
+    "id": "Sistem pengajuan dan persetujuan cuti pegawai multi-peran (Pegawai, Atasan Langsung, Pejabat, Admin, Super Admin) menggunakan Spatie RBAC. Dilengkapi pendelegasian tugas rekan kerja, deteksi konflik tanggal & hari libur otomatis, cetak surat cuti PDF (DomPDF) & laporan Excel, serta notifikasi dan pemulihan akun via WhatsApp (Fonnte API).",
+    "en": "Five-role employee leave submission and tiered approval system (Employee, Direct Supervisor, Official, Admin, Super Admin) built with Laravel 12 and Spatie RBAC. Features peer task delegation, automated holiday and date-conflict checks, official PDF/Excel exports, and WhatsApp notifications via Fonnte API."
+  },
+  "home.dev.banua.role": {
+    "id": "Full-Stack Web · CodeIgniter 4",
+    "en": "Full-Stack Web · CodeIgniter 4"
+  },
+  "home.dev.banua.title": {
+    "id": "Banua-Tour: Platform Wisata & E-Ticketing Kalsel",
+    "en": "Banua-Tour: South Kalimantan Tourism & E-Ticketing"
+  },
+  "home.dev.banua.desc": {
+    "id": "Platform eksplorasi destinasi wisata Kalimantan Selatan dengan pemesanan tiket terintegrasi, verifikasi pembayaran admin, penerbitan kode tiket unik, ulasan terverifikasi pasca-kunjungan, rekomendasi berdasarkan minat pengguna, serta impor massal data berita wisata menggunakan PhpSpreadsheet (XLSX) dan pengujian keamanan PHPUnit.",
+    "en": "Regional tourism discovery and ticket booking platform for South Kalimantan featuring server-side booking verification, unique ticket code generation, verified post-visit reviews, user interest personalization, XLSX batch news imports, and a PHPUnit security test suite."
+  },
+  "home.dev.cloud.role": {
+    "id": "Backend & Cloud · Laravel + Docker",
+    "en": "Backend & Cloud · Laravel + Docker"
+  },
+  "home.dev.cloud.title": {
+    "id": "Cloud Resource & IaaS Subscription Manager",
+    "en": "Cloud Resource & IaaS Subscription Manager"
+  },
+  "home.dev.cloud.desc": {
+    "id": "Platform manajemen langganan dan provisi sumber daya cloud IaaS yang mensimulasikan penyediaan instance komputasi (EC2 Controller) dan penyimpanan objek (S3 Bucket Controller). Mencakup kalkulasi tagihan bulanan (monthly run-rate billing), kuota penyimpanan, manajemen kredensial API Key, dan orkestrasi Docker Compose (Nginx, PHP-FPM, MySQL 8).",
+    "en": "IaaS cloud resource provisioning and subscription management platform simulating compute instances (EC2 Controller) and object storage buckets (S3 Controller), complete with monthly run-rate billing, API key middleware, and Docker Compose orchestration (Nginx, PHP-FPM, MySQL 8)."
+  },
+  "home.dev.anime.role": {
+    "id": "Mobile App · Flutter & Firebase",
+    "en": "Mobile App · Flutter & Firebase"
+  },
+  "home.dev.anime.title": {
+    "id": "MyAnimeRent: Marketplace Sewa Kostum Cosplay",
+    "en": "MyAnimeRent: Cosplay Costume Rental Marketplace"
+  },
+  "home.dev.anime.desc": {
+    "id": "Aplikasi mobile lintas platform yang menghubungkan cosplayer dengan toko penyewaan kostum (Cosrent). Menyediakan direktori toko per kota, filter seri anime, kalender visual interaktif untuk cek tanggal tersedia vs. tersewa (minimal sewa 3 hari), daftar favorit (wishlist), ulasan berbintang, dan unggah foto profil ke cloud via Imgur API.",
+    "en": "Cross-platform Flutter mobile marketplace connecting cosplayers with rental shops (Cosrent). Includes a store directory by city, anime series catalog, interactive availability calendar (3-day minimum booking), wishlist, star reviews, and cloud profile uploads via Imgur API."
+  },
+  "home.dev.mgapp.role": {
+    "id": "Mobile & IoT App · Flutter",
+    "en": "Mobile & IoT App · Flutter"
+  },
+  "home.dev.mgapp.title": {
+    "id": "Mangrovepreneurs App: Smart Kelulut Telemetry",
+    "en": "Mangrovepreneurs App: Smart Kelulut Telemetry"
+  },
+  "home.dev.mgapp.desc": {
+    "id": "Aplikasi Flutter pendamping node sensor ESP32 untuk memantau multi-sarang lebah kelulut secara real-time. Dilengkapi grafik tren historis suhu, kelembapan, dan bobot madu (fl_chart), pengaturan kalibrasi offset sensor per sarang, serta layanan latar belakang (flutter_background_service) yang memicu notifikasi peringatan dini meski aplikasi ditutup.",
+    "en": "Companion Flutter app for ESP32 sensor nodes monitoring stingless bee hives in real time. Features historical temperature, humidity, and honey weight charts (fl_chart), per-hive sensor offset calibration, and an always-on background service for threshold alerts."
+  },
+  "home.dev.eponic.role": {
+    "id": "Backend & Mobile · Flutter + Firestore",
+    "en": "Backend & Mobile · Flutter + Firestore"
+  },
+  "home.dev.eponic.title": {
+    "id": "E-Ponic: Manajemen Kebun Hidroponik & Logistik",
+    "en": "E-Ponic: Hydroponic Farm & Logistics Management"
+  },
+  "home.dev.eponic.desc": {
+    "id": "Aplikasi operasional pertanian hidroponik berbasis Cloud Firestore dengan 5 modul peran (Farmer, Logistics, Courier, Admin, Superadmin). Mencakup penjadwalan alarm perawatan nutrisi tanaman dengan audio kustom di latar belakang, pencatatan kesiapan panen, penugasan rute kurir pengiriman, serta pembuatan laporan PDF langsung dari perangkat.",
+    "en": "Cloud Firestore hydroponic operations app featuring 5 role modules (Farmer, Logistics, Courier, Admin, Superadmin), scheduled background plant-maintenance alarms, harvest readiness tracking, courier delivery routing, and on-device PDF report generation."
+  },
+  "home.role.1.t": {
+    "id": "Robotika, Embedded & Alat Asistif",
+    "en": "Robotics, Embedded & Assistive Tech"
+  },
+  "home.role.1.d": {
+    "id": "Merakit sirkuit PCB, memprogram firmware C++/Arduino/ESP32, hingga kendali Inverse Kinematics 18-DOF dan visi komputer YOLOv8 di Raspberry Pi 5.",
+    "en": "Building custom PCBs, C++/Arduino/ESP32 firmware, 18-DOF Inverse Kinematics, and YOLOv8 computer vision on Raspberry Pi 5."
+  },
+  "home.role.2.t": {
+    "id": "Full-Stack Web & Mobile Flutter",
+    "en": "Full-Stack Web & Flutter Mobile"
+  },
+  "home.role.2.d": {
+    "id": "Membangun sistem informasi multi-role berbasis Laravel 12 & CodeIgniter 4, layanan cloud terkontainerisasi Docker, serta aplikasi Android/iOS dengan Flutter & Firebase.",
+    "en": "Developing multi-role information systems with Laravel 12 & CodeIgniter 4, Dockerized cloud services, and Android/iOS apps with Flutter & Firebase."
+  },
+  "home.role.3.t": {
+    "id": "Co-Founder @ CetakIn Studio",
+    "en": "Co-Founder @ CetakIn Studio"
+  },
+  "home.role.3.d": {
+    "id": "Mengelola produksi cetak 3D FDM, merancang konfigurator produk 2D di browser (Clicker Lab), sistem kasir/ERP multi-unit, dan jasa pembuatan alat IoT.",
+    "en": "Running FDM 3D printing production, building the browser-based 2D Clicker Lab configurator, multi-unit Cloud ERP, and custom IoT prototyping services."
+  },
+  "home.role.4.t": {
+    "id": "Pengajar & Mentor Robotika / IoT",
+    "en": "Robotics & IoT Educator / Mentor"
+  },
+  "home.role.4.d": {
+    "id": "Mengajar ekskul robotik, membimbing tim siswa hingga babak final nasional KOSSMI di Bandung, dan menjadi pemateri workshop robotika serta IoT.",
+    "en": "Teaching school robotics clubs, mentoring student teams to the KOSSMI National Finals in Bandung, and leading hands-on robotics and IoT workshops."
+  },
+  "home.about.venture": {
+    "id": "Usaha",
+    "en": "Venture"
+  },
+  "home.about.ventureVal": {
+    "id": "Co-Founder CetakIn (cetak-in.my.id)",
+    "en": "Co-Founder of CetakIn (cetak-in.my.id)"
+  },
+  "home.about.cert": {
+    "id": "Sertifikasi",
+    "en": "Certification"
+  },
+  "home.about.certVal": {
+    "id": "EC-Council Digital Forensics Essentials (D|FE)",
+    "en": "EC-Council Digital Forensics Essentials (D|FE)"
+  },
+  "skills.3dprint": {
+    "id": "3D Printing (PLA+ / PETG)",
+    "en": "3D Printing (PLA+ / PETG)"
+  },
+  "skills.ci4": {
+    "id": "CodeIgniter 4",
+    "en": "CodeIgniter 4"
+  },
+  "skills.node": {
+    "id": "Node.js & Express.js",
+    "en": "Node.js & Express.js"
+  },
+  "skills.react": {
+    "id": "React & TypeScript",
+    "en": "React & TypeScript"
+  },
+  "skills.docker": {
+    "id": "Docker & Linux Server",
+    "en": "Docker & Linux Server"
+  },
+  "skills.firestore": {
+    "id": "Cloud Firestore & Auth",
+    "en": "Cloud Firestore & Auth"
+  },
+  "skills.flchart": {
+    "id": "fl_chart & GoRouter",
+    "en": "fl_chart & GoRouter"
+  },
+  "skills.forensics": {
+    "id": "Digital Forensics (EC-Council D|FE)",
+    "en": "Digital Forensics (EC-Council D|FE)"
+  },
+  "skills.data": {
+    "id": "Data Analytics & Visualisasi",
+    "en": "Data Analytics & Visualization"
+  },
+  "skills.designTools": {
+    "id": "Desain, CAD & Produktivitas",
+    "en": "Design, CAD & Productivity"
+  },
+  "skills.cad": {
+    "id": "3D CAD & Slicing (Cura / Prusa)",
+    "en": "3D CAD & Slicing (Cura / Prusa)"
+  },
+  "skills.git": {
+    "id": "Git, GitHub & Manajemen Proyek",
+    "en": "Git, GitHub & Project Management"
+  },
+  "skills.creative": {
+    "id": "Canva, CapCut & Microsoft Office",
+    "en": "Canva, CapCut & Microsoft Office"
+  },
+  "home.edu.eyebrow": {
+    "id": "04 / Educator, Narasumber & Mentor Teknis",
+    "en": "04 / Educator, Speaker & Technical Mentor"
+  },
+  "home.edu.title": {
+    "id": "Rekam Jejak Mengajar & Membina",
+    "en": "Teaching, Speaking & Mentoring Track Record"
+  },
+  "home.edu.sub": {
+    "id": "Ilmu rekayasa paling cepat matang ketika dibagikan. Berikut adalah kegiatan mengajar ekstrakurikuler, bimbingan kompetisi nasional, les privat robotika, serta lokakarya yang pernah saya ampu.",
+    "en": "Engineering knowledge matures fastest when shared. Below are the extracurricular classes, national competition mentorships, intensive robotics tutoring, and workshops I have led."
+  },
+  "home.edu.photoPending": {
+    "id": "Slot Dokumentasi Foto (Menyusul)",
+    "en": "Photo Documentation Slot (Coming Soon)"
+  },
+  "home.edu.1.badge": {
+    "id": "Narasumber Workshop IoT",
+    "en": "IoT Workshop Speaker"
+  },
+  "home.edu.1.date": {
+    "id": "Agustus 2026",
+    "en": "August 2026"
+  },
+  "home.edu.1.role": {
+    "id": "Narasumber Utama",
+    "en": "Keynote Speaker & Instructor"
+  },
+  "home.edu.1.title": {
+    "id": "Workshop Internet of Things: \"Zero to Smart Device\"",
+    "en": "Internet of Things Workshop: \"Zero to Smart Device\""
+  },
+  "home.edu.1.desc": {
+    "id": "Membawakan materi dan praktik langsung pembuatan perangkat pintar dari nol: mulai dari pengenalan arsitektur IoT, pembacaan sensor pada mikrokontroler ESP32, hingga pengiriman telemetri real-time ke antarmuka pemantauan.",
+    "en": "Delivered hands-on training on building smart devices from scratch: covering IoT architecture, sensor acquisition on ESP32 microcontrollers, and real-time telemetry streaming to monitoring dashboards."
+  },
+  "home.edu.2.badge": {
+    "id": "Instruktur Robot Line Follower",
+    "en": "Line Follower Robotics Tutor"
+  },
+  "home.edu.2.date": {
+    "id": "Agustus 2026",
+    "en": "August 2026"
+  },
+  "home.edu.2.role": {
+    "id": "Pengajar Les Intensif",
+    "en": "Intensive Private Instructor"
+  },
+  "home.edu.2.title": {
+    "id": "Kelas Intensif & Les Robot Line Follower",
+    "en": "Intensive Line Follower Robot Tutoring"
+  },
+  "home.edu.2.desc": {
+    "id": "Membimbing siswa merakit dan memprogram robot pelacak garis (Line Follower): kalibrasi array sensor fotodioda/inframerah, pengendalian driver motor DC PWM, serta penyetelan logika kontrol PD untuk bermanuver di tikungan tajam.",
+    "en": "Coached students in assembling and programming Line Follower robots: calibrating photodiode/IR sensor arrays, PWM DC motor driver control, and tuning PD control loops for sharp track corners."
+  },
+  "home.edu.3.badge": {
+    "id": "Workshop SMAN 7 Banjarmasin",
+    "en": "SMAN 7 Banjarmasin Workshop"
+  },
+  "home.edu.3.date": {
+    "id": "Desember 2025",
+    "en": "December 2025"
+  },
+  "home.edu.3.role": {
+    "id": "Pemateri Workshop",
+    "en": "Workshop Instructor"
+  },
+  "home.edu.3.title": {
+    "id": "Workshop \"Pengenalan Robotic\" di SMA Negeri 7 Banjarmasin",
+    "en": "\"Introduction to Robotics\" Workshop at SMAN 7 Banjarmasin"
+  },
+  "home.edu.3.desc": {
+    "id": "Mengisi sesi pengenalan dunia robotika bagi siswa SMA Negeri 7 Banjarmasin, mencakup cara kerja sensor-aktuator, demonstrasi langsung unit robot, serta simulasi logika pemrograman mikrokontroler dasar.",
+    "en": "Led an introductory robotics workshop for students at SMA Negeri 7 Banjarmasin, covering sensor-actuator fundamentals, live robot demonstrations, and basic microcontroller programming logic."
+  },
+  "home.edu.4.badge": {
+    "id": "Final Nasional KOSSMI · Telkom Univ",
+    "en": "KOSSMI National Final · Telkom Univ"
+  },
+  "home.edu.4.date": {
+    "id": "Tingkat Nasional · Bandung",
+    "en": "National Finals · Bandung"
+  },
+  "home.edu.4.role": {
+    "id": "Mentor & Pendamping Lomba",
+    "en": "Competition Mentor & Coach"
+  },
+  "home.edu.4.title": {
+    "id": "Pendamping Finalis KOSSMI Bidang Robotik di Telkom University",
+    "en": "Robotics Finalist Mentor at KOSSMI National Finals (Telkom University)"
+  },
+  "home.edu.4.desc": {
+    "id": "Mendampingi dan membina tim siswa pada babak Final Nasional Kompetisi Sains Siswa Muslim Indonesia (KOSSMI) bidang Robotik di Telkom University, Bandung, mulai dari kesiapan perangkat keras, strategi arena, hingga pemecahan masalah teknis saat pertandingan.",
+    "en": "Mentored and accompanied student finalists at the KOSSMI National Robotics Finals at Telkom University, Bandung, overseeing hardware readiness, arena strategy, and live technical troubleshooting."
+  },
+  "home.edu.5.badge": {
+    "id": "Ekskul Robotik MAN IC Tanah Laut",
+    "en": "MAN IC Tanah Laut Robotics Club"
+  },
+  "home.edu.5.date": {
+    "id": "5 Pertemuan Praktik",
+    "en": "5 Hands-On Sessions"
+  },
+  "home.edu.5.role": {
+    "id": "Pengajar Ekstrakurikuler",
+    "en": "Extracurricular Instructor"
+  },
+  "home.edu.5.title": {
+    "id": "Pengajar Ekstrakurikuler Robotik di MAN Insan Cendekia Tanah Laut",
+    "en": "Robotics Extracurricular Instructor at MAN Insan Cendekia Tanah Laut"
+  },
+  "home.edu.5.desc": {
+    "id": "Kembali ke almamater untuk mengajar ekstrakurikuler robotika dalam 5 sesi pertemuan terstruktur: membimbing adik-adik kelas merangkai komponen elektronika di breadboard, memprogram Arduino, dan merancang proyek inovasi madrasah.",
+    "en": "Returned to my alma mater to teach 5 structured hands-on sessions for the robotics club, guiding students through breadboard electronics, Arduino programming, and madrasah innovation projects."
+  },
+  "home.certs.eyebrow": {
+    "id": "05 / Kredensial, Lisensi & Penghargaan",
+    "en": "05 / Credentials, Licenses & Awards"
+  },
+  "home.certs.title": {
+    "id": "Sertifikat Terverifikasi",
+    "en": "Verified Certificates"
+  },
+  "home.certs.sub": {
+    "id": "Arsip sertifikasi internasional, kejuaraan robotika & karya ilmiah, serta pelatihan teknis yang telah saya selesaikan. Klik tombol dokumen untuk membuka berkas sertifikat asli.",
+    "en": "Archive of international certifications, national robotics and research awards, and technical training courses I have completed. Click any document button to open the original certificate."
+  },
+  "home.certs.filterAria": {
+    "id": "Filter kategori sertifikat",
+    "en": "Filter certificate categories"
+  },
+  "home.certs.fAll": {
+    "id": "Semua (16)",
+    "en": "All (16)"
+  },
+  "home.certs.fCyber": {
+    "id": "Sertifikasi & Cyber Security (3)",
+    "en": "Certifications & Cyber Security (3)"
+  },
+  "home.certs.fComp": {
+    "id": "Kompetisi & Riset (4)",
+    "en": "Competitions & Research (4)"
+  },
+  "home.certs.fAi": {
+    "id": "AI, Robotika & Software (7)",
+    "en": "AI, Robotics & Software (7)"
+  },
+  "home.certs.fLead": {
+    "id": "Kepemimpinan & Pengabdian (4)",
+    "en": "Leadership & Community (4)"
+  },
+  "home.cert.dfe.title": {
+    "id": "Digital Forensics Essentials (D|FE) v2 Certified",
+    "en": "Digital Forensics Essentials (D|FE) v2 Certified"
+  },
+  "home.cert.dfe.desc": {
+    "id": "Lulus ujian sertifikasi internasional forensik digital dengan skor 89,33% (67/75). Mencakup investigasi forensik Windows & Linux, akuisisi bukti digital, analisis malware, dan dark web. No: ECC1467203859.",
+    "en": "Passed the international EC-Council digital forensics certification exam with a score of 89.33% (67/75), covering Windows & Linux forensics, evidence acquisition, malware, and dark web investigations. ID: ECC1467203859."
+  },
+  "home.cert.viewPdf": {
+    "id": "Sertifikat Ujian (PDF) ↗",
+    "en": "Exam Certificate (PDF) ↗"
+  },
+  "home.cert.viewTrans": {
+    "id": "Transkrip Nilai (89,33%) ↗",
+    "en": "Score Transcript (89.33%) ↗"
+  },
+  "home.cert.best.title": {
+    "id": "Finalis / Exhibitor BRIN Exhibition on Smart Technology (BEST) 2026",
+    "en": "Finalist / Exhibitor at BRIN Exhibition on Smart Technology (BEST) 2026"
+  },
+  "home.cert.best.desc": {
+    "id": "Memamerkan sistem navigasi otonom robot hexapod Wasaka Robotic Team pada ajang ICSMech & BEST 2026 oleh Pusat Riset Mekatronika Cerdas BRIN. No: B-18906/III.6.6/TK.01.04/6/2026.",
+    "en": "Exhibited the autonomous hexapod navigation system with Wasaka Robotic Team at ICSMech & BEST 2026 hosted by BRIN Research Center for Smart Mechatronics. No: B-18906/III.6.6/TK.01.04/6/2026."
+  },
+  "home.cert.viewImg": {
+    "id": "Lihat Sertifikat ↗",
+    "en": "View Certificate ↗"
+  },
+  "home.cert.stem.title": {
+    "id": "Juara 3 Kompetisi Robotik Tingkat Nasional",
+    "en": "3rd Place Winner at National Robotics Competition"
+  },
+  "home.cert.stem.desc": {
+    "id": "Meraih peringkat ke-3 nasional pada Kompetisi Robotik STEM Indonesia melalui pengembangan algoritma kinematika gerak dan navigasi labirin robot hexapod. No: 3040A/STEM/KOMP/XI/2025.",
+    "en": "Won 3rd Place Nationally at the STEM Indonesia Robotics Competition for hexapod gait kinematics and autonomous maze navigation. No: 3040A/STEM/KOMP/XI/2025."
+  },
+  "home.cert.yolo.title": {
+    "id": "Optimasi Computer Vision YOLO di CPU Tanpa GPU",
+    "en": "YOLO Computer Vision Optimization on CPU Without GPU"
+  },
+  "home.cert.yolo.desc": {
+    "id": "Pelatihan percepatan inferensi deteksi objek YOLO secara real-time pada prosesor CPU (SBC seperti Raspberry Pi 5 menggunakan format ONNX). ID: AVISHA/a38348/27112025/0447.",
+    "en": "Specialized training in accelerating real-time YOLO object detection inference on CPU-only single-board computers using ONNX runtime. ID: AVISHA/a38348/27112025/0447."
+  },
+  "home.cert.pkm.title": {
+    "id": "Peningkatan Kapasitas Penyusunan Proposal PKM 2025",
+    "en": "Student Creativity Program (PKM) Proposal Capacity Building 2025"
+  },
+  "home.cert.pkm.desc": {
+    "id": "Pelatihan metodologi riset terapan dan penyusunan proposal Program Kreativitas Mahasiswa (PKM) tingkat universitas. No: 2387/UN8/KM.01.02/2025.",
+    "en": "Applied research methodology and grant proposal writing workshop for the national Student Creativity Program (PKM). No: 2387/UN8/KM.01.02/2025."
+  },
+  "home.cert.cisco.title": {
+    "id": "Data Analytics Essentials",
+    "en": "Data Analytics Essentials"
+  },
+  "home.cert.cisco.desc": {
+    "id": "Menyelesaikan kurikulum analisis data Cisco mencakup transformasi dataset, kueri SQL, statistik deskriptif, dan pemodelan visualisasi keputusan.",
+    "en": "Completed Cisco Networking Academy's data analytics curriculum covering data transformation, SQL querying, descriptive statistics, and decision visualization."
+  },
+  "home.cert.openPdf": {
+    "id": "Buka Dokumen PDF ↗",
+    "en": "Open PDF Document ↗"
+  },
+  "home.cert.ctf.title": {
+    "id": "Cyber Security & Capture The Flag (CTF) Fundamentals",
+    "en": "Cyber Security & Capture The Flag (CTF) Fundamentals"
+  },
+  "home.cert.ctf.desc": {
+    "id": "Pelatihan intensif 6 JP mengenai dasar keamanan aplikasi web, kriptografi, analisis celah keamanan, dan penyelesaian tantangan CTF. No: 04/S/HMTI-FT ULM/VI/2024.",
+    "en": "Intensive training on web application security fundamentals, cryptography, vulnerability analysis, and CTF problem solving. No: 04/S/HMTI-FT ULM/VI/2024."
+  },
+  "home.cert.ecsos.title": {
+    "id": "Finalis Paper Conference Competition Economic Solutions 2025",
+    "en": "Finalist at Economic Solutions (ECSOS) Paper Conference 2025"
+  },
+  "home.cert.ecsos.desc": {
+    "id": "Finalis kompetisi karya tulis ilmiah tingkat nasional bertema transformasi dan efisiensi ekonomi digital. No: 1073/UN8.1.12/PP/2025.",
+    "en": "National paper conference finalist examining digital economy transformation and operational efficiency. No: 1073/UN8.1.12/PP/2025."
+  },
+  "home.cert.compfest.title": {
+    "id": "Indie Game Ignite at COMPFEST 16",
+    "en": "Indie Game Ignite at COMPFEST 16"
+  },
+  "home.cert.compfest.desc": {
+    "id": "Peserta rangkaian kompetisi dan lokakarya pengembangan gim independen pada perhelatan IT tahunan mahasiswa Fakultas Ilmu Komputer UI.",
+    "en": "Participant in the independent game development track at COMPFEST 16 hosted by the Faculty of Computer Science, Universitas Indonesia."
+  },
+  "home.cert.ichiro.title": {
+    "id": "TECHXPERIENCE: SynchroMove Servo Dynamics with ICHIRO",
+    "en": "TECHXPERIENCE: SynchroMove Servo Dynamics with ICHIRO"
+  },
+  "home.cert.ichiro.desc": {
+    "id": "Pelatihan dinamika aktuator servo dan sinkronisasi gerak robot bersama tim robot humanoid ICHIRO Institut Teknologi Sepuluh Nopember. No: 184/TECHXPERIENCE/ICHIRO-ITS/XI/2025.",
+    "en": "Technical workshop on servo actuator dynamics and multi-joint motion synchronization with the ICHIRO ITS humanoid robotics team. No: 184/TECHXPERIENCE/ICHIRO-ITS/XI/2025."
+  },
+  "home.cert.sic.title": {
+    "id": "Samsung Innovation Campus Batch 6: AI in Everyday Life",
+    "en": "Samsung Innovation Campus Batch 6: AI in Everyday Life"
+  },
+  "home.cert.sic.desc": {
+    "id": "Peserta program pembinaan talenta kecerdasan buatan (AI) dan Internet of Things yang diselenggarakan oleh Samsung Electronics Indonesia dan Hacktiv8.",
+    "en": "Participant in the national AI and IoT talent incubation program organized by Samsung Electronics Indonesia and Hacktiv8."
+  },
+  "home.cert.dicodingMl.title": {
+    "id": "Belajar Machine Learning untuk Pemula (30 Jam)",
+    "en": "Machine Learning for Beginners (30 Hours)"
+  },
+  "home.cert.dicodingMl.desc": {
+    "id": "Sertifikat kompetensi kelulusan mencakup supervised/unsupervised learning, regresi, klasifikasi, neural networks, dan proyek akhir TensorFlow. ID: 98XWL0J7LZM3.",
+    "en": "Competency certification covering supervised and unsupervised learning, regression, classification, neural networks, and TensorFlow projects. ID: 98XWL0J7LZM3."
+  },
+  "home.cert.dicodingPy.title": {
+    "id": "Memulai Pemrograman dengan Python (35 Jam)",
+    "en": "Getting Started with Python Programming (35 Hours)"
+  },
+  "home.cert.dicodingPy.desc": {
+    "id": "Sertifikat kompetensi pemrograman Python mencakup struktur data, OOP, pemrosesan matriks, unit testing, dan pengelolaan pustaka. ID: NVP7QNQKGZR0.",
+    "en": "Competency certification in Python programming covering data structures, OOP, matrix operations, unit testing, and package management. ID: NVP7QNQKGZR0."
+  },
+  "home.cert.dicodingVis.title": {
+    "id": "Belajar Dasar Visualisasi Data (16 Jam)",
+    "en": "Data Visualization Fundamentals (16 Hours)"
+  },
+  "home.cert.dicodingVis.desc": {
+    "id": "Sertifikat kompetensi pengolahan data dan penyajian visualisasi grafik yang efektif untuk komunikasi teknis. ID: MEPJNQK2JX3V.",
+    "en": "Competency certification in data wrangling and designing clear quantitative charts for technical communication. ID: MEPJNQK2JX3V."
+  },
+  "home.cert.dicodingPm.title": {
+    "id": "Belajar Dasar Manajemen Proyek (11 Jam)",
+    "en": "Project Management Fundamentals (11 Hours)"
+  },
+  "home.cert.dicodingPm.desc": {
+    "id": "Sertifikat kompetensi metodologi manajemen proyek perangkat lunak (Agile, Scrum, Waterfall, pengelolaan risiko, dan penjadwalan). ID: JMZV4EJKNXN9.",
+    "en": "Competency certification in software project management methodologies (Agile, Scrum, Waterfall, risk management, and scheduling). ID: JMZV4EJKNXN9."
+  },
+  "home.cert.abdi.title": {
+    "id": "Volunteer Abdi Teknik FT ULM (2024 & 2025)",
+    "en": "Abdi Teknik FT ULM Community Volunteer (2024 & 2025)"
+  },
+  "home.cert.abdi.desc": {
+    "id": "Relawan pengabdian masyarakat dan aksi lingkungan Fakultas Teknik ULM di Desa Penyambaran (2024) serta Desa Balau, Karang Intan (2025).",
+    "en": "Community service and environmental action volunteer with the Faculty of Engineering ULM in Penyambaran Village (2024) and Balau Village (2025)."
+  },
+  "home.edu.1.org": {
+    "id": "Penyelenggara: HMTI Fakultas Teknik ULM · No: 281/UN8.1.31.7/SP/2026",
+    "en": "Organizer: Information Technology Student Association (HMTI) FT ULM · Ref: 281/UN8.1.31.7/SP/2026"
+  },
+  "home.cert.hmtiIot.title": {
+    "id": "Narasumber Workshop IoT: \"Zero to Smart Device\"",
+    "en": "Keynote Speaker: IoT Workshop \"Zero to Smart Device\""
+  },
+  "home.cert.hmtiIot.desc": {
+    "id": "Sertifikat penghargaan sebagai Narasumber dalam Workshop Internet of Things yang diselenggarakan oleh Himpunan Mahasiswa Teknologi Informasi, Fakultas Teknik Universitas Lambung Mangkurat. No: 281/UN8.1.31.7/SP/2026.",
+    "en": "Certificate of honor as Speaker in the Internet of Things Workshop organized by the Information Technology Student Association (HMTI), Faculty of Engineering, Lambung Mangkurat University. Ref: 281/UN8.1.31.7/SP/2026."
+  },
+  "compact.position": {
+    "id": "Robotika, IoT & pengembangan aplikasi",
+    "en": "Robotics, IoT & application development"
+  },
+  "compact.hero": {
+    "id": "Saya membangun perangkat dan aplikasi untuk kebutuhan nyata. Mahasiswa Teknologi Informasi ULM, General Manager Wasaka Robotic Team, dan Co-Founder CetakIn.",
+    "en": "I build devices and applications for real needs. Information Technology student at ULM, General Manager of Wasaka Robotic Team, and Co-Founder of CetakIn."
+  },
+  "compact.hero.projects": {
+    "id": "Lihat karya pilihan",
+    "en": "Explore selected work"
+  },
+  "compact.hero.contact": {
+    "id": "Hubungi saya",
+    "en": "Get in touch"
+  },
+  "compact.projects.eyebrow": {
+    "id": "01 / Karya pilihan",
+    "en": "01 / Selected work"
+  },
+  "compact.projects.title": {
+    "id": "Dari ide menjadi sesuatu yang berguna.",
+    "en": "Turning ideas into useful things."
+  },
+  "compact.projects.sub": {
+    "id": "Lihat apa yang dibuat, manfaatnya, dan cara kerjanya langsung di halaman proyek.",
+    "en": "See what I built, who it helps, and how it works on each project page."
+  },
+  "compact.hexaka.role": {
+    "id": "Kontribusi: pemrograman robot & kendali",
+    "en": "Contribution: robot programming & control"
+  },
+  "compact.kind.Robotika": {
+    "id": "Robotika",
+    "en": "Robotics"
+  },
+  "compact.project.hexaka.desc": {
+    "id": "Robot berkaki enam yang menjaga keseimbangan dan membaca lintasan melalui kamera.",
+    "en": "A six-legged robot that balances its body and interprets its route through a camera."
+  },
+  "compact.viewProject": {
+    "id": "Lihat proyek & preview",
+    "en": "View project & preview"
+  },
+  "compact.cetakin.role": {
+    "id": "Peran: Co-Founder & pengembangan teknologi",
+    "en": "Role: Co-Founder & technology development"
+  },
+  "compact.kind.Usaha & web": {
+    "id": "Usaha & web",
+    "en": "Venture & web"
+  },
+  "compact.project.cetakin.desc": {
+    "id": "Layanan cetak 3D dan produk robotika dengan konfigurator produk yang bisa digunakan di browser.",
+    "en": "3D printing and robotics products with a product configurator visitors can use in a browser."
+  },
+  "compact.kominfo.role": {
+    "id": "Kontribusi: pengembangan aplikasi web",
+    "en": "Contribution: web application development"
+  },
+  "compact.illustration": {
+    "id": "Ilustrasi tampilan",
+    "en": "Illustrative interface"
+  },
+  "compact.kind.Aplikasi web": {
+    "id": "Aplikasi web",
+    "en": "Web application"
+  },
+  "compact.project.pkl-kominfo.desc": {
+    "id": "Merapikan pengajuan cuti pegawai, persetujuan berjenjang, dan penerbitan surat dalam satu sistem.",
+    "en": "Brings employee leave requests, tiered approvals, and official letters into one system."
+  },
+  "compact.anime.role": {
+    "id": "Kontribusi: pengembangan aplikasi Flutter",
+    "en": "Contribution: Flutter app development"
+  },
+  "compact.kind.Aplikasi Flutter": {
+    "id": "Aplikasi Flutter",
+    "en": "Flutter application"
+  },
+  "compact.project.myanimerent.desc": {
+    "id": "Membantu cosplayer menemukan kostum sewaan dan memeriksa tanggal ketersediaannya.",
+    "en": "Helps cosplayers find rental costumes and check their availability."
+  },
+  "compact.projects.all": {
+    "id": "Lihat semua proyek",
+    "en": "Explore all projects"
+  },
+  "compact.about.eyebrow": {
+    "id": "02 / Tentang saya",
+    "en": "02 / About me"
+  },
+  "compact.about.title": {
+    "id": "Menjembatani perangkat dan aplikasi.",
+    "en": "Connecting devices and applications."
+  },
+  "compact.about.copy": {
+    "id": "Fokus saya ada pada robotika dan IoT, aplikasi web dan Flutter, serta prototipe cetak 3D. Saya terbiasa menangani rangkaian, pemrograman, dan antarmuka yang digunakan pengguna.",
+    "en": "My work spans robotics and IoT, web and Flutter apps, and 3D-printed prototypes. I work across circuits, programming, and the interfaces people use."
+  },
+  "compact.focus.1": {
+    "id": "Robotika & IoT",
+    "en": "Robotics & IoT"
+  },
+  "compact.focus.2": {
+    "id": "Web & aplikasi Flutter",
+    "en": "Web & Flutter applications"
+  },
+  "compact.focus.3": {
+    "id": "Prototipe & cetak 3D",
+    "en": "Prototypes & 3D printing"
+  },
+  "compact.about.more": {
+    "id": "Profil, kemampuan & kegiatan mengajar",
+    "en": "Profile, skills & teaching"
+  },
+  "compact.proof.eyebrow": {
+    "id": "03 / Pengalaman & bukti",
+    "en": "03 / Experience & evidence"
+  },
+  "compact.proof.title": {
+    "id": "Dibangun, dipimpin, dan dibagikan.",
+    "en": "Building, leading, and sharing."
+  },
+  "compact.proof.1": {
+    "id": "Wasaka Robotic Team · memimpin koordinasi tim robotika Universitas Lambung Mangkurat.",
+    "en": "Wasaka Robotic Team · coordinating the robotics team at Lambung Mangkurat University."
+  },
+  "compact.proof.2.title": {
+    "id": "Juara 3 STEM Robotik Indonesia",
+    "en": "3rd Place · Indonesian STEM Robotics"
+  },
+  "compact.proof.2": {
+    "id": "Pengembangan pemrograman dan kendali robot hexapod bersama Wasaka Robotic Team.",
+    "en": "Hexapod programming and control development with Wasaka Robotic Team."
+  },
+  "compact.proof.3": {
+    "id": "Sertifikasi Digital Forensics Essentials; dokumen dan transkrip tersedia untuk ditinjau.",
+    "en": "Digital Forensics Essentials certification; certificate and transcript available for review."
+  },
+  "compact.proof.more": {
+    "id": "Rekam jejak lengkap",
+    "en": "Full experience"
+  },
+  "compact.proof.certs": {
+    "id": "Lihat sertifikat",
+    "en": "View certificates"
+  },
+  "compact.contact.eyebrow": {
+    "id": "04 / Kontak",
+    "en": "04 / Contact"
+  },
+  "compact.contact.title": {
+    "id": "Punya proyek atau peluang kerja?",
+    "en": "Have a project or an opportunity?"
+  },
+  "compact.contact.copy": {
+    "id": "Mari bicarakan kebutuhan tim, pengembangan produk, atau kolaborasi Anda.",
+    "en": "Let’s talk about your team, product development, or collaboration."
+  },
+  "compact.home.title": {
+    "id": "Naufal Elyzar | Robotika, IoT & Aplikasi",
+    "en": "Naufal Elyzar | Robotics, IoT & Applications"
+  },
+  "compact.footer.projects": {
+    "id": "Semua proyek",
+    "en": "All projects"
+  },
+  "compact.back": {
+    "id": "← Kembali ke beranda",
+    "en": "← Back to home"
+  },
+  "compact.archive.eyebrow": {
+    "id": "Arsip karya",
+    "en": "Project archive"
+  },
+  "compact.archive.title": {
+    "id": "Proyek & cara kerjanya",
+    "en": "Projects & how they work"
+  },
+  "compact.archive.sub": {
+    "id": "Robot, perangkat IoT, aplikasi web, dan aplikasi mobile. Setiap proyek memiliki penjelasan dan preview di dalam portofolio ini.",
+    "en": "Robots, IoT devices, web systems, and mobile apps. Every project has its explanation and preview within this portfolio."
+  },
+  "compact.archive.hardware": {
+    "id": "01 / Robotika & perangkat",
+    "en": "01 / Robotics & devices"
+  },
+  "compact.archive.hardware.title": {
+    "id": "Sistem yang hadir di dunia fisik.",
+    "en": "Systems for the physical world."
+  },
+  "compact.kind.IoT & Flutter": {
+    "id": "IoT & Flutter",
+    "en": "IoT & Flutter"
+  },
+  "compact.project.mangrovepreneurs.desc": {
+    "id": "Membantu peternak memantau kondisi sarang kelulut dan target panen melalui ponsel.",
+    "en": "Helps beekeepers monitor stingless bee hives and harvest targets from a phone."
+  },
+  "compact.kind.Teknologi asistif": {
+    "id": "Teknologi asistif",
+    "en": "Assistive technology"
+  },
+  "compact.project.aac.desc": {
+    "id": "Tiga tombol bersuara untuk membantu pengguna menyampaikan “mau”, “iya”, dan “tidak”.",
+    "en": "Three voice buttons that help users express “want”, “yes”, and “no”."
+  },
+  "compact.project.teksif.desc": {
+    "id": "Mengenali nominal uang melalui sensor warna lalu menyebutkannya lewat speaker.",
+    "en": "Recognizes banknote denominations through a color sensor and announces them through a speaker."
+  },
+  "compact.kind.Drone & IoT": {
+    "id": "Drone & IoT",
+    "en": "Drone & IoT"
+  },
+  "compact.project.amd.desc": {
+    "id": "Menghubungkan sensor tanah, pemantauan lahan, dan drone untuk kebutuhan perkebunan.",
+    "en": "Connects soil sensors, field monitoring, and a drone for plantation needs."
+  },
+  "compact.kind.Robotika & visi komputer": {
+    "id": "Robotika & visi komputer",
+    "en": "Robotics & computer vision"
+  },
+  "compact.project.mrc.desc": {
+    "id": "Konveyor yang mengenali kategori sampah melalui kamera dan memilahnya secara otomatis.",
+    "en": "A conveyor that recognizes waste categories through a camera and sorts them automatically."
+  },
+  "compact.archive.software": {
+    "id": "02 / Web, aplikasi & usaha",
+    "en": "02 / Web, apps & venture"
+  },
+  "compact.archive.software.title": {
+    "id": "Perangkat lunak untuk pengguna.",
+    "en": "Software for people."
+  },
+  "compact.project.cetakin.app": {
+    "id": "Layanan cetak 3D dan produk robotika dengan konfigurator produk yang bisa digunakan di browser.",
+    "en": "3D printing and robotics products with a product configurator visitors can use in a browser."
+  },
+  "compact.project.pkl-kominfo.app": {
+    "id": "Merapikan pengajuan cuti pegawai, persetujuan berjenjang, dan penerbitan surat dalam satu sistem.",
+    "en": "Brings employee leave requests, tiered approvals, and official letters into one system."
+  },
+  "compact.project.banua-tour.app": {
+    "id": "Membantu pengunjung menemukan wisata Kalimantan Selatan dan memesan tiket kunjungan.",
+    "en": "Helps visitors discover South Kalimantan destinations and book admission tickets."
+  },
+  "compact.kind.Cloud & backend": {
+    "id": "Cloud & backend",
+    "en": "Cloud & backend"
+  },
+  "compact.project.cloud-manager.app": {
+    "id": "Simulasi pengelolaan server, penyimpanan, dan tagihan langganan cloud dalam satu dashboard.",
+    "en": "A simulation for managing cloud servers, storage, and subscription bills in one dashboard."
+  },
+  "compact.project.myanimerent.app": {
+    "id": "Membantu cosplayer menemukan kostum sewaan dan memeriksa tanggal ketersediaannya.",
+    "en": "Helps cosplayers find rental costumes and check their availability."
+  },
+  "compact.kind.Aplikasi Flutter & IoT": {
+    "id": "Aplikasi Flutter & IoT",
+    "en": "Flutter & IoT application"
+  },
+  "compact.project.mangrovepreneurs.app": {
+    "id": "Menampilkan suhu, kelembapan, dan berat sarang kelulut beserta notifikasi di ponsel.",
+    "en": "Displays hive temperature, humidity, weight, and alerts on a phone."
+  },
+  "compact.project.e-ponic.app": {
+    "id": "Menghubungkan pekerjaan kebun hidroponik, pencatatan panen, dan pengiriman hasilnya.",
+    "en": "Connects hydroponic farm tasks, harvest records, and produce deliveries."
+  },
+  "compact.archive.meta": {
+    "id": "Proyek | Naufal Elyzar",
+    "en": "Projects | Naufal Elyzar"
+  },
+  "compact.profile.eyebrow": {
+    "id": "Di balik karya",
+    "en": "Behind the work"
+  },
+  "compact.profile.title": {
+    "id": "Profil & rekam jejak",
+    "en": "Profile & experience"
+  },
+  "compact.profile.sub": {
+    "id": "Latar belakang, kemampuan teknis, kegiatan mengajar, serta dokumen pendukung.",
+    "en": "Background, technical skills, teaching, and supporting credentials."
+  },
+  "compact.profile.contact": {
+    "id": "Hubungi saya ↗",
+    "en": "Get in touch ↗"
+  },
+  "compact.profile.nav": {
+    "id": "Navigasi profil",
+    "en": "Profile navigation"
+  },
+  "compact.profile.meta": {
+    "id": "Profil | Naufal Elyzar",
+    "en": "Profile | Naufal Elyzar"
+  },
+  "mg.preview.nav": {
+    "id": "Preview aplikasi",
+    "en": "App preview"
+  },
+  "mg.preview.cta": {
+    "id": "Lihat preview aplikasi",
+    "en": "View app preview"
+  },
+  "mg.preview.title": {
+    "id": "Kondisi sarang, langsung dari ponsel",
+    "en": "Hive conditions, straight to your phone"
+  },
+  "mg.preview.intro": {
+    "id": "Peternak dapat memeriksa kondisi beberapa sarang tanpa membuka kotaknya satu per satu. Berikut dokumentasi tampilan aplikasi Flutter yang dibuat untuk proyek ini.",
+    "en": "Beekeepers can check several hives without opening each box. This is a documented view of the Flutter app built for this project."
+  },
+  "mg.preview.caption": {
+    "id": "Dokumentasi tampilan aplikasi Mangrovepreneurs. Angka pada gambar adalah kondisi saat dokumentasi diambil.",
+    "en": "Documented Mangrovepreneurs app screen. The figures reflect conditions when the image was captured."
+  },
+  "mg.preview.alt": {
+    "id": "Dashboard aplikasi Mangrovepreneurs berisi daftar sarang dan pembacaan sensor.",
+    "en": "Mangrovepreneurs app dashboard showing hives and sensor readings."
+  },
+  "mg.preview.how": {
+    "id": "Bagaimana aplikasi membantu peternak?",
+    "en": "How does the app help beekeepers?"
+  },
+  "mg.preview.step1": {
+    "id": "Pilih sarang untuk memeriksa suhu, kelembapan, bobot, dan kondisi baterainya.",
+    "en": "Select a hive to check its temperature, humidity, weight, and battery condition."
+  },
+  "mg.preview.step2": {
+    "id": "Lihat riwayat pembacaan untuk memahami perubahan kondisi sarang dari waktu ke waktu.",
+    "en": "Review historical readings to understand how hive conditions change over time."
+  },
+  "mg.preview.step3": {
+    "id": "Atur batas peringatan dan target bobot. Aplikasi memberi notifikasi ketika pembacaan melewati batas yang ditetapkan.",
+    "en": "Set alert thresholds and a target weight. The app sends a notification when readings cross a configured threshold."
+  },
+  "mg.preview.note": {
+    "id": "Gambar ini adalah dokumentasi aplikasi, bukan sambungan langsung ke sensor. Simulasi di bawah memakai data contoh untuk menjelaskan alurnya.",
+    "en": "This image documents the app and is not connected to live sensors. The simulation below uses sample data to explain the workflow."
+  },
+  "mg.preview.try": {
+    "id": "Jelajahi contoh kondisi sarang ↓",
+    "en": "Explore example hive conditions ↓"
+  },
+  "mg.preview.demo": {
+    "id": "DATA CONTOH",
+    "en": "SAMPLE DATA"
+  },
+  "capture.cover.cetakin": {
+    "id": "Halaman utama & layanan",
+    "en": "Homepage & services"
+  },
+  "capture.cover.pkl-kominfo": {
+    "id": "Dashboard pegawai",
+    "en": "Employee dashboard"
+  },
+  "capture.cover.myanimerent": {
+    "id": "Beranda & katalog kostum",
+    "en": "Home & costume catalog"
+  },
+  "capture.cover.banua-tour": {
+    "id": "Katalog destinasi asli",
+    "en": "Original destination catalog"
+  },
+  "capture.pending": {
+    "id": "Screenshot belum tersedia",
+    "en": "Screenshots pending"
+  },
+  "capture.cover.e-ponic": {
+    "id": "Beranda petani",
+    "en": "Farmer home screen"
+  },
+  "capture.cover.cloud-manager": {
+    "id": "Dashboard Vortex Cloud",
+    "en": "Vortex Cloud dashboard"
   }
 };

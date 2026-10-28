@@ -12,3 +12,6 @@ node_modules/
 
 # Local project documentation
 /PROJECT_CONTEXT.local.md
+
+# Isolated source copies and fixture databases used only to capture project UI
+/scratch/actual-previews/

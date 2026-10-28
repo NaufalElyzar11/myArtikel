@@ -6,9 +6,11 @@ import json
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
-PAGES = [ROOT/'index.html', *sorted((ROOT/'projects').glob('*/index.html'))]
+PAGES = [ROOT/'index.html', ROOT/'projects/index.html', ROOT/'profil/index.html', *sorted((ROOT/'projects').glob('*/index.html'))]
 raw = (ROOT/'assets/js/translations.js').read_text(encoding='utf-8')
 catalog = json.loads(raw.split('window.siteTranslations = ', 1)[1].rstrip().removesuffix(';'))
+software = (ROOT/'assets/js/software-data.js').read_text(encoding='utf-8')
+catalog.update(json.loads(software.split('Object.assign(window.siteTranslations, ', 1)[1].rstrip().removesuffix(');')))
 assert all(set(entry) == {'id', 'en'} and all(entry.values()) for entry in catalog.values())
 for page in PAGES:
     soup = BeautifulSoup(page.read_text(encoding='utf-8'), 'html.parser')
@@ -47,7 +49,12 @@ for page in PAGES:
 
 home = BeautifulSoup((ROOT/'index.html').read_text(encoding='utf-8'), 'html.parser')
 assert [tag['id'] for tag in home.select('main > section')][:2] == ['home', 'projects']
-assert 'Hexaka' in home.select_one('.project__name').get_text()
-assert len(home.select('#experience > .container > .log > .log__item')) == 4
-assert len(home.select('.experience-history .log__item')) == 6
+assert 'Hexaka' in home.select_one('.work-card h3').get_text()
+assert len(home.select('.selected-grid .work-card')) == 4
+assert not home.select('#interactive-lab, #certificates, #skills, #gallery, .project__tabs')
+profile = BeautifulSoup((ROOT/'profil/index.html').read_text(encoding='utf-8'), 'html.parser')
+assert len(profile.select('#experience > .container > .log > .log__item')) == 4
+assert len(profile.select('.experience-history .log__item')) == 6
+archive = BeautifulSoup((ROOT/'projects/index.html').read_text(encoding='utf-8'), 'html.parser')
+assert len(archive.select('.work-card')) == 13
 print(f'PASS {len(catalog)} bilingual entries; featured project and experience order')

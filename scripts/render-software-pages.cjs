@@ -6,7 +6,9 @@ module.exports = function renderPages({ root, projects, fs, path }) {
     'sw.ui.play': { id: 'Putar preview', en: 'Play preview' },
     'sw.ui.pause': { id: 'Jeda', en: 'Pause' },
     'sw.ui.playReduced': { id: 'Putar tanpa animasi', en: 'Play without animation' },
-    'sw.ui.step': { id: 'Tampilan', en: 'Screen' }
+    'sw.ui.step': { id: 'Tampilan', en: 'Screen' },
+    'sw.ui.choose': { id: 'Pilih tampilan aplikasi', en: 'Choose an application screen' },
+    'sw.ui.controls': { id: 'Kontrol preview aplikasi', en: 'Application preview controls' }
   };
   let serial = 0;
   const esc = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
@@ -22,11 +24,11 @@ module.exports = function renderPages({ root, projects, fs, path }) {
       return `<div class="preview-unavailable">${text('Dokumentasi tampilan asli belum tersedia.','Original interface captures are not available yet.','h3')}${paragraph(['Penjelasan proyek tersedia di bawah. Preview akan ditambahkan setelah aplikasi aslinya dapat dijalankan dan didokumentasikan.','The project description is available below. A preview will be added when the original application can be run and documented.'])}</div>`;
     }
     const scenes = capture.scenes;
-    return `<div class="walkthrough" data-walkthrough data-capture-kind="${esc(capture.kind)}">${scenes.map((scene, index) => {
+    return `<div class="walkthrough" data-walkthrough data-capture-kind="${esc(capture.kind)}"><div class="walkthrough__controls" role="group" aria-label="Kontrol preview aplikasi" data-i18n-aria-label="sw.ui.controls" hidden><div class="walkthrough__steps" role="group" aria-label="Pilih tampilan aplikasi" data-i18n-aria-label="sw.ui.choose">${scenes.map((scene, index) => text(`${index + 1}. ${scene.title.id}`, `${index + 1}. ${scene.title.en}`, 'button', `type="button" data-preview-step="${index}" aria-pressed="${index === 0}" aria-controls="preview-scene-${index}"`)).join('')}</div><div class="walkthrough__transport">${text('Sebelumnya', 'Previous', 'button', 'type="button" data-preview-prev')}${text('Berikutnya', 'Next', 'button', 'type="button" data-preview-next')}<button type="button" data-preview-play aria-pressed="false">Putar preview</button></div><p class="walkthrough__status" data-preview-status role="status" aria-live="polite"></p></div>${scenes.map((scene, index) => {
       const captionKey = `sw.capture.${project.slug}.${index}`;
       dictionary[captionKey] = scene.title;
-      return `<div class="walkthrough__scene" data-scene="${index}" ${index ? 'hidden' : ''}><figure class="actual-capture"><a class="gallery__item" href="../../assets/images/previews/${esc(scene.image)}" data-caption="${esc(scene.title.id)}" data-i18n-data-caption="${captionKey}"><img src="../../assets/images/previews/${esc(scene.image)}" width="${scene.width}" height="${scene.height}" alt="${esc(scene.title.id)}" data-i18n-alt="${captionKey}" loading="${index ? 'lazy' : 'eager'}" decoding="async"></a>${text('Klik gambar untuk memperbesar','Select the image to enlarge','figcaption')}</figure><div class="walkthrough__copy"><span class="walkthrough__number">${String(index + 1).padStart(2, '0')} / ${String(scenes.length).padStart(2, '0')}</span>${text(scene.title.id, scene.title.en, 'h3')}${paragraph(scene.description)}</div></div>`;
-    }).join('')}<div class="walkthrough__controls" hidden><div class="walkthrough__steps">${scenes.map((scene, index) => text(`Tampilan ${index + 1}`, `Screen ${index + 1}`, 'button', `type="button" data-preview-step="${index}" aria-pressed="${index === 0}"`)).join('')}</div>${text('Sebelumnya', 'Previous', 'button', 'type="button" data-preview-prev')}${text('Berikutnya', 'Next', 'button', 'type="button" data-preview-next')}<button type="button" data-preview-play aria-pressed="false">Putar preview</button><p class="walkthrough__status" data-preview-status role="status" aria-live="polite"></p></div>${paragraph(['Tangkapan layar diambil dari antarmuka aplikasi asli pada lingkungan lokal dengan data demo. Teks di dalam gambar mengikuti bahasa aplikasi.','Screenshots were captured from the original application interface running locally with demo data. Text inside the images follows the application’s language.'], 'class="walkthrough__footnote"')}</div>`;
+      return `<div class="walkthrough__scene" id="preview-scene-${index}" role="group" aria-labelledby="preview-title-${index}" data-scene="${index}" ${index ? 'hidden' : ''}><figure class="actual-capture"><a class="gallery__item" href="../../assets/images/previews/${esc(scene.image)}" data-caption="${esc(scene.title.id)}" data-i18n-data-caption="${captionKey}"><img src="../../assets/images/previews/${esc(scene.image)}" width="${scene.width}" height="${scene.height}" alt="${esc(scene.title.id)}" data-i18n-alt="${captionKey}" loading="${index ? 'lazy' : 'eager'}" decoding="async"></a>${text('Klik gambar untuk memperbesar ↗','Select the image to enlarge ↗','figcaption')}</figure><div class="walkthrough__copy"><span class="walkthrough__number">${String(index + 1).padStart(2, '0')} / ${String(scenes.length).padStart(2, '0')}</span>${text(scene.title.id, scene.title.en, 'h3', `id="preview-title-${index}"`)}${paragraph(scene.description)}</div></div>`;
+    }).join('')}${paragraph(['Tangkapan layar diambil dari antarmuka aplikasi asli pada lingkungan lokal dengan data demo. Teks di dalam gambar mengikuti bahasa aplikasi.','Screenshots were captured from the original application interface running locally with demo data. Text inside the images follows the application’s language.'], 'class="walkthrough__footnote"')}</div>`;
   }
   for (const project of projects) {
     const capture = manifest[project.slug];
@@ -56,11 +58,13 @@ module.exports = function renderPages({ root, projects, fs, path }) {
   const hash = value => require('node:crypto').createHash('sha256').update(value).digest('hex').slice(0,12);
   const copyVersion = hash(serialized);
   const styleVersion = hash(fs.readFileSync(path.join(root, 'assets/css/software-project.css')));
+  const behaviorVersion = hash(fs.readFileSync(path.join(root, 'assets/js/software-project.js')));
   for (const project of projects) {
     const file = path.join(root,'projects',project.slug,'index.html');
     const html = fs.readFileSync(file,'utf8')
       .replace('software-data.js?v=actual', `software-data.js?v=${copyVersion}`)
-      .replace('software-project.css?v=20261028-actual', `software-project.css?v=${styleVersion}`);
+      .replace('software-project.css?v=20261028-actual', `software-project.css?v=${styleVersion}`)
+      .replace('software-project.js"', `software-project.js?v=${behaviorVersion}"`);
     fs.writeFileSync(file,html);
   }
   console.log(`Rendered ${projects.length} case studies; ${Object.keys(manifest).length} have genuine application captures.`);

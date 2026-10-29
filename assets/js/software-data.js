@@ -20,6 +20,14 @@ Object.assign(window.siteTranslations, {
     "id": "Tampilan",
     "en": "Screen"
   },
+  "sw.ui.choose": {
+    "id": "Pilih tampilan aplikasi",
+    "en": "Choose an application screen"
+  },
+  "sw.ui.controls": {
+    "id": "Kontrol preview aplikasi",
+    "en": "Application preview controls"
+  },
   "sw.cetakin.pageTitle": {
     "id": "CetakIn | Naufal Elyzar",
     "en": "CetakIn | Naufal Elyzar"
@@ -96,19 +104,39 @@ Object.assign(window.siteTranslations, {
     "id": "Screenshot aplikasi asli · data demo",
     "en": "Actual application screenshots · demo data"
   },
+  "sw.real.18": {
+    "id": "1. Halaman utama & layanan",
+    "en": "1. Homepage & services"
+  },
+  "sw.real.19": {
+    "id": "2. Clicker Lab yang sebenarnya",
+    "en": "2. The actual Clicker Lab"
+  },
+  "sw.real.20": {
+    "id": "3. Panduan komponen robotika",
+    "en": "3. Robotics component guides"
+  },
+  "sw.real.21": {
+    "id": "Sebelumnya",
+    "en": "Previous"
+  },
+  "sw.real.22": {
+    "id": "Berikutnya",
+    "en": "Next"
+  },
   "sw.capture.cetakin.0": {
     "id": "Halaman utama & layanan",
     "en": "Homepage & services"
   },
-  "sw.real.18": {
-    "id": "Klik gambar untuk memperbesar",
-    "en": "Select the image to enlarge"
+  "sw.real.23": {
+    "id": "Klik gambar untuk memperbesar ↗",
+    "en": "Select the image to enlarge ↗"
   },
-  "sw.real.19": {
+  "sw.real.24": {
     "id": "Halaman utama & layanan",
     "en": "Homepage & services"
   },
-  "sw.real.20": {
+  "sw.real.25": {
     "id": "Tampilan asli halaman utama memperkenalkan layanan cetak 3D dan produk kustom CetakIn.",
     "en": "The original homepage introduces CetakIn’s 3D printing and custom product services."
   },
@@ -116,15 +144,15 @@ Object.assign(window.siteTranslations, {
     "id": "Clicker Lab yang sebenarnya",
     "en": "The actual Clicker Lab"
   },
-  "sw.real.21": {
-    "id": "Klik gambar untuk memperbesar",
-    "en": "Select the image to enlarge"
+  "sw.real.26": {
+    "id": "Klik gambar untuk memperbesar ↗",
+    "en": "Select the image to enlarge ↗"
   },
-  "sw.real.22": {
+  "sw.real.27": {
     "id": "Clicker Lab yang sebenarnya",
     "en": "The actual Clicker Lab"
   },
-  "sw.real.23": {
+  "sw.real.28": {
     "id": "Konfigurator asli dengan desain contoh enam tombol. Pengunjung situs CetakIn dapat mengubah huruf, bentuk, warna, dan susunan melalui antarmuka ini.",
     "en": "The original configurator with an example six-key design. CetakIn visitors can change letters, shape, colors, and arrangement through this interface."
   },
@@ -132,37 +160,17 @@ Object.assign(window.siteTranslations, {
     "id": "Panduan komponen robotika",
     "en": "Robotics component guides"
   },
-  "sw.real.24": {
-    "id": "Klik gambar untuk memperbesar",
-    "en": "Select the image to enlarge"
+  "sw.real.29": {
+    "id": "Klik gambar untuk memperbesar ↗",
+    "en": "Select the image to enlarge ↗"
   },
-  "sw.real.25": {
+  "sw.real.30": {
     "id": "Panduan komponen robotika",
     "en": "Robotics component guides"
   },
-  "sw.real.26": {
+  "sw.real.31": {
     "id": "Halaman panduan asli membantu pengguna mempelajari komponen, wiring, kode uji, dan langkah pemeriksaan rangkaian.",
     "en": "The original guide page helps users learn about components, wiring, test code, and circuit checks."
-  },
-  "sw.real.27": {
-    "id": "Tampilan 1",
-    "en": "Screen 1"
-  },
-  "sw.real.28": {
-    "id": "Tampilan 2",
-    "en": "Screen 2"
-  },
-  "sw.real.29": {
-    "id": "Tampilan 3",
-    "en": "Screen 3"
-  },
-  "sw.real.30": {
-    "id": "Sebelumnya",
-    "en": "Previous"
-  },
-  "sw.real.31": {
-    "id": "Berikutnya",
-    "en": "Next"
   },
   "sw.real.32": {
     "id": "Tangkapan layar diambil dari antarmuka aplikasi asli pada lingkungan lokal dengan data demo. Teks di dalam gambar mengikuti bahasa aplikasi.",
@@ -328,19 +336,39 @@ Object.assign(window.siteTranslations, {
     "id": "Screenshot aplikasi asli · data demo",
     "en": "Actual application screenshots · demo data"
   },
+  "sw.real.71": {
+    "id": "1. Dashboard pegawai",
+    "en": "1. Employee dashboard"
+  },
+  "sw.real.72": {
+    "id": "2. Formulir pengajuan cuti",
+    "en": "2. Leave request form"
+  },
+  "sw.real.73": {
+    "id": "3. Riwayat & laporan cuti",
+    "en": "3. Leave history & reports"
+  },
+  "sw.real.74": {
+    "id": "Sebelumnya",
+    "en": "Previous"
+  },
+  "sw.real.75": {
+    "id": "Berikutnya",
+    "en": "Next"
+  },
   "sw.capture.pkl-kominfo.0": {
     "id": "Dashboard pegawai",
     "en": "Employee dashboard"
   },
-  "sw.real.71": {
-    "id": "Klik gambar untuk memperbesar",
-    "en": "Select the image to enlarge"
+  "sw.real.76": {
+    "id": "Klik gambar untuk memperbesar ↗",
+    "en": "Select the image to enlarge ↗"
   },
-  "sw.real.72": {
+  "sw.real.77": {
     "id": "Dashboard pegawai",
     "en": "Employee dashboard"
   },
-  "sw.real.73": {
+  "sw.real.78": {
     "id": "Tampilan asli ringkasan sisa cuti, pemberitahuan, dan status permohonan. Seluruh identitas serta angka pada screenshot adalah data demonstrasi.",
     "en": "The original overview of remaining leave, notifications, and request statuses. All identities and figures in the screenshot are demonstration data."
   },
@@ -348,15 +376,15 @@ Object.assign(window.siteTranslations, {
     "id": "Formulir pengajuan cuti",
     "en": "Leave request form"
   },
-  "sw.real.74": {
-    "id": "Klik gambar untuk memperbesar",
-    "en": "Select the image to enlarge"
+  "sw.real.79": {
+    "id": "Klik gambar untuk memperbesar ↗",
+    "en": "Select the image to enlarge ↗"
   },
-  "sw.real.75": {
+  "sw.real.80": {
     "id": "Formulir pengajuan cuti",
     "en": "Leave request form"
   },
-  "sw.real.76": {
+  "sw.real.81": {
     "id": "Formulir asli memperlihatkan data pegawai, jenis cuti, periode, alasan, dan pengganti tugas sebelum permohonan dikirim.",
     "en": "The original form shows employee information, leave type, dates, reason, and task coverage before submission."
   },
@@ -364,37 +392,17 @@ Object.assign(window.siteTranslations, {
     "id": "Riwayat & laporan cuti",
     "en": "Leave history & reports"
   },
-  "sw.real.77": {
-    "id": "Klik gambar untuk memperbesar",
-    "en": "Select the image to enlarge"
+  "sw.real.82": {
+    "id": "Klik gambar untuk memperbesar ↗",
+    "en": "Select the image to enlarge ↗"
   },
-  "sw.real.78": {
+  "sw.real.83": {
     "id": "Riwayat & laporan cuti",
     "en": "Leave history & reports"
   },
-  "sw.real.79": {
+  "sw.real.84": {
     "id": "Tampilan riwayat asli membantu pegawai meninjau hasil persetujuan serta mengakses rekap laporan. Data yang terlihat dibuat khusus untuk preview.",
     "en": "The original history view helps employees review approval outcomes and access reports. The visible records were created specifically for the preview."
-  },
-  "sw.real.80": {
-    "id": "Tampilan 1",
-    "en": "Screen 1"
-  },
-  "sw.real.81": {
-    "id": "Tampilan 2",
-    "en": "Screen 2"
-  },
-  "sw.real.82": {
-    "id": "Tampilan 3",
-    "en": "Screen 3"
-  },
-  "sw.real.83": {
-    "id": "Sebelumnya",
-    "en": "Previous"
-  },
-  "sw.real.84": {
-    "id": "Berikutnya",
-    "en": "Next"
   },
   "sw.real.85": {
     "id": "Tangkapan layar diambil dari antarmuka aplikasi asli pada lingkungan lokal dengan data demo. Teks di dalam gambar mengikuti bahasa aplikasi.",
@@ -560,19 +568,39 @@ Object.assign(window.siteTranslations, {
     "id": "Screenshot aplikasi asli · data demo",
     "en": "Actual application screenshots · demo data"
   },
+  "sw.real.124": {
+    "id": "1. Katalog destinasi asli",
+    "en": "1. Original destination catalog"
+  },
+  "sw.real.125": {
+    "id": "2. Detail destinasi & galeri",
+    "en": "2. Destination details & gallery"
+  },
+  "sw.real.126": {
+    "id": "3. Perencanaan kunjungan",
+    "en": "3. Visit planning"
+  },
+  "sw.real.127": {
+    "id": "Sebelumnya",
+    "en": "Previous"
+  },
+  "sw.real.128": {
+    "id": "Berikutnya",
+    "en": "Next"
+  },
   "sw.capture.banua-tour.0": {
     "id": "Katalog destinasi asli",
     "en": "Original destination catalog"
   },
-  "sw.real.124": {
-    "id": "Klik gambar untuk memperbesar",
-    "en": "Select the image to enlarge"
+  "sw.real.129": {
+    "id": "Klik gambar untuk memperbesar ↗",
+    "en": "Select the image to enlarge ↗"
   },
-  "sw.real.125": {
+  "sw.real.130": {
     "id": "Katalog destinasi asli",
     "en": "Original destination catalog"
   },
-  "sw.real.126": {
+  "sw.real.131": {
     "id": "Pengunjung dapat mencari tempat wisata, menyaring kategori dan daerah, serta mengurutkan hasil pada antarmuka katalog yang sebenarnya.",
     "en": "Visitors can search places, filter categories and regions, and sort results using the actual catalog interface."
   },
@@ -580,15 +608,15 @@ Object.assign(window.siteTranslations, {
     "id": "Detail destinasi & galeri",
     "en": "Destination details & gallery"
   },
-  "sw.real.127": {
-    "id": "Klik gambar untuk memperbesar",
-    "en": "Select the image to enlarge"
+  "sw.real.132": {
+    "id": "Klik gambar untuk memperbesar ↗",
+    "en": "Select the image to enlarge ↗"
   },
-  "sw.real.128": {
+  "sw.real.133": {
     "id": "Detail destinasi & galeri",
     "en": "Destination details & gallery"
   },
-  "sw.real.129": {
+  "sw.real.134": {
     "id": "Halaman asli menyatukan foto, informasi destinasi, persiapan kunjungan, serta akses pemesanan. Harga dan informasi operasional di screenshot adalah data contoh.",
     "en": "The original page combines photos, destination information, visit preparation, and booking access. Prices and operational details in the screenshot are sample data."
   },
@@ -596,37 +624,17 @@ Object.assign(window.siteTranslations, {
     "id": "Perencanaan kunjungan",
     "en": "Visit planning"
   },
-  "sw.real.130": {
-    "id": "Klik gambar untuk memperbesar",
-    "en": "Select the image to enlarge"
+  "sw.real.135": {
+    "id": "Klik gambar untuk memperbesar ↗",
+    "en": "Select the image to enlarge ↗"
   },
-  "sw.real.131": {
+  "sw.real.136": {
     "id": "Perencanaan kunjungan",
     "en": "Visit planning"
   },
-  "sw.real.132": {
+  "sw.real.137": {
     "id": "Formulir pemesanan asli menampilkan tanggal, jumlah pengunjung, dan total biaya contoh sebelum pesanan disimpan. Tidak ada transaksi yang dikirim saat pengambilan gambar.",
     "en": "The original booking form shows dates, visitor count, and a sample total before saving an order. No transaction was submitted during capture."
-  },
-  "sw.real.133": {
-    "id": "Tampilan 1",
-    "en": "Screen 1"
-  },
-  "sw.real.134": {
-    "id": "Tampilan 2",
-    "en": "Screen 2"
-  },
-  "sw.real.135": {
-    "id": "Tampilan 3",
-    "en": "Screen 3"
-  },
-  "sw.real.136": {
-    "id": "Sebelumnya",
-    "en": "Previous"
-  },
-  "sw.real.137": {
-    "id": "Berikutnya",
-    "en": "Next"
   },
   "sw.real.138": {
     "id": "Tangkapan layar diambil dari antarmuka aplikasi asli pada lingkungan lokal dengan data demo. Teks di dalam gambar mengikuti bahasa aplikasi.",
@@ -792,19 +800,39 @@ Object.assign(window.siteTranslations, {
     "id": "Screenshot aplikasi asli · data demo",
     "en": "Actual application screenshots · demo data"
   },
+  "sw.real.177": {
+    "id": "1. Dashboard Vortex Cloud",
+    "en": "1. Vortex Cloud dashboard"
+  },
+  "sw.real.178": {
+    "id": "2. Sumber daya komputasi & penyimpanan",
+    "en": "2. Compute & storage resources"
+  },
+  "sw.real.179": {
+    "id": "3. Pilihan paket langganan",
+    "en": "3. Subscription plans"
+  },
+  "sw.real.180": {
+    "id": "Sebelumnya",
+    "en": "Previous"
+  },
+  "sw.real.181": {
+    "id": "Berikutnya",
+    "en": "Next"
+  },
   "sw.capture.cloud-manager.0": {
     "id": "Dashboard Vortex Cloud",
     "en": "Vortex Cloud dashboard"
   },
-  "sw.real.177": {
-    "id": "Klik gambar untuk memperbesar",
-    "en": "Select the image to enlarge"
+  "sw.real.182": {
+    "id": "Klik gambar untuk memperbesar ↗",
+    "en": "Select the image to enlarge ↗"
   },
-  "sw.real.178": {
+  "sw.real.183": {
     "id": "Dashboard Vortex Cloud",
     "en": "Vortex Cloud dashboard"
   },
-  "sw.real.179": {
+  "sw.real.184": {
     "id": "Dashboard asli merangkum jumlah sumber daya, layanan aktif, estimasi biaya, alokasi, serta aktivitas sistem. Semua angka pada screenshot ini berasal dari data demonstrasi.",
     "en": "The original dashboard summarizes resource counts, active services, cost estimates, allocation, and system activity. All figures in this screenshot come from demonstration data."
   },
@@ -812,15 +840,15 @@ Object.assign(window.siteTranslations, {
     "id": "Sumber daya komputasi & penyimpanan",
     "en": "Compute & storage resources"
   },
-  "sw.real.180": {
-    "id": "Klik gambar untuk memperbesar",
-    "en": "Select the image to enlarge"
+  "sw.real.185": {
+    "id": "Klik gambar untuk memperbesar ↗",
+    "en": "Select the image to enlarge ↗"
   },
-  "sw.real.181": {
+  "sw.real.186": {
     "id": "Sumber daya komputasi & penyimpanan",
     "en": "Compute & storage resources"
   },
-  "sw.real.182": {
+  "sw.real.187": {
     "id": "Antarmuka asli memperlihatkan kuota penyimpanan S3, kapasitas EC2, serta formulir penyediaan sumber daya. Preview tidak membuat server atau penyimpanan sungguhan.",
     "en": "The original interface shows S3 storage quotas, EC2 capacity, and resource provisioning forms. The preview does not create real servers or storage."
   },
@@ -828,37 +856,17 @@ Object.assign(window.siteTranslations, {
     "id": "Pilihan paket langganan",
     "en": "Subscription plans"
   },
-  "sw.real.183": {
-    "id": "Klik gambar untuk memperbesar",
-    "en": "Select the image to enlarge"
+  "sw.real.188": {
+    "id": "Klik gambar untuk memperbesar ↗",
+    "en": "Select the image to enlarge ↗"
   },
-  "sw.real.184": {
+  "sw.real.189": {
     "id": "Pilihan paket langganan",
     "en": "Subscription plans"
   },
-  "sw.real.185": {
+  "sw.real.190": {
     "id": "Halaman asli menampilkan tingkatan paket komputasi dan penyimpanan. Harga serta spesifikasi yang terlihat adalah contoh dari lingkungan dokumentasi.",
     "en": "The original page displays compute and storage plan tiers. The visible prices and specifications are examples from the documentation environment."
-  },
-  "sw.real.186": {
-    "id": "Tampilan 1",
-    "en": "Screen 1"
-  },
-  "sw.real.187": {
-    "id": "Tampilan 2",
-    "en": "Screen 2"
-  },
-  "sw.real.188": {
-    "id": "Tampilan 3",
-    "en": "Screen 3"
-  },
-  "sw.real.189": {
-    "id": "Sebelumnya",
-    "en": "Previous"
-  },
-  "sw.real.190": {
-    "id": "Berikutnya",
-    "en": "Next"
   },
   "sw.real.191": {
     "id": "Tangkapan layar diambil dari antarmuka aplikasi asli pada lingkungan lokal dengan data demo. Teks di dalam gambar mengikuti bahasa aplikasi.",
@@ -1024,19 +1032,39 @@ Object.assign(window.siteTranslations, {
     "id": "Screenshot aplikasi asli · data demo",
     "en": "Actual application screenshots · demo data"
   },
+  "sw.real.230": {
+    "id": "1. Beranda & katalog kostum",
+    "en": "1. Home & costume catalog"
+  },
+  "sw.real.231": {
+    "id": "2. Detail kostum yang sebenarnya",
+    "en": "2. The actual costume details"
+  },
+  "sw.real.232": {
+    "id": "3. Ukuran & kalender sewa",
+    "en": "3. Sizes & rental calendar"
+  },
+  "sw.real.233": {
+    "id": "Sebelumnya",
+    "en": "Previous"
+  },
+  "sw.real.234": {
+    "id": "Berikutnya",
+    "en": "Next"
+  },
   "sw.capture.myanimerent.0": {
     "id": "Beranda & katalog kostum",
     "en": "Home & costume catalog"
   },
-  "sw.real.230": {
-    "id": "Klik gambar untuk memperbesar",
-    "en": "Select the image to enlarge"
+  "sw.real.235": {
+    "id": "Klik gambar untuk memperbesar ↗",
+    "en": "Select the image to enlarge ↗"
   },
-  "sw.real.231": {
+  "sw.real.236": {
     "id": "Beranda & katalog kostum",
     "en": "Home & costume catalog"
   },
-  "sw.real.232": {
+  "sw.real.237": {
     "id": "Ini adalah tampilan beranda Flutter asli, dengan banner kostum, direktori toko, kategori, dan navigasi aplikasi.",
     "en": "This is the original Flutter home screen with costume banners, a shop directory, categories, and app navigation."
   },
@@ -1044,15 +1072,15 @@ Object.assign(window.siteTranslations, {
     "id": "Detail kostum yang sebenarnya",
     "en": "The actual costume details"
   },
-  "sw.real.233": {
-    "id": "Klik gambar untuk memperbesar",
-    "en": "Select the image to enlarge"
+  "sw.real.238": {
+    "id": "Klik gambar untuk memperbesar ↗",
+    "en": "Select the image to enlarge ↗"
   },
-  "sw.real.234": {
+  "sw.real.239": {
     "id": "Detail kostum yang sebenarnya",
     "en": "The actual costume details"
   },
-  "sw.real.235": {
+  "sw.real.240": {
     "id": "Layar asli menampilkan foto kostum, toko penyedia, harga, dan deskripsi sebelum pengguna memilih ukuran serta tanggal sewa.",
     "en": "The original screen shows costume photos, the rental shop, price, and description before the user selects size and rental dates."
   },
@@ -1060,37 +1088,17 @@ Object.assign(window.siteTranslations, {
     "id": "Ukuran & kalender sewa",
     "en": "Sizes & rental calendar"
   },
-  "sw.real.236": {
-    "id": "Klik gambar untuk memperbesar",
-    "en": "Select the image to enlarge"
+  "sw.real.241": {
+    "id": "Klik gambar untuk memperbesar ↗",
+    "en": "Select the image to enlarge ↗"
   },
-  "sw.real.237": {
+  "sw.real.242": {
     "id": "Ukuran & kalender sewa",
     "en": "Sizes & rental calendar"
   },
-  "sw.real.238": {
+  "sw.real.243": {
     "id": "Kalender dan pemilihan ukuran berasal dari widget aplikasi asli. Rentang tanggal yang dipilih di sini hanya contoh dan tidak membuat pemesanan.",
     "en": "The calendar and size selection use the original app widgets. The selected dates are examples and do not create a booking."
-  },
-  "sw.real.239": {
-    "id": "Tampilan 1",
-    "en": "Screen 1"
-  },
-  "sw.real.240": {
-    "id": "Tampilan 2",
-    "en": "Screen 2"
-  },
-  "sw.real.241": {
-    "id": "Tampilan 3",
-    "en": "Screen 3"
-  },
-  "sw.real.242": {
-    "id": "Sebelumnya",
-    "en": "Previous"
-  },
-  "sw.real.243": {
-    "id": "Berikutnya",
-    "en": "Next"
   },
   "sw.real.244": {
     "id": "Tangkapan layar diambil dari antarmuka aplikasi asli pada lingkungan lokal dengan data demo. Teks di dalam gambar mengikuti bahasa aplikasi.",
@@ -1256,19 +1264,39 @@ Object.assign(window.siteTranslations, {
     "id": "Screenshot aplikasi asli · data demo",
     "en": "Actual application screenshots · demo data"
   },
+  "sw.real.283": {
+    "id": "1. Beranda petani",
+    "en": "1. Farmer home screen"
+  },
+  "sw.real.284": {
+    "id": "2. Detail perawatan tanaman",
+    "en": "2. Plant care details"
+  },
+  "sw.real.285": {
+    "id": "3. Tugas panen",
+    "en": "3. Harvest tasks"
+  },
+  "sw.real.286": {
+    "id": "Sebelumnya",
+    "en": "Previous"
+  },
+  "sw.real.287": {
+    "id": "Berikutnya",
+    "en": "Next"
+  },
   "sw.capture.e-ponic.0": {
     "id": "Beranda petani",
     "en": "Farmer home screen"
   },
-  "sw.real.283": {
-    "id": "Klik gambar untuk memperbesar",
-    "en": "Select the image to enlarge"
+  "sw.real.288": {
+    "id": "Klik gambar untuk memperbesar ↗",
+    "en": "Select the image to enlarge ↗"
   },
-  "sw.real.284": {
+  "sw.real.289": {
     "id": "Beranda petani",
     "en": "Farmer home screen"
   },
-  "sw.real.285": {
+  "sw.real.290": {
     "id": "Tampilan asli menampilkan ringkasan tanaman dan daftar jadwal perawatan harian untuk petani.",
     "en": "The original screen presents a crop summary and daily care schedule for farmers."
   },
@@ -1276,15 +1304,15 @@ Object.assign(window.siteTranslations, {
     "id": "Detail perawatan tanaman",
     "en": "Plant care details"
   },
-  "sw.real.286": {
-    "id": "Klik gambar untuk memperbesar",
-    "en": "Select the image to enlarge"
+  "sw.real.291": {
+    "id": "Klik gambar untuk memperbesar ↗",
+    "en": "Select the image to enlarge ↗"
   },
-  "sw.real.287": {
+  "sw.real.292": {
     "id": "Detail perawatan tanaman",
     "en": "Plant care details"
   },
-  "sw.real.288": {
+  "sw.real.293": {
     "id": "Layar asli memuat tugas, penjelasan, tanggal, waktu, dan interval perawatan yang perlu diikuti.",
     "en": "The original screen presents the task, description, date, time, and care interval to follow."
   },
@@ -1292,37 +1320,17 @@ Object.assign(window.siteTranslations, {
     "id": "Tugas panen",
     "en": "Harvest tasks"
   },
-  "sw.real.289": {
-    "id": "Klik gambar untuk memperbesar",
-    "en": "Select the image to enlarge"
+  "sw.real.294": {
+    "id": "Klik gambar untuk memperbesar ↗",
+    "en": "Select the image to enlarge ↗"
   },
-  "sw.real.290": {
+  "sw.real.295": {
     "id": "Tugas panen",
     "en": "Harvest tasks"
   },
-  "sw.real.291": {
+  "sw.real.296": {
     "id": "Daftar tugas panen berasal dari antarmuka aplikasi yang sebenarnya. Nama pelanggan, alamat, dan jumlah di layar ini khusus untuk demonstrasi.",
     "en": "Harvest tasks are shown in the actual app interface. Customer names, addresses, and quantities on this screen are demonstration data."
-  },
-  "sw.real.292": {
-    "id": "Tampilan 1",
-    "en": "Screen 1"
-  },
-  "sw.real.293": {
-    "id": "Tampilan 2",
-    "en": "Screen 2"
-  },
-  "sw.real.294": {
-    "id": "Tampilan 3",
-    "en": "Screen 3"
-  },
-  "sw.real.295": {
-    "id": "Sebelumnya",
-    "en": "Previous"
-  },
-  "sw.real.296": {
-    "id": "Berikutnya",
-    "en": "Next"
   },
   "sw.real.297": {
     "id": "Tangkapan layar diambil dari antarmuka aplikasi asli pada lingkungan lokal dengan data demo. Teks di dalam gambar mengikuti bahasa aplikasi.",

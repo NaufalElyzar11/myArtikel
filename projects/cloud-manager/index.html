@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
 <link rel="stylesheet" href="../../assets/css/project-detail.css">
 <link rel="stylesheet" href="../../assets/css/site-controls.css">
-<link rel="stylesheet" href="../../assets/css/software-project.css?v=4535b2bd6611">
+<link rel="stylesheet" href="../../assets/css/software-project.css?v=705488b7ce77">
 </head>
 <body class="software-page" data-software-project="cloud-manager">
 <a class="skip-link" href="#main-content" data-i18n="t002">Langsung ke konten</a>
@@ -68,56 +68,58 @@
 <span data-i18n="sw.real.176" class="preview-label">Screenshot aplikasi asli · data demo</span>
 </div>
 <div class="walkthrough" data-walkthrough data-capture-kind="web">
-<div class="walkthrough__scene" data-scene="0" >
+<div class="walkthrough__controls" role="group" aria-label="Kontrol preview aplikasi" data-i18n-aria-label="sw.ui.controls" hidden>
+<div class="walkthrough__steps" role="group" aria-label="Pilih tampilan aplikasi" data-i18n-aria-label="sw.ui.choose">
+<button data-i18n="sw.real.177" type="button" data-preview-step="0" aria-pressed="true" aria-controls="preview-scene-0">1. Dashboard Vortex Cloud</button>
+<button data-i18n="sw.real.178" type="button" data-preview-step="1" aria-pressed="false" aria-controls="preview-scene-1">2. Sumber daya komputasi &amp; penyimpanan</button>
+<button data-i18n="sw.real.179" type="button" data-preview-step="2" aria-pressed="false" aria-controls="preview-scene-2">3. Pilihan paket langganan</button>
+</div>
+<div class="walkthrough__transport">
+<button data-i18n="sw.real.180" type="button" data-preview-prev>Sebelumnya</button>
+<button data-i18n="sw.real.181" type="button" data-preview-next>Berikutnya</button>
+<button type="button" data-preview-play aria-pressed="false">Putar preview</button>
+</div>
+<p class="walkthrough__status" data-preview-status role="status" aria-live="polite">
+</p>
+</div>
+<div class="walkthrough__scene" id="preview-scene-0" role="group" aria-labelledby="preview-title-0" data-scene="0" >
 <figure class="actual-capture">
 <a class="gallery__item" href="../../assets/images/previews/cloud-overview.jpg" data-caption="Dashboard Vortex Cloud" data-i18n-data-caption="sw.capture.cloud-manager.0">
 <img src="../../assets/images/previews/cloud-overview.jpg" width="1272" height="716" alt="Dashboard Vortex Cloud" data-i18n-alt="sw.capture.cloud-manager.0" loading="eager" decoding="async">
 </a>
-<figcaption data-i18n="sw.real.177" >Klik gambar untuk memperbesar</figcaption>
+<figcaption data-i18n="sw.real.182" >Klik gambar untuk memperbesar ↗</figcaption>
 </figure>
 <div class="walkthrough__copy">
 <span class="walkthrough__number">01 / 03</span>
-<h3 data-i18n="sw.real.178" >Dashboard Vortex Cloud</h3>
-<p data-i18n="sw.real.179" >Dashboard asli merangkum jumlah sumber daya, layanan aktif, estimasi biaya, alokasi, serta aktivitas sistem. Semua angka pada screenshot ini berasal dari data demonstrasi.</p>
+<h3 data-i18n="sw.real.183" id="preview-title-0">Dashboard Vortex Cloud</h3>
+<p data-i18n="sw.real.184" >Dashboard asli merangkum jumlah sumber daya, layanan aktif, estimasi biaya, alokasi, serta aktivitas sistem. Semua angka pada screenshot ini berasal dari data demonstrasi.</p>
 </div>
 </div>
-<div class="walkthrough__scene" data-scene="1" hidden>
+<div class="walkthrough__scene" id="preview-scene-1" role="group" aria-labelledby="preview-title-1" data-scene="1" hidden>
 <figure class="actual-capture">
 <a class="gallery__item" href="../../assets/images/previews/cloud-resources.jpg" data-caption="Sumber daya komputasi &amp; penyimpanan" data-i18n-data-caption="sw.capture.cloud-manager.1">
 <img src="../../assets/images/previews/cloud-resources.jpg" width="1272" height="716" alt="Sumber daya komputasi &amp; penyimpanan" data-i18n-alt="sw.capture.cloud-manager.1" loading="lazy" decoding="async">
 </a>
-<figcaption data-i18n="sw.real.180" >Klik gambar untuk memperbesar</figcaption>
+<figcaption data-i18n="sw.real.185" >Klik gambar untuk memperbesar ↗</figcaption>
 </figure>
 <div class="walkthrough__copy">
 <span class="walkthrough__number">02 / 03</span>
-<h3 data-i18n="sw.real.181" >Sumber daya komputasi &amp; penyimpanan</h3>
-<p data-i18n="sw.real.182" >Antarmuka asli memperlihatkan kuota penyimpanan S3, kapasitas EC2, serta formulir penyediaan sumber daya. Preview tidak membuat server atau penyimpanan sungguhan.</p>
+<h3 data-i18n="sw.real.186" id="preview-title-1">Sumber daya komputasi &amp; penyimpanan</h3>
+<p data-i18n="sw.real.187" >Antarmuka asli memperlihatkan kuota penyimpanan S3, kapasitas EC2, serta formulir penyediaan sumber daya. Preview tidak membuat server atau penyimpanan sungguhan.</p>
 </div>
 </div>
-<div class="walkthrough__scene" data-scene="2" hidden>
+<div class="walkthrough__scene" id="preview-scene-2" role="group" aria-labelledby="preview-title-2" data-scene="2" hidden>
 <figure class="actual-capture">
 <a class="gallery__item" href="../../assets/images/previews/cloud-plans.jpg" data-caption="Pilihan paket langganan" data-i18n-data-caption="sw.capture.cloud-manager.2">
 <img src="../../assets/images/previews/cloud-plans.jpg" width="1272" height="716" alt="Pilihan paket langganan" data-i18n-alt="sw.capture.cloud-manager.2" loading="lazy" decoding="async">
 </a>
-<figcaption data-i18n="sw.real.183" >Klik gambar untuk memperbesar</figcaption>
+<figcaption data-i18n="sw.real.188" >Klik gambar untuk memperbesar ↗</figcaption>
 </figure>
 <div class="walkthrough__copy">
 <span class="walkthrough__number">03 / 03</span>
-<h3 data-i18n="sw.real.184" >Pilihan paket langganan</h3>
-<p data-i18n="sw.real.185" >Halaman asli menampilkan tingkatan paket komputasi dan penyimpanan. Harga serta spesifikasi yang terlihat adalah contoh dari lingkungan dokumentasi.</p>
+<h3 data-i18n="sw.real.189" id="preview-title-2">Pilihan paket langganan</h3>
+<p data-i18n="sw.real.190" >Halaman asli menampilkan tingkatan paket komputasi dan penyimpanan. Harga serta spesifikasi yang terlihat adalah contoh dari lingkungan dokumentasi.</p>
 </div>
-</div>
-<div class="walkthrough__controls" hidden>
-<div class="walkthrough__steps">
-<button data-i18n="sw.real.186" type="button" data-preview-step="0" aria-pressed="true">Tampilan 1</button>
-<button data-i18n="sw.real.187" type="button" data-preview-step="1" aria-pressed="false">Tampilan 2</button>
-<button data-i18n="sw.real.188" type="button" data-preview-step="2" aria-pressed="false">Tampilan 3</button>
-</div>
-<button data-i18n="sw.real.189" type="button" data-preview-prev>Sebelumnya</button>
-<button data-i18n="sw.real.190" type="button" data-preview-next>Berikutnya</button>
-<button type="button" data-preview-play aria-pressed="false">Putar preview</button>
-<p class="walkthrough__status" data-preview-status role="status" aria-live="polite">
-</p>
 </div>
 <p data-i18n="sw.real.191" class="walkthrough__footnote">Tangkapan layar diambil dari antarmuka aplikasi asli pada lingkungan lokal dengan data demo. Teks di dalam gambar mengikuti bahasa aplikasi.</p>
 </div>
@@ -190,13 +192,13 @@
 </footer>
 <script defer src="../../assets/js/translations.js">
 </script>
-<script defer src="../../assets/js/software-data.js?v=655e0d659943">
+<script defer src="../../assets/js/software-data.js?v=b9c254ae079a">
 </script>
 <script defer src="../../assets/js/i18n.js">
 </script>
 <script defer src="../../assets/js/gallery.js">
 </script>
-<script defer src="../../assets/js/software-project.js">
+<script defer src="../../assets/js/software-project.js?v=92ae1a1db11a">
 </script>
 </body>
 </html>

@@ -14,9 +14,9 @@ Saya mengembangkan robot, perangkat sensor, dan aplikasi web & mobile. Dari gera
 
 Mahasiswa Teknologi Informasi Universitas Lambung Mangkurat · General Manager Wasaka Robotic Team · Co-Founder CetakIn · Pengajar robotika.
 
-Lihat proyek & kontribusi saya
+Lihat proyek pilihan
 
-Diskusikan peluang
+Hubungi saya
 
 Bersama Wasaka: Juara 3 STEM Robotik 2025 ↗
 
@@ -32,9 +32,9 @@ I develop robots, sensor devices, and web and mobile applications. From robot mo
 
 Information Technology student at Universitas Lambung Mangkurat · General Manager of Wasaka Robotic Team · Co-Founder of CetakIn · Robotics educator.
 
-See projects & my contribution
+Explore selected projects
 
-Discuss an opportunity
+Get in touch
 
 With Wasaka: 3rd place, STEM Robotics 2025 ↗
 
@@ -54,7 +54,7 @@ Robot berkaki enam yang menjaga keseimbangan dan membaca lintasan melalui kamera
 
 Bagian saya: pemrograman gerak dan kendali robot bersama Wasaka Robotic Team.
 
-Lihat proyek & preview
+Jelajahi proyek Hexaka
 
 **CetakIn**
 
@@ -62,7 +62,7 @@ Layanan cetak 3D dan produk robotika dengan konfigurator produk yang bisa diguna
 
 Bagian saya: Co-Founder, pengembangan website pelanggan dan konfigurator produk.
 
-Lihat proyek & preview
+Lihat website CetakIn
 
 **Sistem Cuti Kominfo**
 
@@ -70,7 +70,7 @@ Merapikan pengajuan cuti pegawai, persetujuan berjenjang, dan penerbitan surat d
 
 Bagian saya saat PKL: alur pengajuan, hak akses, persetujuan, dan laporan.
 
-Lihat proyek & preview
+Lihat cara kerja Si-Cuti
 
 **MyAnimeRent**
 
@@ -78,7 +78,7 @@ Membantu cosplayer menemukan kostum sewaan dan memeriksa tanggal ketersediaannya
 
 Bagian saya: katalog, navigasi, dan integrasi data pengguna serta penyewaan di Flutter.
 
-Lihat proyek & preview
+Lihat aplikasi MyAnimeRent
 
 Proyek perangkat lainnya:
 
@@ -102,7 +102,7 @@ A six-legged robot that balances its body and interprets its route through a cam
 
 My contribution: robot movement programming and control with Wasaka Robotic Team.
 
-View project & preview
+Explore the Hexaka project
 
 **CetakIn**
 
@@ -110,7 +110,7 @@ View project & preview
 
 My role: Co-Founder, customer website and product configurator development.
 
-View project & preview
+Explore the CetakIn website
 
 **Sistem Cuti Kominfo**
 
@@ -118,7 +118,7 @@ Brings employee leave requests, tiered approvals, and official letters into one 
 
 My internship contribution: request workflows, access roles, approvals, and reports.
 
-View project & preview
+See how Si-Cuti works
 
 **MyAnimeRent**
 
@@ -126,7 +126,7 @@ Helps cosplayers find rental costumes and check their availability.
 
 My contribution: catalogs, navigation, and user and rental data integration in Flutter.
 
-View project & preview
+Explore the MyAnimeRent app
 
 More hardware projects:
 

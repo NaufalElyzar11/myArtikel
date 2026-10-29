@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
 <link rel="stylesheet" href="../../assets/css/project-detail.css">
 <link rel="stylesheet" href="../../assets/css/site-controls.css">
-<link rel="stylesheet" href="../../assets/css/software-project.css?v=4535b2bd6611">
+<link rel="stylesheet" href="../../assets/css/software-project.css?v=705488b7ce77">
 </head>
 <body class="software-page" data-software-project="cetakin">
 <a class="skip-link" href="#main-content" data-i18n="t002">Langsung ke konten</a>
@@ -68,56 +68,58 @@
 <span data-i18n="sw.real.17" class="preview-label">Screenshot aplikasi asli · data demo</span>
 </div>
 <div class="walkthrough" data-walkthrough data-capture-kind="web">
-<div class="walkthrough__scene" data-scene="0" >
+<div class="walkthrough__controls" role="group" aria-label="Kontrol preview aplikasi" data-i18n-aria-label="sw.ui.controls" hidden>
+<div class="walkthrough__steps" role="group" aria-label="Pilih tampilan aplikasi" data-i18n-aria-label="sw.ui.choose">
+<button data-i18n="sw.real.18" type="button" data-preview-step="0" aria-pressed="true" aria-controls="preview-scene-0">1. Halaman utama &amp; layanan</button>
+<button data-i18n="sw.real.19" type="button" data-preview-step="1" aria-pressed="false" aria-controls="preview-scene-1">2. Clicker Lab yang sebenarnya</button>
+<button data-i18n="sw.real.20" type="button" data-preview-step="2" aria-pressed="false" aria-controls="preview-scene-2">3. Panduan komponen robotika</button>
+</div>
+<div class="walkthrough__transport">
+<button data-i18n="sw.real.21" type="button" data-preview-prev>Sebelumnya</button>
+<button data-i18n="sw.real.22" type="button" data-preview-next>Berikutnya</button>
+<button type="button" data-preview-play aria-pressed="false">Putar preview</button>
+</div>
+<p class="walkthrough__status" data-preview-status role="status" aria-live="polite">
+</p>
+</div>
+<div class="walkthrough__scene" id="preview-scene-0" role="group" aria-labelledby="preview-title-0" data-scene="0" >
 <figure class="actual-capture">
 <a class="gallery__item" href="../../assets/images/previews/cetakin-home.jpg" data-caption="Halaman utama &amp; layanan" data-i18n-data-caption="sw.capture.cetakin.0">
 <img src="../../assets/images/previews/cetakin-home.jpg" width="1425" height="990" alt="Halaman utama &amp; layanan" data-i18n-alt="sw.capture.cetakin.0" loading="eager" decoding="async">
 </a>
-<figcaption data-i18n="sw.real.18" >Klik gambar untuk memperbesar</figcaption>
+<figcaption data-i18n="sw.real.23" >Klik gambar untuk memperbesar ↗</figcaption>
 </figure>
 <div class="walkthrough__copy">
 <span class="walkthrough__number">01 / 03</span>
-<h3 data-i18n="sw.real.19" >Halaman utama &amp; layanan</h3>
-<p data-i18n="sw.real.20" >Tampilan asli halaman utama memperkenalkan layanan cetak 3D dan produk kustom CetakIn.</p>
+<h3 data-i18n="sw.real.24" id="preview-title-0">Halaman utama &amp; layanan</h3>
+<p data-i18n="sw.real.25" >Tampilan asli halaman utama memperkenalkan layanan cetak 3D dan produk kustom CetakIn.</p>
 </div>
 </div>
-<div class="walkthrough__scene" data-scene="1" hidden>
+<div class="walkthrough__scene" id="preview-scene-1" role="group" aria-labelledby="preview-title-1" data-scene="1" hidden>
 <figure class="actual-capture">
 <a class="gallery__item" href="../../assets/images/previews/cetakin-clicker.jpg" data-caption="Clicker Lab yang sebenarnya" data-i18n-data-caption="sw.capture.cetakin.1">
 <img src="../../assets/images/previews/cetakin-clicker.jpg" width="1425" height="990" alt="Clicker Lab yang sebenarnya" data-i18n-alt="sw.capture.cetakin.1" loading="lazy" decoding="async">
 </a>
-<figcaption data-i18n="sw.real.21" >Klik gambar untuk memperbesar</figcaption>
+<figcaption data-i18n="sw.real.26" >Klik gambar untuk memperbesar ↗</figcaption>
 </figure>
 <div class="walkthrough__copy">
 <span class="walkthrough__number">02 / 03</span>
-<h3 data-i18n="sw.real.22" >Clicker Lab yang sebenarnya</h3>
-<p data-i18n="sw.real.23" >Konfigurator asli dengan desain contoh enam tombol. Pengunjung situs CetakIn dapat mengubah huruf, bentuk, warna, dan susunan melalui antarmuka ini.</p>
+<h3 data-i18n="sw.real.27" id="preview-title-1">Clicker Lab yang sebenarnya</h3>
+<p data-i18n="sw.real.28" >Konfigurator asli dengan desain contoh enam tombol. Pengunjung situs CetakIn dapat mengubah huruf, bentuk, warna, dan susunan melalui antarmuka ini.</p>
 </div>
 </div>
-<div class="walkthrough__scene" data-scene="2" hidden>
+<div class="walkthrough__scene" id="preview-scene-2" role="group" aria-labelledby="preview-title-2" data-scene="2" hidden>
 <figure class="actual-capture">
 <a class="gallery__item" href="../../assets/images/previews/cetakin-guides.jpg" data-caption="Panduan komponen robotika" data-i18n-data-caption="sw.capture.cetakin.2">
 <img src="../../assets/images/previews/cetakin-guides.jpg" width="1425" height="990" alt="Panduan komponen robotika" data-i18n-alt="sw.capture.cetakin.2" loading="lazy" decoding="async">
 </a>
-<figcaption data-i18n="sw.real.24" >Klik gambar untuk memperbesar</figcaption>
+<figcaption data-i18n="sw.real.29" >Klik gambar untuk memperbesar ↗</figcaption>
 </figure>
 <div class="walkthrough__copy">
 <span class="walkthrough__number">03 / 03</span>
-<h3 data-i18n="sw.real.25" >Panduan komponen robotika</h3>
-<p data-i18n="sw.real.26" >Halaman panduan asli membantu pengguna mempelajari komponen, wiring, kode uji, dan langkah pemeriksaan rangkaian.</p>
+<h3 data-i18n="sw.real.30" id="preview-title-2">Panduan komponen robotika</h3>
+<p data-i18n="sw.real.31" >Halaman panduan asli membantu pengguna mempelajari komponen, wiring, kode uji, dan langkah pemeriksaan rangkaian.</p>
 </div>
-</div>
-<div class="walkthrough__controls" hidden>
-<div class="walkthrough__steps">
-<button data-i18n="sw.real.27" type="button" data-preview-step="0" aria-pressed="true">Tampilan 1</button>
-<button data-i18n="sw.real.28" type="button" data-preview-step="1" aria-pressed="false">Tampilan 2</button>
-<button data-i18n="sw.real.29" type="button" data-preview-step="2" aria-pressed="false">Tampilan 3</button>
-</div>
-<button data-i18n="sw.real.30" type="button" data-preview-prev>Sebelumnya</button>
-<button data-i18n="sw.real.31" type="button" data-preview-next>Berikutnya</button>
-<button type="button" data-preview-play aria-pressed="false">Putar preview</button>
-<p class="walkthrough__status" data-preview-status role="status" aria-live="polite">
-</p>
 </div>
 <p data-i18n="sw.real.32" class="walkthrough__footnote">Tangkapan layar diambil dari antarmuka aplikasi asli pada lingkungan lokal dengan data demo. Teks di dalam gambar mengikuti bahasa aplikasi.</p>
 </div>
@@ -190,13 +192,13 @@
 </footer>
 <script defer src="../../assets/js/translations.js">
 </script>
-<script defer src="../../assets/js/software-data.js?v=655e0d659943">
+<script defer src="../../assets/js/software-data.js?v=b9c254ae079a">
 </script>
 <script defer src="../../assets/js/i18n.js">
 </script>
 <script defer src="../../assets/js/gallery.js">
 </script>
-<script defer src="../../assets/js/software-project.js">
+<script defer src="../../assets/js/software-project.js?v=92ae1a1db11a">
 </script>
 </body>
 </html>

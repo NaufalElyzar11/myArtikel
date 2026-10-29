@@ -58,6 +58,7 @@
   previous.addEventListener('click', () => select(current - 1));
   next.addEventListener('click', () => select(current + 1));
   steps.forEach((button, index) => button.addEventListener('click', () => select(index)));
+  walkthrough.querySelectorAll('.gallery__item').forEach(link => link.addEventListener('click', stop));
   play.addEventListener('click', () => {
     if (playing) { stop(); return; }
     if (current === scenes.length - 1) current = 0;

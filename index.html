@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="style.css?v=96d7f6840349" rel="stylesheet">
+  <link href="style.css?v=89d95671bd98" rel="stylesheet">
   <link href="assets/css/site-controls.css" rel="stylesheet">
 </head>
 <body class="portfolio-home">
@@ -24,11 +24,9 @@
 </a>
 <nav aria-label="Navigasi utama" class="nav__menu" data-i18n-aria-label="t106" id="navMenu">
   <a data-i18n="t004" href="#projects">Proyek</a>
-  <a data-i18n="t005" href="#about">Tentang</a>
   <a data-i18n="t006" href="#skills">Tools &amp; Tech</a>
   <a data-i18n="overview.nav.educator" href="#educator">Educator</a>
-  <a data-i18n="t007" href="#experience">Pengalaman</a>
-  <a data-i18n="home.nav.certs" href="./profil/#certificates">Sertifikat</a>
+  <a data-i18n="ui.nav.profile" href="./profil/">Profil</a>
   <a data-i18n="t009" href="#contact">Kontak</a>
   <a class="btn btn--ghost" data-i18n="t010" href="./assets/images/profile/My%20CV.jpg" target="_blank" rel="noreferrer">Lihat CV</a>
 </nav>
@@ -49,14 +47,16 @@
 <main id="main-content" tabindex="-1">
 <section class="hero intro" id="home">
 <div class="container intro__grid">
-<div class="intro__copy">
+<div class="intro__heading">
 <p data-i18n="compact.position" class="hero__eyebrow">Robotika &amp; IoT · Web &amp; Mobile · Educator</p>
 <h1 class="hero__title">Naufal Elyzar</h1>
+</div>
+<div class="intro__copy">
 <p data-i18n="compact.hero" class="hero__intro">Saya mengembangkan robot, perangkat sensor, dan aplikasi web &amp; mobile. Dari gerak robot sampai pengajuan cuti, proyek saya berangkat dari tugas yang perlu diselesaikan pengguna.</p>
 <p data-i18n="research.hero.context" class="intro__context">Mahasiswa Teknologi Informasi Universitas Lambung Mangkurat · General Manager Wasaka Robotic Team · Co-Founder CetakIn · Pengajar robotika.</p>
 <div class="hero__cta">
-<a class="btn" href="#projects" data-i18n="compact.hero.projects">Lihat proyek &amp; kontribusi saya</a>
-<a class="btn btn--ghost" href="#contact" data-i18n="compact.hero.contact">Diskusikan peluang</a>
+<a class="btn" href="#projects" data-i18n="compact.hero.projects">Lihat proyek pilihan</a>
+<a class="btn btn--ghost" href="#contact" data-i18n="compact.hero.contact">Hubungi saya</a>
 </div>
 <div class="intro__evidence">
 <a href="./assets/images/certificates/cert-stem-2025.webp" target="_blank" rel="noreferrer" data-i18n="research.hero.award">Bersama Wasaka: Juara 3 STEM Robotik 2025 ↗</a>
@@ -79,7 +79,7 @@
 </div>
 </div>
 <div class="selected-grid">
-<article class="work-card">
+<article class="work-card work-card--featured">
 <a class="work-card__media work-card__media--hexaka" href="projects/hexaka/" aria-label="Wasaka Hexapod (Hexaka V3)">
 <img alt="Wasaka Hexapod (Hexaka V3)" data-i18n-alt="t020" decoding="async" height="1280" loading="lazy" sizes="(max-width: 960px) 90vw, 600px" src="assets/images/optimized/projects-hexaka-Hexa-960.webp" srcset="assets/images/optimized/projects-hexaka-Hexa-480.webp 480w, assets/images/optimized/projects-hexaka-Hexa-960.webp 960w" width="960">
 </a>
@@ -90,7 +90,7 @@
 </h3>
 <p data-i18n="compact.project.hexaka.desc" class="work-card__description">Robot berkaki enam yang menjaga keseimbangan dan membaca lintasan melalui kamera.</p>
 <p data-i18n="compact.hexaka.role" class="work-card__role">Bagian saya: pemrograman gerak dan kendali robot bersama Wasaka Robotic Team.</p>
-<a class="work-card__link" href="projects/hexaka/" data-i18n="compact.viewProject">Lihat proyek &amp; preview</a>
+<a class="work-card__link" href="projects/hexaka/" data-i18n="ui.project.hexaka">Jelajahi proyek Hexaka</a>
 </div>
 </article>
 <article class="work-card">
@@ -104,7 +104,7 @@
 </h3>
 <p data-i18n="compact.project.cetakin.desc" class="work-card__description">Layanan cetak 3D dan produk robotika dengan konfigurator produk yang bisa digunakan di browser.</p>
 <p data-i18n="compact.cetakin.role" class="work-card__role">Bagian saya: Co-Founder, pengembangan website pelanggan dan konfigurator produk.</p>
-<a class="work-card__link" href="projects/cetakin/" data-i18n="compact.viewProject">Lihat proyek &amp; preview</a>
+<a class="work-card__link" href="projects/cetakin/" data-i18n="ui.project.cetakin">Lihat website CetakIn</a>
 </div>
 </article>
 <article class="work-card">
@@ -118,7 +118,7 @@
 </h3>
 <p data-i18n="compact.project.pkl-kominfo.desc" class="work-card__description">Merapikan pengajuan cuti pegawai, persetujuan berjenjang, dan penerbitan surat dalam satu sistem.</p>
 <p data-i18n="compact.kominfo.role" class="work-card__role">Bagian saya saat PKL: alur pengajuan, hak akses, persetujuan, dan laporan.</p>
-<a class="work-card__link" href="projects/pkl-kominfo/" data-i18n="compact.viewProject">Lihat proyek &amp; preview</a>
+<a class="work-card__link" href="projects/pkl-kominfo/" data-i18n="ui.project.kominfo">Lihat cara kerja Si-Cuti</a>
 </div>
 </article>
 <article class="work-card">
@@ -132,7 +132,7 @@
 </h3>
 <p data-i18n="compact.project.myanimerent.desc" class="work-card__description">Membantu cosplayer menemukan kostum sewaan dan memeriksa tanggal ketersediaannya.</p>
 <p data-i18n="compact.anime.role" class="work-card__role">Bagian saya: katalog, navigasi, dan integrasi data pengguna serta penyewaan di Flutter.</p>
-<a class="work-card__link" href="projects/myanimerent/" data-i18n="compact.viewProject">Lihat proyek &amp; preview</a>
+<a class="work-card__link" href="projects/myanimerent/" data-i18n="ui.project.myanimerent">Lihat aplikasi MyAnimeRent</a>
 </div>
 </article>
 </div>
@@ -436,7 +436,7 @@
 </script>
 <script defer src="assets/js/i18n.js">
 </script>
-<script defer src="script.js">
+<script defer src="script.js?v=de2d35ffa00e">
 </script>
 <script defer src="assets/js/gallery.js">
 </script>

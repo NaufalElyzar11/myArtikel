@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
 <link rel="stylesheet" href="../../assets/css/project-detail.css">
 <link rel="stylesheet" href="../../assets/css/site-controls.css">
-<link rel="stylesheet" href="../../assets/css/software-project.css?v=4535b2bd6611">
+<link rel="stylesheet" href="../../assets/css/software-project.css?v=705488b7ce77">
 </head>
 <body class="software-page" data-software-project="myanimerent">
 <a class="skip-link" href="#main-content" data-i18n="t002">Langsung ke konten</a>
@@ -68,56 +68,58 @@
 <span data-i18n="sw.real.229" class="preview-label">Screenshot aplikasi asli · data demo</span>
 </div>
 <div class="walkthrough" data-walkthrough data-capture-kind="mobile">
-<div class="walkthrough__scene" data-scene="0" >
+<div class="walkthrough__controls" role="group" aria-label="Kontrol preview aplikasi" data-i18n-aria-label="sw.ui.controls" hidden>
+<div class="walkthrough__steps" role="group" aria-label="Pilih tampilan aplikasi" data-i18n-aria-label="sw.ui.choose">
+<button data-i18n="sw.real.230" type="button" data-preview-step="0" aria-pressed="true" aria-controls="preview-scene-0">1. Beranda &amp; katalog kostum</button>
+<button data-i18n="sw.real.231" type="button" data-preview-step="1" aria-pressed="false" aria-controls="preview-scene-1">2. Detail kostum yang sebenarnya</button>
+<button data-i18n="sw.real.232" type="button" data-preview-step="2" aria-pressed="false" aria-controls="preview-scene-2">3. Ukuran &amp; kalender sewa</button>
+</div>
+<div class="walkthrough__transport">
+<button data-i18n="sw.real.233" type="button" data-preview-prev>Sebelumnya</button>
+<button data-i18n="sw.real.234" type="button" data-preview-next>Berikutnya</button>
+<button type="button" data-preview-play aria-pressed="false">Putar preview</button>
+</div>
+<p class="walkthrough__status" data-preview-status role="status" aria-live="polite">
+</p>
+</div>
+<div class="walkthrough__scene" id="preview-scene-0" role="group" aria-labelledby="preview-title-0" data-scene="0" >
 <figure class="actual-capture">
 <a class="gallery__item" href="../../assets/images/previews/myanimerent-home.jpg" data-caption="Beranda &amp; katalog kostum" data-i18n-data-caption="sw.capture.myanimerent.0">
 <img src="../../assets/images/previews/myanimerent-home.jpg" width="390" height="843" alt="Beranda &amp; katalog kostum" data-i18n-alt="sw.capture.myanimerent.0" loading="eager" decoding="async">
 </a>
-<figcaption data-i18n="sw.real.230" >Klik gambar untuk memperbesar</figcaption>
+<figcaption data-i18n="sw.real.235" >Klik gambar untuk memperbesar ↗</figcaption>
 </figure>
 <div class="walkthrough__copy">
 <span class="walkthrough__number">01 / 03</span>
-<h3 data-i18n="sw.real.231" >Beranda &amp; katalog kostum</h3>
-<p data-i18n="sw.real.232" >Ini adalah tampilan beranda Flutter asli, dengan banner kostum, direktori toko, kategori, dan navigasi aplikasi.</p>
+<h3 data-i18n="sw.real.236" id="preview-title-0">Beranda &amp; katalog kostum</h3>
+<p data-i18n="sw.real.237" >Ini adalah tampilan beranda Flutter asli, dengan banner kostum, direktori toko, kategori, dan navigasi aplikasi.</p>
 </div>
 </div>
-<div class="walkthrough__scene" data-scene="1" hidden>
+<div class="walkthrough__scene" id="preview-scene-1" role="group" aria-labelledby="preview-title-1" data-scene="1" hidden>
 <figure class="actual-capture">
 <a class="gallery__item" href="../../assets/images/previews/myanimerent-detail.jpg" data-caption="Detail kostum yang sebenarnya" data-i18n-data-caption="sw.capture.myanimerent.1">
 <img src="../../assets/images/previews/myanimerent-detail.jpg" width="390" height="843" alt="Detail kostum yang sebenarnya" data-i18n-alt="sw.capture.myanimerent.1" loading="lazy" decoding="async">
 </a>
-<figcaption data-i18n="sw.real.233" >Klik gambar untuk memperbesar</figcaption>
+<figcaption data-i18n="sw.real.238" >Klik gambar untuk memperbesar ↗</figcaption>
 </figure>
 <div class="walkthrough__copy">
 <span class="walkthrough__number">02 / 03</span>
-<h3 data-i18n="sw.real.234" >Detail kostum yang sebenarnya</h3>
-<p data-i18n="sw.real.235" >Layar asli menampilkan foto kostum, toko penyedia, harga, dan deskripsi sebelum pengguna memilih ukuran serta tanggal sewa.</p>
+<h3 data-i18n="sw.real.239" id="preview-title-1">Detail kostum yang sebenarnya</h3>
+<p data-i18n="sw.real.240" >Layar asli menampilkan foto kostum, toko penyedia, harga, dan deskripsi sebelum pengguna memilih ukuran serta tanggal sewa.</p>
 </div>
 </div>
-<div class="walkthrough__scene" data-scene="2" hidden>
+<div class="walkthrough__scene" id="preview-scene-2" role="group" aria-labelledby="preview-title-2" data-scene="2" hidden>
 <figure class="actual-capture">
 <a class="gallery__item" href="../../assets/images/previews/myanimerent-calendar.jpg" data-caption="Ukuran &amp; kalender sewa" data-i18n-data-caption="sw.capture.myanimerent.2">
 <img src="../../assets/images/previews/myanimerent-calendar.jpg" width="390" height="843" alt="Ukuran &amp; kalender sewa" data-i18n-alt="sw.capture.myanimerent.2" loading="lazy" decoding="async">
 </a>
-<figcaption data-i18n="sw.real.236" >Klik gambar untuk memperbesar</figcaption>
+<figcaption data-i18n="sw.real.241" >Klik gambar untuk memperbesar ↗</figcaption>
 </figure>
 <div class="walkthrough__copy">
 <span class="walkthrough__number">03 / 03</span>
-<h3 data-i18n="sw.real.237" >Ukuran &amp; kalender sewa</h3>
-<p data-i18n="sw.real.238" >Kalender dan pemilihan ukuran berasal dari widget aplikasi asli. Rentang tanggal yang dipilih di sini hanya contoh dan tidak membuat pemesanan.</p>
+<h3 data-i18n="sw.real.242" id="preview-title-2">Ukuran &amp; kalender sewa</h3>
+<p data-i18n="sw.real.243" >Kalender dan pemilihan ukuran berasal dari widget aplikasi asli. Rentang tanggal yang dipilih di sini hanya contoh dan tidak membuat pemesanan.</p>
 </div>
-</div>
-<div class="walkthrough__controls" hidden>
-<div class="walkthrough__steps">
-<button data-i18n="sw.real.239" type="button" data-preview-step="0" aria-pressed="true">Tampilan 1</button>
-<button data-i18n="sw.real.240" type="button" data-preview-step="1" aria-pressed="false">Tampilan 2</button>
-<button data-i18n="sw.real.241" type="button" data-preview-step="2" aria-pressed="false">Tampilan 3</button>
-</div>
-<button data-i18n="sw.real.242" type="button" data-preview-prev>Sebelumnya</button>
-<button data-i18n="sw.real.243" type="button" data-preview-next>Berikutnya</button>
-<button type="button" data-preview-play aria-pressed="false">Putar preview</button>
-<p class="walkthrough__status" data-preview-status role="status" aria-live="polite">
-</p>
 </div>
 <p data-i18n="sw.real.244" class="walkthrough__footnote">Tangkapan layar diambil dari antarmuka aplikasi asli pada lingkungan lokal dengan data demo. Teks di dalam gambar mengikuti bahasa aplikasi.</p>
 </div>
@@ -190,13 +192,13 @@
 </footer>
 <script defer src="../../assets/js/translations.js">
 </script>
-<script defer src="../../assets/js/software-data.js?v=655e0d659943">
+<script defer src="../../assets/js/software-data.js?v=b9c254ae079a">
 </script>
 <script defer src="../../assets/js/i18n.js">
 </script>
 <script defer src="../../assets/js/gallery.js">
 </script>
-<script defer src="../../assets/js/software-project.js">
+<script defer src="../../assets/js/software-project.js?v=92ae1a1db11a">
 </script>
 </body>
 </html>

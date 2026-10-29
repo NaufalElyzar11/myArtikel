@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
 <link rel="stylesheet" href="../../assets/css/project-detail.css">
 <link rel="stylesheet" href="../../assets/css/site-controls.css">
-<link rel="stylesheet" href="../../assets/css/software-project.css?v=4535b2bd6611">
+<link rel="stylesheet" href="../../assets/css/software-project.css?v=705488b7ce77">
 </head>
 <body class="software-page" data-software-project="e-ponic">
 <a class="skip-link" href="#main-content" data-i18n="t002">Langsung ke konten</a>
@@ -68,56 +68,58 @@
 <span data-i18n="sw.real.282" class="preview-label">Screenshot aplikasi asli · data demo</span>
 </div>
 <div class="walkthrough" data-walkthrough data-capture-kind="mobile">
-<div class="walkthrough__scene" data-scene="0" >
+<div class="walkthrough__controls" role="group" aria-label="Kontrol preview aplikasi" data-i18n-aria-label="sw.ui.controls" hidden>
+<div class="walkthrough__steps" role="group" aria-label="Pilih tampilan aplikasi" data-i18n-aria-label="sw.ui.choose">
+<button data-i18n="sw.real.283" type="button" data-preview-step="0" aria-pressed="true" aria-controls="preview-scene-0">1. Beranda petani</button>
+<button data-i18n="sw.real.284" type="button" data-preview-step="1" aria-pressed="false" aria-controls="preview-scene-1">2. Detail perawatan tanaman</button>
+<button data-i18n="sw.real.285" type="button" data-preview-step="2" aria-pressed="false" aria-controls="preview-scene-2">3. Tugas panen</button>
+</div>
+<div class="walkthrough__transport">
+<button data-i18n="sw.real.286" type="button" data-preview-prev>Sebelumnya</button>
+<button data-i18n="sw.real.287" type="button" data-preview-next>Berikutnya</button>
+<button type="button" data-preview-play aria-pressed="false">Putar preview</button>
+</div>
+<p class="walkthrough__status" data-preview-status role="status" aria-live="polite">
+</p>
+</div>
+<div class="walkthrough__scene" id="preview-scene-0" role="group" aria-labelledby="preview-title-0" data-scene="0" >
 <figure class="actual-capture">
 <a class="gallery__item" href="../../assets/images/previews/eponic-farmer.jpg" data-caption="Beranda petani" data-i18n-data-caption="sw.capture.e-ponic.0">
 <img src="../../assets/images/previews/eponic-farmer.jpg" width="390" height="843" alt="Beranda petani" data-i18n-alt="sw.capture.e-ponic.0" loading="eager" decoding="async">
 </a>
-<figcaption data-i18n="sw.real.283" >Klik gambar untuk memperbesar</figcaption>
+<figcaption data-i18n="sw.real.288" >Klik gambar untuk memperbesar ↗</figcaption>
 </figure>
 <div class="walkthrough__copy">
 <span class="walkthrough__number">01 / 03</span>
-<h3 data-i18n="sw.real.284" >Beranda petani</h3>
-<p data-i18n="sw.real.285" >Tampilan asli menampilkan ringkasan tanaman dan daftar jadwal perawatan harian untuk petani.</p>
+<h3 data-i18n="sw.real.289" id="preview-title-0">Beranda petani</h3>
+<p data-i18n="sw.real.290" >Tampilan asli menampilkan ringkasan tanaman dan daftar jadwal perawatan harian untuk petani.</p>
 </div>
 </div>
-<div class="walkthrough__scene" data-scene="1" hidden>
+<div class="walkthrough__scene" id="preview-scene-1" role="group" aria-labelledby="preview-title-1" data-scene="1" hidden>
 <figure class="actual-capture">
 <a class="gallery__item" href="../../assets/images/previews/eponic-maintenance.jpg" data-caption="Detail perawatan tanaman" data-i18n-data-caption="sw.capture.e-ponic.1">
 <img src="../../assets/images/previews/eponic-maintenance.jpg" width="390" height="843" alt="Detail perawatan tanaman" data-i18n-alt="sw.capture.e-ponic.1" loading="lazy" decoding="async">
 </a>
-<figcaption data-i18n="sw.real.286" >Klik gambar untuk memperbesar</figcaption>
+<figcaption data-i18n="sw.real.291" >Klik gambar untuk memperbesar ↗</figcaption>
 </figure>
 <div class="walkthrough__copy">
 <span class="walkthrough__number">02 / 03</span>
-<h3 data-i18n="sw.real.287" >Detail perawatan tanaman</h3>
-<p data-i18n="sw.real.288" >Layar asli memuat tugas, penjelasan, tanggal, waktu, dan interval perawatan yang perlu diikuti.</p>
+<h3 data-i18n="sw.real.292" id="preview-title-1">Detail perawatan tanaman</h3>
+<p data-i18n="sw.real.293" >Layar asli memuat tugas, penjelasan, tanggal, waktu, dan interval perawatan yang perlu diikuti.</p>
 </div>
 </div>
-<div class="walkthrough__scene" data-scene="2" hidden>
+<div class="walkthrough__scene" id="preview-scene-2" role="group" aria-labelledby="preview-title-2" data-scene="2" hidden>
 <figure class="actual-capture">
 <a class="gallery__item" href="../../assets/images/previews/eponic-harvest.jpg" data-caption="Tugas panen" data-i18n-data-caption="sw.capture.e-ponic.2">
 <img src="../../assets/images/previews/eponic-harvest.jpg" width="390" height="843" alt="Tugas panen" data-i18n-alt="sw.capture.e-ponic.2" loading="lazy" decoding="async">
 </a>
-<figcaption data-i18n="sw.real.289" >Klik gambar untuk memperbesar</figcaption>
+<figcaption data-i18n="sw.real.294" >Klik gambar untuk memperbesar ↗</figcaption>
 </figure>
 <div class="walkthrough__copy">
 <span class="walkthrough__number">03 / 03</span>
-<h3 data-i18n="sw.real.290" >Tugas panen</h3>
-<p data-i18n="sw.real.291" >Daftar tugas panen berasal dari antarmuka aplikasi yang sebenarnya. Nama pelanggan, alamat, dan jumlah di layar ini khusus untuk demonstrasi.</p>
+<h3 data-i18n="sw.real.295" id="preview-title-2">Tugas panen</h3>
+<p data-i18n="sw.real.296" >Daftar tugas panen berasal dari antarmuka aplikasi yang sebenarnya. Nama pelanggan, alamat, dan jumlah di layar ini khusus untuk demonstrasi.</p>
 </div>
-</div>
-<div class="walkthrough__controls" hidden>
-<div class="walkthrough__steps">
-<button data-i18n="sw.real.292" type="button" data-preview-step="0" aria-pressed="true">Tampilan 1</button>
-<button data-i18n="sw.real.293" type="button" data-preview-step="1" aria-pressed="false">Tampilan 2</button>
-<button data-i18n="sw.real.294" type="button" data-preview-step="2" aria-pressed="false">Tampilan 3</button>
-</div>
-<button data-i18n="sw.real.295" type="button" data-preview-prev>Sebelumnya</button>
-<button data-i18n="sw.real.296" type="button" data-preview-next>Berikutnya</button>
-<button type="button" data-preview-play aria-pressed="false">Putar preview</button>
-<p class="walkthrough__status" data-preview-status role="status" aria-live="polite">
-</p>
 </div>
 <p data-i18n="sw.real.297" class="walkthrough__footnote">Tangkapan layar diambil dari antarmuka aplikasi asli pada lingkungan lokal dengan data demo. Teks di dalam gambar mengikuti bahasa aplikasi.</p>
 </div>
@@ -190,13 +192,13 @@
 </footer>
 <script defer src="../../assets/js/translations.js">
 </script>
-<script defer src="../../assets/js/software-data.js?v=655e0d659943">
+<script defer src="../../assets/js/software-data.js?v=b9c254ae079a">
 </script>
 <script defer src="../../assets/js/i18n.js">
 </script>
 <script defer src="../../assets/js/gallery.js">
 </script>
-<script defer src="../../assets/js/software-project.js">
+<script defer src="../../assets/js/software-project.js?v=92ae1a1db11a">
 </script>
 </body>
 </html>

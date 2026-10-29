@@ -6,7 +6,8 @@ const manifest = JSON.parse(fs.readFileSync(path.join(root, 'assets/images/previ
 const translationPath = path.join(root, 'assets/js/translations.js');
 const catalog = JSON.parse(fs.readFileSync(translationPath,'utf8').split('window.siteTranslations = ')[1].trim().replace(/;$/,''));
 const styleVersion = require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(root,'style.css'))).digest('hex').slice(0,12);
-for (const file of ['index.html', 'projects/index.html']) {
+const scriptVersion = require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(root,'script.js'))).digest('hex').slice(0,12);
+for (const file of ['index.html', 'projects/index.html', 'profil/index.html']) {
   const source = fs.readFileSync(path.join(root,file),'utf8');
   const { document } = parseHTML(source);
   const prefix = file === 'index.html' ? './' : '../';
@@ -27,8 +28,10 @@ for (const file of ['index.html', 'projects/index.html']) {
     media.classList.toggle('work-card__media--mobile-capture',capture.kind === 'mobile');
     media.innerHTML = `<img src="${prefix}assets/images/previews/${image.image}" width="${image.width}" height="${image.height}" alt="${image.title.id}" data-i18n-alt="${key}" loading="lazy" decoding="async">`;
   }
-  const html = document.documentElement.outerHTML.replace(/></g,'>\n<').replace(/style\.css\?v=[^"\s]+/g, `style.css?v=${styleVersion}`);
+  const html = document.documentElement.outerHTML.replace(/></g,'>\n<')
+    .replace(/style\.css(?:\?v=[^"\s]+)?(?=")/g, `style.css?v=${styleVersion}`)
+    .replace(/(src="(?:\.\/|\.\.\/)?)script\.js(?:\?[^"\s]+)?"/g, `$1script.js?v=${scriptVersion}"`);
   fs.writeFileSync(path.join(root,file),'<!DOCTYPE html>\n'+html+'\n');
 }
 fs.writeFileSync(translationPath,`window.siteTranslations = ${JSON.stringify(catalog,null,2)};\n`);
-console.log('Updated homepage and project archive covers from genuine captures.');
+console.log('Updated genuine capture covers and shared stylesheet/script versions.');

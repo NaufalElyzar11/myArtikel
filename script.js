@@ -25,16 +25,13 @@ const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
 
 const sectionLinks = [...(navMenu?.querySelectorAll('a[href^="#"]') || [])];
+const overviewSections = [...document.querySelectorAll('main > section[id]')];
 let pending = false;
 function updateSection() {
   pending = false;
-  const candidates = sectionLinks.filter(link => {
-    const section = document.querySelector(link.getAttribute('href'));
-    return section && section.getBoundingClientRect().top <= 150;
-  });
-  const active = candidates.sort((a, b) =>
-    document.querySelector(b.getAttribute('href')).getBoundingClientRect().top -
-    document.querySelector(a.getAttribute('href')).getBoundingClientRect().top)[0];
+  const currentSection = overviewSections.filter(section => section.getBoundingClientRect().top <= 150)
+    .sort((a, b) => b.getBoundingClientRect().top - a.getBoundingClientRect().top)[0];
+  const active = currentSection && sectionLinks.find(link => link.getAttribute('href') === `#${currentSection.id}`);
   sectionLinks.forEach(link => {
     if (link === active) link.setAttribute('aria-current', 'location');
     else link.removeAttribute('aria-current');

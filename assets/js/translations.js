@@ -3048,12 +3048,12 @@ window.siteTranslations = {
     "en": "I develop robots, sensor devices, and web and mobile applications. From robot movement to leave requests, my projects start with the tasks users need to complete."
   },
   "compact.hero.projects": {
-    "id": "Lihat proyek & kontribusi saya",
-    "en": "See projects & my contribution"
+    "id": "Lihat proyek pilihan",
+    "en": "Explore selected projects"
   },
   "compact.hero.contact": {
-    "id": "Diskusikan peluang",
-    "en": "Discuss an opportunity"
+    "id": "Hubungi saya",
+    "en": "Get in touch"
   },
   "compact.projects.eyebrow": {
     "id": "01 / Karya pilihan",
@@ -3582,5 +3582,25 @@ window.siteTranslations = {
   "research.contact.prompt": {
     "id": "Ceritakan posisi atau kebutuhan proyek, lingkup pekerjaan, dan perkiraan waktunya sebagai awal percakapan.",
     "en": "Start the conversation with the role or project needs, scope of work, and an approximate timeline."
+  },
+  "ui.nav.profile": {
+    "id": "Profil",
+    "en": "Profile"
+  },
+  "ui.project.hexaka": {
+    "id": "Jelajahi proyek Hexaka",
+    "en": "Explore the Hexaka project"
+  },
+  "ui.project.cetakin": {
+    "id": "Lihat website CetakIn",
+    "en": "Explore the CetakIn website"
+  },
+  "ui.project.kominfo": {
+    "id": "Lihat cara kerja Si-Cuti",
+    "en": "See how Si-Cuti works"
+  },
+  "ui.project.myanimerent": {
+    "id": "Lihat aplikasi MyAnimeRent",
+    "en": "Explore the MyAnimeRent app"
   }
 };

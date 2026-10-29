@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
 <link rel="stylesheet" href="../../assets/css/project-detail.css">
 <link rel="stylesheet" href="../../assets/css/site-controls.css">
-<link rel="stylesheet" href="../../assets/css/software-project.css?v=4535b2bd6611">
+<link rel="stylesheet" href="../../assets/css/software-project.css?v=705488b7ce77">
 </head>
 <body class="software-page" data-software-project="pkl-kominfo">
 <a class="skip-link" href="#main-content" data-i18n="t002">Langsung ke konten</a>
@@ -68,56 +68,58 @@
 <span data-i18n="sw.real.70" class="preview-label">Screenshot aplikasi asli · data demo</span>
 </div>
 <div class="walkthrough" data-walkthrough data-capture-kind="web">
-<div class="walkthrough__scene" data-scene="0" >
+<div class="walkthrough__controls" role="group" aria-label="Kontrol preview aplikasi" data-i18n-aria-label="sw.ui.controls" hidden>
+<div class="walkthrough__steps" role="group" aria-label="Pilih tampilan aplikasi" data-i18n-aria-label="sw.ui.choose">
+<button data-i18n="sw.real.71" type="button" data-preview-step="0" aria-pressed="true" aria-controls="preview-scene-0">1. Dashboard pegawai</button>
+<button data-i18n="sw.real.72" type="button" data-preview-step="1" aria-pressed="false" aria-controls="preview-scene-1">2. Formulir pengajuan cuti</button>
+<button data-i18n="sw.real.73" type="button" data-preview-step="2" aria-pressed="false" aria-controls="preview-scene-2">3. Riwayat &amp; laporan cuti</button>
+</div>
+<div class="walkthrough__transport">
+<button data-i18n="sw.real.74" type="button" data-preview-prev>Sebelumnya</button>
+<button data-i18n="sw.real.75" type="button" data-preview-next>Berikutnya</button>
+<button type="button" data-preview-play aria-pressed="false">Putar preview</button>
+</div>
+<p class="walkthrough__status" data-preview-status role="status" aria-live="polite">
+</p>
+</div>
+<div class="walkthrough__scene" id="preview-scene-0" role="group" aria-labelledby="preview-title-0" data-scene="0" >
 <figure class="actual-capture">
 <a class="gallery__item" href="../../assets/images/previews/pkl-dashboard.jpg" data-caption="Dashboard pegawai" data-i18n-data-caption="sw.capture.pkl-kominfo.0">
 <img src="../../assets/images/previews/pkl-dashboard.jpg" width="1425" height="990" alt="Dashboard pegawai" data-i18n-alt="sw.capture.pkl-kominfo.0" loading="eager" decoding="async">
 </a>
-<figcaption data-i18n="sw.real.71" >Klik gambar untuk memperbesar</figcaption>
+<figcaption data-i18n="sw.real.76" >Klik gambar untuk memperbesar ↗</figcaption>
 </figure>
 <div class="walkthrough__copy">
 <span class="walkthrough__number">01 / 03</span>
-<h3 data-i18n="sw.real.72" >Dashboard pegawai</h3>
-<p data-i18n="sw.real.73" >Tampilan asli ringkasan sisa cuti, pemberitahuan, dan status permohonan. Seluruh identitas serta angka pada screenshot adalah data demonstrasi.</p>
+<h3 data-i18n="sw.real.77" id="preview-title-0">Dashboard pegawai</h3>
+<p data-i18n="sw.real.78" >Tampilan asli ringkasan sisa cuti, pemberitahuan, dan status permohonan. Seluruh identitas serta angka pada screenshot adalah data demonstrasi.</p>
 </div>
 </div>
-<div class="walkthrough__scene" data-scene="1" hidden>
+<div class="walkthrough__scene" id="preview-scene-1" role="group" aria-labelledby="preview-title-1" data-scene="1" hidden>
 <figure class="actual-capture">
 <a class="gallery__item" href="../../assets/images/previews/pkl-request.jpg" data-caption="Formulir pengajuan cuti" data-i18n-data-caption="sw.capture.pkl-kominfo.1">
 <img src="../../assets/images/previews/pkl-request.jpg" width="1440" height="1000" alt="Formulir pengajuan cuti" data-i18n-alt="sw.capture.pkl-kominfo.1" loading="lazy" decoding="async">
 </a>
-<figcaption data-i18n="sw.real.74" >Klik gambar untuk memperbesar</figcaption>
+<figcaption data-i18n="sw.real.79" >Klik gambar untuk memperbesar ↗</figcaption>
 </figure>
 <div class="walkthrough__copy">
 <span class="walkthrough__number">02 / 03</span>
-<h3 data-i18n="sw.real.75" >Formulir pengajuan cuti</h3>
-<p data-i18n="sw.real.76" >Formulir asli memperlihatkan data pegawai, jenis cuti, periode, alasan, dan pengganti tugas sebelum permohonan dikirim.</p>
+<h3 data-i18n="sw.real.80" id="preview-title-1">Formulir pengajuan cuti</h3>
+<p data-i18n="sw.real.81" >Formulir asli memperlihatkan data pegawai, jenis cuti, periode, alasan, dan pengganti tugas sebelum permohonan dikirim.</p>
 </div>
 </div>
-<div class="walkthrough__scene" data-scene="2" hidden>
+<div class="walkthrough__scene" id="preview-scene-2" role="group" aria-labelledby="preview-title-2" data-scene="2" hidden>
 <figure class="actual-capture">
 <a class="gallery__item" href="../../assets/images/previews/pkl-history.jpg" data-caption="Riwayat &amp; laporan cuti" data-i18n-data-caption="sw.capture.pkl-kominfo.2">
 <img src="../../assets/images/previews/pkl-history.jpg" width="1440" height="1000" alt="Riwayat &amp; laporan cuti" data-i18n-alt="sw.capture.pkl-kominfo.2" loading="lazy" decoding="async">
 </a>
-<figcaption data-i18n="sw.real.77" >Klik gambar untuk memperbesar</figcaption>
+<figcaption data-i18n="sw.real.82" >Klik gambar untuk memperbesar ↗</figcaption>
 </figure>
 <div class="walkthrough__copy">
 <span class="walkthrough__number">03 / 03</span>
-<h3 data-i18n="sw.real.78" >Riwayat &amp; laporan cuti</h3>
-<p data-i18n="sw.real.79" >Tampilan riwayat asli membantu pegawai meninjau hasil persetujuan serta mengakses rekap laporan. Data yang terlihat dibuat khusus untuk preview.</p>
+<h3 data-i18n="sw.real.83" id="preview-title-2">Riwayat &amp; laporan cuti</h3>
+<p data-i18n="sw.real.84" >Tampilan riwayat asli membantu pegawai meninjau hasil persetujuan serta mengakses rekap laporan. Data yang terlihat dibuat khusus untuk preview.</p>
 </div>
-</div>
-<div class="walkthrough__controls" hidden>
-<div class="walkthrough__steps">
-<button data-i18n="sw.real.80" type="button" data-preview-step="0" aria-pressed="true">Tampilan 1</button>
-<button data-i18n="sw.real.81" type="button" data-preview-step="1" aria-pressed="false">Tampilan 2</button>
-<button data-i18n="sw.real.82" type="button" data-preview-step="2" aria-pressed="false">Tampilan 3</button>
-</div>
-<button data-i18n="sw.real.83" type="button" data-preview-prev>Sebelumnya</button>
-<button data-i18n="sw.real.84" type="button" data-preview-next>Berikutnya</button>
-<button type="button" data-preview-play aria-pressed="false">Putar preview</button>
-<p class="walkthrough__status" data-preview-status role="status" aria-live="polite">
-</p>
 </div>
 <p data-i18n="sw.real.85" class="walkthrough__footnote">Tangkapan layar diambil dari antarmuka aplikasi asli pada lingkungan lokal dengan data demo. Teks di dalam gambar mengikuti bahasa aplikasi.</p>
 </div>
@@ -191,13 +193,13 @@
 </footer>
 <script defer src="../../assets/js/translations.js">
 </script>
-<script defer src="../../assets/js/software-data.js?v=655e0d659943">
+<script defer src="../../assets/js/software-data.js?v=b9c254ae079a">
 </script>
 <script defer src="../../assets/js/i18n.js">
 </script>
 <script defer src="../../assets/js/gallery.js">
 </script>
-<script defer src="../../assets/js/software-project.js">
+<script defer src="../../assets/js/software-project.js?v=92ae1a1db11a">
 </script>
 </body>
 </html>

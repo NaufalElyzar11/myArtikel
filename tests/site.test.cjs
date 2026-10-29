@@ -148,6 +148,25 @@ test('Mobile menu survives language changes and closes with Escape or resize', (
   assert.equal(toggle.getAttribute('aria-expanded'), 'false');
 });
 
+test('Overview navigation clears its active state while reading a section outside the main menu', () => {
+  const { document, window } = load('index.html');
+  const sections = [...document.querySelectorAll('main > section[id]')];
+  const positions = new Map(sections.map(section => [section.id, 1000]));
+  sections.forEach(section => { section.getBoundingClientRect = () => ({ top: positions.get(section.id) }); });
+  positions.set('projects', -200);
+  window.dispatchEvent(new window.Event('scroll'));
+  assert.equal(document.querySelector('#navMenu a[href="#projects"]').getAttribute('aria-current'), 'location');
+  positions.set('about', 80);
+  window.dispatchEvent(new window.Event('scroll'));
+  assert.equal(document.querySelector('#navMenu [aria-current]'), null);
+  positions.set('about', -400);
+  positions.set('skills', 80);
+  window.dispatchEvent(new window.Event('scroll'));
+  assert.equal(document.querySelector('#navMenu a[href="#skills"]').getAttribute('aria-current'), 'location');
+  const profile = load('profil/index.html').document;
+  assert.equal(profile.querySelector('#navMenu [aria-current="page"]').textContent, 'Profil');
+});
+
 test('Project contents collapse on mobile and expand on desktop', () => {
   const { document, click, media, window } = load('projects/hexaka/index.html');
   const toggle = document.querySelector('.toc-toggle');
@@ -312,6 +331,13 @@ for (const file of softwareFiles.filter(file => captureManifest[file.split('/')[
     assert.equal(play.getAttribute('aria-pressed'), 'false');
     click(document.querySelector('[data-preview-step="2"]'));
     assert.equal(current(), 2);
+    click(play);
+    assert.equal(timers.size, 1);
+    click(document.querySelector('.walkthrough__scene:not([hidden]) .gallery__item'));
+    assert.equal(play.getAttribute('aria-pressed'), 'false');
+    assert.equal(timers.size, 0);
+    click(document.querySelector('.lightbox__close'));
+    assert.equal(document.querySelector('.lightbox').getAttribute('aria-hidden'), 'true');
   });
 
   test(`${file}: reduced motion disables scene transitions and honors preference changes`, () => {

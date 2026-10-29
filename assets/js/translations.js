@@ -400,8 +400,8 @@ window.siteTranslations = {
     "en": "Sunset"
   },
   "t101": {
-    "id": "Sedang merancang prototipe perangkat asistif, sistem sensor IoT, aplikasi web/Flutter, atau ingin mengundang untuk kelas dan workshop robotika? Hubungi saya melalui kanal di bawah ini.",
-    "en": "Building an assistive device prototype, IoT sensor network, web/Flutter app, or looking to invite a speaker for a robotics/IoT workshop? Reach out through any channel below."
+    "id": "Untuk membahas peluang kerja, kolaborasi perangkat atau aplikasi, maupun kelas dan workshop robotika, hubungi saya melalui kanal di bawah ini.",
+    "en": "To discuss a job opportunity, device or application collaboration, or a robotics class or workshop, contact me through the channels below."
   },
   "t102": {
     "id": "Rekan kolaborasi",
@@ -3040,36 +3040,36 @@ window.siteTranslations = {
     "en": "Certificate of honor as Speaker in the Internet of Things Workshop organized by the Information Technology Student Association (HMTI), Faculty of Engineering, Lambung Mangkurat University. Ref: 281/UN8.1.31.7/SP/2026."
   },
   "compact.position": {
-    "id": "Robotika, IoT & pengembangan aplikasi",
-    "en": "Robotics, IoT & application development"
+    "id": "Robotika & IoT · Web & Mobile · Educator",
+    "en": "Robotics & IoT · Web & Mobile · Educator"
   },
   "compact.hero": {
-    "id": "Saya membangun perangkat dan aplikasi untuk kebutuhan nyata. Mahasiswa Teknologi Informasi ULM, General Manager Wasaka Robotic Team, dan Co-Founder CetakIn.",
-    "en": "I build devices and applications for real needs. Information Technology student at ULM, General Manager of Wasaka Robotic Team, and Co-Founder of CetakIn."
+    "id": "Saya mengembangkan robot, perangkat sensor, dan aplikasi web & mobile. Dari gerak robot sampai pengajuan cuti, proyek saya berangkat dari tugas yang perlu diselesaikan pengguna.",
+    "en": "I develop robots, sensor devices, and web and mobile applications. From robot movement to leave requests, my projects start with the tasks users need to complete."
   },
   "compact.hero.projects": {
-    "id": "Lihat karya pilihan",
-    "en": "Explore selected work"
+    "id": "Lihat proyek & kontribusi saya",
+    "en": "See projects & my contribution"
   },
   "compact.hero.contact": {
-    "id": "Hubungi saya",
-    "en": "Get in touch"
+    "id": "Diskusikan peluang",
+    "en": "Discuss an opportunity"
   },
   "compact.projects.eyebrow": {
     "id": "01 / Karya pilihan",
     "en": "01 / Selected work"
   },
   "compact.projects.title": {
-    "id": "Dari ide menjadi sesuatu yang berguna.",
-    "en": "Turning ideas into useful things."
+    "id": "Pilihan proyek",
+    "en": "Selected projects"
   },
   "compact.projects.sub": {
-    "id": "Lihat apa yang dibuat, manfaatnya, dan cara kerjanya langsung di halaman proyek.",
-    "en": "See what I built, who it helps, and how it works on each project page."
+    "id": "Empat contoh pekerjaan saya: kebutuhan penggunanya, bagian yang saya kerjakan, dan hasil yang bisa Anda lihat.",
+    "en": "Four examples of my work: the users’ needs, my contribution, and results you can explore."
   },
   "compact.hexaka.role": {
-    "id": "Kontribusi: pemrograman robot & kendali",
-    "en": "Contribution: robot programming & control"
+    "id": "Bagian saya: pemrograman gerak dan kendali robot bersama Wasaka Robotic Team.",
+    "en": "My contribution: robot movement programming and control with Wasaka Robotic Team."
   },
   "compact.kind.Robotika": {
     "id": "Robotika",
@@ -3084,8 +3084,8 @@ window.siteTranslations = {
     "en": "View project & preview"
   },
   "compact.cetakin.role": {
-    "id": "Peran: Co-Founder & pengembangan teknologi",
-    "en": "Role: Co-Founder & technology development"
+    "id": "Bagian saya: Co-Founder, pengembangan website pelanggan dan konfigurator produk.",
+    "en": "My role: Co-Founder, customer website and product configurator development."
   },
   "compact.kind.Usaha & web": {
     "id": "Usaha & web",
@@ -3096,8 +3096,8 @@ window.siteTranslations = {
     "en": "3D printing and robotics products with a product configurator visitors can use in a browser."
   },
   "compact.kominfo.role": {
-    "id": "Kontribusi: pengembangan aplikasi web",
-    "en": "Contribution: web application development"
+    "id": "Bagian saya saat PKL: alur pengajuan, hak akses, persetujuan, dan laporan.",
+    "en": "My internship contribution: request workflows, access roles, approvals, and reports."
   },
   "compact.illustration": {
     "id": "Ilustrasi tampilan",
@@ -3112,8 +3112,8 @@ window.siteTranslations = {
     "en": "Brings employee leave requests, tiered approvals, and official letters into one system."
   },
   "compact.anime.role": {
-    "id": "Kontribusi: pengembangan aplikasi Flutter",
-    "en": "Contribution: Flutter app development"
+    "id": "Bagian saya: katalog, navigasi, dan integrasi data pengguna serta penyewaan di Flutter.",
+    "en": "My contribution: catalogs, navigation, and user and rental data integration in Flutter."
   },
   "compact.kind.Aplikasi Flutter": {
     "id": "Aplikasi Flutter",
@@ -3132,12 +3132,12 @@ window.siteTranslations = {
     "en": "02 / About me"
   },
   "compact.about.title": {
-    "id": "Menjembatani perangkat dan aplikasi.",
-    "en": "Connecting devices and applications."
+    "id": "Tentang saya",
+    "en": "About me"
   },
   "compact.about.copy": {
-    "id": "Fokus saya ada pada robotika dan IoT, aplikasi web dan Flutter, serta prototipe cetak 3D. Saya terbiasa menangani rangkaian, pemrograman, dan antarmuka yang digunakan pengguna.",
-    "en": "My work spans robotics and IoT, web and Flutter apps, and 3D-printed prototypes. I work across circuits, programming, and the interfaces people use."
+    "id": "Pekerjaan saya sering mempertemukan rangkaian, pemrograman, dan antarmuka pengguna. Di Wasaka saya mengembangkan robot bersama tim; melalui CetakIn saya mengerjakan produk dan prototipe cetak 3D. Pengalaman praktik ini juga saya bawa ke kelas dan pendampingan robotika.",
+    "en": "My work often connects circuits, programming, and user interfaces. At Wasaka, I develop robots with the team; through CetakIn, I work on 3D-printed products and prototypes. I also bring this practical experience into robotics classes and mentoring."
   },
   "compact.focus.1": {
     "id": "Robotika & IoT",
@@ -3156,12 +3156,12 @@ window.siteTranslations = {
     "en": "Profile, skills & teaching"
   },
   "compact.proof.eyebrow": {
-    "id": "03 / Pengalaman & bukti",
-    "en": "03 / Experience & evidence"
+    "id": "05 / Pengalaman & bukti",
+    "en": "05 / Experience & evidence"
   },
   "compact.proof.title": {
-    "id": "Dibangun, dipimpin, dan dibagikan.",
-    "en": "Building, leading, and sharing."
+    "id": "Pengalaman & sertifikasi",
+    "en": "Experience & credentials"
   },
   "compact.proof.1": {
     "id": "Wasaka Robotic Team · memimpin koordinasi tim robotika Universitas Lambung Mangkurat.",
@@ -3418,5 +3418,169 @@ window.siteTranslations = {
   "capture.cover.cloud-manager": {
     "id": "Dashboard Vortex Cloud",
     "en": "Vortex Cloud dashboard"
+  },
+  "overview.nav.educator": {
+    "id": "Educator",
+    "en": "Educator"
+  },
+  "overview.skills.eyebrow": {
+    "id": "03 / Kemampuan & perangkat kerja",
+    "en": "03 / Skills & tools"
+  },
+  "overview.skills.intro": {
+    "id": "Teknologi yang saya gunakan, beserta penerapannya dalam proyek.",
+    "en": "The technologies I use and how I apply them in projects."
+  },
+  "overview.tools.robotics.title": {
+    "id": "Robotika & kendali",
+    "en": "Robotics & control"
+  },
+  "overview.tools.robotics.body": {
+    "id": "Pemrograman gerak, keseimbangan, dan navigasi robot.",
+    "en": "Programming robot movement, balance, and navigation."
+  },
+  "overview.tools.example": {
+    "id": "Lihat penerapan",
+    "en": "See it in practice"
+  },
+  "overview.tools.iot.title": {
+    "id": "IoT & perangkat keras",
+    "en": "IoT & hardware"
+  },
+  "overview.tools.iot.body": {
+    "id": "Merakit sensor dan menghubungkan pembacaannya ke aplikasi.",
+    "en": "Building sensor systems and connecting their readings to applications."
+  },
+  "overview.tools.web.title": {
+    "id": "Web, backend & cloud",
+    "en": "Web, backend & cloud"
+  },
+  "overview.tools.web.body": {
+    "id": "Mengembangkan sistem informasi dan layanan untuk operasional pengguna.",
+    "en": "Developing information systems and services for everyday operations."
+  },
+  "overview.tools.mobile.title": {
+    "id": "Aplikasi mobile",
+    "en": "Mobile applications"
+  },
+  "overview.tools.mobile.body": {
+    "id": "Membangun antarmuka ponsel, alur pengguna, dan integrasi data.",
+    "en": "Building mobile interfaces, user journeys, and data integrations."
+  },
+  "overview.tools.vision.title": {
+    "id": "Visi komputer",
+    "en": "Computer vision"
+  },
+  "overview.tools.vision.body": {
+    "id": "Mengolah citra kamera untuk mengenali objek dan membaca lintasan.",
+    "en": "Processing camera images to identify objects and interpret paths."
+  },
+  "overview.tools.prototype.title": {
+    "id": "Prototipe & manufaktur",
+    "en": "Prototypes & manufacturing"
+  },
+  "overview.tools.prototype.body": {
+    "id": "Mewujudkan rancangan menjadi casing, mekanik, dan perangkat fungsional.",
+    "en": "Turning designs into enclosures, mechanisms, and functional devices."
+  },
+  "overview.tools.aria": {
+    "id": "Teknologi",
+    "en": "Technologies"
+  },
+  "overview.skills.more": {
+    "id": "Daftar tools & kemampuan lengkap",
+    "en": "Full tools & skills inventory"
+  },
+  "overview.educator.eyebrow": {
+    "id": "04 / Mengajar & membimbing",
+    "en": "04 / Teaching & mentoring"
+  },
+  "overview.educator.title": {
+    "id": "Educator & Mentor Robotika",
+    "en": "Robotics Educator & Mentor"
+  },
+  "overview.educator.intro": {
+    "id": "Selain membangun proyek, saya membagikan pengalaman melalui kelas praktik, workshop, dan pendampingan kompetisi.",
+    "en": "Alongside building projects, I share my experience through practical classes, workshops, and competition mentoring."
+  },
+  "overview.educator.workshop.category": {
+    "id": "Narasumber & workshop",
+    "en": "Speaking & workshops"
+  },
+  "overview.educator.workshop.title": {
+    "id": "Workshop IoT & pengenalan robotika",
+    "en": "IoT workshops & robotics introductions"
+  },
+  "overview.educator.workshop.body": {
+    "id": "Narasumber “Zero to Smart Device” di HMTI FT ULM dan pemateri pengenalan robotika di SMA Negeri 7 Banjarmasin.",
+    "en": "Speaker for “Zero to Smart Device” at HMTI FT ULM and a robotics introduction workshop at SMA Negeri 7 Banjarmasin."
+  },
+  "overview.educator.class.category": {
+    "id": "Pengajar praktik",
+    "en": "Hands-on teaching"
+  },
+  "overview.educator.class.title": {
+    "id": "Kelas robotika & ekstrakurikuler",
+    "en": "Robotics classes & extracurriculars"
+  },
+  "overview.educator.class.body": {
+    "id": "Mengajar kelas Line Follower dan lima sesi ekstrakurikuler robotika di MAN Insan Cendekia Tanah Laut, dari merangkai komponen hingga memprogram robot.",
+    "en": "Teaching Line Follower classes and five robotics extracurricular sessions at MAN Insan Cendekia Tanah Laut, from assembling components to programming robots."
+  },
+  "overview.educator.mentor.category": {
+    "id": "Mentor kompetisi",
+    "en": "Competition mentoring"
+  },
+  "overview.educator.mentor.title": {
+    "id": "Pendamping finalis KOSSMI Robotik",
+    "en": "Mentor to KOSSMI robotics finalists"
+  },
+  "overview.educator.mentor.body": {
+    "id": "Membina dan mendampingi tim siswa pada final nasional di Telkom University, Bandung, termasuk kesiapan perangkat serta penanganan kendala teknis.",
+    "en": "Coaching and supporting a student team at the national finals at Telkom University, Bandung, including device readiness and technical troubleshooting."
+  },
+  "overview.educator.more": {
+    "id": "Riwayat mengajar & kegiatan lengkap",
+    "en": "Full teaching record & activities"
+  },
+  "overview.educator.proof": {
+    "id": "Lihat sertifikat pendukung",
+    "en": "View supporting certificates"
+  },
+  "overview.profile.gallery": {
+    "id": "Galeri fotografi",
+    "en": "Photography gallery"
+  },
+  "overview.projects.other": {
+    "id": "Proyek perangkat lainnya:",
+    "en": "More hardware projects:"
+  },
+  "overview.contact.eyebrow": {
+    "id": "06 / Kontak & kolaborasi",
+    "en": "06 / Contact & collaboration"
+  },
+  "research.hero.context": {
+    "id": "Mahasiswa Teknologi Informasi Universitas Lambung Mangkurat · General Manager Wasaka Robotic Team · Co-Founder CetakIn · Pengajar robotika.",
+    "en": "Information Technology student at Universitas Lambung Mangkurat · General Manager of Wasaka Robotic Team · Co-Founder of CetakIn · Robotics educator."
+  },
+  "research.hero.award": {
+    "id": "Bersama Wasaka: Juara 3 STEM Robotik 2025 ↗",
+    "en": "With Wasaka: 3rd place, STEM Robotics 2025 ↗"
+  },
+  "research.proof.team": {
+    "id": "Lihat perjalanan di Wasaka",
+    "en": "Explore my work at Wasaka"
+  },
+  "research.proof.award": {
+    "id": "Lihat sertifikat kompetisi ↗",
+    "en": "View competition certificate ↗"
+  },
+  "research.proof.cert": {
+    "id": "Lihat sertifikasi D|FE (PDF) ↗",
+    "en": "View D|FE certification (PDF) ↗"
+  },
+  "research.contact.prompt": {
+    "id": "Ceritakan posisi atau kebutuhan proyek, lingkup pekerjaan, dan perkiraan waktunya sebagai awal percakapan.",
+    "en": "Start the conversation with the role or project needs, scope of work, and an approximate timeline."
   }
 };

@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="style.css?v=24889ecb6d64" rel="stylesheet">
+  <link href="style.css?v=96d7f6840349" rel="stylesheet">
   <link href="assets/css/site-controls.css" rel="stylesheet">
 </head>
 <body class="portfolio-home">
@@ -23,11 +23,14 @@
 <a class="logo" href="#home">Naufal<span>.</span>
 </a>
 <nav aria-label="Navigasi utama" class="nav__menu" data-i18n-aria-label="t106" id="navMenu">
-<a data-i18n="t004" href="#projects">Proyek</a>
-<a data-i18n="t005" href="#about">Tentang</a>
-<a data-i18n="t007" href="#experience">Pengalaman</a>
-<a data-i18n="t009" href="#contact">Kontak</a>
-<a class="btn btn--ghost" data-i18n="t010" href="assets/images/profile/My%20CV.jpg" target="_blank" rel="noreferrer">Lihat CV</a>
+  <a data-i18n="t004" href="#projects">Proyek</a>
+  <a data-i18n="t005" href="#about">Tentang</a>
+  <a data-i18n="t006" href="#skills">Tools &amp; Tech</a>
+  <a data-i18n="overview.nav.educator" href="#educator">Educator</a>
+  <a data-i18n="t007" href="#experience">Pengalaman</a>
+  <a data-i18n="home.nav.certs" href="./profil/#certificates">Sertifikat</a>
+  <a data-i18n="t009" href="#contact">Kontak</a>
+  <a class="btn btn--ghost" data-i18n="t010" href="./assets/images/profile/My%20CV.jpg" target="_blank" rel="noreferrer">Lihat CV</a>
 </nav>
 <div aria-label="Bahasa" class="language-switch" data-i18n-aria-label="t107" role="group">
 <button aria-label="Bahasa Indonesia" aria-pressed="true" data-i18n-aria-label="t108" data-language="id" lang="id" type="button">ID</button>
@@ -47,12 +50,17 @@
 <section class="hero intro" id="home">
 <div class="container intro__grid">
 <div class="intro__copy">
-<p data-i18n="compact.position" class="hero__eyebrow">Robotika, IoT &amp; pengembangan aplikasi</p>
+<p data-i18n="compact.position" class="hero__eyebrow">Robotika &amp; IoT · Web &amp; Mobile · Educator</p>
 <h1 class="hero__title">Naufal Elyzar</h1>
-<p data-i18n="compact.hero" class="hero__intro">Saya membangun perangkat dan aplikasi untuk kebutuhan nyata. Mahasiswa Teknologi Informasi ULM, General Manager Wasaka Robotic Team, dan Co-Founder CetakIn.</p>
+<p data-i18n="compact.hero" class="hero__intro">Saya mengembangkan robot, perangkat sensor, dan aplikasi web &amp; mobile. Dari gerak robot sampai pengajuan cuti, proyek saya berangkat dari tugas yang perlu diselesaikan pengguna.</p>
+<p data-i18n="research.hero.context" class="intro__context">Mahasiswa Teknologi Informasi Universitas Lambung Mangkurat · General Manager Wasaka Robotic Team · Co-Founder CetakIn · Pengajar robotika.</p>
 <div class="hero__cta">
-<a class="btn" href="#projects" data-i18n="compact.hero.projects">Lihat karya pilihan</a>
-<a class="btn btn--ghost" href="#contact" data-i18n="compact.hero.contact">Hubungi saya</a>
+<a class="btn" href="#projects" data-i18n="compact.hero.projects">Lihat proyek &amp; kontribusi saya</a>
+<a class="btn btn--ghost" href="#contact" data-i18n="compact.hero.contact">Diskusikan peluang</a>
+</div>
+<div class="intro__evidence">
+<a href="./assets/images/certificates/cert-stem-2025.webp" target="_blank" rel="noreferrer" data-i18n="research.hero.award">Bersama Wasaka: Juara 3 STEM Robotik 2025 ↗</a>
+<a href="./assets/images/profile/My%20CV.jpg" target="_blank" rel="noreferrer" data-i18n="t010">Lihat CV</a>
 </div>
 </div>
 <div class="intro__portrait">
@@ -66,8 +74,8 @@
 <div class="section__head">
 <div class="section__head-left">
 <span data-i18n="compact.projects.eyebrow" class="section__eyebrow">01 / Karya pilihan</span>
-<h2 data-i18n="compact.projects.title" class="section__title">Dari ide menjadi sesuatu yang berguna.</h2>
-<p data-i18n="compact.projects.sub" class="section__sub">Lihat apa yang dibuat, manfaatnya, dan cara kerjanya langsung di halaman proyek.</p>
+<h2 data-i18n="compact.projects.title" class="section__title">Pilihan proyek</h2>
+<p data-i18n="compact.projects.sub" class="section__sub">Empat contoh pekerjaan saya: kebutuhan penggunanya, bagian yang saya kerjakan, dan hasil yang bisa Anda lihat.</p>
 </div>
 </div>
 <div class="selected-grid">
@@ -81,7 +89,7 @@
 <a href="projects/hexaka/">Wasaka Hexapod (Hexaka V3)</a>
 </h3>
 <p data-i18n="compact.project.hexaka.desc" class="work-card__description">Robot berkaki enam yang menjaga keseimbangan dan membaca lintasan melalui kamera.</p>
-<p data-i18n="compact.hexaka.role" class="work-card__role">Kontribusi: pemrograman robot &amp; kendali</p>
+<p data-i18n="compact.hexaka.role" class="work-card__role">Bagian saya: pemrograman gerak dan kendali robot bersama Wasaka Robotic Team.</p>
 <a class="work-card__link" href="projects/hexaka/" data-i18n="compact.viewProject">Lihat proyek &amp; preview</a>
 </div>
 </article>
@@ -95,7 +103,7 @@
 <a href="projects/cetakin/">CetakIn</a>
 </h3>
 <p data-i18n="compact.project.cetakin.desc" class="work-card__description">Layanan cetak 3D dan produk robotika dengan konfigurator produk yang bisa digunakan di browser.</p>
-<p data-i18n="compact.cetakin.role" class="work-card__role">Peran: Co-Founder &amp; pengembangan teknologi</p>
+<p data-i18n="compact.cetakin.role" class="work-card__role">Bagian saya: Co-Founder, pengembangan website pelanggan dan konfigurator produk.</p>
 <a class="work-card__link" href="projects/cetakin/" data-i18n="compact.viewProject">Lihat proyek &amp; preview</a>
 </div>
 </article>
@@ -109,7 +117,7 @@
 <a href="projects/pkl-kominfo/">Sistem Cuti Kominfo</a>
 </h3>
 <p data-i18n="compact.project.pkl-kominfo.desc" class="work-card__description">Merapikan pengajuan cuti pegawai, persetujuan berjenjang, dan penerbitan surat dalam satu sistem.</p>
-<p data-i18n="compact.kominfo.role" class="work-card__role">Kontribusi: pengembangan aplikasi web</p>
+<p data-i18n="compact.kominfo.role" class="work-card__role">Bagian saya saat PKL: alur pengajuan, hak akses, persetujuan, dan laporan.</p>
 <a class="work-card__link" href="projects/pkl-kominfo/" data-i18n="compact.viewProject">Lihat proyek &amp; preview</a>
 </div>
 </article>
@@ -123,10 +131,16 @@
 <a href="projects/myanimerent/">MyAnimeRent</a>
 </h3>
 <p data-i18n="compact.project.myanimerent.desc" class="work-card__description">Membantu cosplayer menemukan kostum sewaan dan memeriksa tanggal ketersediaannya.</p>
-<p data-i18n="compact.anime.role" class="work-card__role">Kontribusi: pengembangan aplikasi Flutter</p>
+<p data-i18n="compact.anime.role" class="work-card__role">Bagian saya: katalog, navigasi, dan integrasi data pengguna serta penyewaan di Flutter.</p>
 <a class="work-card__link" href="projects/myanimerent/" data-i18n="compact.viewProject">Lihat proyek &amp; preview</a>
 </div>
 </article>
+</div>
+<div class="project-crosslinks">
+<span data-i18n="overview.projects.other">Proyek perangkat lainnya:</span>
+<a href="./projects/mangrovepreneurs/">Mangrovepreneurs</a>
+<a href="./projects/aac/">AAC: Bicara Warna</a>
+<a href="./projects/teksif/">TekSif: Chromoney</a>
 </div>
 <div class="section__more">
 <a class="btn btn--ghost" href="./projects/" data-i18n="compact.projects.all">Lihat semua proyek</a>
@@ -138,26 +152,137 @@
 <div class="section__head">
 <div class="section__head-left">
 <span data-i18n="compact.about.eyebrow" class="section__eyebrow">02 / Tentang saya</span>
-<h2 data-i18n="compact.about.title" class="section__title">Menjembatani perangkat dan aplikasi.</h2>
+<h2 data-i18n="compact.about.title" class="section__title">Tentang saya</h2>
 </div>
 </div>
 <div class="brief-about__body">
-<p data-i18n="compact.about.copy">Fokus saya ada pada robotika dan IoT, aplikasi web dan Flutter, serta prototipe cetak 3D. Saya terbiasa menangani rangkaian, pemrograman, dan antarmuka yang digunakan pengguna.</p>
+<p data-i18n="compact.about.copy">Pekerjaan saya sering mempertemukan rangkaian, pemrograman, dan antarmuka pengguna. Di Wasaka saya mengembangkan robot bersama tim; melalui CetakIn saya mengerjakan produk dan prototipe cetak 3D. Pengalaman praktik ini juga saya bawa ke kelas dan pendampingan robotika.</p>
 <div class="focus-list">
 <span data-i18n="compact.focus.1">Robotika &amp; IoT</span>
 <span data-i18n="compact.focus.2">Web &amp; aplikasi Flutter</span>
 <span data-i18n="compact.focus.3">Prototipe &amp; cetak 3D</span>
 </div>
 <a class="text-link" href="./profil/" data-i18n="compact.about.more">Profil, kemampuan &amp; kegiatan mengajar</a>
+<div class="profile-secondary-links">
+<a data-i18n="overview.profile.gallery" class="text-link" href="./profil/#gallery">Galeri fotografi</a>
 </div>
+</div>
+</div>
+</section>
+<section class="section section--alt" id="skills">
+<div class="container">
+  <div class="section__head">
+<div class="section__head-left">
+    <span data-i18n="overview.skills.eyebrow" class="section__eyebrow">03 / Kemampuan &amp; perangkat kerja</span>
+    <h2 class="section__title" data-i18n="t006">Tools &amp; Tech</h2>
+    <p data-i18n="overview.skills.intro" class="section__sub">Teknologi yang saya gunakan, beserta penerapannya dalam proyek.</p>
+  </div>
+</div>
+  <div class="capability-grid">
+<article class="capability-item">
+    <h3 data-i18n="overview.tools.robotics.title">Robotika &amp; kendali</h3>
+    <p data-i18n="overview.tools.robotics.body">Pemrograman gerak, keseimbangan, dan navigasi robot.</p>
+    <ul class="capability-item__stack" aria-label="Teknologi" data-i18n-aria-label="overview.tools.aria">
+<li>C/C++ · Python</li>
+<li>ROS2</li>
+<li>Dynamixel</li>
+</ul>
+    <a data-i18n="overview.tools.example" class="text-link" href="./projects/hexaka/">Lihat penerapan</a>
+  </article>
+<article class="capability-item">
+    <h3 data-i18n="overview.tools.iot.title">IoT &amp; perangkat keras</h3>
+    <p data-i18n="overview.tools.iot.body">Merakit sensor dan menghubungkan pembacaannya ke aplikasi.</p>
+    <ul class="capability-item__stack" aria-label="Teknologi" data-i18n-aria-label="overview.tools.aria">
+<li>ESP32 · Arduino</li>
+<li>Firebase</li>
+<li>Wiring PCB</li>
+</ul>
+    <a data-i18n="overview.tools.example" class="text-link" href="./projects/mangrovepreneurs/">Lihat penerapan</a>
+  </article>
+<article class="capability-item">
+    <h3 data-i18n="overview.tools.web.title">Web, backend &amp; cloud</h3>
+    <p data-i18n="overview.tools.web.body">Mengembangkan sistem informasi dan layanan untuk operasional pengguna.</p>
+    <ul class="capability-item__stack" aria-label="Teknologi" data-i18n-aria-label="overview.tools.aria">
+<li>Laravel · CodeIgniter</li>
+<li>Node.js</li>
+<li>Docker · MySQL</li>
+</ul>
+    <a data-i18n="overview.tools.example" class="text-link" href="./projects/pkl-kominfo/">Lihat penerapan</a>
+  </article>
+<article class="capability-item">
+    <h3 data-i18n="overview.tools.mobile.title">Aplikasi mobile</h3>
+    <p data-i18n="overview.tools.mobile.body">Membangun antarmuka ponsel, alur pengguna, dan integrasi data.</p>
+    <ul class="capability-item__stack" aria-label="Teknologi" data-i18n-aria-label="overview.tools.aria">
+<li>Flutter · Dart</li>
+<li>Firebase Auth</li>
+<li>Cloud Firestore</li>
+</ul>
+    <a data-i18n="overview.tools.example" class="text-link" href="./projects/myanimerent/">Lihat penerapan</a>
+  </article>
+<article class="capability-item">
+    <h3 data-i18n="overview.tools.vision.title">Visi komputer</h3>
+    <p data-i18n="overview.tools.vision.body">Mengolah citra kamera untuk mengenali objek dan membaca lintasan.</p>
+    <ul class="capability-item__stack" aria-label="Teknologi" data-i18n-aria-label="overview.tools.aria">
+<li>YOLO</li>
+<li>OpenCV</li>
+<li>Python</li>
+</ul>
+    <a data-i18n="overview.tools.example" class="text-link" href="./projects/mrc/">Lihat penerapan</a>
+  </article>
+<article class="capability-item">
+    <h3 data-i18n="overview.tools.prototype.title">Prototipe &amp; manufaktur</h3>
+    <p data-i18n="overview.tools.prototype.body">Mewujudkan rancangan menjadi casing, mekanik, dan perangkat fungsional.</p>
+    <ul class="capability-item__stack" aria-label="Teknologi" data-i18n-aria-label="overview.tools.aria">
+<li>3D CAD</li>
+<li>FDM 3D Printing</li>
+<li>PLA+ · PETG</li>
+</ul>
+    <a data-i18n="overview.tools.example" class="text-link" href="./projects/cetakin/">Lihat penerapan</a>
+  </article>
+</div>
+  <div class="section__more">
+<a class="text-link" href="./profil/#skills" data-i18n="overview.skills.more">Daftar tools &amp; kemampuan lengkap</a>
+</div>
+</div>
+</section>
+<section class="section" id="educator">
+<div class="container">
+  <div class="section__head">
+<div class="section__head-left">
+    <span data-i18n="overview.educator.eyebrow" class="section__eyebrow">04 / Mengajar &amp; membimbing</span>
+    <h2 data-i18n="overview.educator.title" class="section__title">Educator &amp; Mentor Robotika</h2>
+    <p data-i18n="overview.educator.intro" class="section__sub">Selain membangun proyek, saya membagikan pengalaman melalui kelas praktik, workshop, dan pendampingan kompetisi.</p>
+  </div>
+</div>
+  <div class="teaching-overview">
+<article class="teaching-item">
+    <span data-i18n="overview.educator.workshop.category" class="teaching-item__category">Narasumber &amp; workshop</span>
+    <h3 data-i18n="overview.educator.workshop.title">Workshop IoT &amp; pengenalan robotika</h3>
+    <p data-i18n="overview.educator.workshop.body">Narasumber “Zero to Smart Device” di HMTI FT ULM dan pemateri pengenalan robotika di SMA Negeri 7 Banjarmasin.</p>
+  </article>
+<article class="teaching-item">
+    <span data-i18n="overview.educator.class.category" class="teaching-item__category">Pengajar praktik</span>
+    <h3 data-i18n="overview.educator.class.title">Kelas robotika &amp; ekstrakurikuler</h3>
+    <p data-i18n="overview.educator.class.body">Mengajar kelas Line Follower dan lima sesi ekstrakurikuler robotika di MAN Insan Cendekia Tanah Laut, dari merangkai komponen hingga memprogram robot.</p>
+  </article>
+<article class="teaching-item">
+    <span data-i18n="overview.educator.mentor.category" class="teaching-item__category">Mentor kompetisi</span>
+    <h3 data-i18n="overview.educator.mentor.title">Pendamping finalis KOSSMI Robotik</h3>
+    <p data-i18n="overview.educator.mentor.body">Membina dan mendampingi tim siswa pada final nasional di Telkom University, Bandung, termasuk kesiapan perangkat serta penanganan kendala teknis.</p>
+  </article>
+</div>
+  <div class="section__more section__more--links">
+    <a data-i18n="overview.educator.more" class="text-link" href="./profil/#educator">Riwayat mengajar &amp; kegiatan lengkap</a>
+    <a data-i18n="overview.educator.proof" class="text-link" href="./profil/#certificates">Lihat sertifikat pendukung</a>
+  </div>
 </div>
 </section>
 <section class="section section--alt" id="experience">
 <div class="container">
 <div class="section__head">
 <div class="section__head-left">
-<span data-i18n="compact.proof.eyebrow" class="section__eyebrow">03 / Pengalaman &amp; bukti</span>
-<h2 data-i18n="compact.proof.title" class="section__title">Dibangun, dipimpin, dan dibagikan.</h2>
+<span data-i18n="compact.proof.eyebrow" class="section__eyebrow">05 / Pengalaman &amp; bukti</span>
+<h2 data-i18n="compact.proof.title" class="section__title">Pengalaman &amp; sertifikasi</h2>
 </div>
 </div>
 <div class="proof-grid">
@@ -165,16 +290,19 @@
 <span>2026</span>
 <h3>General Manager</h3>
 <p data-i18n="compact.proof.1">Wasaka Robotic Team · memimpin koordinasi tim robotika Universitas Lambung Mangkurat.</p>
+<a class="text-link" href="./profil/#experience" data-i18n="research.proof.team">Lihat perjalanan di Wasaka</a>
 </article>
 <article class="proof-item">
 <span>2025</span>
 <h3 data-i18n="compact.proof.2.title">Juara 3 STEM Robotik Indonesia</h3>
 <p data-i18n="compact.proof.2">Pengembangan pemrograman dan kendali robot hexapod bersama Wasaka Robotic Team.</p>
+<a class="text-link" href="./assets/images/certificates/cert-stem-2025.webp" target="_blank" rel="noreferrer" data-i18n="research.proof.award">Lihat sertifikat kompetisi ↗</a>
 </article>
 <article class="proof-item">
 <span>2026</span>
 <h3>EC-Council D|FE</h3>
 <p data-i18n="compact.proof.3">Sertifikasi Digital Forensics Essentials; dokumen dan transkrip tersedia untuk ditinjau.</p>
+<a class="text-link" href="./assets/certificates/eccouncil-dfe-certification.pdf" target="_blank" rel="noreferrer" data-i18n="research.proof.cert">Lihat sertifikasi D|FE (PDF) ↗</a>
 </article>
 </div>
 <div class="section__more section__more--links">
@@ -183,23 +311,118 @@
 </div>
 </div>
 </section>
-<section class="section" id="contact">
-<div class="container brief-contact">
-<div>
-<span data-i18n="compact.contact.eyebrow" class="section__eyebrow">04 / Kontak</span>
-<h2 data-i18n="compact.contact.title" class="section__title">Punya proyek atau peluang kerja?</h2>
-<p data-i18n="compact.contact.copy" class="section__sub">Mari bicarakan kebutuhan tim, pengembangan produk, atau kolaborasi Anda.</p>
-</div>
-<div class="brief-contact__actions">
-<a class="btn" href="mailto:nelyzar8@gmail.com">nelyzar8@gmail.com</a>
-<div class="brief-contact__links">
-<a href="https://www.linkedin.com/in/naufal-elyzar-8b8764296/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-<a href="https://github.com/NaufalElyzar11" target="_blank" rel="noreferrer">GitHub ↗</a>
-<a href="./assets/images/profile/My%20CV.jpg" target="_blank" rel="noreferrer" data-i18n="t010">Lihat CV</a>
-</div>
-</div>
-</div>
-</section>
+<section class="section section--alt" id="contact">
+      <div class="container contact__grid">
+        <div class="contact__card">
+          <span class="section__eyebrow" data-i18n="overview.contact.eyebrow">06 / Kontak &amp; kolaborasi</span>
+          <h2 class="section__title" data-i18n="t009">Kontak</h2>
+          <p class="muted" data-i18n="t101" style="margin-top:12px;">Untuk membahas peluang kerja, kolaborasi perangkat atau aplikasi, maupun kelas dan workshop robotika, hubungi saya melalui kanal di bawah ini.</p>
+          <p class="contact__prompt" data-i18n="research.contact.prompt">Ceritakan posisi atau kebutuhan proyek, lingkup pekerjaan, dan perkiraan waktunya sebagai awal percakapan.</p>
+          <div class="contact__quick-actions">
+            <a class="btn btn--sm" href="mailto:nelyzar8@gmail.com" data-i18n="home.contact.sendEmail">Kirim Email ↗</a>
+            <button type="button" class="btn btn--ghost btn--sm" id="copyEmailBtn" data-email="nelyzar8@gmail.com" data-i18n="home.contact.copyEmail">Salin Alamat Email</button>
+            <span aria-live="polite" role="status" class="copy-feedback" id="copyFeedback" hidden>
+</span>
+          </div>
+          <ul class="contact__links">
+            <li>
+              <a href="mailto:nelyzar8@gmail.com">
+                <span aria-hidden="true" class="icon">
+                  <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z">
+                    </path>
+                    <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z">
+                    </path>
+                  </svg>
+                </span>
+                <span>nelyzar8@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/naufal-elyzar-8b8764296/" rel="noreferrer" target="_blank">
+                <span aria-hidden="true" class="icon">
+                  <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 20.452H3.554V9h3.565v11.452z">
+                    </path>
+                  </svg>
+                </span>
+                <span>LinkedIn — Naufal Elyzar</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/NaufalElyzar11" rel="noreferrer" target="_blank">
+                <span aria-hidden="true" class="icon">
+                  <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.1-.75.08-.74.08-.74 1.22.09 1.86 1.25 1.86 1.25 1.08 1.86 2.84 1.32 3.53 1.01.11-.79.42-1.32.76-1.63-2.66-.3-5.46-1.33-5.46-5.9 0-1.3.47-2.36 1.24-3.19-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.22a11.5 11.5 0 0 1 6 0c2.29-1.54 3.3-1.22 3.3-1.22.66 1.65.24 2.87.12 3.17.77.83 1.24 1.89 1.24 3.19 0 4.59-2.81 5.59-5.49 5.88.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57A12 12 0 0 0 12 .5Z">
+                    </path>
+                  </svg>
+                </span>
+                <span>GitHub — @NaufalElyzar11</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/val_elzar?igsh=aGxxejllY21jeDVq" rel="noreferrer" target="_blank">
+                <span aria-hidden="true" class="icon">
+                  <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5Zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5ZM18 6.2a1 1 0 1 1-1 1 1 1 0 0 1 1-1Z">
+                    </path>
+                  </svg>
+                </span>
+                <span>Instagram — @val_elzar</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="card__title" data-i18n="t102" style="font-family:var(--font-mono); text-transform:uppercase; font-size:.85rem; letter-spacing:.05em; color:var(--accent); margin-bottom:16px;">Rekan kolaborasi</h3>
+          <p class="muted" data-i18n="home.partners.sub" style="margin-bottom:18px; font-size:0.94rem;">Rekan-rekan lintas disiplin yang terlibat bersama saya dalam perakitan hardware, perancangan sistem, dan kompetisi:</p>
+          <ul class="people">
+            <li>
+              <img alt="Ahmad Najmuddin Rafid" data-i18n-alt="t116" decoding="async" height="800" loading="lazy" sizes="46px" src="./assets/images/optimized/profile-Rafid-800.webp" srcset="./assets/images/optimized/profile-Rafid-480.webp 480w, ./assets/images/optimized/profile-Rafid-800.webp 800w" width="800">
+              <div>
+                <strong>Ahmad Najmuddin Rafid</strong>
+                <span>Technical</span>
+              </div>
+            </li>
+            <li>
+              <img alt="Hatta Matahari Persada" data-i18n-alt="t117" decoding="async" height="800" loading="lazy" sizes="46px" src="./assets/images/optimized/profile-Hatta-800.webp" srcset="./assets/images/optimized/profile-Hatta-480.webp 480w, ./assets/images/optimized/profile-Hatta-800.webp 800w" width="800">
+              <div>
+                <strong>Hatta Matahari Persada</strong>
+                <span>Marketing Specialist</span>
+              </div>
+            </li>
+            <li>
+              <img alt="M. Afifuddin" data-i18n-alt="t118" decoding="async" height="800" loading="lazy" sizes="46px" src="./assets/images/optimized/profile-Afif-799.webp" srcset="./assets/images/optimized/profile-Afif-480.webp 480w, ./assets/images/optimized/profile-Afif-799.webp 799w" width="799">
+              <div>
+                <strong>M. Afifuddin</strong>
+                <span>Thinker</span>
+              </div>
+            </li>
+            <li>
+              <img alt="Chythan Wahyu Zurlya Vallent" data-i18n-alt="t119" decoding="async" height="400" loading="lazy" sizes="46px" src="./assets/images/optimized/profile-Chythan1-400.webp" srcset="./assets/images/optimized/profile-Chythan1-400.webp 400w" width="400">
+              <div>
+                <strong>Chythan Wahyu Zurlya Vallent</strong>
+                <span>Programmer &amp; IT Consultant</span>
+              </div>
+            </li>
+            <li>
+              <img src="./assets/images/optimized/partner-nanda-192.webp" srcset="./assets/images/optimized/partner-nanda-96.webp 96w, ./assets/images/optimized/partner-nanda-192.webp 192w" sizes="46px" width="381" height="381" alt="Nanda Ikbar" data-i18n-alt="partner-nanda.name" decoding="async" loading="lazy">
+              <div>
+                <strong>Nanda Ikbar</strong>
+                <span data-i18n="partner-nanda.role">Electrical</span>
+              </div>
+            </li>
+            <li>
+              <img src="./assets/images/optimized/partner-rara-192.webp" srcset="./assets/images/optimized/partner-rara-96.webp 96w, ./assets/images/optimized/partner-rara-192.webp 192w" sizes="46px" width="639" height="639" alt="Siti Fathimah Az-Zahra" data-i18n-alt="partner-rara.name" decoding="async" loading="lazy">
+              <div>
+                <strong>Siti Fathimah Az-Zahra</strong>
+                <span data-i18n="partner-rara.role">Robotic Consultant</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
 </main>
 <footer class="footer">
 <div class="container footer__inner">

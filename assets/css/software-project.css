@@ -13,6 +13,10 @@
 .software-page .hero { padding: 56px 0 34px; }
 .software-page .hero__title { font-size: clamp(2.8rem, 6vw, 5.1rem); line-height: 1.04; max-width: 16ch; }
 .software-page .hero .lead { max-width: 66ch; margin: 20px 0 0; font-size: 1.12rem; }
+.software-page .project-facts { display: grid; grid-template-columns: 1fr 1fr 1.4fr; gap: 24px; margin: 30px 0 0; padding-top: 24px; border-top: 1px solid var(--rule); }
+.software-page .project-facts > div { min-width: 0; scroll-margin-top: 100px; }
+.software-page .project-facts dt { color: var(--accent); font: .74rem var(--font-mono); letter-spacing: .05em; margin-bottom: 9px; }
+.software-page .project-facts dd { margin: 0; font-size: .92rem; line-height: 1.6; color: var(--ink-muted); }
 .software-page .eyebrow { color: var(--accent); font: .78rem var(--font-mono); text-transform: uppercase; letter-spacing: .12em; margin-bottom: 18px; }
 .software-page .hero__meta { display: flex; flex-wrap: wrap; gap: 10px 28px; color: var(--ink-muted); margin-top: 24px; font-size: .9rem; }
 .software-page .cta-group { margin-top: 26px; }
@@ -20,7 +24,7 @@
 .software-page .block { padding-block: 38px; border-top: 1px solid var(--rule); }
 .software-page .block > h2 { font-size: clamp(1.9rem, 3vw, 2.5rem); margin-bottom: 18px; }
 .software-page .block > p { max-width: 75ch; }
-.software-page .story-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; }
+.software-page .story-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; }
 .software-page .story-grid h3 { font-size: 1.35rem; margin-bottom: 10px; }
 .software-page .story-grid p { color: var(--ink-muted); font-size: .97rem; margin: 0; }
 .software-page .feature-list { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px 36px; }
@@ -59,6 +63,7 @@
 @keyframes scene-enter { from { opacity: .4; transform: translateY(7px); } to { opacity: 1; transform: none; } }
 @media (max-width: 860px) {
  .software-page .mininav { display: none; }
+ .software-page .project-facts { grid-template-columns: 1fr; gap: 20px; }
  .software-page .story-grid { grid-template-columns: 1fr; gap: 22px; }
  .software-page .scope { grid-template-columns: 1fr; gap: 20px; }
  .walkthrough__scene { grid-template-columns: minmax(0,1fr); gap: 22px; }

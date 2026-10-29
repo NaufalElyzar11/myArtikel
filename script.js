@@ -359,15 +359,46 @@ skillItems.forEach(item => {
 const copyEmailBtn = document.getElementById('copyEmailBtn');
 const copyFeedback = document.getElementById('copyFeedback');
 if (copyEmailBtn && copyFeedback) {
-  copyEmailBtn.addEventListener('click', () => {
-    const email = copyEmailBtn.dataset.email || 'nelyzar8@gmail.com';
+  const email = copyEmailBtn.dataset.email || 'nelyzar8@gmail.com';
+  let copyState = 'idle';
+  let feedbackTimer = null;
+  copyFeedback.setAttribute('role', 'status');
+  copyFeedback.setAttribute('aria-live', 'polite');
+  copyFeedback.setAttribute('aria-atomic', 'true');
+
+  function renderCopyFeedback() {
+    copyFeedback.dataset.state = copyState;
+    copyFeedback.hidden = copyState === 'idle';
+    if (copyState === 'pending') copyFeedback.textContent = isEn() ? 'Copying email…' : 'Menyalin email…';
+    else if (copyState === 'copied') copyFeedback.textContent = isEn() ? 'Email copied.' : 'Email tersalin.';
+    else if (copyState === 'failed') copyFeedback.textContent = isEn()
+      ? `Automatic copying is unavailable. Copy this address manually: ${email}`
+      : `Penyalinan otomatis tidak tersedia. Salin alamat ini secara manual: ${email}`;
+  }
+
+  copyEmailBtn.addEventListener('click', async () => {
+    if (copyState === 'pending') return;
+    if (feedbackTimer !== null) window.clearTimeout(feedbackTimer);
+    copyState = 'pending';
+    copyEmailBtn.disabled = true;
+    renderCopyFeedback();
     try {
-      navigator.clipboard?.writeText(email);
-    } catch { /* fallback */ }
-    copyFeedback.hidden = false;
-    copyFeedback.textContent = isEn() ? '✓ Email copied!' : '✓ Email tersalin!';
-    setTimeout(() => { copyFeedback.hidden = true; }, 2500);
+      if (!navigator.clipboard?.writeText) throw new Error('Clipboard API unavailable');
+      await navigator.clipboard.writeText(email);
+      copyState = 'copied';
+      feedbackTimer = window.setTimeout(() => {
+        feedbackTimer = null;
+        copyState = 'idle';
+        renderCopyFeedback();
+      }, 2500);
+    } catch {
+      copyState = 'failed';
+    } finally {
+      copyEmailBtn.disabled = false;
+      renderCopyFeedback();
+    }
   });
+  document.addEventListener('languagechange', renderCopyFeedback);
 }
 
 document.addEventListener('languagechange', () => {

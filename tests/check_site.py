@@ -51,7 +51,13 @@ home = BeautifulSoup((ROOT/'index.html').read_text(encoding='utf-8'), 'html.pars
 assert [tag['id'] for tag in home.select('main > section')][:2] == ['home', 'projects']
 assert 'Hexaka' in home.select_one('.work-card h3').get_text()
 assert len(home.select('.selected-grid .work-card')) == 4
-assert not home.select('#interactive-lab, #certificates, #skills, #gallery, .project__tabs')
+assert not home.select('#interactive-lab, .project__tabs')
+for section_id in ('skills', 'educator'):
+    assert home.select_one(f'#{section_id}')
+    assert home.select_one(f'#navMenu a[href="#{section_id}"]')
+assert home.select_one('#contact #copyEmailBtn')
+assert home.select_one('#contact #copyFeedback')
+assert len(home.select('#contact .people li')) == 6
 profile = BeautifulSoup((ROOT/'profil/index.html').read_text(encoding='utf-8'), 'html.parser')
 assert len(profile.select('#experience > .container > .log > .log__item')) == 4
 assert len(profile.select('.experience-history .log__item')) == 6

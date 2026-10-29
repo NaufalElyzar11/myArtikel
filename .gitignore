@@ -15,3 +15,7 @@ node_modules/
 
 # Isolated source copies and fixture databases used only to capture project UI
 /scratch/actual-previews/
+
+# Project-scoped assistant skills are local working guidance, not website source
+/.local-skills/
+/AGENTS.md

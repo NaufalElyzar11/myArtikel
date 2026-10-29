@@ -12,7 +12,7 @@ const files = ['index.html', 'projects/index.html', 'profil/index.html', 'projec
   'projects/mrc/index.html', 'projects/hexaka/index.html', 'projects/aac/index.html',
   'projects/teksif/index.html', 'projects/mangrovepreneurs/index.html', ...softwareFiles];
 
-function load(file, { query = '', saved, blocked = false, mobile = true, reducedMotion = false } = {}) {
+function load(file, { query = '', saved, blocked = false, mobile = true, reducedMotion = false, clipboard } = {}) {
   const { window, document } = parseHTML(fs.readFileSync(path.join(root, file), 'utf8'));
   let active = document.body;
   Object.defineProperty(document, 'activeElement', { get: () => active });
@@ -35,7 +35,7 @@ function load(file, { query = '', saved, blocked = false, mobile = true, reduced
   const location = new URL(`https://portfolio.test/${file}${query}`);
   const store = new Map(saved ? [['naufal-language', saved]] : []);
   const context = vm.createContext({
-    window, document, location, URL, URLSearchParams, Date,
+    window, document, location, URL, URLSearchParams, Date, navigator: { clipboard },
     CustomEvent: window.CustomEvent,
     localStorage: {
       getItem(key) { if (blocked) throw new Error('Storage blocked'); return store.get(key) ?? null; },
@@ -205,14 +205,23 @@ test('New project galleries use the supplied result covers and retain contextual
   assert.ok(names.includes('Siti Fathimah Az-Zahra'));
 });
 
-test('Homepage gives four selected works and links to complete archives', () => {
+test('Homepage covers the main roles, tools, teaching, and full contact while linking to archives', () => {
   const { document } = load('index.html');
   assert.equal(document.querySelectorAll('.selected-grid .work-card').length, 4);
   assert.equal(document.querySelector('#interactive-lab'), null);
   assert.equal(document.querySelector('[data-project-sim]'), null);
-  for (const selector of ['#certificates', '#skills', '#gallery', '.project__tabs']) {
-    assert.equal(document.querySelector(selector), null);
+  assert.equal(document.querySelector('.project__tabs'), null);
+  for (const id of ['skills', 'educator']) {
+    assert.ok(document.querySelector(`#${id}`), `${id} overview is visible on the homepage`);
+    assert.ok(document.querySelector(`#navMenu a[href="#${id}"]`), `${id} has a direct menu entry`);
+    assert.ok(document.querySelector(`#${id} a[href*="/profil/"]`), `${id} links to its full record`);
   }
+  assert.ok(document.querySelector('#contact #copyEmailBtn'));
+  assert.ok(document.querySelector('#contact #copyFeedback'));
+  for (const channel of ['mailto:', 'linkedin.com', 'github.com', 'instagram.com']) {
+    assert.ok([...document.querySelectorAll('#contact a[href]')].some(link => link.href.includes(channel)));
+  }
+  assert.equal(document.querySelectorAll('#contact .people li').length, 6);
   assert.ok(document.querySelector('a[href*="/projects/?lang=id"]'));
   assert.ok(document.querySelector('a[href*="/profil/?lang=id"]'));
   const { document: archive } = load('projects/index.html');
@@ -220,6 +229,49 @@ test('Homepage gives four selected works and links to complete archives', () => 
   for (const link of archive.querySelectorAll('.work-card__link')) {
     assert.ok(link.href.startsWith('https://portfolio.test/projects/'));
     assert.ok(!link.href.includes('github.com'));
+  }
+});
+
+test('Copy email announces success only after the clipboard write resolves', async () => {
+  let resolveWrite;
+  let copiedValue;
+  const { document, click, advanceTimer, window } = load('index.html', {
+    clipboard: { writeText(value) { copiedValue = value; return new Promise(resolve => { resolveWrite = resolve; }); } }
+  });
+  const button = document.querySelector('#copyEmailBtn');
+  const feedback = document.querySelector('#copyFeedback');
+  click(button);
+  assert.equal(copiedValue, button.dataset.email);
+  assert.equal(button.disabled, true);
+  assert.equal(feedback.hidden, false);
+  assert.equal(feedback.getAttribute('role'), 'status');
+  assert.doesNotMatch(feedback.textContent, /tersalin|copied/i);
+  resolveWrite();
+  await new Promise(resolve => setImmediate(resolve));
+  assert.equal(button.disabled, false);
+  assert.match(feedback.textContent, /tersalin/);
+  window.siteI18n.setLanguage('en');
+  assert.match(feedback.textContent, /copied/);
+  advanceTimer();
+  assert.equal(feedback.hidden, true);
+});
+
+test('Copy email keeps manual fallback available when clipboard access fails or is missing', async () => {
+  for (const clipboard of [undefined, { writeText: () => Promise.reject(new Error('Access denied')) }]) {
+    const { document, click, window, timers } = load('index.html', { clipboard });
+    const button = document.querySelector('#copyEmailBtn');
+    const feedback = document.querySelector('#copyFeedback');
+    click(button);
+    await new Promise(resolve => setImmediate(resolve));
+    assert.equal(button.disabled, false);
+    assert.equal(feedback.hidden, false);
+    assert.match(feedback.textContent, /manual/);
+    assert.ok(feedback.textContent.includes(button.dataset.email));
+    assert.doesNotMatch(feedback.textContent, /tersalin|copied/i);
+    assert.equal(timers.size, 0);
+    window.siteI18n.setLanguage('en');
+    assert.match(feedback.textContent, /manually/);
+    assert.ok(document.querySelector(`#contact a[href="mailto:${button.dataset.email}"]`));
   }
 });
 

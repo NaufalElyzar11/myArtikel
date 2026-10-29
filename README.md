@@ -4,10 +4,12 @@ Repositori web portofolio personal dan dokumentasi studi kasus teknis proyek rek
 
 ## Navigasi portofolio
 
-- `index.html` merangkum identitas, empat karya pilihan, pengalaman terpilih, dan kontak.
+- `index.html` merangkum identitas, empat karya pilihan, profil, enam bidang Tools & Tech, kegiatan Educator, serta pengalaman dan sertifikasi terpilih. Kontak lengkap, media sosial, tombol salin email, dan rekan kolaborasi tetap ada di beranda; rincian panjang tersedia melalui halaman lanjutan.
 - `projects/index.html` memuat seluruh 13 entri proyek, termasuk dua sudut pandang Mangrovepreneurs (perangkat dan aplikasi), dengan filter kategori dan tautan detail lokal.
 - `profil/index.html` menyimpan profil lengkap, kemampuan, kegiatan mengajar, 16 sertifikat, pengalaman, fotografi, dan rekan kolaborasi.
 - Detail web dan aplikasi ada di `projects/cetakin/`, `projects/pkl-kominfo/`, `projects/banua-tour/`, `projects/cloud-manager/`, `projects/myanimerent/`, dan `projects/e-ponic/`. Aplikasi Mangrovepreneurs memakai `projects/mangrovepreneurs/#preview` bersama studi kasus perangkatnya.
+
+Dasar editorial dan sumber primer tersedia di [riset portofolio](docs/RISET_PORTOFOLIO.md), dengan [naskah ID/EN yang diterapkan](docs/NASKAH_PORTOFOLIO.md). Pembuka menampilkan pekerjaan konkret dan bukti awal; detail software menjelaskan konteks, pengguna sasaran, dan kontribusi sebelum preview. Kontak mencakup peluang kerja, kolaborasi, dan kegiatan mengajar.
 
 Detail software memakai screenshot aplikasi asli dengan tombol tampilan, sebelumnya/berikutnya, dan putar/jeda. Gambar dapat diperbesar melalui galeri. Pemutaran dimulai atas pilihan pengunjung, selesai setelah satu putaran, berhenti ketika halaman atau preview ditinggalkan, dan menghormati reduced motion. Label **screenshot aplikasi asli / data demo** membedakan antarmuka asli dari data demonstrasi. Mangrovepreneurs tetap menampilkan dokumentasi aplikasi asli. GitHub menjadi tautan sumber opsional.
 

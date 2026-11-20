@@ -3040,12 +3040,12 @@ window.siteTranslations = {
     "en": "Certificate of honor as Speaker in the Internet of Things Workshop organized by the Information Technology Student Association (HMTI), Faculty of Engineering, Lambung Mangkurat University. Ref: 281/UN8.1.31.7/SP/2026."
   },
   "compact.position": {
-    "id": "Robotika & IoT · Web & Mobile · Educator",
-    "en": "Robotics & IoT · Web & Mobile · Educator"
+    "id": "Web & Mobile · Robotika & IoT",
+    "en": "Web & Mobile · Robotics & IoT"
   },
   "compact.hero": {
-    "id": "Saya mengembangkan robot, perangkat sensor, dan aplikasi web & mobile. Dari gerak robot sampai pengajuan cuti, proyek saya berangkat dari tugas yang perlu diselesaikan pengguna.",
-    "en": "I develop robots, sensor devices, and web and mobile applications. From robot movement to leave requests, my projects start with the tasks users need to complete."
+    "id": "Saya membangun website, aplikasi mobile, dan sistem robotika. Coba kendalikan simulasi 3D Hexaka V3 atau buka demo clicker.",
+    "en": "I build websites, mobile apps, and robotics systems. Try controlling the 3D Hexaka V3 simulation or switch to the clicker demo."
   },
   "compact.hero.projects": {
     "id": "Lihat proyek pilihan",
@@ -3064,8 +3064,8 @@ window.siteTranslations = {
     "en": "Selected projects"
   },
   "compact.projects.sub": {
-    "id": "Empat contoh pekerjaan saya: kebutuhan penggunanya, bagian yang saya kerjakan, dan hasil yang bisa Anda lihat.",
-    "en": "Four examples of my work: the users’ needs, my contribution, and results you can explore."
+    "id": "Jelajahi antarmuka yang saya buat dan lihat bagian yang saya kerjakan, dari konfigurator produk hingga kendali robot.",
+    "en": "Explore the interfaces I built and see what I contributed, from product configuration to robot control."
   },
   "compact.hexaka.role": {
     "id": "Bagian saya: pemrograman gerak dan kendali robot bersama Wasaka Robotic Team.",
@@ -3200,8 +3200,117 @@ window.siteTranslations = {
     "en": "Let’s talk about your team, product development, or collaboration."
   },
   "compact.home.title": {
-    "id": "Naufal Elyzar | Robotika, IoT & Aplikasi",
-    "en": "Naufal Elyzar | Robotics, IoT & Applications"
+    "id": "Naufal Elyzar | Web, Mobile, Robotika & IoT",
+    "en": "Naufal Elyzar | Web, Mobile, Robotics & IoT"
+  },
+  "home.clicker.eyebrow": { "id": "Demo interaktif", "en": "Interactive demo" },
+  "home.clicker.title": { "id": "Rakit clicker.", "en": "Build a clicker." },
+  "home.clicker.heading": { "id": "CLICKER LAB", "en": "CLICKER LAB" },
+  "home.clicker.subtitle": { "id": "PRATINJAU WARNA & HURUF", "en": "COLOR & LETTER PREVIEW" },
+  "home.clicker.concept": { "id": "VISUALISASI KONSEP", "en": "CONCEPT VISUALIZATION" },
+  "home.clicker.notPhoto": { "id": "BUKAN FOTO PRODUK", "en": "NOT A PRODUCT PHOTO" },
+  "home.clicker.textLabel": { "id": "Teks clicker", "en": "Clicker text" },
+  "home.clicker.textHint": { "id": "01-05 HURUF", "en": "01-05 LETTERS" },
+  "home.clicker.textHelp": { "id": "Gunakan satu hingga lima huruf A sampai Z.", "en": "Use one to five letters A through Z." },
+  "home.clicker.baseColor": { "id": "Warna base", "en": "Base color" },
+  "home.clicker.baseColorAria": { "id": "Pilih warna base clicker", "en": "Choose clicker base color" },
+  "home.clicker.color.orange": { "id": "Orange", "en": "Orange" },
+  "home.clicker.color.blue": { "id": "Sky blue", "en": "Sky blue" },
+  "home.clicker.color.white": { "id": "Putih", "en": "White" },
+  "home.clicker.color.black": { "id": "Hitam", "en": "Black" },
+  "home.clicker.color.red": { "id": "Merah", "en": "Red" },
+  "home.clicker.color.pink": { "id": "Pink", "en": "Pink" },
+  "home.clicker.customize": { "id": "Lanjut atur desain", "en": "Continue customizing" },
+  "home.clicker.emptyStatus": { "id": "Isi 1-5 huruf untuk melihat contoh.", "en": "Enter 1-5 letters to see a preview." },
+  "home.clicker.emptyAria": { "id": "Isi teks untuk melihat pratinjau clicker", "en": "Enter text to preview the clicker" },
+  "home.clicker.lettersUnit": { "id": "huruf", "en": "letters" },
+  "home.clicker.letterUnit": { "id": "huruf", "en": "letter" },
+  "home.clicker.basePrefix": { "id": "Base", "en": "Base" },
+  "home.clicker.previewPrefix": { "id": "Pratinjau clicker bertuliskan", "en": "Clicker preview reading" },
+  "home.clicker.keys": { "id": "Tombol clicker", "en": "Clicker keys" },
+  "home.clicker.key": { "id": "Tekan tombol", "en": "Press key" },
+  "home.clicker.hint": { "id": "Tekan tombol · Geser untuk memutar", "en": "Press a key · Drag to rotate" },
+  "home.clicker.letters": { "id": "3 huruf atau angka", "en": "3 letters or digits" },
+  "home.clicker.color": { "id": "Warna", "en": "Color" },
+  "home.clicker.rotate": { "id": "Putar", "en": "Rotate" },
+  "home.clicker.explode": { "id": "Urai komponen", "en": "Explode view" },
+  "home.clicker.credit": { "id": "Dari Clicker Lab CetakIn", "en": "From CetakIn Clicker Lab" },
+  "home.clicker.project": { "id": "Studi kasus", "en": "Case study" },
+  "home.lab.tabsAria": { "id": "Pilih demo interaktif", "en": "Choose interactive demo" },
+  "home.lab.tabHexapod": { "id": "Hexaka V3 · 3D", "en": "Hexaka V3 · 3D" },
+  "home.lab.tabClicker": { "id": "Clicker Lab", "en": "Clicker Lab" },
+  "home.hexapod.eyebrow": { "id": "Simulasi unggulan", "en": "Featured simulation" },
+  "home.hexapod.title": { "id": "Kendalikan Hexaka V3.", "en": "Drive Hexaka V3." },
+  "home.hexapod.viewportAria": { "id": "Area 3D simulasi Hexaka V3. Gunakan WASD atau panah untuk bergerak, Spasi untuk berhenti.", "en": "Hexaka V3 3D viewport. Use WASD or arrow keys to move, Space to stop." },
+  "home.hexapod.posterAlt": { "id": "Robot Wasaka Hexapod Hexaka V3 dengan 6 kaki 18-DOF", "en": "Wasaka Hexapod Hexaka V3 six-legged 18-DOF robot" },
+  "home.hexapod.loading": { "id": "Memuat simulasi 3D...", "en": "Loading 3D simulation..." },
+  "home.hexapod.fileProtocol": { "id": "Mode file:// memblokir modul 3D. Jalankan lewat server lokal (python -m http.server 8000) atau GitHub Pages.", "en": "file:// blocks 3D modules. Serve via a local server (python -m http.server 8000) or GitHub Pages." },
+  "home.hexapod.loadError": { "id": "Gagal memuat aset 3D. Kontrol telemetri dan kemiringan tetap aktif.", "en": "Failed to load 3D assets. Telemetry and slope controls remain active." },
+  "home.hexapod.fallback": { "id": "WebGL tidak tersedia. Kontrol telemetri dan kemiringan tetap aktif.", "en": "WebGL is unavailable. Telemetry and slope controls remain active." },
+  "home.hexapod.reset": { "id": "Reset sudut", "en": "Reset view" },
+  "home.hexapod.resetAria": { "id": "Reset sudut kamera 3D", "en": "Reset 3D camera angle" },
+  "home.hexapod.internals": { "id": "Komponen dalam: Raspberry Pi 5 · UBEC 15A · U2D2", "en": "Internals: Raspberry Pi 5 · 15A UBEC · U2D2" },
+  "home.hexapod.k1": { "id": "Koreksi IMU", "en": "IMU leveling" },
+  "home.hexapod.k2": { "id": "Pola langkah", "en": "Gait mode" },
+  "home.hexapod.k3": { "id": "Perintah gerak", "en": "Motion state" },
+  "home.hexapod.dpadAria": { "id": "Kendali gerak robot", "en": "Robot motion controls" },
+  "home.hexapod.dirForward": { "id": "Maju", "en": "Forward" },
+  "home.hexapod.dirBackward": { "id": "Mundur", "en": "Backward" },
+  "home.hexapod.dirLeft": { "id": "Belok kiri", "en": "Turn left" },
+  "home.hexapod.dirRight": { "id": "Belok kanan", "en": "Turn right" },
+  "home.hexapod.dirStop": { "id": "Berhenti", "en": "Stop" },
+  "home.hexapod.slope": { "id": "Kemiringan medan (BNO055)", "en": "Terrain slope (BNO055)" },
+  "home.hexapod.slopeAria": { "id": "Atur sudut kemiringan medan 0 hingga 22 derajat", "en": "Adjust terrain slope from 0 to 22 degrees" },
+  "home.hexapod.explode": { "id": "Urai bodi (RPi 5 & komponen)", "en": "Explode body (RPi 5 & internals)" },
+  "home.hexapod.credit": { "id": "Model kinematika 18-DOF · Geser untuk putar 3D", "en": "18-DOF kinematics model · Drag to orbit 3D" },
+  "home.hexapod.project": { "id": "Studi kasus Hexaka", "en": "Hexaka case study" },
+  "home.design.description": {
+    "id": "Portofolio Naufal Elyzar: pengembangan web & aplikasi Flutter, robotika dan IoT, Co-Founder CetakIn, dan pengajar robotika.",
+    "en": "Portfolio of Naufal Elyzar, a web and Flutter app developer, robotics and IoT builder, CetakIn co-founder, and robotics educator."
+  },
+  "home.design.featured": {
+    "id": "01 / Proyek web unggulan",
+    "en": "01 / Featured web project"
+  },
+  "home.design.caseStudy": {
+    "id": "Buka studi kasus CetakIn",
+    "en": "Explore the CetakIn case study"
+  },
+  "home.design.viewer": {
+    "id": "Pratinjau web",
+    "en": "Website preview"
+  },
+  "home.design.storeCaption": {
+    "id": "Etalase layanan cetak 3D dan produk kustom.",
+    "en": "Storefront for 3D printing services and custom products."
+  },
+  "home.design.clickerAlt": {
+    "id": "Antarmuka konfigurator Clicker Lab",
+    "en": "Clicker Lab configurator interface"
+  },
+  "home.design.clickerCaption": {
+    "id": "Clicker Lab untuk menyesuaikan huruf, bentuk, warna, dan susunan tombol.",
+    "en": "Clicker Lab lets you customize the lettering, shape, color, and button layout."
+  },
+  "home.design.guidesAlt": {
+    "id": "Halaman panduan komponen robotika CetakIn",
+    "en": "CetakIn robotics component guides page"
+  },
+  "home.design.guidesCaption": {
+    "id": "Panduan komponen dengan contoh rangkaian dan kode uji.",
+    "en": "Component guides with circuit examples and test code."
+  },
+  "home.design.views": {
+    "id": "Pilih tampilan CetakIn",
+    "en": "Choose a CetakIn view"
+  },
+  "home.design.store": {
+    "id": "Etalase",
+    "en": "Storefront"
+  },
+  "home.design.guides": {
+    "id": "Panduan",
+    "en": "Guides"
   },
   "compact.footer.projects": {
     "id": "Semua proyek",
@@ -3602,5 +3711,273 @@ window.siteTranslations = {
   "ui.project.myanimerent": {
     "id": "Lihat aplikasi MyAnimeRent",
     "en": "Explore the MyAnimeRent app"
+  },
+  "home.hero.intro": {
+    "id": "Coba kendalikan simulasi 3D Hexaka V3, atau buka demo Clicker Lab dari CetakIn.",
+    "en": "Try steering the 3D Hexaka V3 simulation, or open the CetakIn Clicker Lab demo."
+  },
+  "home.flap.label": {
+    "id": "Saya membangun",
+    "en": "I build"
+  },
+  "home.flap.words": {
+    "id": "WEBSITE LARAVEL|APLIKASI FLUTTER|ROBOT HEXAPOD|PERANGKAT IOT|PROTOTIPE 3D",
+    "en": "LARAVEL WEBSITES|FLUTTER APPS|HEXAPOD ROBOTS|IOT DEVICES|3D PROTOTYPES"
+  },
+  "home.flap.sr": {
+    "id": "Saya membangun website Laravel, aplikasi Flutter, robot hexapod, perangkat IoT, dan prototipe 3D.",
+    "en": "I build Laravel websites, Flutter apps, hexapod robots, IoT devices, and 3D prototypes."
+  },
+  "skills.map.intro": {
+    "id": "Pilih teknologi untuk melihat proyek yang memakainya, atau arahkan ke proyek untuk melihat teknologinya.",
+    "en": "Pick a technology to see which projects use it, or point at a project to see its technologies."
+  },
+  "skills.map.projects": {
+    "id": "Dipakai di proyek",
+    "en": "Used in projects"
+  },
+  "skills.map.status": {
+    "id": "{tech} dipakai di {n} proyek.",
+    "en": "{tech} is used in {n} projects."
+  },
+  "skills.map.statusOne": {
+    "id": "{tech} dipakai di 1 proyek.",
+    "en": "{tech} is used in 1 project."
+  },
+  "skills.map.reverse": {
+    "id": "{project} memakai {n} teknologi dari peta ini.",
+    "en": "{project} uses {n} technologies from this map."
+  },
+  "skills.map.print": {
+    "id": "Cetak 3D",
+    "en": "3D printing"
+  },
+  "skills.map.sensors": {
+    "id": "Sensor HX711 & BME280",
+    "en": "HX711 & BME280 sensors"
+  },
+  "cmd.open": {
+    "id": "Cari halaman, proyek, atau perintah",
+    "en": "Search pages, projects, or commands"
+  },
+  "cmd.placeholder": {
+    "id": "Ketik nama proyek, teknologi, atau perintah",
+    "en": "Type a project, technology, or command"
+  },
+  "cmd.empty": {
+    "id": "Tidak ada hasil. Coba nama proyek seperti Hexaka atau teknologi seperti Laravel.",
+    "en": "No results. Try a project such as Hexaka or a technology such as Laravel."
+  },
+  "cmd.group.pages": {
+    "id": "Halaman",
+    "en": "Pages"
+  },
+  "cmd.group.projects": {
+    "id": "Proyek",
+    "en": "Projects"
+  },
+  "cmd.group.actions": {
+    "id": "Perintah",
+    "en": "Commands"
+  },
+  "cmd.home": {
+    "id": "Beranda",
+    "en": "Home"
+  },
+  "cmd.projects": {
+    "id": "Proyek pilihan",
+    "en": "Selected projects"
+  },
+  "cmd.skills": {
+    "id": "Tools & Tech",
+    "en": "Tools & Tech"
+  },
+  "cmd.educator": {
+    "id": "Educator & mentor robotika",
+    "en": "Robotics educator & mentor"
+  },
+  "cmd.contact": {
+    "id": "Kontak",
+    "en": "Contact"
+  },
+  "cmd.profile": {
+    "id": "Profil lengkap",
+    "en": "Full profile"
+  },
+  "cmd.archive": {
+    "id": "Semua proyek",
+    "en": "All projects"
+  },
+  "cmd.lang": {
+    "id": "Ganti bahasa ke English",
+    "en": "Switch language to Indonesian"
+  },
+  "cmd.copy": {
+    "id": "Salin alamat email",
+    "en": "Copy email address"
+  },
+  "cmd.copied": {
+    "id": "Alamat email disalin.",
+    "en": "Email address copied."
+  },
+  "cmd.copyFailed": {
+    "id": "Gagal menyalin. Alamat email: nelyzar8@gmail.com",
+    "en": "Copy failed. Email address: nelyzar8@gmail.com"
+  },
+  "cmd.cv": {
+    "id": "Buka CV",
+    "en": "Open CV"
+  },
+  "cmd.github": {
+    "id": "Buka GitHub",
+    "en": "Open GitHub"
+  },
+  "cmd.linkedin": {
+    "id": "Buka LinkedIn",
+    "en": "Open LinkedIn"
+  },
+  "cmd.navigate": {
+    "id": "pilih",
+    "en": "select"
+  },
+  "cmd.enter": {
+    "id": "buka",
+    "en": "open"
+  },
+  "cmd.close": {
+    "id": "tutup",
+    "en": "close"
+  },
+  "cmd.label": {
+    "id": "Navigasi cepat",
+    "en": "Quick navigation"
+  },
+  "hexaka.sim3d.title": {
+    "id": "Simulasi Interaktif: Kendali 3D & Stabilisasi IMU",
+    "en": "Interactive Simulation: 3D Control & IMU Leveling"
+  },
+  "hexaka.sim3d.desc": {
+    "id": "Gerakkan Hexaka V3 dengan tombol arah atau WASD, ubah kemiringan medan 0° sampai 22° untuk melihat koreksi PID pada bodi, lalu urai bodinya untuk melihat komponen di dalam.",
+    "en": "Drive Hexaka V3 with the arrow buttons or WASD, tilt the terrain from 0° to 22° to watch the body's PID correction, then explode the body to see the internals."
+  },
+  "reel.workbench": {
+    "id": "Rekaman dari meja kerja",
+    "en": "From the workbench"
+  },
+  "reel.title": {
+    "id": "Karya pilihan.",
+    "en": "Selected work."
+  },
+  "reel.sub": {
+    "id": "Empat proyek, dari konfigurator produk di browser sampai robot berkaki enam.",
+    "en": "Four projects, from an in-browser product configurator to a six-legged robot."
+  },
+  "reel.screen": {
+    "id": "Rekaman proyek",
+    "en": "Project reel"
+  },
+  "reel.railAria": {
+    "id": "Bab proyek pilihan",
+    "en": "Selected work chapters"
+  },
+  "reel.q.cetakin": {
+    "id": "Bagaimana pelanggan merancang produk sebelum dicetak?",
+    "en": "How do customers design a product before it is printed?"
+  },
+  "reel.q.pkl": {
+    "id": "Bagaimana pengajuan cuti melewati beberapa tingkat persetujuan?",
+    "en": "How does a leave request move through each approval level?"
+  },
+  "reel.q.anime": {
+    "id": "Bagaimana cosplayer tahu kostum tersedia di tanggal acara?",
+    "en": "How does a cosplayer know a costume is free on event day?"
+  },
+  "reel.q.hexaka": {
+    "id": "Bagaimana robot berkaki enam tetap seimbang di medan miring?",
+    "en": "How does a six-legged robot stay level on a slope?"
+  },
+  "reel.visit": {
+    "id": "Kunjungi cetak-in.my.id",
+    "en": "Visit cetak-in.my.id"
+  },
+  "reel.trySim": {
+    "id": "Coba simulasi 3D",
+    "en": "Try the 3D simulation"
+  },
+  "reel.plate.pkl": {
+    "id": "Pengajuan → persetujuan",
+    "en": "Request → approval"
+  },
+  "reel.plate.anime": {
+    "id": "Katalog → kalender sewa",
+    "en": "Catalog → rental calendar"
+  },
+  "reel.plate.hexaka": {
+    "id": "Lintasan uji",
+    "en": "Test course"
+  },
+  "reel.cap.pkl": {
+    "id": "Dashboard pegawai dan formulir pengajuan cuti",
+    "en": "Employee dashboard and leave request form"
+  },
+  "reel.cap.anime": {
+    "id": "Beranda katalog dan kalender ketersediaan kostum",
+    "en": "Catalog home and costume availability calendar"
+  },
+  "reel.cap.hexaka": {
+    "id": "Persiapan uji lintasan bersama Wasaka Robotic Team",
+    "en": "Preparing a course test with Wasaka Robotic Team"
+  },
+  "reel.alt.pklRequest": {
+    "id": "Formulir pengajuan cuti Si-Cuti",
+    "en": "Si-Cuti leave request form"
+  },
+  "reel.alt.animeCalendar": {
+    "id": "Kalender ketersediaan kostum MyAnimeRent",
+    "en": "MyAnimeRent costume availability calendar"
+  },
+  "reel.alt.hexaka": {
+    "id": "Tim Wasaka Robotic Team menyiapkan lintasan uji Hexaka",
+    "en": "Wasaka Robotic Team preparing the Hexaka test course"
+  },
+  "edu.tl.role.1": {
+    "id": "Narasumber workshop",
+    "en": "Workshop speaker"
+  },
+  "edu.tl.role.2": {
+    "id": "Pengajar praktik",
+    "en": "Hands-on instructor"
+  },
+  "edu.tl.role.3": {
+    "id": "Pemateri",
+    "en": "Guest presenter"
+  },
+  "edu.tl.role.4": {
+    "id": "Mentor kompetisi",
+    "en": "Competition mentor"
+  },
+  "edu.tl.role.5": {
+    "id": "Pengajar ekstrakurikuler",
+    "en": "Extracurricular instructor"
+  },
+  "edu.tl.d.1": {
+    "id": "Membawakan materi IoT dari nol di HMTI FT ULM, dari membaca sensor dengan ESP32 sampai mengirim telemetri ke dasbor pemantauan.",
+    "en": "Taught IoT from scratch at HMTI FT ULM, from reading sensors on an ESP32 to sending telemetry to a monitoring dashboard."
+  },
+  "edu.tl.d.2": {
+    "id": "Membimbing siswa merakit robot pelacak garis: kalibrasi sensor, driver motor PWM, dan penyetelan kontrol PD.",
+    "en": "Coached students building line-following robots: sensor calibration, PWM motor drivers, and PD control tuning."
+  },
+  "edu.tl.d.3": {
+    "id": "Memperkenalkan sensor, aktuator, dan logika pemrograman mikrokontroler lewat demo robot langsung.",
+    "en": "Introduced sensors, actuators, and microcontroller programming logic through live robot demos."
+  },
+  "edu.tl.d.4": {
+    "id": "Mendampingi tim siswa di final nasional, dari kesiapan perangkat sampai penanganan kendala teknis saat bertanding.",
+    "en": "Supported a student team at the national finals, from hardware readiness to handling technical issues during matches."
+  },
+  "edu.tl.d.5": {
+    "id": "Mengajar lima pertemuan praktik, dari merangkai komponen sampai memprogram robot.",
+    "en": "Taught five hands-on sessions, from assembling components to programming the robot."
   }
 };

@@ -1,0 +1,405 @@
+.clicker-cetakin {
+  min-width: 0;
+  background: #f8f9f6;
+  color: #19242f;
+}
+
+.clicker-cetakin__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px 14px;
+  min-height: 50px;
+  padding: 10px clamp(16px, 2.4vw, 24px);
+}
+
+.clicker-cetakin__top h2,
+.clicker-cetakin__top span {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.clicker-cetakin__top h2 {
+  color: #19242f;
+}
+
+.clicker-cetakin__top span {
+  color: #4a5863;
+  text-align: end;
+}
+
+.clicker-cetakin__window {
+  --shell: #ff8b1b;
+  --shell-shadow: #ce5d00;
+  position: relative;
+  height: clamp(210px, 24vw, 265px);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #e3f5fd;
+  transition: background-color .25s ease;
+}
+
+.clicker-cetakin__window[data-color="blue"] {
+  --shell: #38bdf8;
+  --shell-shadow: #167cad;
+  background: #e8f6ff;
+}
+
+.clicker-cetakin__window[data-color="white"] {
+  --shell: #e8eef0;
+  --shell-shadow: #b9c4c9;
+  background: #f3f6f6;
+}
+
+.clicker-cetakin__window[data-color="black"] {
+  --shell: #293442;
+  --shell-shadow: #111a23;
+  background: #dcecf3;
+}
+
+.clicker-cetakin__window[data-color="red"] {
+  --shell: #de3636;
+  --shell-shadow: #9f1d1d;
+  background: #ffebee;
+}
+
+.clicker-cetakin__window[data-color="pink"] {
+  --shell: #fc8395;
+  --shell-shadow: #d95e76;
+  background: #fff0f3;
+}
+
+.clicker-cetakin__window::after {
+  content: "";
+  position: absolute;
+  left: 11%;
+  bottom: 42px;
+  width: 78%;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(24, 65, 91, .16);
+  filter: blur(14px);
+  pointer-events: none;
+}
+
+.clicker-cetakin__object {
+  position: relative;
+  z-index: 3;
+  margin-left: 14px;
+  transform: rotate(-9deg);
+  filter: drop-shadow(12px 22px 12px rgba(36, 82, 109, .16));
+  transition: transform .25s ease;
+}
+
+.clicker-cetakin__object:hover {
+  transform: rotate(-6deg) translateY(-4px);
+}
+
+.clicker-cetakin__ring {
+  position: absolute;
+  left: -20px;
+  top: 24px;
+  width: 30px;
+  height: 26px;
+  border: 6px solid var(--shell);
+  border-radius: 50%;
+  box-shadow: 0 3px 0 var(--shell-shadow);
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+.clicker-cetakin__keys {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 13px 14px 17px;
+  border: 2px solid var(--shell-shadow);
+  border-radius: 17px;
+  background: var(--shell);
+  box-shadow:
+    0 6px 0 var(--shell-shadow),
+    0 12px 0 #95d9f5,
+    0 17px 0 #e8f6ff,
+    0 23px 0 #29aee9;
+  transition: background-color .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.clicker-cetakin__key {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 9px;
+  background: linear-gradient(145deg, #ffffff, #e8eeef);
+  color: #273441;
+  font: 700 1.35rem/1 var(--font-body);
+  box-shadow: 0 4px 0 #b9c4c9, 0 7px 0 #345065;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: transform .1s ease, box-shadow .1s ease;
+}
+
+.clicker-cetakin__key:hover,
+.clicker-cetakin__key:active,
+.clicker-cetakin__key.pressed,
+.clicker-cetakin__key[data-down] {
+  transform: translateY(5px);
+  box-shadow: 0 1px 0 #b9c4c9, 0 2px 0 #345065;
+}
+
+.clicker-cetakin__key:focus-visible {
+  outline: 3px solid #19242f;
+  outline-offset: 2px;
+}
+
+.clicker-cetakin__key--placeholder {
+  opacity: .72;
+  cursor: default;
+}
+
+.clicker-cetakin__key--placeholder:hover {
+  transform: none;
+  box-shadow: 0 4px 0 #b9c4c9, 0 7px 0 #345065;
+}
+
+.clicker-cetakin__caption {
+  position: absolute;
+  z-index: 4;
+  left: clamp(16px, 2.4vw, 24px);
+  right: clamp(16px, 2.4vw, 24px);
+  bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #2b4c60;
+  font: 700 .62rem/1.3 var(--font-mono);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.clicker-cetakin__controls {
+  padding: 16px clamp(16px, 2.4vw, 24px) 18px;
+}
+
+.clicker-cetakin__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 16px;
+  margin-bottom: 16px;
+}
+
+.clicker-cetakin__row label {
+  display: grid;
+  gap: 2px;
+  color: #19242f;
+  font: 700 .9rem/1.3 var(--font-body);
+}
+
+.clicker-cetakin__row small {
+  color: #4a5863;
+  font: 600 .64rem/1.3 var(--font-mono);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.clicker-cetakin__row input {
+  width: 136px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid #b8c2c7;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #19242f;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font: 700 1.05rem/1.2 var(--font-body);
+}
+
+.clicker-cetakin__row input:focus-visible {
+  border-color: #d96400;
+  outline: 3px solid #d96400;
+  outline-offset: 2px;
+}
+
+.clicker-cetakin__color-label {
+  margin: 0 0 10px;
+  color: #19242f;
+  font: 700 .88rem/1.3 var(--font-body);
+}
+
+.clicker-cetakin__options {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.clicker-cetakin__option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 0;
+  min-height: 58px;
+  padding: 5px 2px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #19242f;
+  font: 600 .72rem/1.2 var(--font-body);
+  cursor: pointer;
+}
+
+.clicker-cetakin__option:focus-visible {
+  outline: 3px solid #d96400;
+  outline-offset: 2px;
+}
+
+.clicker-cetakin__chip {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #b8c2c7;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.clicker-cetakin__option[aria-pressed="true"] .clicker-cetakin__chip {
+  transform: scale(1.12);
+  box-shadow: 0 0 0 2px #19242f;
+}
+
+.clicker-cetakin__chip--orange { background: #ff7a00; }
+.clicker-cetakin__chip--blue { background: #38bdf8; }
+.clicker-cetakin__chip--white { background: #e7eef0; }
+.clicker-cetakin__chip--black { background: #1f2937; }
+.clicker-cetakin__chip--red { background: #de3636; }
+.clicker-cetakin__chip--pink { background: #fc8395; }
+
+.clicker-cetakin__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 14px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #d5dcdf;
+}
+
+.clicker-cetakin__footer p {
+  margin: 0;
+  color: #4a5863;
+  font: 500 .8rem/1.4 var(--font-body);
+}
+
+.clicker-cetakin__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #19242f;
+  color: #ffffff;
+  font: 700 .8rem/1.2 var(--font-body);
+  text-decoration: none;
+  transition: background-color .2s ease;
+}
+
+.clicker-cetakin__cta:hover {
+  background: #2b3c4d;
+}
+
+.clicker-cetakin__cta:focus-visible {
+  outline: 3px solid #d96400;
+  outline-offset: 2px;
+}
+
+.clicker-cetakin__cta[aria-disabled="true"] {
+  background: #dfe5e7;
+  color: #4a5863;
+  cursor: not-allowed;
+}
+
+.clicker-cetakin__meta {
+  border-top: 1px solid var(--rule);
+  background: #1a1711;
+  color: var(--ink-muted);
+  padding: 4px clamp(14px, 2.4vw, 24px);
+}
+
+.clicker-cetakin__meta .text-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--accent-bright);
+}
+
+@media (max-width: 540px) {
+  .clicker-cetakin__window {
+    height: 225px;
+  }
+
+  .clicker-cetakin__keys {
+    gap: 5px;
+    padding: 10px 11px 14px;
+  }
+
+  .clicker-cetakin__key {
+    width: clamp(38px, 11.2vw, 45px);
+    height: 44px;
+    font-size: 1.1rem;
+  }
+
+  .clicker-cetakin__ring {
+    width: 24px;
+    height: 22px;
+    left: -16px;
+    top: 22px;
+    border-width: 5px;
+  }
+
+  .clicker-cetakin__options {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px 6px;
+  }
+
+  .clicker-cetakin__footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .clicker-cetakin__cta {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clicker-cetakin__window,
+  .clicker-cetakin__object,
+  .clicker-cetakin__ring,
+  .clicker-cetakin__keys,
+  .clicker-cetakin__key,
+  .clicker-cetakin__chip,
+  .clicker-cetakin__cta {
+    transition: none;
+  }
+
+  .clicker-cetakin__object:hover {
+    transform: rotate(-9deg);
+  }
+}

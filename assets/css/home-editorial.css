@@ -1,0 +1,206 @@
+.portfolio-home :is(#about, #skills, #educator, #experience) {
+  padding-block: clamp(48px, 7vw, 94px);
+}
+
+.portfolio-home :is(#about, #skills, #educator, #experience) .section__head {
+  align-items: start;
+  margin: 0 0 clamp(18px, 4vw, 40px);
+  padding: 0;
+  border: 0;
+}
+
+.portfolio-home :is(#about, #skills, #educator, #experience) .section__eyebrow {
+  color: var(--accent);
+}
+
+.portfolio-home :is(#about, #skills, #educator, #experience) .section__title {
+  font-size: clamp(2.5rem, 5.5vw, 4.8rem);
+  text-wrap: balance;
+}
+
+.portfolio-home #about {
+  background: radial-gradient(ellipse at top left, var(--accent-soft), transparent 56%);
+}
+
+.portfolio-home #about .brief-about {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.8fr);
+  align-items: start;
+  gap: clamp(20px, 6vw, 78px);
+}
+
+.portfolio-home #about .section__head {
+  margin: 0;
+}
+
+.portfolio-home #about .brief-about__body > p {
+  max-width: 52ch;
+  color: var(--ink);
+  font-size: clamp(1.08rem, 1.8vw, 1.45rem);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.portfolio-home #about .focus-list {
+  gap: 8px 18px;
+  margin-block: 22px 8px;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+}
+
+.portfolio-home #about .focus-list span {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 0;
+  border: 0;
+  color: var(--ink-muted);
+  font-size: .88rem;
+}
+
+.portfolio-home #about .focus-list span::before {
+  content: "";
+  flex: 0 0 5px;
+  height: 5px;
+  align-self: center;
+  background: var(--accent);
+}
+
+.portfolio-home #skills .capability-grid {
+  gap: 0 clamp(18px, 3.5vw, 42px);
+}
+
+.portfolio-home #skills .capability-item {
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  align-items: start;
+  justify-items: start;
+  padding-block: 16px 8px;
+  transition: border-color var(--transition);
+}
+
+.portfolio-home #skills .capability-item:focus-within {
+  border-color: var(--accent);
+}
+
+.portfolio-home #skills .capability-item h3 {
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+}
+
+.portfolio-home #skills .capability-item > p {
+  margin-block: 7px 12px;
+}
+
+.portfolio-home #skills .capability-item__stack {
+  gap: 5px 7px;
+}
+
+.portfolio-home #skills .capability-item__stack li {
+  padding: 1px 6px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
+  overflow-wrap: anywhere;
+}
+
+.portfolio-home #skills .section__more {
+  justify-content: start;
+}
+
+.portfolio-home #educator .teaching-overview {
+  margin-left: 4px;
+  padding-left: clamp(14px, 3.3vw, 42px);
+  border-left: 1px solid var(--accent-dim);
+}
+
+.portfolio-home #educator .teaching-item {
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.2fr) minmax(0, 1.65fr);
+  gap: 8px clamp(12px, 2.8vw, 36px);
+  padding-block: 24px;
+  position: relative;
+}
+
+.portfolio-home #educator .teaching-item::before {
+  content: "";
+  position: absolute;
+  top: 33px;
+  left: calc(-5px - clamp(14px, 3.3vw, 42px));
+  width: 9px;
+  height: 9px;
+  border: 1px solid var(--accent);
+  background: var(--paper);
+  transform: rotate(45deg);
+}
+
+.portfolio-home #educator .teaching-item__category {
+  color: var(--accent);
+}
+
+.portfolio-home #educator .teaching-item p {
+  max-width: 60ch;
+}
+
+.portfolio-home #experience .proof-grid {
+  gap: 0 clamp(18px, 3.6vw, 42px);
+}
+
+.portfolio-home #experience .proof-item {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-block: 18px 8px;
+}
+
+.portfolio-home #experience .proof-item > span {
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.portfolio-home #experience .proof-item p {
+  margin-bottom: 8px;
+}
+
+.portfolio-home #experience .proof-item .text-link {
+  margin-top: auto;
+}
+
+@media (min-width: 901px) {
+  .portfolio-home #skills > .container {
+    display: grid;
+    grid-template-columns: minmax(0, .65fr) minmax(0, 1.35fr);
+    gap: 0 clamp(26px, 6vw, 86px);
+  }
+
+  .portfolio-home #skills .section__more {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 900px) {
+  .portfolio-home #educator .teaching-item {
+    grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr);
+  }
+
+  .portfolio-home #experience .proof-item h3 {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-home #about .brief-about {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .portfolio-home #educator .teaching-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .portfolio-home #educator .teaching-item__category,
+  .portfolio-home #educator .teaching-item p {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .portfolio-home #educator .teaching-item h3 {
+    margin: 0;
+  }
+}

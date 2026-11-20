@@ -226,7 +226,7 @@ test('New project galleries use the supplied result covers and retain contextual
 
 test('Homepage covers the main roles, tools, teaching, and full contact while linking to archives', () => {
   const { document } = load('index.html');
-  assert.equal(document.querySelectorAll('.selected-grid .work-card').length, 4);
+  assert.equal(document.querySelectorAll('[data-project-reel] .project-reel__chapter').length, 4);
   assert.equal(document.querySelector('#interactive-lab'), null);
   assert.equal(document.querySelector('[data-project-sim]'), null);
   assert.equal(document.querySelector('.project__tabs'), null);
@@ -249,6 +249,218 @@ test('Homepage covers the main roles, tools, teaching, and full contact while li
     assert.ok(link.href.startsWith('https://portfolio.test/projects/'));
     assert.ok(!link.href.includes('github.com'));
   }
+});
+
+test('CetakIn homepage preview switches captures and preserves the selected view across languages', () => {
+  const { document, window, click } = load('index.html');
+  const viewer = document.querySelector('[data-showcase]');
+  const controls = viewer.querySelector('.showcase__controls');
+  const buttons = [...controls.querySelectorAll('button')];
+  const panels = [...viewer.querySelectorAll('.showcase__screen')];
+  const captures = {
+    'cetakin-store': 'cetakin-home.jpg',
+    'cetakin-clicker': 'cetakin-clicker.jpg',
+    'cetakin-guides': 'cetakin-guides.jpg'
+  };
+  assert.equal(controls.hidden, false);
+  assert.equal(controls.getAttribute('role'), 'group');
+  assert.equal(panels.length, 3);
+  assert.deepEqual(buttons.map(button => button.getAttribute('aria-controls')), Object.keys(captures));
+  for (const button of buttons) {
+    assert.equal(button.getAttribute('type'), 'button');
+    assert.equal(button.disabled, false);
+    const id = button.getAttribute('aria-controls');
+    const panel = viewer.querySelector(`#${id}`);
+    assert.ok(panel, `${id} is a panel inside the viewer`);
+    assert.equal(path.basename(panel.querySelector('img').getAttribute('src')), captures[id]);
+  }
+
+  function assertSelection(id, language) {
+    for (const button of buttons) {
+      assert.equal(button.getAttribute('aria-pressed'), String(button.getAttribute('aria-controls') === id));
+    }
+    assert.deepEqual(panels.filter(panel => !panel.hidden).map(panel => panel.id), [id]);
+    const caption = viewer.querySelector(`#${id} figcaption`);
+    const translationKey = caption.getAttribute('data-i18n');
+    assert.equal(caption.textContent, window.siteTranslations[translationKey][language]);
+  }
+
+  assertSelection('cetakin-store', 'id');
+  for (const button of buttons.slice(1)) {
+    // LinkeDOM has no native keyboard activation. Dispatch the click a focused button would receive.
+    button.focus();
+    click(button);
+    assert.equal(document.activeElement, button);
+    assertSelection(button.getAttribute('aria-controls'), 'id');
+  }
+  for (const language of ['en', 'id']) {
+    click(document.querySelector(`[data-language="${language}"]`));
+    assertSelection('cetakin-guides', language);
+  }
+  click(buttons[0]);
+  assertSelection('cetakin-store', 'id');
+});
+
+test('Homepage Clicker Lab matches CetakIn preview behavior across languages, colors, and empty state', () => {
+  const { document, window, click, advanceTimer } = load('index.html');
+  const lab = document.querySelector('.clicker-lab');
+  const input = lab.querySelector('#clicker-text');
+  const previewWindow = lab.querySelector('#clicker-window');
+  const status = lab.querySelector('#clicker-status');
+  const orderLink = lab.querySelector('#clicker-order-link');
+  const keys = () => [...lab.querySelectorAll('button.clicker-cetakin__key')];
+  const legends = () => keys().map(key => key.textContent.trim());
+  const pinkBtn = lab.querySelector('.clicker-cetakin__option[data-color="pink"]');
+  const blueBtn = lab.querySelector('.clicker-cetakin__option[data-color="blue"]');
+
+  assert.equal(previewWindow.dataset.color, 'orange');
+  assert.deepEqual(legends(), ['C', 'E', 'T', 'A', 'K']);
+  assert.equal(status.textContent, '5 huruf · Base PETG orange');
+  assert.match(orderLink.getAttribute('href'), /^https:\/\/cetak-in\.my\.id\/clicker\.html#desain=/);
+
+  input.value = 'n4!au f';
+  input.dispatchEvent(new window.Event('input', { bubbles: true }));
+  click(pinkBtn);
+
+  assert.equal(input.value, 'NAUF');
+  assert.deepEqual(legends(), ['N', 'A', 'U', 'F']);
+  assert.equal(previewWindow.dataset.color, 'pink');
+  assert.equal(pinkBtn.getAttribute('aria-pressed'), 'true');
+  assert.equal(status.textContent, '4 huruf · Base PLA pink');
+  assert.equal(keys()[0].getAttribute('aria-label'), `${window.siteTranslations['home.clicker.key'].id} N`);
+
+  click(document.querySelector('[data-language="en"]'));
+  assert.equal(status.textContent, '4 letters · PLA pink base');
+  assert.equal(keys()[0].getAttribute('aria-label'), `${window.siteTranslations['home.clicker.key'].en} N`);
+
+  click(blueBtn);
+  assert.equal(previewWindow.dataset.color, 'blue');
+  assert.equal(status.textContent, '4 letters · PETG sky blue base');
+
+  const firstKey = keys()[0];
+  firstKey.focus();
+  click(firstKey);
+  assert.equal(document.activeElement, firstKey);
+  assert.equal(firstKey.classList.contains('pressed'), true);
+  advanceTimer();
+  assert.equal(firstKey.classList.contains('pressed'), false);
+
+  input.value = '123';
+  input.dispatchEvent(new window.Event('input', { bubbles: true }));
+  assert.equal(input.value, '');
+  assert.equal(keys().length, 0);
+  assert.equal(lab.querySelector('.clicker-cetakin__key--placeholder').textContent, '?');
+  assert.equal(orderLink.getAttribute('aria-disabled'), 'true');
+  assert.equal(status.textContent, window.siteTranslations['home.clicker.emptyStatus'].en);
+
+  click(document.querySelector('[data-language="id"]'));
+  assert.equal(status.textContent, window.siteTranslations['home.clicker.emptyStatus'].id);
+});
+
+test('Hexapod kinematics module solves 18-DOF IK/FK accurately across walking and IMU slope interlock', () => {
+  const kin = require(path.join(root, 'assets/js/hexapod-kinematics.js'));
+  for (const [vx, omega, slopeDeg, phase] of [
+    [0, 0, 0, 0],
+    [1, 0, 0, Math.PI * 0.5],
+    [-1, 0, 10, Math.PI * 1.4],
+    [0, 1, 14, Math.PI * 0.7],
+    [1, 0, 22, Math.PI * 0.4]
+  ]) {
+    const pose = kin.computePose({ vx, omega, slopeDeg, phase });
+    assert.equal(pose.legs.length, 6);
+    assert.equal(pose.telemetry.interlock, slopeDeg >= 18);
+    if (slopeDeg >= 18) {
+      assert.equal(pose.telemetry.gaitLabel, 'INTERLOCK');
+      assert.ok(pose.bodyHeight < kin.DEFAULT_STAND_HEIGHT);
+    } else {
+      assert.equal(pose.telemetry.gaitLabel, 'TRIPOD 3+3');
+    }
+    pose.legs.forEach((legOut, idx) => {
+      const def = kin.DEFAULT_LEGS[idx];
+      const fk = kin.solveLegFK(def.mount, def.baseYaw, legOut.angles);
+      const err = Math.hypot(
+        fk.x - legOut.footTarget.x,
+        fk.y - legOut.footTarget.y,
+        fk.z - legOut.footTarget.z
+      );
+      assert.ok(Number.isFinite(err) && err < 0.001, `Leg ${idx} IK error too large: ${err}`);
+    });
+  }
+
+  // Verify smooth continuous velocity ramp across forward -> reverse and forward -> turn without discontinuities.
+  let prevPose = null;
+  for (let step = 0; step <= 20; step++) {
+    const t = step / 20;
+    const vx = 1 - 2 * t;
+    const omega = Math.sin(t * Math.PI) * 0.5;
+    const pose = kin.computePose({ vx, omega, slopeDeg: 8, phase: 0.6 + step * 0.12 });
+    if (prevPose) {
+      pose.legs.forEach((legOut, idx) => {
+        const prev = prevPose.legs[idx].angles;
+        const maxJointJump = Math.max(
+          Math.abs(legOut.angles.coxa - prev.coxa),
+          Math.abs(legOut.angles.femur - prev.femur),
+          Math.abs(legOut.angles.tibia - prev.tibia)
+        );
+        assert.ok(maxJointJump < 0.35, `Leg ${idx} jumped abruptly during reversal: ${maxJointJump}`);
+      });
+    }
+    prevPose = pose;
+  }
+});
+
+test('Homepage Dual Lab defaults to Hexaka V3, controls gait/IMU/explode, and switches cleanly to Clicker Lab', () => {
+  const { document, window, click } = load('index.html');
+  const hexTab = document.querySelector('#lab-tab-hexapod');
+  const clickerTab = document.querySelector('#lab-tab-clicker');
+  const hexPanel = document.querySelector('#lab-panel-hexapod');
+  const clickerPanel = document.querySelector('#lab-panel-clicker');
+  const forwardBtn = hexPanel.querySelector('[data-hex-move="forward"]');
+  const stopBtn = hexPanel.querySelector('[data-hex-move="stop"]');
+  const slopeInput = hexPanel.querySelector('#hexapod-slope');
+  const explodeBtn = hexPanel.querySelector('#hexapod-explode');
+  const internalsBar = hexPanel.querySelector('#hexapod-internals');
+
+  assert.equal(hexTab.getAttribute('aria-selected'), 'true');
+  assert.equal(clickerTab.getAttribute('aria-selected'), 'false');
+  assert.equal(hexPanel.hidden, false);
+  assert.equal(clickerPanel.hidden, true);
+  assert.equal(stopBtn.getAttribute('aria-pressed'), 'true');
+  assert.equal(internalsBar.hidden, true);
+
+  click(forwardBtn);
+  assert.equal(forwardBtn.getAttribute('aria-pressed'), 'true');
+  assert.equal(stopBtn.getAttribute('aria-pressed'), 'false');
+  assert.equal(hexPanel.querySelector('#hexapod-motion-val').textContent, 'Maju');
+
+  slopeInput.value = '18';
+  slopeInput.dispatchEvent(new window.Event('input', { bubbles: true }));
+  assert.equal(hexPanel.querySelector('#hexapod-slope-val').textContent, '18°');
+  assert.equal(hexPanel.querySelector('#hexapod-pid-val').textContent, '-16.9° PID');
+  assert.equal(hexPanel.querySelector('#hexapod-gait-val').textContent, 'INTERLOCK');
+  assert.equal(hexPanel.hasAttribute('data-interlock'), true);
+
+  click(explodeBtn);
+  assert.equal(explodeBtn.getAttribute('aria-pressed'), 'true');
+  assert.equal(internalsBar.hidden, false);
+
+  window.siteI18n.setLanguage('en');
+  assert.equal(hexPanel.querySelector('#hexapod-motion-val').textContent, 'Forward');
+  assert.equal(internalsBar.hidden, false);
+
+  click(stopBtn);
+  assert.equal(stopBtn.getAttribute('aria-pressed'), 'true');
+  assert.equal(hexPanel.querySelector('#hexapod-motion-val').textContent, 'Stop');
+
+  click(clickerTab);
+  assert.equal(clickerTab.getAttribute('aria-selected'), 'true');
+  assert.equal(hexPanel.hidden, true);
+  assert.equal(clickerPanel.hidden, false);
+
+  click(hexTab);
+  assert.equal(hexTab.getAttribute('aria-selected'), 'true');
+  assert.equal(hexPanel.hidden, false);
+  assert.equal(clickerPanel.hidden, true);
 });
 
 test('Copy email announces success only after the clipboard write resolves', async () => {
@@ -368,4 +580,144 @@ test('Software previews use captured assets and never substitute reconstructed i
       assert.ok(asset.length > 10000, 'Capture must contain a rendered image');
     }
   }
+});
+
+test('Skill map links each technology to real project pages and reports the selection in both languages', () => {
+  const { document, window, click } = load('index.html');
+  const map = document.querySelector('[data-skill-map]');
+  const chips = [...map.querySelectorAll('.skill-chip')];
+  const rows = new Map([...map.querySelectorAll('[data-project]')].map(row => [row.dataset.project, row]));
+  assert.ok(chips.length >= 20);
+  for (const [slug, row] of rows) {
+    assert.ok(fs.existsSync(path.join(root, 'projects', slug, 'index.html')), `${slug} page exists`);
+    assert.ok(row.querySelector('a').getAttribute('href').includes(`projects/${slug}/`));
+  }
+  for (const chip of chips) {
+    const links = chip.dataset.links.split(' ');
+    assert.ok(links.length > 0);
+    links.forEach(slug => assert.ok(rows.has(slug), `${chip.textContent} links to ${slug}`));
+  }
+  const linked = () => [...rows].filter(([, row]) => row.classList.contains('is-linked')).map(([slug]) => slug);
+  const status = map.querySelector('[data-skill-status]');
+  const laravel = chips.find(chip => chip.textContent === 'Laravel');
+  assert.equal(laravel.getAttribute('aria-pressed'), 'true');
+  assert.deepEqual(linked(), ['pkl-kominfo', 'cloud-manager']);
+  assert.equal(status.textContent, 'Laravel dipakai di 2 proyek.');
+
+  const flutter = chips.find(chip => chip.textContent.startsWith('Flutter'));
+  click(flutter);
+  assert.equal(flutter.getAttribute('aria-pressed'), 'true');
+  assert.equal(laravel.getAttribute('aria-pressed'), 'false');
+  assert.deepEqual(linked(), ['myanimerent', 'e-ponic', 'mangrovepreneurs']);
+  window.siteI18n.setLanguage('en');
+  assert.equal(status.textContent, 'Flutter · Dart is used in 3 projects.');
+
+  click(flutter);
+  assert.equal(flutter.getAttribute('aria-pressed'), 'false');
+  assert.deepEqual(linked(), []);
+  assert.equal(status.textContent, '');
+});
+
+test('Hero split-flap board shows the first role and keeps a full sentence for screen readers', () => {
+  const { document, window, timers } = load('index.html');
+  const board = document.querySelector('[data-flap-board]');
+  assert.equal(board.getAttribute('aria-hidden'), 'true');
+  assert.equal(board.querySelectorAll('.flap__cell').length, 16);
+  const text = () => [...board.querySelectorAll('.flap__glyph')].map(glyph => glyph.textContent || ' ').join('').trim();
+  assert.equal(text(), 'WEBSITE LARAVEL');
+  assert.equal(timers.size, 0, 'rotation waits until the board is observed on screen');
+  window.siteI18n.setLanguage('en');
+  assert.equal(text(), 'LARAVEL WEBSITES');
+  assert.match(document.querySelector('.flap .sr-only').textContent, /Laravel websites, Flutter apps/);
+});
+
+test('Command palette opens from the keyboard, finds projects by technology, and keeps the language', () => {
+  for (const file of ['index.html', 'projects/hexaka/index.html', 'projects/cetakin/index.html']) {
+    const { document, window, location } = load(file);
+    const trigger = document.querySelector('.cmd-trigger');
+    assert.ok(trigger, `${file} has a palette trigger`);
+    assert.equal(trigger.nextElementSibling, document.querySelector('.language-switch'));
+    window.siteI18n.setLanguage('en');
+    assert.equal(trigger.getAttribute('aria-label'), 'Search pages, projects, or commands');
+
+    const press = (key, extra = {}) => {
+      const event = new window.Event('keydown', { bubbles: true, cancelable: true });
+      Object.assign(event, { key }, extra);
+      (extra.target || document).dispatchEvent(event);
+    };
+    press('k', { ctrlKey: true });
+    const dialog = document.querySelector('dialog.cmd');
+    assert.ok(dialog.hasAttribute('open'));
+    const input = dialog.querySelector('.cmd__input');
+    assert.equal(document.activeElement, input);
+
+    input.value = 'laravel';
+    input.dispatchEvent(new window.Event('input', { bubbles: true }));
+    const labels = [...dialog.querySelectorAll('[role="option"] .cmd__label')].map(el => el.textContent);
+    assert.deepEqual(labels, ['Sistem Cuti Kominfo', 'Cloud Resource Manager']);
+    assert.equal(input.getAttribute('aria-activedescendant'), dialog.querySelector('[aria-selected="true"]').id);
+
+    input.value = 'zzzz';
+    input.dispatchEvent(new window.Event('input', { bubbles: true }));
+    assert.match(dialog.querySelector('.cmd__empty').textContent, /No results/);
+
+    input.value = 'laravel';
+    input.dispatchEvent(new window.Event('input', { bubbles: true }));
+    const down = new window.Event('keydown', { bubbles: true, cancelable: true });
+    Object.assign(down, { key: 'ArrowDown' });
+    input.dispatchEvent(down);
+    const enter = new window.Event('keydown', { bubbles: true, cancelable: true });
+    Object.assign(enter, { key: 'Enter' });
+    input.dispatchEvent(enter);
+    assert.equal(dialog.hasAttribute('open'), false);
+    assert.equal(location.pathname, '/projects/cloud-manager/');
+    assert.equal(location.searchParams.get('lang'), 'en');
+  }
+});
+
+test('Selected work reel keeps one CetakIn viewer, moves it with the layout, and hides inactive scenes from focus', () => {
+  const { document, media } = load('index.html');
+  const reel = document.querySelector('[data-project-reel]');
+  const viewer = () => document.querySelectorAll('[data-showcase]');
+  assert.equal(viewer().length, 1);
+  assert.equal(document.querySelectorAll('#cetakin-store').length, 1);
+  const chapters = [...reel.querySelectorAll('[data-reel-beat]')].map(el => el.dataset.reelBeat);
+  const layers = [...reel.querySelectorAll('[data-reel-layer]')];
+  assert.deepEqual(chapters, ['cetakin', 'pkl-kominfo', 'myanimerent', 'hexaka']);
+  assert.deepEqual(layers.map(el => el.dataset.reelLayer), chapters);
+  for (const key of chapters) {
+    assert.ok(reel.querySelector(`#work-${key} a[href*="projects/${key}/"]`), `${key} links to its case study`);
+    assert.equal(reel.querySelectorAll(`[data-reel-jump="${key}"]`).length, 2);
+  }
+
+  const query = '(min-width: 980px) and (min-height: 620px) and (prefers-reduced-motion: no-preference)';
+  // Starts stacked (no sticky screen): the viewer sits inline in its chapter.
+  assert.equal(reel.hasAttribute('data-reel-enhanced'), false);
+  assert.ok(viewer()[0].closest('[data-showcase-slot="inline"]'));
+
+  media.get(query).change(true);
+  assert.ok(reel.hasAttribute('data-reel-enhanced'));
+  assert.ok(viewer()[0].closest('[data-showcase-slot="stage"]'));
+  assert.equal(viewer().length, 1);
+  // Exactly one scene is shown; the others cannot take keyboard focus.
+  const shown = layers.filter(layer => layer.dataset.active === 'true');
+  assert.equal(shown.length, 1);
+  layers.forEach(layer => assert.equal(layer.hasAttribute('inert'), layer !== shown[0]));
+  assert.equal(reel.querySelector(`[data-reel-jump="${shown[0].dataset.reelLayer}"][aria-current="location"]`) !== null, true);
+
+  media.get(query).change(false);
+  assert.equal(reel.hasAttribute('data-reel-enhanced'), false);
+  assert.ok(viewer()[0].closest('[data-showcase-slot="inline"]'));
+  layers.forEach(layer => assert.equal(layer.hasAttribute('inert'), false));
+});
+
+test('Teaching timeline lists dated activities without inventing years and links to the full record', () => {
+  const { document } = load('index.html');
+  const timeline = document.querySelector('#educator [data-edu-timeline]');
+  const entries = [...timeline.querySelectorAll('[data-timeline-entry]')];
+  assert.equal(entries.length, 5);
+  assert.deepEqual(entries.map(e => e.dataset.timelineEntry), ['2026', '2026', '2025', 'KOSSMI', 'MAN IC']);
+  assert.equal(timeline.querySelector('[data-timeline-current]').textContent, '2026');
+  assert.ok(entries[0].classList.contains('is-current'));
+  assert.ok(timeline.querySelector('a[href*="/profil/"]'));
 });

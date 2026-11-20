@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
  <head>
-  <meta charset="utf-8"/>
+  <meta charset="utf-8"/><script src="../../assets/js/site-enhance.js"></script>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title data-i18n="t256">
    Wasaka Hexapod (Hexaka V3): Robot Berkaki Otonom 18-DOF | Naufal Elyzar
@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
   <!-- Stylesheet bersama -->
   <link href="../../assets/css/project-detail.css" rel="stylesheet"/>
-  <link href="../../assets/css/site-controls.css" rel="stylesheet"/>
+  <link href="../../assets/css/site-controls.css" rel="stylesheet"/><link rel="stylesheet" href="../../assets/css/site-enhance.css"><link rel="stylesheet" href="../../assets/css/home-hexapod.css">
  </head>
  <body>
   <a class="skip-link" data-i18n="t002" href="#main-content">
@@ -212,54 +212,82 @@
      </div>
     </section>
     <!-- Interactive Simulator -->
-    <section class="block block--sim" id="simulasi" data-project-sim="hexaka">
-     <h2 data-i18n="hexaka.sim.title">
-      Simulasi Interaktif: Stabilisasi IMU &amp; Mode Misi
-     </h2>
-     <p class="muted" data-i18n="hexaka.sim.desc">
-      Ubah sudut kemiringan lantai (0°–22°) atau pilih salah satu dari 3 aplikasi misi Hexaka V3 untuk mengamati respons PID body leveling dan status sistemnya.
-     </p>
-     <div class="sim-widget">
-      <div class="sim-controls">
-       <div class="sim-group">
-        <div class="sim-label">
-         <span data-i18n="hexaka.sim.slope">Kemiringan Permukaan Medan (BNO055 IMU)</span>
-         <strong id="simHexSlopeVal">8°</strong>
+    <section class="block block--sim" id="simulasi">
+     <h2 data-i18n="hexaka.sim3d.title">Simulasi Interaktif: Kendali 3D &amp; Stabilisasi IMU</h2>
+     <p class="muted" data-i18n="hexaka.sim3d.desc">Gerakkan Hexaka V3 dengan tombol arah atau WASD, ubah kemiringan medan 0° sampai 22° untuk melihat koreksi PID pada bodi, lalu urai bodinya untuk melihat komponen di dalam.</p>
+     <div class="hero-lab hero-lab--embedded">
+      <section class="hero-lab__panel hexapod-lab" id="lab-panel-hexapod" aria-labelledby="hexapod-title" data-lab-panel="hexapod">
+        <div class="hexapod-lab__heading">
+          <div>
+            <p class="hexapod-lab__eyebrow" data-i18n="home.hexapod.eyebrow">Simulasi unggulan</p>
+            <h3 id="hexapod-title" data-i18n="home.hexapod.title">Kendalikan Hexaka V3.</h3>
+          </div>
+          <span class="hexapod-lab__tech">Three.js <span aria-hidden="true">/</span> WebGL</span>
         </div>
-        <input type="range" class="sim-slider" id="simHexSlope" min="0" max="22" step="1" value="8" aria-label="Sudut kemiringan" />
-       </div>
-       <div class="sim-group">
-        <div class="sim-label"><span data-i18n="hexaka.sim.mode">Pilih Aplikasi Misi Aktif:</span></div>
-        <div class="sim-btns">
-         <button type="button" class="sim-btn active" data-hex-mode="BEST_AUTONOMOUS" data-i18n="hexaka.sim.m_best">1 · BRIN BEST 2026</button>
-         <button type="button" class="sim-btn" data-hex-mode="PKKMB_TRACK" data-i18n="hexaka.sim.m_pkkmb">2 · Human Tracking</button>
-         <button type="button" class="sim-btn" data-hex-mode="TIKTOK_LIVE" data-i18n="hexaka.sim.m_tiktok">3 · TikTok Live + 3D</button>
+        <div class="hexapod-lab__viewport" id="hexapod-view">
+          <div class="hexapod-lab__stage" id="hexapod-canvas" tabindex="0" role="region" aria-label="Area 3D simulasi Hexaka V3. Gunakan WASD atau panah untuk bergerak, Spasi untuk berhenti." data-i18n-aria-label="home.hexapod.viewportAria"></div>
+          <figure class="hexapod-lab__poster" id="hexapod-poster">
+            <img alt="Robot Wasaka Hexapod Hexaka V3 dengan 6 kaki 18-DOF" data-i18n-alt="home.hexapod.posterAlt" decoding="async" height="1280" sizes="(max-width: 760px) 92vw, 560px" src="../../assets/images/optimized/projects-hexaka-Hexa-960.webp" srcset="../../assets/images/optimized/projects-hexaka-Hexa-480.webp 480w, ../../assets/images/optimized/projects-hexaka-Hexa-960.webp 960w" width="960">
+          </figure>
+          <div class="hexapod-lab__state" id="hexapod-state" role="status" aria-live="polite" hidden>
+            <span id="hexapod-state-text"></span>
+          </div>
+          <button class="hexapod-lab__reset" id="hexapod-reset" type="button" aria-label="Reset sudut kamera 3D" data-i18n-aria-label="home.hexapod.resetAria">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 10a8 8 0 1 0-2 8M20 5v5h-5"/></svg>
+            <span data-i18n="home.hexapod.reset">Reset sudut</span>
+          </button>
         </div>
-       </div>
-      </div>
-      <div class="sim-terminal">
-       <div class="sim-terminal__head">
-        <span>HEXAKA_V3 // 18-DOF DYNAMIXEL</span>
-        <span class="sim-terminal__badge">● 50Hz TELEMETRY</span>
-       </div>
-       <div class="sim-metrics">
-        <div class="sim-metric">
-         <span data-i18n="hexaka.sim.k1">KOREKSI BODI</span>
-         <strong id="simHexM1">-7.5° PID</strong>
+        <p class="hexapod-lab__internals" id="hexapod-internals" data-i18n="home.hexapod.internals" hidden>Komponen dalam: Raspberry Pi 5 · UBEC 15A · U2D2</p>
+        <div class="hexapod-lab__telemetry">
+          <div class="hexapod-lab__telemetry-item">
+            <span data-i18n="home.hexapod.k1">Koreksi IMU</span>
+            <strong id="hexapod-pid-val">0.0° PID</strong>
+          </div>
+          <div class="hexapod-lab__telemetry-item">
+            <span data-i18n="home.hexapod.k2">Pola langkah</span>
+            <strong id="hexapod-gait-val">TRIPOD 3+3</strong>
+          </div>
+          <div class="hexapod-lab__telemetry-item">
+            <span data-i18n="home.hexapod.k3">Perintah gerak</span>
+            <strong id="hexapod-motion-val">Berhenti</strong>
+          </div>
         </div>
-        <div class="sim-metric">
-         <span data-i18n="hexaka.sim.k2">POLA LANGKAH</span>
-         <strong id="simHexM2">TRIPOD 3+3</strong>
+        <div class="hexapod-lab__controls">
+          <div class="hexapod-dpad" role="group" aria-label="Kendali gerak robot" data-i18n-aria-label="home.hexapod.dpadAria">
+            <button class="hexapod-dpad__btn hexapod-dpad__btn--forward" type="button" data-hex-move="forward" aria-pressed="false" aria-label="Maju" data-i18n-aria-label="home.hexapod.dirForward">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+            </button>
+            <button class="hexapod-dpad__btn hexapod-dpad__btn--left" type="button" data-hex-move="left" aria-pressed="false" aria-label="Belok kiri" data-i18n-aria-label="home.hexapod.dirLeft">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <button class="hexapod-dpad__btn hexapod-dpad__btn--stop" type="button" data-hex-move="stop" aria-pressed="true" aria-label="Berhenti" data-i18n-aria-label="home.hexapod.dirStop">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="2"/></svg>
+            </button>
+            <button class="hexapod-dpad__btn hexapod-dpad__btn--right" type="button" data-hex-move="right" aria-pressed="false" aria-label="Belok kanan" data-i18n-aria-label="home.hexapod.dirRight">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+            <button class="hexapod-dpad__btn hexapod-dpad__btn--backward" type="button" data-hex-move="backward" aria-pressed="false" aria-label="Mundur" data-i18n-aria-label="home.hexapod.dirBackward">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </div>
+          <div class="hexapod-lab__side">
+            <div class="hexapod-slope">
+              <label class="hexapod-slope__label" for="hexapod-slope">
+                <span data-i18n="home.hexapod.slope">Kemiringan medan (BNO055)</span>
+                <strong id="hexapod-slope-val">0°</strong>
+              </label>
+              <input id="hexapod-slope" type="range" min="0" max="22" step="1" value="0" aria-label="Atur sudut kemiringan medan 0 hingga 22 derajat" data-i18n-aria-label="home.hexapod.slopeAria">
+            </div>
+            <button class="hexapod-lab__action" id="hexapod-explode" type="button" aria-pressed="false">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m12 4 8 4-8 4-8-4zM4 12l8 4 8-4M4 16l8 4 8-4"/></svg>
+              <span data-i18n="home.hexapod.explode">Urai bodi (RPi 5 &amp; komponen)</span>
+            </button>
+          </div>
         </div>
-        <div class="sim-metric">
-         <span data-i18n="hexaka.sim.k3">PIPELINE AKTIF</span>
-         <strong id="simHexM3">ONNX + 50Hz</strong>
+        <div class="hexapod-lab__footer">
+          <span data-i18n="home.hexapod.credit">Model kinematika 18-DOF · Geser untuk putar 3D</span>
         </div>
-       </div>
-       <div class="sim-output" id="simHexOut">
-        [BRIN BEST 2026] Segmentasi lantai kamera tunggal + penghindaran rintangan YOLO11 aktif. IMU BNO055 mengompensasi miring 8°.
-       </div>
-      </div>
+      </section>
      </div>
     </section>
     <!-- 3 Misi Utama -->
@@ -592,6 +620,8 @@
   </script>
   <script defer="" src="../../assets/js/i18n.js">
   </script>
+  <script defer src="../../assets/js/hexapod-kinematics.js"></script>
+  <script defer src="../../assets/js/home-hexapod.js"></script>
   <script defer="" src="../../assets/js/project-detail.js">
   </script>
   <script defer="" src="../../assets/js/gallery.js">

@@ -44,6 +44,20 @@ window.addEventListener('resize', updateSection);
 document.addEventListener('languagechange', updateSection);
 updateSection();
 
+const showcase = document.querySelector('[data-showcase]');
+if (showcase) {
+  const controls = showcase.querySelector('.showcase__controls');
+  const buttons = [...controls.querySelectorAll('button')];
+  const screens = [...showcase.querySelectorAll('.showcase__screen')];
+
+  buttons.forEach(button => button.addEventListener('click', () => {
+    const activeScreenId = button.getAttribute('aria-controls');
+    screens.forEach(screen => { screen.hidden = screen.id !== activeScreenId; });
+    buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+  }));
+  controls.hidden = false;
+}
+
 const projectBrowser = document.querySelector('.project-browser');
 const projectFilters = [...document.querySelectorAll('[data-project-filter]')];
 const projectCards = [...document.querySelectorAll('[data-project-category]')];

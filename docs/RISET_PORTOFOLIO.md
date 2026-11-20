@@ -46,3 +46,43 @@ Sebagai langkah lanjutan, minta calon pembaca dari tiga kelompok sasaran mencoba
 Jika nantinya ada analitik, nilai kunjungan detail proyek, akses CV, dan tindakan kontak bersama konteks sumber kunjungannya. Keluar cepat setelah menemukan alamat email juga dapat merupakan keberhasilan. Pengukuran produksi dan pemasangan analitik belum menjadi bagian perubahan ini.
 
 Naskah yang diterapkan tersedia di [NASKAH_PORTOFOLIO.md](NASKAH_PORTOFOLIO.md). Skill kerja tetap lokal di `.local-skills/` dan dikecualikan dari Git.
+
+## Riset tampilan beranda · 10 November 2026
+
+Beranda sebelumnya mengulang pola foto, deskripsi, dan tautan pada hampir semua proyek. Karya software sudah memiliki tangkapan layar yang berguna, tetapi pengunjung perlu membuka detail untuk membandingkan alur atau fitur. Rancangan baru memberi lebih banyak ruang pada karakter visual situs dan bukti pengerjaan produk web.
+
+### Referensi
+
+- **Fikri Aditya** membuat perpustakaan 3D yang bisa dijelajahi dengan scroll dan buku yang bisa dibuka. Jalur langsung ke List view, About, dan Contact melayani pembaca yang ingin segera menemukan karya. Terapkan pemisahan serupa antara interaksi yang bisa dicoba dan navigasi yang selalu mudah ditemukan. [Portofolio Fikri Aditya](https://adityara.is-a.dev/)
+- **Rishi Thakor** menggunakan pembuka bernuansa kertas dengan potret cutout, buku yang memperlihatkan perannya, dan pintu visual per bidang. Tombol untuk melihat karya dan menghubungi Rishi tampil sejak pembuka. Halaman web dan mobile memakai dokumentasi layar untuk menunjukkan fitur. Adaptasi yang sesuai adalah pemilih pratinjau software dengan aksi utama yang langsung terbaca. [Portofolio Rishi Thakor](https://therishithakor.com/home) · [Contoh karya web](https://therishithakor.com/web-developer/)
+- **Renando** menggabungkan tipografi raksasa berlapis potret dengan nuansa gelap dan merah. Kontrol motion, akses langsung ke karya dan CV, serta slider sebelum dan sesudah memberi fungsi pada interaksi. Ambil hierarki visual dan gagasan bahwa gerak bisa membantu pembaca membandingkan bukti. [Portofolio Renando](https://renando.duingzcreative.site/) · [Dokumentasi pembuat](https://www.duingzforge.site/learn/portfolio-sinematik-ai-copy-prompt)
+- **Brittany Chiang** menempatkan peran, hasil kerja, dan stack dekat dengan proyek, serta menyediakan tautan résumé dan arsip. Pada beranda Naufal, ringkasan kontribusi dan beberapa teknologi di tiap proyek membantu pembaca membedakan web, mobile, dan robotika dengan cepat. [Portofolio Brittany Chiang](https://brittanychiang.com/)
+- **Rauno Freiberg** memperlihatkan kualitas frontend lewat prototipe interaksi kecil seperti tab dan slider. Terapkan ketelitian yang sama pada pemilih pratinjau CetakIn melalui status aktif yang jelas, perubahan gambar singkat, dan akses keyboard. [Craft oleh Rauno Freiberg](https://rauno.me/craft)
+
+### Iterasi visual awal
+
+1. **Pembuka berlapis dengan tipografi besar.** Nama, potret cutout, dan aksen amber memberi identitas. Pengantar menyebut pengembangan web dan mobile bersama robotika dan IoT. Karya, CV, dan kontak memiliki akses langsung.
+2. **CetakIn sebagai karya web unggulan.** Pembaca bisa beralih antara tangkapan layar Etalase, Clicker Lab, dan Panduan untuk melihat cakupan produk serta membaca kontribusi Naufal sebagai co-founder dan pengembang. Pilihan tersedia melalui tombol yang dapat digunakan dengan sentuhan dan keyboard. Detail proyek tetap menampung penjelasan lengkap.
+3. **Komposisi karya pendukung mengikuti medianya.** Si-Cuti menampilkan antarmuka web, MyAnimeRent memakai tampilan aplikasi ponsel, dan Hexaka memakai foto robot. Tools, Educator, pengalaman, serta kontak tetap mendapat ruang di beranda agar pengunjung dapat memindai peran dan bukti yang relevan.
+4. **Gerak singkat pada interaksi.** Gunakan transisi lokal untuk memperjelas perpindahan fokus dan perubahan pratinjau. Hormati preferensi gerak berkurang. Nama, tautan, dan ringkasan karya tersedia sejak halaman dibuka.
+
+### Iterasi pembuka interaktif
+
+Pratinjau CetakIn menunjukkan fitur melalui tangkapan layar. Pembuka berikutnya memberi pengunjung kesempatan mencoba interaksi langsung. Demo Clicker Lab mengadaptasi gagasan konfigurator produk yang sudah dibuat untuk CetakIn dan memberi komposisi pembuka satu objek yang bisa dieksplorasi.
+
+- **Niccolò Miranda** menjadikan koran sebagai satu bahasa visual untuk tipografi, komposisi, dan penjelajahan karya. Beranda Naufal mengambil konsistensinya melalui suasana meja kerja gelap dan aksen amber yang mengikat judul, objek, dan panel konfigurasi. [Paper Portfolio](https://www.niccolomiranda.com/)
+- **Lynn Fisher** memperlihatkan teknik CSS dan JavaScript lewat perilaku khas saat ukuran browser berubah. Efek tersebut punya perilaku yang disesuaikan untuk ponsel. Pada demo Naufal, objek tiga tombol menjadi satu fokus visual dengan kontrol yang bisa digunakan pada layar sentuh. [Studi kasus Lynn Fisher](https://lynnandtonic.com/thoughts/entries/case-study-2025-refresh/)
+- **Rauno Freiberg** menampilkan prototipe kecil sebagai karya dan menjelaskan bagaimana gerak memberi petunjuk tentang susunan serta hubungan objek. Tampilan komponen terurai pada clicker memberi pengunjung cara melihat lapisan yang sebelumnya bertumpuk. [Craft](https://rauno.me/craft) · [Invisible Details of Interaction Design](https://rauno.me/craft/interaction-design)
+- **Josh W. Comeau** menunjukkan tombol dengan lapisan depan yang terlihat turun ketika ditekan, memakai HTML dan CSS. Respons ini meniru gerak clicker fisik, termasuk saat tombol digunakan lewat keyboard. [Building a Magical 3D Button](https://www.joshwcomeau.com/animation/3d-button/)
+- **Emil Kowalski** memperlihatkan perbedaan animasi toast yang melompat dan transisi yang bisa diarahkan ulang oleh input berikutnya. Gunakan umpan balik pendek pada tombol dan perubahan posisi agar pengunjung dapat terus berinteraksi saat gerak berlangsung. [Building a Toast Component](https://emilkowal.ski/ui/building-a-toast-component)
+
+#### Penerapan
+
+1. **Nama, peran, dan akses langsung.** Pembuka memuat nama, fokus web dan mobile serta robotika dan IoT, dan tautan karya, CV, dan kontak sejak halaman terbuka. Potret, lokasi, dan konteks peran berada di Tentang. Bukti kompetisi tersedia di bagian Pengalaman dan sertifikasi.
+2. **Satu demo yang bisa dicoba.** Tiga tombol mulai dari huruf W, E, dan B dan bisa diberi huruf lain. Pengunjung bisa menekannya lewat sentuhan atau keyboard, memilih salah satu dari tiga palet, memutar objek dengan menyeret atau memakai kontrol, dan membuka tampilan komponen terurai. Perubahan langsung terlihat pada objek.
+3. **Batas demo dan bukti produk jelas.** Pembuka memperkenalkan clicker sebagai demo portofolio yang terinspirasi Clicker Lab CetakIn, dengan tautan ke studi kasus produknya. Pilihan proyek tetap menampilkan tangkapan layar CetakIn dan dokumentasi karya web, mobile, serta robotika lainnya.
+4. **Gerak mengikuti tindakan pengunjung.** Transisi membantu membedakan posisi, tekanan tombol, dan susunan komponen. Preferensi gerak berkurang tetap memberi akses pada semua fungsi demo. Konten, navigasi, dan scroll halaman tersedia sejak awal.
+
+Periksa di ponsel dan desktop apakah pengunjung dapat mengubah satu huruf dan palet, memutar objek, memahami tautan dari demo ke produk, serta membuka CV dan kontak. Ulangi dengan keyboard dan preferensi gerak berkurang.
+
+Ide terpisah untuk nanti adalah eksplorasi simulasi Hexaka berbasis desain yang tersedia.

@@ -1,0 +1,5 @@
+{
+  "glbUrl": "./assets/models/hexaka-v3.glb",
+  "dracoPath": "./assets/vendor/three/jsm/libs/draco/gltf/",
+  "notes": "Generated from SolidWorks STL assembly via scripts/build-hexaka-glb.py."
+}

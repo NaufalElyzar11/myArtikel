@@ -49,8 +49,10 @@ for page in PAGES:
 
 home = BeautifulSoup((ROOT/'index.html').read_text(encoding='utf-8'), 'html.parser')
 assert [tag['id'] for tag in home.select('main > section')][:2] == ['home', 'projects']
-assert 'Hexaka' in home.select_one('.work-card h3').get_text()
-assert len(home.select('.selected-grid .work-card')) == 4
+selected_work = home.select('.selected-grid .work-card')
+assert len(selected_work) == 4
+assert selected_work[0].select_one('h3').get_text(strip=True) == 'CetakIn'
+assert any(card.select_one('a[href="projects/hexaka/"]') for card in selected_work)
 assert not home.select('#interactive-lab, .project__tabs')
 for section_id in ('skills', 'educator'):
     assert home.select_one(f'#{section_id}')

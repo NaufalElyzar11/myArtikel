@@ -1,44 +1,62 @@
 # Naskah portofolio yang diterapkan
 
-30 Oktober 2026. Naskah berikut mencatat teks tampilan ID dan EN dari implementasi. Nama, lingkup kontribusi, dan bukti berasal dari konten serta dokumentasi proyek yang sudah ada. Struktur dan alasan editorial dijelaskan dalam [RISET_PORTOFOLIO.md](RISET_PORTOFOLIO.md).
+10 November 2026. Naskah berikut mencatat teks tampilan ID dan EN dari implementasi. Nama, lingkup kontribusi, dan bukti berasal dari konten serta dokumentasi proyek yang sudah ada. Struktur dan alasan editorial dijelaskan dalam [RISET_PORTOFOLIO.md](RISET_PORTOFOLIO.md).
 
 ## Pembuka
 
 ### ID
 
-Robotika & IoT · Web & Mobile · Educator
+Web & Mobile · Robotika & IoT
 
 **Naufal Elyzar**
 
-Saya mengembangkan robot, perangkat sensor, dan aplikasi web & mobile. Dari gerak robot sampai pengajuan cuti, proyek saya berangkat dari tugas yang perlu diselesaikan pengguna.
-
-Mahasiswa Teknologi Informasi Universitas Lambung Mangkurat · General Manager Wasaka Robotic Team · Co-Founder CetakIn · Pengajar robotika.
+Saya membangun website, aplikasi mobile, dan sistem robotika. Coba kendalikan simulasi 3D Hexaka V3 atau buka demo clicker.
 
 Lihat proyek pilihan
 
-Hubungi saya
-
-Bersama Wasaka: Juara 3 STEM Robotik 2025 ↗
-
 Lihat CV
+
+Hubungi saya
 
 ### EN
 
-Robotics & IoT · Web & Mobile · Educator
+Web & Mobile · Robotics & IoT
 
 **Naufal Elyzar**
 
-I develop robots, sensor devices, and web and mobile applications. From robot movement to leave requests, my projects start with the tasks users need to complete.
-
-Information Technology student at Universitas Lambung Mangkurat · General Manager of Wasaka Robotic Team · Co-Founder of CetakIn · Robotics educator.
+I build websites, mobile apps, and robotics systems. Try controlling the 3D Hexaka V3 simulation or switch to the clicker demo.
 
 Explore selected projects
 
+View CV
+
 Get in touch
 
-With Wasaka: 3rd place, STEM Robotics 2025 ↗
-
-View CV
+| ID | EN |
+| --- | --- |
+| Hexaka V3 · 3D | Hexaka V3 · 3D |
+| Clicker Lab | Clicker Lab |
+| Simulasi unggulan | Featured simulation |
+| Kendalikan Hexaka V3. | Drive Hexaka V3. |
+| Reset sudut | Reset view |
+| Komponen dalam: Raspberry Pi 5 · UBEC 15A · U2D2 | Internals: Raspberry Pi 5 · 15A UBEC · U2D2 |
+| Koreksi IMU | IMU leveling |
+| Pola langkah | Gait mode |
+| Perintah gerak | Motion state |
+| Kemiringan medan (BNO055) | Terrain slope (BNO055) |
+| Urai bodi (RPi 5 & komponen) | Explode body (RPi 5 & internals) |
+| Model kinematika 18-DOF · Geser untuk putar 3D | 18-DOF kinematics model · Drag to orbit 3D |
+| Studi kasus Hexaka | Hexaka case study |
+| CLICKER LAB | CLICKER LAB |
+| PRATINJAU WARNA & HURUF | COLOR & LETTER PREVIEW |
+| VISUALISASI KONSEP | CONCEPT VISUALIZATION |
+| BUKAN FOTO PRODUK | NOT A PRODUCT PHOTO |
+| Teks clicker | Clicker text |
+| 01-05 HURUF | 01-05 LETTERS |
+| Warna base | Base color |
+| Lanjut atur desain | Continue customizing |
+| Dari Clicker Lab CetakIn | From CetakIn Clicker Lab |
+| Studi kasus | Case study |
 
 ## Karya pilihan
 
@@ -46,15 +64,9 @@ View CV
 
 **Pilihan proyek**
 
-Empat contoh pekerjaan saya: kebutuhan penggunanya, bagian yang saya kerjakan, dan hasil yang bisa Anda lihat.
+Jelajahi antarmuka yang saya buat dan lihat bagian yang saya kerjakan, dari konfigurator produk hingga kendali robot.
 
-**Wasaka Hexapod (Hexaka V3)**
-
-Robot berkaki enam yang menjaga keseimbangan dan membaca lintasan melalui kamera.
-
-Bagian saya: pemrograman gerak dan kendali robot bersama Wasaka Robotic Team.
-
-Jelajahi proyek Hexaka
+01 / Proyek web unggulan
 
 **CetakIn**
 
@@ -62,7 +74,13 @@ Layanan cetak 3D dan produk robotika dengan konfigurator produk yang bisa diguna
 
 Bagian saya: Co-Founder, pengembangan website pelanggan dan konfigurator produk.
 
-Lihat website CetakIn
+Buka studi kasus CetakIn
+
+Pratinjau web
+
+- **Etalase** · Etalase layanan cetak 3D dan produk kustom.
+- **Clicker Lab** · Clicker Lab untuk menyesuaikan huruf, bentuk, warna, dan susunan tombol.
+- **Panduan** · Panduan komponen dengan contoh rangkaian dan kode uji.
 
 **Sistem Cuti Kominfo**
 
@@ -80,6 +98,14 @@ Bagian saya: katalog, navigasi, dan integrasi data pengguna serta penyewaan di F
 
 Lihat aplikasi MyAnimeRent
 
+**Wasaka Hexapod (Hexaka V3)**
+
+Robot berkaki enam yang menjaga keseimbangan dan membaca lintasan melalui kamera.
+
+Bagian saya: pemrograman gerak dan kendali robot bersama Wasaka Robotic Team.
+
+Jelajahi proyek Hexaka
+
 Proyek perangkat lainnya:
 
 Mangrovepreneurs
@@ -94,15 +120,9 @@ Lihat semua proyek
 
 **Selected projects**
 
-Four examples of my work: the users’ needs, my contribution, and results you can explore.
+Explore the interfaces I built and see what I contributed, from product configuration to robot control.
 
-**Wasaka Hexapod (Hexaka V3)**
-
-A six-legged robot that balances its body and interprets its route through a camera.
-
-My contribution: robot movement programming and control with Wasaka Robotic Team.
-
-Explore the Hexaka project
+01 / Featured web project
 
 **CetakIn**
 
@@ -110,7 +130,13 @@ Explore the Hexaka project
 
 My role: Co-Founder, customer website and product configurator development.
 
-Explore the CetakIn website
+Explore the CetakIn case study
+
+Website preview
+
+- **Storefront** · Storefront for 3D printing services and custom products.
+- **Clicker Lab** · Clicker Lab lets you customize the lettering, shape, color, and button layout.
+- **Guides** · Component guides with circuit examples and test code.
 
 **Sistem Cuti Kominfo**
 
@@ -127,6 +153,14 @@ Helps cosplayers find rental costumes and check their availability.
 My contribution: catalogs, navigation, and user and rental data integration in Flutter.
 
 Explore the MyAnimeRent app
+
+**Wasaka Hexapod (Hexaka V3)**
+
+A six-legged robot that balances its body and interprets its route through a camera.
+
+My contribution: robot movement programming and control with Wasaka Robotic Team.
+
+Explore the Hexaka project
 
 More hardware projects:
 
@@ -146,6 +180,10 @@ Explore all projects
 
 Pekerjaan saya sering mempertemukan rangkaian, pemrograman, dan antarmuka pengguna. Di Wasaka saya mengembangkan robot bersama tim; melalui CetakIn saya mengerjakan produk dan prototipe cetak 3D. Pengalaman praktik ini juga saya bawa ke kelas dan pendampingan robotika.
 
+Mahasiswa Teknologi Informasi Universitas Lambung Mangkurat · General Manager Wasaka Robotic Team · Co-Founder CetakIn · Pengajar robotika.
+
+Banjarbaru · Indonesia
+
 Robotika & IoT
 
 Web & aplikasi Flutter
@@ -161,6 +199,10 @@ Galeri fotografi
 **About me**
 
 My work often connects circuits, programming, and user interfaces. At Wasaka, I develop robots with the team; through CetakIn, I work on 3D-printed products and prototypes. I also bring this practical experience into robotics classes and mentoring.
+
+Information Technology student at Universitas Lambung Mangkurat · General Manager of Wasaka Robotic Team · Co-Founder of CetakIn · Robotics educator.
+
+Banjarbaru · Indonesia
 
 Robotics & IoT
 
